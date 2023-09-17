@@ -42,16 +42,16 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Parallax Background
+  - name: Background
     uniqueID: 3998635299
     locked: 0
-  - name: Background
+  - name: PlatformBackground
     uniqueID: 3622875525
     locked: 0
   - name: Decoration
     uniqueID: 2220670979
     locked: 0
-  - name: Platforms
+  - name: Platform
     uniqueID: 717803725
     locked: 0
   - name: Enemy

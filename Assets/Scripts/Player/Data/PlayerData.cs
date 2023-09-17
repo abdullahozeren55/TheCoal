@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="newPlayerData", menuName ="Data/Player Data/Base Data")]
+[CreateAssetMenu(fileName = "newPlayerData", menuName = "Data/Player Data/Base Data")]
 public class PlayerData : ScriptableObject
 {
 
@@ -52,8 +52,10 @@ public class PlayerData : ScriptableObject
     public bool wallJumpCombo;
 
     [Header("Check Variables")]
-    public float groundCheckRadius = 0.3f;
+    //public float groundCheckRadius = 0.3f;
+    public float groundCheckHeight = 1f;
+    public float groundCheckWidth = 0.5f;
     public float wallCheckDistance = 0.5f;
     public LayerMask whatIsGround;
-    
+
 }
