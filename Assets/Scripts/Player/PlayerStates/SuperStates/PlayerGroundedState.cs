@@ -31,10 +31,12 @@ public class PlayerGroundedState : PlayerState
         playerData.isJumping = false;
         playerData.wallJumpCombo = false;
 
+        player.EnvGround.GetComponent<Rigidbody2D>().sharedMaterial = player.frictionMaterial;
     }
 
     public override void Exit()
     {
+        player.EnvGround.GetComponent<Rigidbody2D>().sharedMaterial = new PhysicsMaterial2D() { friction = 0f, bounciness = 0f };
         base.Exit();
     }
 
@@ -46,11 +48,11 @@ public class PlayerGroundedState : PlayerState
         jumpInput = player.InputHandler.JumpInput;
         dashInput = player.InputHandler.DashInput;
 
-        if(player.InputHandler.AttackInputs[(int)CombatInputs.primary])
+        if (player.InputHandler.AttackInputs[(int)CombatInputs.primary])
         {
             stateMachine.ChangeState(player.PrimaryAttackState);
         }
-        else if(player.InputHandler.AttackInputs[(int)CombatInputs.secondary])
+        else if (player.InputHandler.AttackInputs[(int)CombatInputs.secondary])
         {
             stateMachine.ChangeState(player.SecondaryAttackState);
         }
@@ -59,11 +61,11 @@ public class PlayerGroundedState : PlayerState
             player.InputHandler.UseJumpInput();
             stateMachine.ChangeState(player.JumpState);
         }
-        else if(!isGrounded)
+        else if (!isGrounded)
         {
             stateMachine.ChangeState(player.InAirState);
         }
-        else if(dashInput && player.DashState.CheckIfCanDash())
+        else if (dashInput && player.DashState.CheckIfCanDash())
         {
             stateMachine.ChangeState(player.DashState);
         }

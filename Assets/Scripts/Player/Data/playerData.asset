@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f0be78b383f2644bcf93e58c1f260a, type: 3}
   m_Name: playerData
   m_EditorClassIdentifier: 
-  movementVelocity: 10
+  movementVelocity: 15
   canMove: 1
   startMovingFinished: 0
-  startMovingHalfFinished: 1
+  startMovingHalfFinished: 0
   stopMovingFinished: 0
   stopMovingHalfFinished: 0
   jumpVelocity: 15
@@ -31,7 +31,7 @@ MonoBehaviour:
   dashEndYMultiplier: 0.2
   distanceBetweenAfterImages: 1
   canDash: 1
-  lastDashTime: 26.840033
+  lastDashTime: 62.890453
   isAttacking: 0
   attackTransform: {fileID: 0}
   attackRadius: 0
@@ -48,7 +48,8 @@ MonoBehaviour:
   wallJumpTime: 0.4
   wallJumpAngle: {x: 1.7, y: 2}
   wallJumpCombo: 0
-  groundCheckRadius: 0.8
+  groundCheckHeight: 2
+  groundCheckWidth: 0.3
   wallCheckDistance: 0.5
   whatIsGround:
     serializedVersion: 2
