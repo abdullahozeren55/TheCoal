@@ -31,7 +31,7 @@ MonoBehaviour:
   dashEndYMultiplier: 0.2
   distanceBetweenAfterImages: 1
   canDash: 1
-  lastDashTime: 0
+  lastDashTime: 62.890453
   isAttacking: 0
   attackTransform: {fileID: 0}
   attackRadius: 0
@@ -48,11 +48,9 @@ MonoBehaviour:
   wallJumpTime: 0.4
   wallJumpAngle: {x: 1.7, y: 2}
   wallJumpCombo: 0
-  groundCheckHeight: 1
+  groundCheckHeight: 2
   groundCheckWidth: 0.3
   wallCheckDistance: 0.5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 5120
-  envGround: {fileID: 0}
-  groundFrictionMaterial: {fileID: 6200000, guid: 8219492fdee358344abaec24ac895bf4, type: 2}
