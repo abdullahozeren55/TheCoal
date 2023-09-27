@@ -34,6 +34,9 @@ public class Player : MonoBehaviour
 
     public GameObject eyes;
 
+    public GameObject EnvGround;
+    public PhysicsMaterial2D frictionMaterial;
+
     #endregion
 
     #region Check Transforms
@@ -57,7 +60,7 @@ public class Player : MonoBehaviour
 
     #region Unity Callback Functions
 
-    private void Awake() 
+    private void Awake()
     {
         StateMachine = new PlayerStateMachine();
 
@@ -136,7 +139,8 @@ public class Player : MonoBehaviour
 
     public bool CheckIfGrounded()
     {
-        return (Physics2D.OverlapCircle(groundCheck.position, playerData.groundCheckRadius, playerData.whatIsGround));
+        return Physics2D.OverlapBox(groundCheck.position, new Vector2(playerData.groundCheckWidth, playerData.groundCheckHeight), 0f, playerData.whatIsGround);
+        //return Physics2D.OverlapCircle(groundCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
     }
 
     public bool CheckIfTouchingWall()
@@ -152,7 +156,7 @@ public class Player : MonoBehaviour
 
     public void CheckIfShouldFlip(int xInput)
     {
-        if(xInput != 0 && xInput != FacingDirection)
+        if (xInput != 0 && xInput != FacingDirection)
         {
             Flip();
         }
@@ -170,6 +174,12 @@ public class Player : MonoBehaviour
 
     private void Attack2AnimationActionTrigger() => SecondaryAttackState.AnimationActionTrigger();
 
+    private void Flip()
+    {
+        FacingDirection *= -1;
+        transform.Rotate(0.0f, 180.0f, 0.0f);
+    }
+
     public void SetEyesOn() => eyes.SetActive(true);
 
     public void SetEyesOff() => eyes.SetActive(false);
@@ -182,11 +192,6 @@ public class Player : MonoBehaviour
 
     public void StopMovingHalfFinishTrigger() => playerData.stopMovingHalfFinished = true;
 
-    private void Flip()
-    {
-        FacingDirection *= -1;
-        transform.Rotate(0.0f, 180.0f, 0.0f);
-    }
 
     #endregion
 }
