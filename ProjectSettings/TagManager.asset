@@ -69,3 +69,6 @@ TagManager:
   - name: Foreground Decoration
     uniqueID: 1529557549
     locked: 0
+  - name: Far Foreground
+    uniqueID: 1733059045
+    locked: 0

@@ -17,14 +17,14 @@ public class PlayerWallSlideState : PlayerTouchingWallState
     public override void Enter()
     {
         base.Enter();
-        
+
     }
 
     public override void Exit()
     {
         base.Exit();
-        
-        
+
+
     }
 
     public override void LogicUpdate()
@@ -32,14 +32,19 @@ public class PlayerWallSlideState : PlayerTouchingWallState
         base.LogicUpdate();
 
         player.SetVelocityY(-playerData.wallSlideVelocity);
-        
-        if(jumpInput && (isTouchingWall || isTouchingWallBack) && player.JumpState.CheckIfCanJump())
+
+        if (jumpInput && (isTouchingWall || isTouchingWallBack) && player.JumpState.CheckIfCanJump())
         {
-            
             player.WallJumpState.DetermineWallJumpDirection(isTouchingWall);
             stateMachine.ChangeState(player.WallJumpState);
         }
-        else if((Time.time >= startTime + playerData.stickingWallTime))
+        else if (Time.time >= startTime + playerData.stickingWallTime)
+        {
+            playerData.canStickWall = false;
+            playerData.wallJumpCombo = false;
+            stateMachine.ChangeState(player.InAirState);
+        }
+        else if (!isTouchingWall && !isTouchingWallBack)
         {
             playerData.canStickWall = false;
             playerData.wallJumpCombo = false;

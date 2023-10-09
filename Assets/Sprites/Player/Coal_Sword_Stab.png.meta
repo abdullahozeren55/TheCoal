@@ -1,7 +1,28 @@
 fileFormatVersion: 2
 guid: 2cfc268666c71a1428ef142f55a1fcc8
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -920304787882503466
+    second: Coal_Sword_Stab_0
+  - first:
+      213: -1225990257262479144
+    second: Coal_Sword_Stab_1
+  - first:
+      213: 7841306858636567792
+    second: Coal_Sword_Stab_2
+  - first:
+      213: -756246496211476022
+    second: Coal_Sword_Stab_3
+  - first:
+      213: 4387729173648519238
+    second: Coal_Sword_Stab_4
+  - first:
+      213: 4081158379969932132
+    second: Coal_Sword_Stab_5
+  - first:
+      213: 5173772754937886934
+    second: Coal_Sword_Stab_6
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -20,11 +41,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +85,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -89,30 +112,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -129,10 +128,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4e0bc97d6c7afca4b809c343b4a4b08e
-      internalID: 557009126
+      spriteID: 6d21c21ebab6a33f0800000000000000
+      internalID: -920304787882503466
       vertices: []
       indices: 
       edges: []
@@ -150,10 +149,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b1d0ab80bb490da4bad2a302bac19835
-      internalID: 443924632
+      spriteID: 8d8b7c94b586cfee0800000000000000
+      internalID: -1225990257262479144
       vertices: []
       indices: 
       edges: []
@@ -171,10 +170,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 28808d767b9fef746bde89ff7df65d60
-      internalID: 1183132452
+      spriteID: 0f4eddbfa0be1dc60800000000000000
+      internalID: 7841306858636567792
       vertices: []
       indices: 
       edges: []
@@ -192,10 +191,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d2559eadd32786f458b0e1dc6c844306
-      internalID: 1570690347
+      spriteID: ac16ea681d54185f0800000000000000
+      internalID: -756246496211476022
       vertices: []
       indices: 
       edges: []
@@ -213,10 +212,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5b0df4c0316aa584cb54433c05bf5aa9
-      internalID: -1180907362
+      spriteID: 64030fdaf6854ec30800000000000000
+      internalID: 4387729173648519238
       vertices: []
       indices: 
       edges: []
@@ -234,10 +233,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a9b67f5f6e5107044bae6dca7ef18d07
-      internalID: -2073322185
+      spriteID: 46b67367cef23a830800000000000000
+      internalID: 4081158379969932132
       vertices: []
       indices: 
       edges: []
@@ -255,10 +254,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 12d061156b3d9424dab4fdd87b1921ec
-      internalID: -1227972867
+      spriteID: 6d8baa6a8eeecc740800000000000000
+      internalID: 5173772754937886934
       vertices: []
       indices: 
       edges: []
@@ -266,7 +265,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: d750d3b46466f62489c231b3a8318b87
     internalID: 0
     vertices: []
     indices: 
@@ -274,16 +273,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Coal_Sword_Stab_0: 557009126
-      Coal_Sword_Stab_1: 443924632
-      Coal_Sword_Stab_2: 1183132452
-      Coal_Sword_Stab_3: 1570690347
-      Coal_Sword_Stab_4: -1180907362
-      Coal_Sword_Stab_5: -2073322185
-      Coal_Sword_Stab_6: -1227972867
-  spritePackingTag: 
+      Coal_Sword_Stab_0: -920304787882503466
+      Coal_Sword_Stab_1: -1225990257262479144
+      Coal_Sword_Stab_2: 7841306858636567792
+      Coal_Sword_Stab_3: -756246496211476022
+      Coal_Sword_Stab_4: 4387729173648519238
+      Coal_Sword_Stab_5: 4081158379969932132
+      Coal_Sword_Stab_6: 5173772754937886934
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

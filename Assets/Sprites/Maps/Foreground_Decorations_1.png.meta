@@ -1,0 +1,1232 @@
+fileFormatVersion: 2
+guid: bd22bdd719c25f743a4f4b60d36ddca2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2338234651407309926
+    second: Foreground_Decorations_1_0
+  - first:
+      213: 8711518055572335404
+    second: Foreground_Decorations_1_1
+  - first:
+      213: -8014310687070701006
+    second: Foreground_Decorations_1_2
+  - first:
+      213: -7105982968231645626
+    second: Foreground_Decorations_1_3
+  - first:
+      213: -7039890727365521583
+    second: Foreground_Decorations_1_4
+  - first:
+      213: 7654941681781563633
+    second: Foreground_Decorations_1_5
+  - first:
+      213: -1760885487475440398
+    second: Foreground_Decorations_1_6
+  - first:
+      213: -3219519866958006377
+    second: Foreground_Decorations_1_7
+  - first:
+      213: -6005133884570869434
+    second: Foreground_Decorations_1_8
+  - first:
+      213: -4636731842536343247
+    second: Foreground_Decorations_1_9
+  - first:
+      213: -6757735089466764446
+    second: Foreground_Decorations_1_10
+  - first:
+      213: -3322595840385883687
+    second: Foreground_Decorations_1_11
+  - first:
+      213: 3364414374624558432
+    second: Foreground_Decorations_1_12
+  - first:
+      213: 7305733089034980851
+    second: Foreground_Decorations_1_13
+  - first:
+      213: -717326884498677523
+    second: Foreground_Decorations_1_14
+  - first:
+      213: -7569141166281891662
+    second: Foreground_Decorations_1_15
+  - first:
+      213: 7050726887361188638
+    second: Foreground_Decorations_1_16
+  - first:
+      213: 1848300775932701001
+    second: Foreground_Decorations_1_17
+  - first:
+      213: 2182758283640971142
+    second: Foreground_Decorations_1_18
+  - first:
+      213: 8236696126890351911
+    second: Foreground_Decorations_1_19
+  - first:
+      213: 8112260719553365705
+    second: Foreground_Decorations_1_20
+  - first:
+      213: 4280332374461367864
+    second: Foreground_Decorations_1_21
+  - first:
+      213: 7165656123029699445
+    second: Foreground_Decorations_1_22
+  - first:
+      213: -3029272127812708934
+    second: Foreground_Decorations_1_23
+  - first:
+      213: -1476033757894344071
+    second: Foreground_Decorations_1_24
+  - first:
+      213: 6852827436570794728
+    second: Foreground_Decorations_1_25
+  - first:
+      213: 6522279365234785885
+    second: Foreground_Decorations_1_26
+  - first:
+      213: 2120254618303195768
+    second: Foreground_Decorations_1_27
+  - first:
+      213: -8641517770803458378
+    second: Foreground_Decorations_1_28
+  - first:
+      213: 8215892242405023830
+    second: Foreground_Decorations_1_29
+  - first:
+      213: -4685439246105784865
+    second: Foreground_Decorations_1_30
+  - first:
+      213: -3656499870111210450
+    second: Foreground_Decorations_1_31
+  - first:
+      213: -2225868602182281069
+    second: Foreground_Decorations_1_32
+  - first:
+      213: -1443493537874163547
+    second: Foreground_Decorations_1_33
+  - first:
+      213: 4242660171322460540
+    second: Foreground_Decorations_1_34
+  - first:
+      213: 9016982568343516971
+    second: Foreground_Decorations_1_35
+  - first:
+      213: -3866889832669412098
+    second: Foreground_Decorations_1_36
+  - first:
+      213: 6348933948965859245
+    second: Foreground_Decorations_1_37
+  - first:
+      213: -2542241964680251845
+    second: Foreground_Decorations_1_38
+  - first:
+      213: 8463142592864360065
+    second: Foreground_Decorations_1_39
+  - first:
+      213: 7835383500530220323
+    second: Foreground_Decorations_1_40
+  - first:
+      213: 6711308132505273826
+    second: Foreground_Decorations_1_41
+  - first:
+      213: 5092773050591443243
+    second: Foreground_Decorations_1_42
+  - first:
+      213: 7595854661351134934
+    second: Foreground_Decorations_1_43
+  - first:
+      213: 22186713101627482
+    second: Foreground_Decorations_1_44
+  - first:
+      213: 7239207905651075089
+    second: Foreground_Decorations_1_45
+  - first:
+      213: 27319445511391625
+    second: Foreground_Decorations_1_46
+  - first:
+      213: -6207581909605871386
+    second: Foreground_Decorations_1_47
+  - first:
+      213: 5139733100955577564
+    second: Foreground_Decorations_1_48
+  - first:
+      213: -2830569854373141653
+    second: Foreground_Decorations_1_49
+  - first:
+      213: -7790768578924533810
+    second: Foreground_Decorations_1_50
+  - first:
+      213: 8700949541917294714
+    second: Foreground_Decorations_1_51
+  - first:
+      213: 2371256838831383376
+    second: Foreground_Decorations_1_52
+  - first:
+      213: 7048069153440933911
+    second: Foreground_Decorations_1_53
+  - first:
+      213: -7238348003711050260
+    second: Foreground_Decorations_1_54
+  - first:
+      213: -699685015055871637
+    second: Foreground_Decorations_1_55
+  - first:
+      213: 8861492716555276149
+    second: Foreground_Decorations_1_56
+  - first:
+      213: -8515738228408105078
+    second: Foreground_Decorations_1_57
+  - first:
+      213: 5904057087571457538
+    second: Foreground_Decorations_1_58
+  - first:
+      213: 7485375175065633018
+    second: Foreground_Decorations_1_59
+  - first:
+      213: -8320350714349307106
+    second: Foreground_Decorations_1_60
+  - first:
+      213: 57322403478391952
+    second: Foreground_Decorations_1_61
+  - first:
+      213: -7937523512588084004
+    second: Foreground_Decorations_1_62
+  - first:
+      213: -5325374313666132036
+    second: Foreground_Decorations_1_63
+  - first:
+      213: -4412877606601811308
+    second: Foreground_Decorations_1_64
+  - first:
+      213: -8315211776450794647
+    second: Foreground_Decorations_1_65
+  - first:
+      213: 6444115693407061270
+    second: Foreground_Decorations_1_66
+  - first:
+      213: -3612435665695030736
+    second: Foreground_Decorations_1_67
+  - first:
+      213: -6537043063326746169
+    second: Foreground_Decorations_1_68
+  - first:
+      213: -2071554418384615622
+    second: Foreground_Decorations_1_69
+  - first:
+      213: -2409118032982208334
+    second: Foreground_Decorations_1_70
+  - first:
+      213: -6438722762224207547
+    second: Foreground_Decorations_1_71
+  - first:
+      213: -8320137192998135463
+    second: Foreground_Decorations_1_72
+  - first:
+      213: -154955716651263910
+    second: Foreground_Decorations_1_73
+  - first:
+      213: -6979458204061393901
+    second: Foreground_Decorations_1_74
+  - first:
+      213: -3967784833171043491
+    second: Foreground_Decorations_1_75
+  - first:
+      213: 1017728779287997158
+    second: Foreground_Decorations_1_76
+  - first:
+      213: -469076935356491596
+    second: Foreground_Decorations_1_77
+  - first:
+      213: -6600035809053657416
+    second: Foreground_Decorations_1_78
+  - first:
+      213: -77668591231374258
+    second: Foreground_Decorations_1_79
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_0
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 943
+        width: 290
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a93ab5919fbec8fd0800000000000000
+      internalID: -2338234651407309926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_1
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 943
+        width: 322
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2b6ac4148785e870800000000000000
+      internalID: 8711518055572335404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_2
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 943
+        width: 200
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23ab88944e277c090800000000000000
+      internalID: -8014310687070701006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_3
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 943
+        width: 349
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64ea396b32a726d90800000000000000
+      internalID: -7105982968231645626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_4
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 943
+        width: 98
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15fcfc1bea84d4e90800000000000000
+      internalID: -7039890727365521583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_5
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 943
+        width: 194
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f0ebe6e6e0db3a60800000000000000
+      internalID: 7654941681781563633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_6
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 943
+        width: 118
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4c2ec8af31097e0800000000000000
+      internalID: -1760885487475440398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_7
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 943
+        width: 238
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 797b7ae1db7f153d0800000000000000
+      internalID: -3219519866958006377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_8
+      rect:
+        serializedVersion: 2
+        x: 2111
+        y: 943
+        width: 220
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 641ed7d6c8a79aca0800000000000000
+      internalID: -6005133884570869434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_9
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 943
+        width: 130
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 139f0e6a4f407afb0800000000000000
+      internalID: -4636731842536343247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_10
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 623
+        width: 290
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 263142a7db3b732a0800000000000000
+      internalID: -6757735089466764446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_11
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 789
+        width: 322
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d1eb91efa4c3e1d0800000000000000
+      internalID: -3322595840385883687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_12
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 748
+        width: 200
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06df6bc5c0dc0be20800000000000000
+      internalID: 3364414374624558432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_13
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 783
+        width: 349
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fd4fbb798d236560800000000000000
+      internalID: 7305733089034980851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_14
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 801
+        width: 98
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de06e95cffa8b06f0800000000000000
+      internalID: -717326884498677523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_15
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 699
+        width: 194
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b06bf8563205f690800000000000000
+      internalID: -7569141166281891662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_16
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 733
+        width: 118
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1395796fb639d160800000000000000
+      internalID: 7050726887361188638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_17
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 735
+        width: 238
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9492c8353cb76a910800000000000000
+      internalID: 1848300775932701001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_18
+      rect:
+        serializedVersion: 2
+        x: 2111
+        y: 763
+        width: 220
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68f16fe1817ba4e10800000000000000
+      internalID: 2182758283640971142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_19
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 815
+        width: 130
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72d922ecc7f9e4270800000000000000
+      internalID: 8236696126890351911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_20
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 368
+        width: 130
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c64552d42a849070800000000000000
+      internalID: 8112260719553365705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_21
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 368
+        width: 220
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 836cf5ccd9bc66b30800000000000000
+      internalID: 4280332374461367864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_22
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 368
+        width: 237
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57bb9c35746817360800000000000000
+      internalID: 7165656123029699445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_23
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 368
+        width: 117
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab55bbdac0dd5f5d0800000000000000
+      internalID: -3029272127812708934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_24
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 368
+        width: 194
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97209381e13148be0800000000000000
+      internalID: -1476033757894344071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_25
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 368
+        width: 99
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ea5ad7ee322a1f50800000000000000
+      internalID: 6852827436570794728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_26
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 368
+        width: 348
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5efda2b68ac38a50800000000000000
+      internalID: 6522279365234785885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_27
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 368
+        width: 200
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87ae75d7758ac6d10800000000000000
+      internalID: 2120254618303195768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_28
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 368
+        width: 323
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bec8074f59231880800000000000000
+      internalID: -8641517770803458378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_29
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 368
+        width: 290
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 650607df676b40270800000000000000
+      internalID: 8215892242405023830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_30
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 239
+        width: 130
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fddc03784d9f9feb0800000000000000
+      internalID: -4685439246105784865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_31
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 188
+        width: 220
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2462c8bdb0814dc0800000000000000
+      internalID: -3656499870111210450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_32
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 159
+        width: 237
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 398da3aac402c11e0800000000000000
+      internalID: -2225868602182281069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_33
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 158
+        width: 117
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a84077764ea7fbe0800000000000000
+      internalID: -1443493537874163547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_34
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 123
+        width: 194
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c798f5e72f4f0ea30800000000000000
+      internalID: 4242660171322460540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_35
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 225
+        width: 99
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2731043fd1c22d70800000000000000
+      internalID: 9016982568343516971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_36
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 208
+        width: 348
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef48b225f2c065ac0800000000000000
+      internalID: -3866889832669412098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_37
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 171
+        width: 200
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daf278ad9c1fb1850800000000000000
+      internalID: 6348933948965859245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_38
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 213
+        width: 323
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b36742a076428bcd0800000000000000
+      internalID: -2542241964680251845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foreground_Decorations_1_39
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 48
+        width: 290
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 186982b395f137570800000000000000
+      internalID: 8463142592864360065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1f9f7de126d456344a93a8e5a4490ffb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Foreground_Decorations_1_0: -2338234651407309926
+      Foreground_Decorations_1_1: 8711518055572335404
+      Foreground_Decorations_1_10: -6757735089466764446
+      Foreground_Decorations_1_11: -3322595840385883687
+      Foreground_Decorations_1_12: 3364414374624558432
+      Foreground_Decorations_1_13: 7305733089034980851
+      Foreground_Decorations_1_14: -717326884498677523
+      Foreground_Decorations_1_15: -7569141166281891662
+      Foreground_Decorations_1_16: 7050726887361188638
+      Foreground_Decorations_1_17: 1848300775932701001
+      Foreground_Decorations_1_18: 2182758283640971142
+      Foreground_Decorations_1_19: 8236696126890351911
+      Foreground_Decorations_1_2: -8014310687070701006
+      Foreground_Decorations_1_20: 8112260719553365705
+      Foreground_Decorations_1_21: 4280332374461367864
+      Foreground_Decorations_1_22: 7165656123029699445
+      Foreground_Decorations_1_23: -3029272127812708934
+      Foreground_Decorations_1_24: -1476033757894344071
+      Foreground_Decorations_1_25: 6852827436570794728
+      Foreground_Decorations_1_26: 6522279365234785885
+      Foreground_Decorations_1_27: 2120254618303195768
+      Foreground_Decorations_1_28: -8641517770803458378
+      Foreground_Decorations_1_29: 8215892242405023830
+      Foreground_Decorations_1_3: -7105982968231645626
+      Foreground_Decorations_1_30: -4685439246105784865
+      Foreground_Decorations_1_31: -3656499870111210450
+      Foreground_Decorations_1_32: -2225868602182281069
+      Foreground_Decorations_1_33: -1443493537874163547
+      Foreground_Decorations_1_34: 4242660171322460540
+      Foreground_Decorations_1_35: 9016982568343516971
+      Foreground_Decorations_1_36: -3866889832669412098
+      Foreground_Decorations_1_37: 6348933948965859245
+      Foreground_Decorations_1_38: -2542241964680251845
+      Foreground_Decorations_1_39: 8463142592864360065
+      Foreground_Decorations_1_4: -7039890727365521583
+      Foreground_Decorations_1_5: 7654941681781563633
+      Foreground_Decorations_1_6: -1760885487475440398
+      Foreground_Decorations_1_7: -3219519866958006377
+      Foreground_Decorations_1_8: -6005133884570869434
+      Foreground_Decorations_1_9: -4636731842536343247
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
