@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementVelocity: 15
   canMove: 1
-  startMovingFinished: 1
+  startMovingFinished: 0
   startMovingHalfFinished: 1
   stopMovingFinished: 0
   stopMovingHalfFinished: 0
@@ -27,11 +27,10 @@ MonoBehaviour:
   dashCooldown: 0
   dashTime: 0.3
   dashVelocity: 35
-  drag: 10
-  dashEndYMultiplier: 0.2
+  dashEndYMultiplier: 1.5
   distanceBetweenAfterImages: 1
   canDash: 1
-  lastDashTime: 247.17223
+  lastDashTime: 150.89082
   isAttacking: 0
   attackTransform: {fileID: 0}
   attackRadius: 0
@@ -48,8 +47,8 @@ MonoBehaviour:
   wallJumpTime: 0.5
   wallJumpAngle: {x: 1.7, y: 2}
   wallJumpCombo: 0
-  groundCheckHeight: 1
-  groundCheckWidth: 0.6
+  groundCheckHeight: 1.35
+  groundCheckWidth: 0.7
   wallCheckDistance: 0.5
   whatIsGround:
     serializedVersion: 2

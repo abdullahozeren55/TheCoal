@@ -37,18 +37,19 @@ public class PlayerState
     {
         player.Anim.SetBool(animBoolName, false);
         isExitingState = true;
+        player.SetAllEyeBoolsFalse();
     }
 
-    public virtual void LogicUpdate(){}
+    public virtual void LogicUpdate() { }
 
     public virtual void PhysicsUpdate()
     {
         DoChecks();
     }
 
-    public virtual void DoChecks(){}
+    public virtual void DoChecks() { }
 
-    public virtual void AnimationTrigger(){}
+    public virtual void AnimationTrigger() { }
 
     public virtual void AnimationFinishTrigger() => isAnimationFinished = true;
 }

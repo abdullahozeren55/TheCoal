@@ -21,14 +21,13 @@ public class PlayerIdleState : PlayerGroundedState
     {
         base.Enter();
         player.SetVelocityX(0f);
-        player.SetEyesOn();
+        player.eyesAnim.SetBool("idle", true);
 
     }
 
     public override void Exit()
     {
         base.Exit();
-        player.SetEyesOff();
     }
 
     public override void LogicUpdate()
@@ -39,8 +38,8 @@ public class PlayerIdleState : PlayerGroundedState
         {
             stateMachine.ChangeState(player.StartMovingState);
         }
-        
-        
+
+
     }
 
     public override void PhysicsUpdate()

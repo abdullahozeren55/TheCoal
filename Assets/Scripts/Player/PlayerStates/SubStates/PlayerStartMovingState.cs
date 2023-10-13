@@ -20,42 +20,43 @@ public class PlayerStartMovingState : PlayerGroundedState
         base.Enter();
         playerData.startMovingFinished = false;
         playerData.startMovingHalfFinished = false;
+        player.eyesAnim.SetBool("moveStartRunning", true);
 
     }
 
     public override void Exit()
     {
         base.Exit();
-        
+
     }
 
     public override void LogicUpdate()
     {
         base.LogicUpdate();
 
-        if(xInput == 0)
+        if (xInput == 0)
         {
-            if(!playerData.startMovingHalfFinished)
+            if (!playerData.startMovingHalfFinished)
             {
                 stateMachine.ChangeState(player.IdleState);
             }
-            else if(playerData.startMovingHalfFinished)
+            else if (playerData.startMovingHalfFinished)
             {
                 stateMachine.ChangeState(player.StopMovingState);
             }
-            
+
         }
-        else if(playerData.canMove && !playerData.startMovingFinished)
+        else if (playerData.canMove && !playerData.startMovingFinished)
         {
             player.CheckIfShouldFlip(xInput);
 
             player.SetVelocityX(playerData.movementVelocity * xInput);
         }
-        else if(playerData.startMovingFinished)
+        else if (playerData.startMovingFinished)
         {
             stateMachine.ChangeState(player.MoveState);
         }
-        
+
     }
 
     public override void PhysicsUpdate()

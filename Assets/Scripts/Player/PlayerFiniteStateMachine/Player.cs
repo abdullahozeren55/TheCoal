@@ -29,6 +29,8 @@ public class Player : MonoBehaviour
     #region Components
 
     public Animator Anim { get; private set; }
+
+    public Animator eyesAnim { get; private set; }
     public PlayerInputHandler InputHandler { get; private set; }
     public Rigidbody2D RB { get; private set; }
 
@@ -82,6 +84,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         Anim = GetComponent<Animator>();
+        eyesAnim = eyes.GetComponent<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
         RB = GetComponent<Rigidbody2D>();
 
@@ -180,9 +183,13 @@ public class Player : MonoBehaviour
         transform.Rotate(0.0f, 180.0f, 0.0f);
     }
 
-    public void SetEyesOn() => eyes.SetActive(true);
-
-    public void SetEyesOff() => eyes.SetActive(false);
+    public void SetAllEyeBoolsFalse()
+    {
+        foreach (AnimatorControllerParameter parameter in eyesAnim.parameters)
+        {
+            eyesAnim.SetBool(parameter.name, false);
+        }
+    }
 
     public void StartMovingFinishTrigger() => playerData.startMovingFinished = true;
 

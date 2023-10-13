@@ -19,6 +19,7 @@ public class PlayerStopMovingState : PlayerGroundedState
     {
         base.Enter();
         player.SetVelocityX(0f);
+        player.eyesAnim.SetBool("moveStopRunning", true);
 
     }
 
@@ -33,23 +34,23 @@ public class PlayerStopMovingState : PlayerGroundedState
     {
         base.LogicUpdate();
 
-        if(playerData.stopMovingFinished)
+        if (playerData.stopMovingFinished)
         {
             stateMachine.ChangeState(player.IdleState);
         }
-        else if(playerData.canMove && xInput != 0)
+        else if (playerData.canMove && xInput != 0)
         {
-            if(playerData.stopMovingHalfFinished)
+            if (playerData.stopMovingHalfFinished)
             {
                 stateMachine.ChangeState(player.StartMovingState);
             }
-            else if(!playerData.stopMovingHalfFinished)
+            else if (!playerData.stopMovingHalfFinished)
             {
                 stateMachine.ChangeState(player.MoveState);
             }
-            
+
         }
-        
+
     }
 
     public override void PhysicsUpdate()

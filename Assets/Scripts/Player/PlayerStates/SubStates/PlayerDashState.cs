@@ -27,6 +27,7 @@ public class PlayerDashState : PlayerAbilityState
         playerData.canDash = false;
         player.InputHandler.UseDashInput();
         playerData.canMove = false;
+        player.eyesAnim.SetBool("moveRun", true);
     }
 
     public override void Exit()
@@ -34,7 +35,7 @@ public class PlayerDashState : PlayerAbilityState
         base.Exit();
         ResetCanDash();
 
-        if(player.CurrentVelocity.y > 0)
+        if (player.CurrentVelocity.y > 0)
         {
             player.SetVelocityY(player.CurrentVelocity.y * playerData.dashEndYMultiplier);
         }
@@ -47,12 +48,12 @@ public class PlayerDashState : PlayerAbilityState
 
         xInput = player.InputHandler.NormInputX;
 
-        if(!isAbilityDone)
+        if (!isAbilityDone)
         {
             CheckIfShouldPlaceAfterImage();
         }
 
-        if((Time.time >= startTime + playerData.dashTime) || isTouchingWall)
+        if ((Time.time >= startTime + playerData.dashTime) || isTouchingWall)
         {
             player.RB.drag = 0.0f;
             isAbilityDone = true;
@@ -67,7 +68,7 @@ public class PlayerDashState : PlayerAbilityState
 
     private void CheckIfShouldPlaceAfterImage()
     {
-        if(Vector2.Distance(player.transform.position, lastAIPos) >= playerData.distanceBetweenAfterImages)
+        if (Vector2.Distance(player.transform.position, lastAIPos) >= playerData.distanceBetweenAfterImages)
         {
             PlaceAfterImage();
         }

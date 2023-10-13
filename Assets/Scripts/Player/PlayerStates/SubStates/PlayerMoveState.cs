@@ -18,7 +18,7 @@ public class PlayerMoveState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
-
+        player.eyesAnim.SetBool("moveRun", true);
 
     }
 
@@ -31,13 +31,13 @@ public class PlayerMoveState : PlayerGroundedState
     {
         base.LogicUpdate();
 
-        if(xInput != 0 && playerData.canMove)
+        if (xInput != 0 && playerData.canMove)
         {
             player.CheckIfShouldFlip(xInput);
 
             player.SetVelocityX(playerData.movementVelocity * xInput);
         }
-        else if(xInput == 0 && !isExitingState)
+        else if (xInput == 0 && !isExitingState)
         {
             stateMachine.ChangeState(player.StopMovingState);
         }
