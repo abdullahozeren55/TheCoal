@@ -1,0 +1,298 @@
+fileFormatVersion: 2
+guid: 890f811d5a1f7d24486cbe205420cee8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2803530347902776062
+    second: Wood2_0
+  - first:
+      213: 9076767736104238455
+    second: Wood2_1
+  - first:
+      213: 5556424481822357131
+    second: Wood2_2
+  - first:
+      213: 668360161424799896
+    second: Wood2_3
+  - first:
+      213: -5931632371536920347
+    second: Wood2_4
+  - first:
+      213: 4164825490085483592
+    second: Wood2_5
+  - first:
+      213: 32320047923900965
+    second: Wood2_6
+  - first:
+      213: 8603495507663909948
+    second: Wood2_7
+  - first:
+      213: 4608276779800451977
+    second: Wood2_8
+  - first:
+      213: -8055960715452187615
+    second: Wood2_9
+  - first:
+      213: 7526151144633585996
+    second: Wood2_10
+  - first:
+      213: 5395720936549984545
+    second: Wood2_11
+  - first:
+      213: -68951984303106687
+    second: Wood2_12
+  - first:
+      213: 7634104312440208653
+    second: Wood2_13
+  - first:
+      213: 1534886995047558172
+    second: Wood2_14
+  - first:
+      213: -7945684579113163260
+    second: Wood2_15
+  - first:
+      213: -2410290228514836623
+    second: Wood2_16
+  - first:
+      213: 1599262869876660272
+    second: Wood2_17
+  - first:
+      213: -1032142695846484749
+    second: Wood2_18
+  - first:
+      213: 5739270770081180370
+    second: Wood2_19
+  - first:
+      213: -6308500702434456967
+    second: Wood2_20
+  - first:
+      213: 5412522951557253360
+    second: Wood2_21
+  - first:
+      213: -6221446312529428638
+    second: Wood2_22
+  - first:
+      213: 9104113796340245511
+    second: Wood2_23
+  - first:
+      213: 7171198701236663277
+    second: Wood2_24
+  - first:
+      213: 5756326912714278496
+    second: Wood2_25
+  - first:
+      213: 4550635633007310206
+    second: Wood2_26
+  - first:
+      213: 5669598266460190567
+    second: Wood2_27
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Wood2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 524
+        width: 370
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cff8dc3eed89d14cab59f5989f69b68
+      internalID: -2803530347902776062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wood2_1
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 524
+        width: 282
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c757e1b2fbd10a647b91ba9cdab9beb0
+      internalID: 2100643405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wood2_2
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 792
+        width: 177
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf5a3cdbd5fd394f927e1ab04c1a5a4
+      internalID: 1117726659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wood2_3
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 792
+        width: 195
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b8e86f25993ea489b9bd68f47b0c69
+      internalID: 548194515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 40ea460a28c1d964fb989a03028e57ad
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 602ff10e106c851429759ee1522ca993, type: 3}
+      name: _NormalMap
+    nameFileIdTable:
+      Wood2_0: -2803530347902776062
+      Wood2_1: 2100643405
+      Wood2_2: 1117726659
+      Wood2_3: 548194515
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -15,7 +15,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Bloom Effect
   - Ground
   - Wall
   - Slopes
@@ -42,33 +42,54 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: FAR FAR Background
+    uniqueID: 2689439245
+    locked: 0
   - name: Background
     uniqueID: 3998635299
     locked: 0
-  - name: PlatformBackground
-    uniqueID: 3622875525
+  - name: GLOW Background Top
+    uniqueID: 987218695
     locked: 0
-  - name: Decoration
-    uniqueID: 2220670979
+  - name: PlatformBackground Far Away
+    uniqueID: 3477222317
+    locked: 0
+  - name: PlatformBackground Away
+    uniqueID: 3335020857
+    locked: 0
+  - name: PlatformBackground Close
+    uniqueID: 1197868687
+    locked: 0
+  - name: PlatformBackground Very Close
+    uniqueID: 3637906815
+    locked: 0
+  - name: GLOW PlatformBackground Top
+    uniqueID: 4275088991
+    locked: 0
+  - name: Decoration Away
+    uniqueID: 3456811661
+    locked: 0
+  - name: Decoration Close
+    uniqueID: 4150046907
+    locked: 0
+  - name: Decoration Very Close
+    uniqueID: 1401462241
+    locked: 0
+  - name: GLOW Decoration Top
+    uniqueID: 2183813239
     locked: 0
   - name: Platform
     uniqueID: 717803725
     locked: 0
-  - name: Enemy
-    uniqueID: 3496792399
-    locked: 0
-  - name: DoorBehindPlayer
-    uniqueID: 2172570345
-    locked: 0
-  - name: Player
+  - name: Player-Enemy
     uniqueID: 1970303165
     locked: 0
-  - name: DoorFrontPlayer
-    uniqueID: 1218012271
-    locked: 0
-  - name: Foreground Decoration
+  - name: Foreground
     uniqueID: 1529557549
     locked: 0
-  - name: Far Foreground
-    uniqueID: 1733059045
+  - name: GLOW Foreground Top
+    uniqueID: 664827219
+    locked: 0
+  - name: FAR FAR Foreground
+    uniqueID: 20939413
     locked: 0

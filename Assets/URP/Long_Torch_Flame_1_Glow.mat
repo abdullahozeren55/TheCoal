@@ -37,15 +37,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _GlowTex:
-        m_Texture: {fileID: 2800000, guid: a13c25e083c37ff40b63c0968aa4f440, type: 3}
+        m_Texture: {fileID: 2800000, guid: e681f8bcd7ed85647b3c5ccf01c35d56, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GlowTex2:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: cf39c15d071ae3a418a9900a64111e9f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 242a9502007175546a54d0628dd2b361, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8c6a83df5e0082246b487f6a8c31857e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -63,6 +63,6 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _GlowColor: {r: 2.9960785, g: 0.66279596, b: 0, a: 0}
-    - _GlowColor2: {r: 0, g: 0, b: 0, a: 0}
+    - _GlowColor: {r: 95.87451, g: 4.788978, b: 0, a: 0}
+    - _GlowColor2: {r: 95.87451, g: 21.20947, b: 0, a: 0}
   m_BuildTextureStacks: []
