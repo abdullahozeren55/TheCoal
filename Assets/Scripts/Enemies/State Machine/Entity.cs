@@ -35,6 +35,7 @@ public class Entity : MonoBehaviour
     private float lastDamageTime;
 
     private Vector2 velocityWorkspace;
+    public Vector2 currentVelocity { get; private set; }
 
     protected bool isStunned;
     protected bool isDead;
@@ -56,11 +57,12 @@ public class Entity : MonoBehaviour
     public virtual void Update()
     {
         stateMachine.currentState.LogicUpdate();
+        currentVelocity = rb.velocity;
 
-        if(Time.time >= lastDamageTime + entityData.stunRecoveryTime)
+        /*if (Time.time >= lastDamageTime + entityData.stunRecoveryTime)
         {
             ResetStunResistance();
-        }
+        }*/
     }
 
     public virtual void FixedUpdate()
@@ -79,6 +81,13 @@ public class Entity : MonoBehaviour
         angle.Normalize();
         velocityWorkspace.Set(angle.x * velocity * direction, angle.y * velocity);
         rb.velocity = velocityWorkspace;
+    }
+
+    public void SetVelocityY(float velocity)
+    {
+        velocityWorkspace.Set(currentVelocity.x, velocity);
+        rb.velocity = velocityWorkspace;
+        currentVelocity = velocityWorkspace;
     }
 
     public virtual bool CheckWall()
@@ -118,7 +127,7 @@ public class Entity : MonoBehaviour
 
     public virtual bool CheckPlayerInMaxAgroRangeRun()
     {
-        return Physics2D.Raycast(playerCheck.position, -aliveGO.transform.right, entityData.maxAgroDistance/2f, entityData.whatIsPlayer);
+        return Physics2D.Raycast(playerCheck.position, -aliveGO.transform.right, entityData.maxAgroDistance / 2f, entityData.whatIsPlayer);
     }
 
     public virtual bool CheckPlayerInCloseRangeAction()
@@ -149,7 +158,7 @@ public class Entity : MonoBehaviour
 
         Instantiate(entityData.hitParticle, aliveGO.transform.position, Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)));
 
-        if(attackDetails.position.x > aliveGO.transform.position.x)
+        if (attackDetails.position.x > aliveGO.transform.position.x)
         {
             lastDamageDirection = -1;
         }
@@ -158,12 +167,12 @@ public class Entity : MonoBehaviour
             lastDamageDirection = 1;
         }
 
-        if(currentStunResistance <= 0)
+        if (currentStunResistance <= 0)
         {
             isStunned = true;
         }
 
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             isDead = true;
         }
@@ -177,11 +186,13 @@ public class Entity : MonoBehaviour
 
     public virtual void OnDrawGizmos()
     {
+        /*
         Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(Vector2.right * facingDirection * entityData.wallCheckDistance));
         Gizmos.DrawLine(ledgeCheck.position, ledgeCheck.position + (Vector3)(Vector2.down * entityData.ledgeCheckDistance));
 
         Gizmos.DrawWireSphere(playerCheck.position + (Vector3)(Vector2.right * entityData.closeRangeActionDistance), 0.2f);
         Gizmos.DrawWireSphere(playerCheck.position + (Vector3)(Vector2.right * entityData.minAgroDistance), 0.2f);
         Gizmos.DrawWireSphere(playerCheck.position + (Vector3)(Vector2.right * entityData.maxAgroDistance), 0.2f);
+        */
     }
 }

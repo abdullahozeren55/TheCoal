@@ -28,7 +28,7 @@ public class RunState : State
         base.DoChecks();
         isDetectingLedge = entity.CheckLedge();
         isDetectingWall = entity.CheckWall();
-        
+
         isDetectingLedgeRun = entity.CheckLedgeRun();
         isDetectingWallRun = entity.CheckWallRun();
 
@@ -46,7 +46,7 @@ public class RunState : State
         entity.Flip();
         isRunOver = false;
         entity.SetVelocity(stateData.runSpeed);
-        
+
     }
 
     public override void Exit()
@@ -58,10 +58,10 @@ public class RunState : State
     {
         base.LogicUpdate();
 
-        if(isDetectingWall || !isDetectingLedge || !isPlayerInMaxAgroRangeRun)
+        /*if(isDetectingWall || !isDetectingLedge || !isPlayerInMaxAgroRangeRun)
         {
             isRunOver = true;
-        }
+        }*/
     }
 
     public override void PhysicsUpdate()

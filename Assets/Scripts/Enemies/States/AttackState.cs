@@ -10,7 +10,7 @@ public class AttackState : State
     protected bool isPlayerInMinAgroRange;
     protected bool isPlayerInMaxAgroRange;
     protected bool performCloseRangeAction;
-    
+
     public AttackState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition) : base(entity, stateMachine, animBoolName)
     {
         this.attackPosition = attackPosition;
@@ -29,9 +29,9 @@ public class AttackState : State
     {
         base.Enter();
 
-        entity.atsm.attackState = this;
+        /*entity.atsm.attackState = this;
         isAnimationFinished = false;
-        entity.SetVelocity(0f);
+        entity.SetVelocity(0f);*/
     }
 
     public override void Exit()
