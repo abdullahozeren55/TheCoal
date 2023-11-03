@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerLandState : PlayerGroundedState
 {
-    
+
     public PlayerLandState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
 
@@ -18,6 +18,7 @@ public class PlayerLandState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
+        player.eyesAnim.SetBool("land", true);
     }
 
     public override void Exit()
@@ -29,22 +30,24 @@ public class PlayerLandState : PlayerGroundedState
     {
         base.LogicUpdate();
 
-        if(jumpInput && player.JumpState.CheckIfCanJump() && !playerData.isJumping)
+        if (jumpInput && player.JumpState.CheckIfCanJump() && !playerData.isJumping)
         {
             stateMachine.ChangeState(player.JumpState);
         }
-        else if(dashInput && player.DashState.CheckIfCanDash())
+        else if (dashInput && player.DashState.CheckIfCanDash())
         {
             stateMachine.ChangeState(player.DashState);
         }
-        else if(xInput != 0)
+        else if (xInput != 0)
         {
             stateMachine.ChangeState(player.MoveState);
         }
-        else if(isAnimationFinished)
+        else if (isAnimationFinished)
         {
             stateMachine.ChangeState(player.IdleState);
         }
+        player.Anim.SetFloat("yVelocity", player.CurrentVelocity.y);
+        player.eyesAnim.SetFloat("yVelocity", player.CurrentVelocity.y);
     }
 
     public override void PhysicsUpdate()

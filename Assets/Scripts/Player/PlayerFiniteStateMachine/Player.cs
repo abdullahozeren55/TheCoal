@@ -180,14 +180,18 @@ public class Player : MonoBehaviour
     private void Flip()
     {
         FacingDirection *= -1;
-        transform.Rotate(0.0f, 180.0f, 0.0f);
+        //transform.Rotate(0.0f, 180.0f, 0.0f);
+        transform.localScale = new Vector3(transform.localScale.x * -1f, 1f, 1f);
     }
 
     public void SetAllEyeBoolsFalse()
     {
         foreach (AnimatorControllerParameter parameter in eyesAnim.parameters)
         {
-            eyesAnim.SetBool(parameter.name, false);
+            if (parameter.type == AnimatorControllerParameterType.Bool)
+            {
+                eyesAnim.SetBool(parameter.name, false);
+            }
         }
     }
 

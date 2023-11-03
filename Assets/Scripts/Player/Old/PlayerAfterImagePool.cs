@@ -9,7 +9,7 @@ public class PlayerAfterImagePool : MonoBehaviour
 
     private Queue<GameObject> availableObjects = new Queue<GameObject>();
 
-    public static PlayerAfterImagePool Instance {get; private set;}
+    public static PlayerAfterImagePool Instance { get; private set; }
 
     private void Awake()
     {
@@ -35,7 +35,7 @@ public class PlayerAfterImagePool : MonoBehaviour
 
     public GameObject GetFromPool()
     {
-        if(availableObjects.Count == 0)
+        if (availableObjects.Count == 0)
         {
             GrowPool();
         }

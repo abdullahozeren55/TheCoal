@@ -30,6 +30,7 @@ public class PlayerInAirState : PlayerState
     public override void Enter()
     {
         base.Enter();
+        player.eyesAnim.SetBool("inAir", true);
 
     }
 
@@ -90,7 +91,9 @@ public class PlayerInAirState : PlayerState
             player.CheckIfShouldFlip(xInput);
             player.SetVelocityX(playerData.movementVelocity * xInput);
             player.Anim.SetFloat("yVelocity", player.CurrentVelocity.y);
+            player.eyesAnim.SetFloat("yVelocity", player.CurrentVelocity.y);
             player.Anim.SetFloat("xVelocity", Mathf.Abs(xInput));
+            player.eyesAnim.SetFloat("xVelocity", Mathf.Abs(xInput));
 
         }
     }
