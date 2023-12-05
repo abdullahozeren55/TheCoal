@@ -15,7 +15,7 @@ MonoBehaviour:
   movementVelocity: 15
   canMove: 1
   startMovingFinished: 0
-  startMovingHalfFinished: 1
+  startMovingHalfFinished: 0
   stopMovingFinished: 0
   stopMovingHalfFinished: 0
   jumpVelocity: 15
@@ -30,7 +30,7 @@ MonoBehaviour:
   dashEndYMultiplier: 1.5
   distanceBetweenAfterImages: 1
   canDash: 1
-  lastDashTime: 150.89082
+  lastDashTime: 21.753185
   isAttacking: 0
   attackTransform: {fileID: 0}
   attackRadius: 0
@@ -47,9 +47,9 @@ MonoBehaviour:
   wallJumpTime: 0.5
   wallJumpAngle: {x: 1.7, y: 2}
   wallJumpCombo: 0
-  groundCheckHeight: 1.35
+  groundCheckHeight: 1.75
   groundCheckWidth: 0.7
   wallCheckDistance: 0.5
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 5120
+    m_Bits: 70656

@@ -30,6 +30,7 @@ public class PlayerData : ScriptableObject
     public float dashTime = 0.3f;
     public float dashVelocity = 30f;
     public float dashEndYMultiplier = 0.2f;
+
     public float distanceBetweenAfterImages = 0.5f;
     public bool canDash;
     public float lastDashTime = 0f;

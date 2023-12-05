@@ -34,6 +34,8 @@ public class Player : MonoBehaviour
     public PlayerInputHandler InputHandler { get; private set; }
     public Rigidbody2D RB { get; private set; }
 
+    public SpriteRenderer SR { get; private set; }
+
     public GameObject eyes;
 
     public GameObject EnvGround;
@@ -47,6 +49,10 @@ public class Player : MonoBehaviour
     private Transform groundCheck;
     [SerializeField]
     private Transform wallCheck;
+
+    [SerializeField] private GameObject shockWavePrefab;
+
+    [SerializeField] private GameObject coalAfterImagePool;
 
     #endregion
 
@@ -87,6 +93,7 @@ public class Player : MonoBehaviour
         eyesAnim = eyes.GetComponent<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
         RB = GetComponent<Rigidbody2D>();
+        SR = GetComponent<SpriteRenderer>();
 
         FacingDirection = 1;
 
@@ -177,11 +184,17 @@ public class Player : MonoBehaviour
 
     private void Attack2AnimationActionTrigger() => SecondaryAttackState.AnimationActionTrigger();
 
+    public void InstantiateShockWave()
+    {
+        Instantiate(shockWavePrefab, transform.position, Quaternion.identity);
+    }
+
     private void Flip()
     {
         FacingDirection *= -1;
         //transform.Rotate(0.0f, 180.0f, 0.0f);
         transform.localScale = new Vector3(transform.localScale.x * -1f, 1f, 1f);
+        coalAfterImagePool.transform.localScale = new Vector3(transform.localScale.x, 1f, 1f);
     }
 
     public void SetAllEyeBoolsFalse()

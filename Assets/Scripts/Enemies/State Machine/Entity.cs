@@ -181,7 +181,8 @@ public class Entity : MonoBehaviour
     public virtual void Flip()
     {
         facingDirection *= -1;
-        aliveGO.transform.Rotate(0f, 180f, 0f);
+        //aliveGO.transform.Rotate(0f, 180f, 0f);
+        aliveGO.transform.localScale = new Vector3(transform.localScale.x * -1f, 1f, 1f);
     }
 
     public virtual void OnDrawGizmos()

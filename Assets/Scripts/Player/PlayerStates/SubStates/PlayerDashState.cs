@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerDashState : PlayerAbilityState
 {
-
     private Vector2 lastAIPos;
     private bool isTouchingWall;
     protected int xInput;
@@ -28,6 +27,7 @@ public class PlayerDashState : PlayerAbilityState
         player.InputHandler.UseDashInput();
         playerData.canMove = false;
         player.eyesAnim.SetBool("moveRun", true);
+        //player.InstantiateShockWave();
     }
 
     public override void Exit()
@@ -50,7 +50,7 @@ public class PlayerDashState : PlayerAbilityState
 
         if (!isAbilityDone)
         {
-            CheckIfShouldPlaceAfterImage();
+            TryPlaceAfterImage();
         }
 
         if ((Time.time >= startTime + playerData.dashTime) || isTouchingWall)
@@ -66,19 +66,18 @@ public class PlayerDashState : PlayerAbilityState
         base.PhysicsUpdate();
     }
 
-    private void CheckIfShouldPlaceAfterImage()
+    private void PlaceAfterImage()
     {
-        if (Vector2.Distance(player.transform.position, lastAIPos) >= playerData.distanceBetweenAfterImages)
+        lastAIPos = player.transform.position;
+        CoalAfterImagePool.Instance.GetFromPool();
+    }
+
+    private void TryPlaceAfterImage()
+    {
+        if(Vector2.Distance(player.transform.position, lastAIPos) >= playerData.distanceBetweenAfterImages)
         {
             PlaceAfterImage();
         }
-    }
-
-    private void PlaceAfterImage()
-    {
-        var image = PlayerAfterImagePool.Instance.GetFromPool();
-        image.transform.position = lastAIPos; //TODO: tüdüdüdü
-        lastAIPos = player.transform.position;
     }
 
     public bool CheckIfCanDash()
