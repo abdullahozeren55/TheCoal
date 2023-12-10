@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FiniteStateMachine
 {
-    public State currentState {get; private set; }
+    public State currentState { get; private set; }
 
     public void Initialize(State startingState)
     {
@@ -18,4 +18,5 @@ public class FiniteStateMachine
         currentState = newState;
         currentState.Enter();
     }
+
 }

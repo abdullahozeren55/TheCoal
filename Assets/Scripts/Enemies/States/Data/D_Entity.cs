@@ -5,26 +5,33 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "newEntityData", menuName = "Data/Entity Data/Base Data")]
 public class D_Entity : ScriptableObject
 {
-
     public float maxHealth = 30f;
-    public float jumpVelocity = 15f;
-    public float damageHopSpeed = 3f;
 
-    public float wallCheckDistance = 0.2f;
-    public float ledgeCheckDistance = 0.4f;
-    public float groundCheckRadius = 0.3f;
+    public float maxStunResistance = 100f;
 
-    public float minAgroDistance = 3f;
+    public float minStunTime = 0.2f;
+
+    public float timeBeforeStunResStartsRegain = 1f;
+
+    public float stunResRegCooldown = 0.2f;
+    public float minStunResistanceRegain = 3f;
+    public float maxStunResistanceRegain = 15f;
+
+    public float damageHopVelocity = 3f;
+
+    public Vector2 damageHopAngle;
+
+    public float wallCheckDistance = 0.3f;
+    public float groundCheckDistance = 0.3f;
+    public float minAgroDistance = 1f;
     public float maxAgroDistance = 4f;
-
-    public float stunResistance = 3f;
-    public float stunRecoveryTime = 2f;
-
     public float closeRangeActionDistance = 1f;
 
     public GameObject hitParticle;
 
-    public LayerMask whatIsGround;
     public LayerMask whatIsWall;
+    public LayerMask whatIsLedge;
     public LayerMask whatIsPlayer;
+
+    public LayerMask whatIsGround;
 }

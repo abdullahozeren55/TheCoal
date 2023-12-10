@@ -8,11 +8,12 @@ public class ChargeState : State
     protected D_ChargeState stateData;
 
     protected bool isPlayerInMinAgroRange;
+
+    protected bool isPlayerInMaxAgroRange;
     protected bool isDetectingLedge;
     protected bool isDetectingWall;
     protected bool isChargeTimeOver;
     protected bool performCloseRangeAction;
-
     public ChargeState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_ChargeState stateData) : base(entity, stateMachine, animBoolName)
     {
         this.stateData = stateData;
@@ -23,9 +24,9 @@ public class ChargeState : State
         base.DoChecks();
 
         isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
+        isPlayerInMaxAgroRange = entity.CheckPlayerInMaxAgroRange();
         isDetectingLedge = entity.CheckLedge();
         isDetectingWall = entity.CheckWall();
-
         performCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
     }
 
@@ -33,8 +34,9 @@ public class ChargeState : State
     {
         base.Enter();
 
+        entity.SetVelocityX(stateData.chargeSpeed);
+
         isChargeTimeOver = false;
-        entity.SetVelocity(stateData.chargeSpeed);
     }
 
     public override void Exit()

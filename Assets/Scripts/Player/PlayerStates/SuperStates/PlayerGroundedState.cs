@@ -30,13 +30,10 @@ public class PlayerGroundedState : PlayerState
         player.JumpState.ResetAmountOfJumpsLeft();
         playerData.isJumping = false;
         playerData.wallJumpCombo = false;
-
-        player.EnvGround.GetComponent<Rigidbody2D>().sharedMaterial = player.frictionMaterial;
     }
 
     public override void Exit()
     {
-        player.EnvGround.GetComponent<Rigidbody2D>().sharedMaterial = new PhysicsMaterial2D() { friction = 0f, bounciness = 0f };
         base.Exit();
     }
 

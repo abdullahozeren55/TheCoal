@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementVelocity: 15
   canMove: 1
-  startMovingFinished: 0
-  startMovingHalfFinished: 0
+  startMovingFinished: 1
+  startMovingHalfFinished: 1
   stopMovingFinished: 0
   stopMovingHalfFinished: 0
+  acceleration: 1
+  decceleration: -1
+  velPower: 1.3
   jumpVelocity: 15
   maxAmountOfJumps: 9999
   amountOfJumpsLeft: 9999
@@ -30,7 +33,7 @@ MonoBehaviour:
   dashEndYMultiplier: 1.5
   distanceBetweenAfterImages: 1
   canDash: 1
-  lastDashTime: 21.753185
+  lastDashTime: 0
   isAttacking: 0
   attackTransform: {fileID: 0}
   attackRadius: 0

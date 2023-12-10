@@ -36,10 +36,9 @@ public class Player : MonoBehaviour
 
     public SpriteRenderer SR { get; private set; }
 
-    public GameObject eyes;
+    public PlayerInventory Inventory { get; private set; }
 
-    public GameObject EnvGround;
-    public PhysicsMaterial2D frictionMaterial;
+    public GameObject eyes;
 
     #endregion
 
@@ -82,8 +81,8 @@ public class Player : MonoBehaviour
         DashState = new PlayerDashState(this, StateMachine, playerData, "move");
         WallSlideState = new PlayerWallSlideState(this, StateMachine, playerData, "wallSlide");
         WallJumpState = new PlayerWallJumpState(this, StateMachine, playerData, "inAir");
-        PrimaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack1");
-        SecondaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack2");
+        PrimaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
+        SecondaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
 
     }
 
@@ -94,8 +93,11 @@ public class Player : MonoBehaviour
         InputHandler = GetComponent<PlayerInputHandler>();
         RB = GetComponent<Rigidbody2D>();
         SR = GetComponent<SpriteRenderer>();
+        Inventory = GetComponent<PlayerInventory>();
 
         FacingDirection = 1;
+
+        PrimaryAttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.primary]);
 
         StateMachine.Initialize(IdleState);
 
@@ -143,6 +145,11 @@ public class Player : MonoBehaviour
         CurrentVelocity = workspace;
     }
 
+    public void SetVelocityXWithAcceleration(float velocity)
+    {
+        RB.AddForce(velocity * Vector2.right);
+    }
+
     #endregion
 
     #region Check Functions
@@ -179,10 +186,6 @@ public class Player : MonoBehaviour
     private void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();
 
     private void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();
-
-    private void Attack1AnimationActionTrigger() => PrimaryAttackState.AnimationActionTrigger();
-
-    private void Attack2AnimationActionTrigger() => SecondaryAttackState.AnimationActionTrigger();
 
     public void InstantiateShockWave()
     {

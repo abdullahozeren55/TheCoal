@@ -5,17 +5,14 @@ using UnityEngine;
 public class PlayerDetectedState : State
 {
 
-    protected D_PlayerDetected stateData;
-
+    protected D_PlayerDetectedState stateData;
     protected bool isPlayerInMinAgroRange;
     protected bool isPlayerInMaxAgroRange;
     protected bool performLongRangeAction;
     protected bool performCloseRangeAction;
-    protected bool isDetectingLedge;
-    protected bool isDetectingLedgeRun;
-    protected bool isDetectingWallRun;
 
-    public PlayerDetectedState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_PlayerDetected stateData) : base(entity, stateMachine, animBoolName)
+    protected bool isGrounded;
+    public PlayerDetectedState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_PlayerDetectedState stateData) : base(entity, stateMachine, animBoolName)
     {
         this.stateData = stateData;
     }
@@ -23,21 +20,19 @@ public class PlayerDetectedState : State
     public override void DoChecks()
     {
         base.DoChecks();
-
         isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
         isPlayerInMaxAgroRange = entity.CheckPlayerInMaxAgroRange();
-        isDetectingLedge = entity.CheckLedge();
+        isGrounded = entity.CheckGround();
         performCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
-
-        isDetectingLedgeRun = entity.CheckLedgeRun();
-        isDetectingWallRun = entity.CheckWallRun();
     }
 
     public override void Enter()
     {
         base.Enter();
+
+        entity.SetVelocityX(0f);
+
         performLongRangeAction = false;
-        entity.SetVelocity(0f);
     }
 
     public override void Exit()
@@ -48,7 +43,7 @@ public class PlayerDetectedState : State
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-
+        
         if(Time.time >= startTime + stateData.longRangeActionTime)
         {
             performLongRangeAction = true;

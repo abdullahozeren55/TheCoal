@@ -9,7 +9,6 @@ public class AttackState : State
     protected bool isAnimationFinished;
     protected bool isPlayerInMinAgroRange;
     protected bool isPlayerInMaxAgroRange;
-    protected bool performCloseRangeAction;
 
     public AttackState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition) : base(entity, stateMachine, animBoolName)
     {
@@ -19,19 +18,17 @@ public class AttackState : State
     public override void DoChecks()
     {
         base.DoChecks();
-
         isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
         isPlayerInMaxAgroRange = entity.CheckPlayerInMaxAgroRange();
-        performCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
     }
 
     public override void Enter()
     {
         base.Enter();
 
-        /*entity.atsm.attackState = this;
+        entity.atsm.attackState = this;
+
         isAnimationFinished = false;
-        entity.SetVelocity(0f);*/
     }
 
     public override void Exit()
@@ -53,7 +50,7 @@ public class AttackState : State
     {
 
     }
-
+    
     public virtual void FinishAttack()
     {
         isAnimationFinished = true;

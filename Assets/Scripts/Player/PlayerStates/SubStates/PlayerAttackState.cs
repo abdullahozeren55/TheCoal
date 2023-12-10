@@ -4,43 +4,33 @@ using UnityEngine;
 
 public class PlayerAttackState : PlayerAbilityState
 {
+
+    private Weapon weapon;
     public PlayerAttackState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
-    }
-
-    public override void DoChecks()
-    {
-        base.DoChecks();
     }
 
     public override void Enter()
     {
         base.Enter();
 
-        playerData.isAttacking = true;
+        weapon.EnterWeapon();
     }
 
     public override void Exit()
     {
         base.Exit();
 
-        playerData.isAttacking = false;
+        weapon.ExitWeapon();
     }
 
-    public override void LogicUpdate()
+    public void SetWeapon(Weapon weapon)
     {
-        base.LogicUpdate();
+        this.weapon = weapon;
+        weapon.InitializeWeapon(this);
     }
 
-    public override void PhysicsUpdate()
-    {
-        base.PhysicsUpdate();
-    }
-
-    public virtual void AnimationActionTrigger()
-    {
-        
-    }
+    #region Animation Triggers
 
     public override void AnimationFinishTrigger()
     {
@@ -48,5 +38,8 @@ public class PlayerAttackState : PlayerAbilityState
 
         isAbilityDone = true;
     }
+
+    #endregion
+
 
 }

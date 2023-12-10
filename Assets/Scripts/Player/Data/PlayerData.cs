@@ -17,6 +17,12 @@ public class PlayerData : ScriptableObject
 
     public bool stopMovingHalfFinished;
 
+    //public float acceleration = 1f;
+
+    //public float decceleration = -1f;
+
+    //public float velPower = 1.1f;
+
     [Header("Jump State")]
     public float jumpVelocity = 15f;
     public int maxAmountOfJumps = 1;

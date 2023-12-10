@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class MeleeAttackState : AttackState
 {
-    protected D_MeleeAttack stateData;
+    protected D_MeleeAttackState stateData;
 
     protected AttackDetails attackDetails;
 
-    public MeleeAttackState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition, D_MeleeAttack stateData) : base(entity, stateMachine, animBoolName, attackPosition)
+    public MeleeAttackState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition, D_MeleeAttackState stateData) : base(entity, stateMachine, animBoolName, attackPosition)
     {
         this.stateData = stateData;
     }
@@ -21,18 +21,15 @@ public class MeleeAttackState : AttackState
     public override void Enter()
     {
         base.Enter();
-        attackDetails.damageAmount = stateData.attackDamage;
+
+        attackDetails.hpDamageAmount = stateData.hpAttackDamage;
+        attackDetails.stunResDamageAmount = stateData.stunResAttackDamage;
         attackDetails.position = entity.aliveGO.transform.position;
     }
 
     public override void Exit()
     {
         base.Exit();
-    }
-
-    public override void FinishAttack()
-    {
-        base.FinishAttack();
     }
 
     public override void LogicUpdate()
@@ -55,5 +52,11 @@ public class MeleeAttackState : AttackState
         {
             collider.transform.SendMessage("Damage", attackDetails);
         }
+
+    }
+    
+    public override void FinishAttack()
+    {
+        base.FinishAttack();
     }
 }
