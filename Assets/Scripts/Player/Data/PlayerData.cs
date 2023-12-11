@@ -57,11 +57,4 @@ public class PlayerData : ScriptableObject
     public Vector2 wallJumpAngle = new Vector2(1, 2);
     public bool wallJumpCombo;
 
-    [Header("Check Variables")]
-    //public float groundCheckRadius = 0.3f;
-    public float groundCheckHeight = 1f;
-    public float groundCheckWidth = 0.5f;
-    public float wallCheckDistance = 0.5f;
-    public LayerMask whatIsGround;
-
 }

@@ -18,8 +18,8 @@ public class Rat_MeleeAttackState : MeleeAttackState
     public override void Enter()
     {
         base.Enter();
-        enemy.SetVelocityX(5f);
-        enemy.SetVelocityY(10f);
+        core.Movement.SetVelocityX(5f * core.Movement.FacingDirection);
+        core.Movement.SetVelocityY(10f);
     }
 
     public override void Exit()

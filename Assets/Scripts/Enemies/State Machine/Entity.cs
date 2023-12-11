@@ -9,12 +9,10 @@ public class Entity : MonoBehaviour
     public FiniteStateMachine stateMachine;
 
     public D_Entity entityData;
-
-    public int facingDirection { get; private set; }
-    public Rigidbody2D rb { get; private set; }
     public Animator anim { get; private set; }
-    public GameObject aliveGO { get; private set; }
     public AnimationToStateMachine atsm { get; private set; }
+
+    public Core Core { get; private set; }
 
     [SerializeField]
     private Transform wallCheck;
@@ -38,18 +36,16 @@ public class Entity : MonoBehaviour
     public bool isStunned;
     public bool isDead;
 
-    public virtual void Start()
+    public virtual void Awake()
     {
-        facingDirection = 1;
+
+        Core = GetComponentInChildren<Core>();
         currentHealth = entityData.maxHealth;
         currentStunResistance = entityData.maxStunResistance;
         isStunned = false;
         isDead = false;
-
-        aliveGO = transform.Find("Alive").gameObject;
-        rb = aliveGO.GetComponent<Rigidbody2D>();
-        anim = aliveGO.GetComponent<Animator>();
-        atsm = aliveGO.GetComponent<AnimationToStateMachine>();
+        anim = GetComponent<Animator>();
+        atsm = GetComponent<AnimationToStateMachine>();
 
 
         stateMachine = new FiniteStateMachine();
@@ -70,52 +66,19 @@ public class Entity : MonoBehaviour
         stateMachine.currentState.PhysicsUpdate();
     }
 
-    public virtual void SetVelocityX(float velocity)
-    {
-        velocityWorkspace.Set(facingDirection * velocity, rb.velocity.y);
-        rb.velocity = velocityWorkspace;
-    }
-
-    public virtual void SetVelocityY(float velocity)
-    {
-        velocityWorkspace.Set(rb.velocity.x, velocity);
-        rb.velocity = velocityWorkspace;
-    }
-
-    public void SetVelocity(float velocity, Vector2 angle, int direction)
-    {
-        angle.Normalize();
-        velocityWorkspace.Set(angle.x * velocity * direction, angle.y * velocity);
-        rb.velocity = velocityWorkspace;
-    }
-
-    public virtual bool CheckWall()
-    {
-        return Physics2D.Raycast(wallCheck.position, aliveGO.transform.right * facingDirection, entityData.wallCheckDistance, entityData.whatIsWall);
-    }
-    public virtual bool CheckLedge()
-    {
-        return Physics2D.Raycast(groundCheck.position, Vector2.down, entityData.groundCheckDistance, entityData.whatIsLedge);
-    }
-
-    public virtual bool CheckGround()
-    {
-        return Physics2D.Raycast(groundCheck.position, Vector2.down, entityData.groundCheckDistance, entityData.whatIsGround);
-    }
-
     public virtual bool CheckPlayerInMinAgroRange()
     {
-        return Physics2D.Raycast(playerCheck.position, aliveGO.transform.right * facingDirection, entityData.minAgroDistance, entityData.whatIsPlayer);
+        return Physics2D.Raycast(playerCheck.position, transform.right * Core.Movement.FacingDirection, entityData.minAgroDistance, entityData.whatIsPlayer);
     }
 
     public virtual bool CheckPlayerInMaxAgroRange()
     {
-        return Physics2D.Raycast(playerCheck.position, aliveGO.transform.right * facingDirection, entityData.maxAgroDistance, entityData.whatIsPlayer);
+        return Physics2D.Raycast(playerCheck.position, transform.right * Core.Movement.FacingDirection, entityData.maxAgroDistance, entityData.whatIsPlayer);
     }
 
     public virtual bool CheckPlayerInCloseRangeAction()
     {
-        return Physics2D.Raycast(playerCheck.position, aliveGO.transform.right * facingDirection, entityData.closeRangeActionDistance, entityData.whatIsPlayer);
+        return Physics2D.Raycast(playerCheck.position, transform.right * Core.Movement.FacingDirection, entityData.closeRangeActionDistance, entityData.whatIsPlayer);
     }
 
     public virtual void Damage(AttackDetails attackDetails)
@@ -126,7 +89,7 @@ public class Entity : MonoBehaviour
         currentHealth -= attackDetails.hpDamageAmount;
         currentStunResistance -= attackDetails.stunResDamageAmount;
 
-        if(attackDetails.position.x > aliveGO.transform.position.x)
+        if(attackDetails.position.x > transform.position.x)
         {
             lastDamageDirection = -1;
         }
@@ -134,8 +97,8 @@ public class Entity : MonoBehaviour
         {
             lastDamageDirection = 1;
         }
-        Instantiate(entityData.hitParticle, aliveGO.transform.position, Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)));
-        SetVelocity(entityData.damageHopVelocity, entityData.damageHopAngle, lastDamageDirection);
+        Instantiate(entityData.hitParticle, transform.position, Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)));
+        //TODO: SetVelocity(entityData.damageHopVelocity, entityData.damageHopAngle, lastDamageDirection);
 
         if(currentHealth <= 0)
         {
@@ -170,12 +133,6 @@ public class Entity : MonoBehaviour
     private void SetRandomStunResistanceRegeneration()
     {
         stunResRegAmount = Random.Range(entityData.minStunResistanceRegain, entityData.maxStunResistanceRegain); 
-    }
-
-    public virtual void Flip()
-    {
-        facingDirection *= -1;
-        aliveGO.transform.localScale = new Vector3(aliveGO.transform.localScale.x * -1f, 1f, 1f);
     }
 
     public virtual void OnDrawGizmos()

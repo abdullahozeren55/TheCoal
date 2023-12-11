@@ -16,7 +16,7 @@ public class Rat_PlayerDetectedState : PlayerDetectedState
         base.Enter();
         if(isGrounded)
         {
-            enemy.SetVelocityY(6f);
+            core.Movement.SetVelocityY(6f);
         }
         
     }

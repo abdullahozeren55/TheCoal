@@ -18,7 +18,7 @@ public class PlayerStopMovingState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
-        player.SetVelocityX(0f);
+        core.Movement.SetVelocityX(0f);
         player.eyesAnim.SetBool("moveStopRunning", true);
 
     }

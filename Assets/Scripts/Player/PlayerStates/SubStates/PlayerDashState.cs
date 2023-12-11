@@ -15,14 +15,14 @@ public class PlayerDashState : PlayerAbilityState
     public override void DoChecks()
     {
         base.DoChecks();
-        isTouchingWall = player.CheckIfTouchingWall();
+        isTouchingWall = core.CollisionSenses.WallFront;
     }
 
     public override void Enter()
     {
         base.Enter();
         PlaceAfterImage();
-        player.SetVelocityX(playerData.dashVelocity * player.FacingDirection);
+        core.Movement.SetVelocityX(playerData.dashVelocity * core.Movement.FacingDirection);
         playerData.canDash = false;
         player.InputHandler.UseDashInput();
         playerData.canMove = false;
@@ -35,9 +35,9 @@ public class PlayerDashState : PlayerAbilityState
         base.Exit();
         ResetCanDash();
 
-        if (player.CurrentVelocity.y > 0)
+        if (core.Movement.CurrentVelocity.y > 0)
         {
-            player.SetVelocityY(player.CurrentVelocity.y * playerData.dashEndYMultiplier);
+            core.Movement.SetVelocityY(core.Movement.CurrentVelocity.y * playerData.dashEndYMultiplier);
         }
         playerData.canMove = true;
     }

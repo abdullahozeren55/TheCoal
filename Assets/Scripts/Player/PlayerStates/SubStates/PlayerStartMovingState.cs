@@ -34,8 +34,6 @@ public class PlayerStartMovingState : PlayerGroundedState
     {
         base.LogicUpdate();
 
-        Debug.Log(player.RB.velocity.x);
-
         if (xInput == 0)
         {
             if (!playerData.startMovingHalfFinished)
@@ -51,14 +49,14 @@ public class PlayerStartMovingState : PlayerGroundedState
         else if (playerData.canMove && !playerData.startMovingFinished)
         {
             
-            player.CheckIfShouldFlip(xInput);
-            player.SetVelocityX(playerData.movementVelocity * xInput);
+            core.Movement.CheckIfShouldFlip(xInput);
+            core.Movement.SetVelocityX(playerData.movementVelocity * xInput);
 
             //float targetSpeed = xInput * playerData.movementVelocity;
             //float speedDif = targetSpeed - player.RB.velocity.x;
             //float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? playerData.acceleration : playerData.decceleration;
             //float movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, playerData.velPower) * Mathf.Sign(speedDif);
-            //player.SetVelocityXWithAcceleration(movement);
+            //core.Movement.SetVelocityXWithAcceleration(movement);
         }
         else if (playerData.startMovingFinished )
         {

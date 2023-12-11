@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
 
     #region Components
 
+    public Core Core { get; private set; }
     public Animator Anim { get; private set; }
 
     public Animator eyesAnim { get; private set; }
@@ -42,12 +43,7 @@ public class Player : MonoBehaviour
 
     #endregion
 
-    #region Check Transforms
-
-    [SerializeField]
-    private Transform groundCheck;
-    [SerializeField]
-    private Transform wallCheck;
+    #region Prefabs
 
     [SerializeField] private GameObject shockWavePrefab;
 
@@ -55,20 +51,13 @@ public class Player : MonoBehaviour
 
     #endregion
 
-    #region Other Variables
-
-    public Vector2 CurrentVelocity { get; private set; }
-    public int FacingDirection { get; private set; }
-
-
-    private Vector2 workspace;
-
-    #endregion
-
     #region Unity Callback Functions
 
     private void Awake()
     {
+
+        Core = GetComponentInChildren<Core>();
+
         StateMachine = new PlayerStateMachine();
 
         IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle");
@@ -95,8 +84,6 @@ public class Player : MonoBehaviour
         SR = GetComponent<SpriteRenderer>();
         Inventory = GetComponent<PlayerInventory>();
 
-        FacingDirection = 1;
-
         PrimaryAttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.primary]);
 
         StateMachine.Initialize(IdleState);
@@ -110,7 +97,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        CurrentVelocity = RB.velocity;
+        Core.LogicUpdate();
         StateMachine.CurrentState.LogicUpdate();
     }
 
@@ -120,67 +107,6 @@ public class Player : MonoBehaviour
     }
 
     #endregion
-
-    #region Set Functions
-
-    public void SetVelocity(float velocity, Vector2 angle, int direction)
-    {
-        angle.Normalize();
-        workspace.Set(angle.x * velocity * direction, angle.y * velocity);
-        RB.velocity = workspace;
-        CurrentVelocity = workspace;
-    }
-
-    public void SetVelocityX(float velocity)
-    {
-        workspace.Set(velocity, CurrentVelocity.y);
-        RB.velocity = workspace;
-        CurrentVelocity = workspace;
-    }
-
-    public void SetVelocityY(float velocity)
-    {
-        workspace.Set(CurrentVelocity.x, velocity);
-        RB.velocity = workspace;
-        CurrentVelocity = workspace;
-    }
-
-    public void SetVelocityXWithAcceleration(float velocity)
-    {
-        RB.AddForce(velocity * Vector2.right);
-    }
-
-    #endregion
-
-    #region Check Functions
-
-    public bool CheckIfGrounded()
-    {
-        return Physics2D.OverlapBox(groundCheck.position, new Vector2(playerData.groundCheckWidth, playerData.groundCheckHeight), 0f, playerData.whatIsGround);
-        //return Physics2D.OverlapCircle(groundCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
-    }
-
-    public bool CheckIfTouchingWall()
-    {
-        return Physics2D.Raycast(wallCheck.position, Vector2.right * FacingDirection, playerData.wallCheckDistance, playerData.whatIsWall);
-    }
-
-    public bool CheckIfTouchingWallBack()
-    {
-        return Physics2D.Raycast(wallCheck.position, Vector2.right * -FacingDirection, playerData.wallCheckDistance, playerData.whatIsWall);
-    }
-
-
-    public void CheckIfShouldFlip(int xInput)
-    {
-        if (xInput != 0 && xInput != FacingDirection)
-        {
-            Flip();
-        }
-    }
-
-    #endregion
-
     #region Other Functions
 
     private void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();
@@ -190,14 +116,6 @@ public class Player : MonoBehaviour
     public void InstantiateShockWave()
     {
         Instantiate(shockWavePrefab, transform.position, Quaternion.identity);
-    }
-
-    private void Flip()
-    {
-        FacingDirection *= -1;
-        //transform.Rotate(0.0f, 180.0f, 0.0f);
-        transform.localScale = new Vector3(transform.localScale.x * -1f, 1f, 1f);
-        coalAfterImagePool.transform.localScale = new Vector3(transform.localScale.x, 1f, 1f);
     }
 
     public void SetAllEyeBoolsFalse()

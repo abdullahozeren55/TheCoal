@@ -26,7 +26,7 @@ public class IdleState : State
     public override void Enter()
     {
         base.Enter();
-        entity.SetVelocityX(0f);
+        core.Movement.SetVelocityZero();
         isIdleTimeOver = false;
         SetRandomIdleTime();
     }
@@ -37,7 +37,7 @@ public class IdleState : State
 
         if(flipAfterIdle)
         {
-            entity.Flip();
+            core.Movement.Flip();
         }
     }
 

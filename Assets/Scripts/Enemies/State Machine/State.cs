@@ -7,6 +7,8 @@ public class State
     protected FiniteStateMachine stateMachine;
     protected Entity entity;
 
+    protected Core core;
+
     protected float startTime;
 
     protected string animBoolName;
@@ -16,6 +18,7 @@ public class State
         this.entity = entity;
         this.stateMachine = stateMachine;
         this.animBoolName = animBoolName;
+        core = entity.Core;
     }
 
     public virtual void DoChecks()

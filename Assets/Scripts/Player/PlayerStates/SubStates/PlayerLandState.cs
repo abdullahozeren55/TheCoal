@@ -46,8 +46,8 @@ public class PlayerLandState : PlayerGroundedState
         {
             stateMachine.ChangeState(player.IdleState);
         }
-        player.Anim.SetFloat("yVelocity", player.CurrentVelocity.y);
-        player.eyesAnim.SetFloat("yVelocity", player.CurrentVelocity.y);
+        player.Anim.SetFloat("yVelocity", core.Movement.CurrentVelocity.y);
+        player.eyesAnim.SetFloat("yVelocity", core.Movement.CurrentVelocity.y);
     }
 
     public override void PhysicsUpdate()

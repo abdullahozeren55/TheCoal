@@ -24,7 +24,7 @@ public class MeleeAttackState : AttackState
 
         attackDetails.hpDamageAmount = stateData.hpAttackDamage;
         attackDetails.stunResDamageAmount = stateData.stunResAttackDamage;
-        attackDetails.position = entity.aliveGO.transform.position;
+        attackDetails.position = entity.transform.position;
     }
 
     public override void Exit()
