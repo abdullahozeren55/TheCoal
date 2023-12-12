@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - CoalAfterImagePool
+  - ParticleContainer
   layers:
   - Default
   - TransparentFX
