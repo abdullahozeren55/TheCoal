@@ -14,10 +14,6 @@ public class Rat : Entity
 
     public Rat_MeleeAttackState meleeAttackState { get; private set; }
 
-    public Rat_StunState stunState { get; private set; }
-
-    public Rat_DeadState deadState { get; private set; }
-
     [SerializeField]
     private D_IdleState idleStateData;
     [SerializeField]
@@ -28,10 +24,6 @@ public class Rat : Entity
     private D_ChargeState chargeStateData;
     [SerializeField]
     private D_MeleeAttackState meleeAttackStateData;
-    [SerializeField]
-    private D_StunState stunStateData;
-    [SerializeField]
-    private D_DeadState deadStateData;
 
     [SerializeField]
     private Transform meleeAttackPosition;
@@ -45,8 +37,6 @@ public class Rat : Entity
         playerDetectedState = new Rat_PlayerDetectedState(this, stateMachine, "playerDetected", playerDetectedStateData, this);
         chargeState = new Rat_ChargeState(this, stateMachine, "charge", chargeStateData, this);
         meleeAttackState = new Rat_MeleeAttackState(this, stateMachine, "meleeAttack", meleeAttackPosition, meleeAttackStateData, this);
-        stunState = new Rat_StunState(this, stateMachine, "stun", stunStateData, this);
-        deadState = new Rat_DeadState(this, stateMachine, "dead", deadStateData, this);
 
     }
 

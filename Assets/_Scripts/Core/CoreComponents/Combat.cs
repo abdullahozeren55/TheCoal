@@ -16,7 +16,7 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
     private ParticleManager ParticleManager => particleManager ??= core.GetCoreComponent<ParticleManager>(); 
     private ParticleManager particleManager;
 
-    [SerializeField] private float maxKnockbackTime = 0.2f;
+    [SerializeField] private float maxKnockbackTime = 0.5f;
     private bool isKnockbackActive;
     private float knockbackStartTime;
 

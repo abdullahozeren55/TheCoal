@@ -65,6 +65,8 @@ public class PlayerSuperDashState : PlayerAbilityState
 
         player.Anim.SetFloat("yVelocity", Movement.CurrentVelocity.y);
 		player.Anim.SetFloat("xVelocity", Mathf.Abs(Movement.CurrentVelocity.x));
+        player.EyesAnim.SetFloat("yVelocity", Movement.CurrentVelocity.y);
+		player.EyesAnim.SetFloat("xVelocity", Mathf.Abs(Movement.CurrentVelocity.x));
 
         if(Movement.FacingDirection == -1)
         {

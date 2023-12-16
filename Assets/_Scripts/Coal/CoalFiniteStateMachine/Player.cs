@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
 
     public Transform DashDirectionIndicator { get; private set; }
     public Rigidbody2D RB { get; private set; }
+
+    public PlayerInventory Inventory { get; private set; }
     
     [SerializeField] private GameObject eyes;
 
@@ -57,10 +59,15 @@ public class Player : MonoBehaviour
     {
         Anim = GetComponent<Animator>();
         EyesAnim = eyes.GetComponent<Animator>();
+        InputHandler = GetComponent<PlayerInputHandler>();
         RB = GetComponent<Rigidbody2D>();
         DashDirectionIndicator = transform.Find("SuperDash_Direction_Indicator");
+        Inventory = GetComponent<PlayerInventory>();
 
-        InputHandler = GetComponent<PlayerInputHandler>();
+        PrimaryAttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.primary]);
+        //TODO: Set SECONDARY WEAPON
+
+        
 
         StateMachine.Initialize(IdleState);
     }

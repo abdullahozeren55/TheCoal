@@ -9,10 +9,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54feab9bd1b43cb4da53ca44158ea80d, type: 3}
+  m_Script: {fileID: 11500000, guid: fe8e8a90070c71144a59c4f5ea55c315, type: 3}
   m_Name: Coal_Sword
   m_EditorClassIdentifier: 
-  movementSpeed:
-  - 3
-  - 4
-  - 2
+  attackDetails:
+  - attackName: Left Slash
+    movementSpeed: 3
+    damageAmount: 10
+    knockbackStrength: 10
+    knockbackAngle: {x: 1, y: 1}
+  - attackName: Right Slash
+    movementSpeed: 4
+    damageAmount: 15
+    knockbackStrength: 15
+    knockbackAngle: {x: 1, y: 1}
+  - attackName: Up Slash
+    movementSpeed: 2
+    damageAmount: 20
+    knockbackStrength: 20
+    knockbackAngle: {x: 1, y: 2}
