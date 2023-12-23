@@ -30,11 +30,13 @@ public class PlayerIdleState : PlayerGroundedState
 
         if (player.InputHandler.AttackInputs[(int)CombatInputs.primary])
         {
-            stateMachine.ChangeState(player.PrimaryAttackState);
+            player.AttackState.SetAttackIsHeavy(false);
+            stateMachine.ChangeState(player.AttackState);
         }
         else if (player.InputHandler.AttackInputs[(int)CombatInputs.secondary])
         {
-            stateMachine.ChangeState(player.SecondaryAttackState);
+            player.AttackState.SetAttackIsHeavy(true);
+            stateMachine.ChangeState(player.AttackState);
         }
         else if(jumpInput && player.JumpState.CanJump())
         {

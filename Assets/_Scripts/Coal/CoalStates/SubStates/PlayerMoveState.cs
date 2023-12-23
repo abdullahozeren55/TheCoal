@@ -33,7 +33,17 @@ public class PlayerMoveState : PlayerGroundedState
 
 		Movement?.SetVelocityX(playerData.movementVelocity * xInput);
 
-        if(jumpInput && player.JumpState.CanJump())
+        if (player.InputHandler.AttackInputs[(int)CombatInputs.primary])
+        {
+            player.AttackState.SetAttackIsHeavy(false);
+            stateMachine.ChangeState(player.AttackState);
+        }
+        else if (player.InputHandler.AttackInputs[(int)CombatInputs.secondary])
+        {
+            player.AttackState.SetAttackIsHeavy(false);
+            stateMachine.ChangeState(player.AttackState);
+        }
+        else if(jumpInput && player.JumpState.CanJump())
         {
             stateMachine.ChangeState(player.JumpState);
         }

@@ -44,7 +44,7 @@ public class PlayerGroundedState : PlayerState
 
         player.JumpState.ResetAmountOfJumpsLeft();
         player.InAirState.SetCanWallHold(true);
-        player.SuperDashState.ResetCanSuperDash();
+        player.SuperDashState.SetCanSuperDash(true);
         player.DashState.ResetCanDash();
     }
 

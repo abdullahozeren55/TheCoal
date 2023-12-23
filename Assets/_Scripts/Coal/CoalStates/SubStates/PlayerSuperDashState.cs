@@ -166,5 +166,8 @@ public class PlayerSuperDashState : PlayerAbilityState
 		return CanSuperDash && Time.time >= lastDashTime + playerData.superDashCooldown;
 	}
 
-	public void ResetCanSuperDash() => CanSuperDash = true;
+    public void SetCanSuperDash(bool value)
+    {
+        CanSuperDash = value;
+    }
 }

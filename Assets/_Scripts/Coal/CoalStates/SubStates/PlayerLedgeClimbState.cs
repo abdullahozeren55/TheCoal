@@ -67,7 +67,7 @@ public class PlayerLedgeClimbState : PlayerState
 
 		player.transform.position = startPos;
 
-        player.SuperDashState.ResetCanSuperDash();
+        player.SuperDashState.SetCanSuperDash(true);
         player.InAirState.SetCanWallHold(true);
     }
 

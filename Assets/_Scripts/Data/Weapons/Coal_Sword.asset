@@ -34,3 +34,38 @@ MonoBehaviour:
     poiseDamageAmount: 12
     knockbackStrength: 10
     knockbackAngle: {x: 1, y: 3}
+  - attackName: Move Stab
+    movementSpeed: 6
+    movementAngle: {x: 1, y: 0.1}
+    damageAmount: 8
+    poiseDamageAmount: 7
+    knockbackStrength: 16
+    knockbackAngle: {x: 2, y: 0.2}
+  - attackName: Move Up Slash
+    movementSpeed: 6
+    movementAngle: {x: 1, y: 0.25}
+    damageAmount: 5
+    poiseDamageAmount: 5
+    knockbackStrength: 16
+    knockbackAngle: {x: 2, y: 1}
+  - attackName: Move Finisher
+    movementSpeed: 6
+    movementAngle: {x: 1, y: 0.1}
+    damageAmount: 7
+    poiseDamageAmount: 15
+    knockbackStrength: 12
+    knockbackAngle: {x: 1, y: 0.1}
+  - attackName: StabAttack
+    movementSpeed: 10
+    movementAngle: {x: 0, y: -10}
+    damageAmount: 20
+    poiseDamageAmount: 15
+    knockbackStrength: 20
+    knockbackAngle: {x: 2, y: 0.5}
+  - attackName: Air Attack
+    movementSpeed: 10
+    movementAngle: {x: 0, y: -10}
+    damageAmount: 12
+    poiseDamageAmount: 100
+    knockbackStrength: 20
+    knockbackAngle: {x: 2, y: 1}

@@ -96,7 +96,17 @@ public class PlayerInAirState : PlayerState
 
         CheckJumpMultiplier();
 
-        if ((isGrounded || isOnSlope) && Movement?.CurrentVelocity.y < 0.01f)
+        if (player.InputHandler.AttackInputs[(int)CombatInputs.primary])
+        {
+            player.AttackState.SetAttackIsHeavy(false);
+            stateMachine.ChangeState(player.AttackState);
+        }
+        else if (player.InputHandler.AttackInputs[(int)CombatInputs.secondary])
+        {
+            player.AttackState.SetAttackIsHeavy(true);
+            stateMachine.ChangeState(player.AttackState);
+        }
+        else if ((isGrounded || isOnSlope) && Movement?.CurrentVelocity.y < 0.01f)
         {
             if(xInput != 0 && !isTouchingWall)
             {
@@ -132,7 +142,7 @@ public class PlayerInAirState : PlayerState
         {
 			stateMachine.ChangeState(player.SuperDashState);
         }
-        else if(dashInput && player.DashState.CheckIfCanDash())
+        else if(dashInput && player.DashState.CheckIfCanDash() && !player.SuperDashState.CheckIfCanSuperDash())
         {
             stateMachine.ChangeState(player.DashState);
         }

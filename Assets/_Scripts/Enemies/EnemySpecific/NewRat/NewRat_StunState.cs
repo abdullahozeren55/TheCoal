@@ -13,8 +13,6 @@ public class NewRat_StunState : StunState
     public override void Enter()
     {
         base.Enter();
-
-        Movement.SetVelocityX(0f);
     }
 
     public override void LogicUpdate()

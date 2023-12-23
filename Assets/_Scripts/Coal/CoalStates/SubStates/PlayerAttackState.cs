@@ -10,6 +10,7 @@ public class PlayerAttackState : PlayerAbilityState
     private float velocityToSet;
     private bool setVelocity;
     private bool shouldCheckFlip;
+    private bool attackIsHeavy;
 
     private int xInput;
     public PlayerAttackState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
@@ -22,7 +23,23 @@ public class PlayerAttackState : PlayerAbilityState
 
         setVelocity = false;
 
-        weapon.EnterWeapon();
+        if(!isGrounded && !isOnSlope)
+        {
+            weapon.EnterWeaponInAir();
+        }
+        else if(attackIsHeavy)
+        {
+            weapon.EnterWeaponHeavy();
+        }
+        else if((isGrounded || isOnSlope) && xInput != 0)
+        {
+            weapon.EnterWeaponMove();
+        }
+        else
+        {
+            weapon.EnterWeapon();
+        }
+        
     }
 
     public override void Exit()
@@ -50,7 +67,15 @@ public class PlayerAttackState : PlayerAbilityState
 
         if(isAbilityDone)
         {
-            stateMachine.ChangeState(player.IdleState);
+            if(isGrounded || isOnSlope)
+            {
+                stateMachine.ChangeState(player.IdleState);
+            }
+            else
+            {
+                stateMachine.ChangeState(player.InAirState);
+            }
+            
         }
     }
 
@@ -79,6 +104,11 @@ public class PlayerAttackState : PlayerAbilityState
     public void SetFlipCheck(bool value)
     {
         shouldCheckFlip = value;
+    }
+
+    public void SetAttackIsHeavy(bool value)
+    {
+        attackIsHeavy = value;
     }
 
     

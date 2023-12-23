@@ -27,9 +27,51 @@ public class Weapon : MonoBehaviour
     {
         gameObject.SetActive(true);
 
-        if(attackCounter >= weaponData.amountOfAttacks)
+        if(attackCounter >= weaponData.amountOfAttacks - 5)
         {
             attackCounter = 0;
+        }
+
+        baseAnimator.SetBool("attack", true);
+        weaponAnimator.SetBool("attack", true);
+
+        baseAnimator.SetInteger("attackCounter", attackCounter);
+        weaponAnimator.SetInteger("attackCounter", attackCounter);
+    }
+
+    public virtual void EnterWeaponInAir()
+    {
+        gameObject.SetActive(true);
+
+        attackCounter = weaponData.amountOfAttacks - 1;
+
+        baseAnimator.SetBool("attack", true);
+        weaponAnimator.SetBool("attack", true);
+
+        baseAnimator.SetInteger("attackCounter", attackCounter);
+        weaponAnimator.SetInteger("attackCounter", attackCounter);
+    }
+
+    public virtual void EnterWeaponHeavy()
+    {
+        gameObject.SetActive(true);
+
+        attackCounter = weaponData.amountOfAttacks - 2;
+
+        baseAnimator.SetBool("attack", true);
+        weaponAnimator.SetBool("attack", true);
+
+        baseAnimator.SetInteger("attackCounter", attackCounter);
+        weaponAnimator.SetInteger("attackCounter", attackCounter);
+    }
+
+    public virtual void EnterWeaponMove()
+    {
+        gameObject.SetActive(true);
+
+        if((attackCounter >= weaponData.amountOfAttacks - 2) || (attackCounter <= 2))
+        {
+            attackCounter = 3;
         }
 
         baseAnimator.SetBool("attack", true);

@@ -32,8 +32,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     public PlayerLedgeClimbState LedgeClimbState { get; private set; }
     public PlayerDashState DashState { get; private set; }
     public PlayerSuperDashState SuperDashState { get; private set; }
-    public PlayerAttackState PrimaryAttackState { get; private set; }
-    public PlayerAttackState SecondaryAttackState { get; private set; }
+    public PlayerAttackState AttackState { get; private set; }
 
     public Animator Anim { get; private set; }
     public Animator EyesAnim { get; private set; }
@@ -72,8 +71,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
         LedgeClimbState = new PlayerLedgeClimbState(this, StateMachine, playerData, "ledgeClimbState");
         DashState = new PlayerDashState(this, StateMachine, playerData, "dash");
         SuperDashState = new PlayerSuperDashState(this, StateMachine, playerData, "inAir");
-        PrimaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
-        SecondaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
+        AttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
     }
 
     private void Start()
@@ -85,8 +83,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
         DashDirectionIndicator = transform.Find("SuperDash_Direction_Indicator");
         Inventory = GetComponent<PlayerInventory>();
 
-        PrimaryAttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.primary]);
-        //TODO: Set SECONDARY WEAPON
+        AttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.primary]);
 
         
 
