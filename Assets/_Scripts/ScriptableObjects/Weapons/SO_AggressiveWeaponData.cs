@@ -16,9 +16,12 @@ public class SO_AggressiveWeaponData : SO_WeaponData
 
         movementSpeed = new float[amountOfAttacks];
 
+        movementAngle = new Vector2[amountOfAttacks];
+
         for (int i = 0; i < amountOfAttacks; i++)
         {
             movementSpeed[i] = attackDetails[i].movementSpeed;
+            movementAngle[i] = attackDetails[i].movementAngle;
         }
     }
 }

@@ -38,5 +38,12 @@ public class PlayerData : ScriptableObject
     public float superDashVelocity = 30f;
     public float drag = 10f;
     public float superDashEndYMultiplier = 0.2f;
-    public float distBetweenAfterImages = 0.5f;
+    public float superDashDistBetweenAfterImages = 0.5f;
+
+    [Header("Dash State")]
+    public float dashCooldown = 0.5f;
+    public float dashTime = 0.2f;
+    public float dashVelocity = 30f;
+    public float dashDistBetweenAfterImages = 0.5f;
+    public float dashFlipCoyoteTime = 0.2f;
 }

@@ -6,14 +6,22 @@ public class Rat_ChargeState : ChargeState
 {
 
     private Rat enemy;
-    public Rat_ChargeState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_ChargeState stateData, Rat enemy) : base(entity, stateMachine, animBoolName, stateData)
+
+    public Rat_ChargeState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_Entity entityData, Rat enemy) : base(entity, stateMachine, animBoolName, entityData)
     {
         this.enemy = enemy;
+    }
+
+    public override void DoChecks()
+    {
+        base.DoChecks();
     }
 
     public override void Enter()
     {
         base.Enter();
+
+        Movement?.SetVelocityX(entityData.chargeSpeed * Movement.FacingDirection);
     }
 
     public override void Exit()
@@ -25,26 +33,31 @@ public class Rat_ChargeState : ChargeState
     {
         base.LogicUpdate();
         
-        if(performCloseRangeAction)
+        if((isDetectingLedge || isDetectingWall) && !isPlayerInMaxAgroRange)
         {
-            stateMachine.ChangeState(enemy.meleeAttackState);
+            enemy.IdleState.SetFlipAfterIdle(true);
+            stateMachine.ChangeState(enemy.IdleState);
         }
-        else if(isChargeTimeOver)
+        else if(performCloseRangeAction)
+        {
+            stateMachine.ChangeState(enemy.MeleeAttackState);
+        }
+        else //if(isChargeTimeOver)
         {
             if(isPlayerInMaxAgroRange)
             {
-                stateMachine.ChangeState(enemy.playerDetectedState);
+                stateMachine.ChangeState(enemy.PlayerDetectedState);
             }
             else
             {
-                stateMachine.ChangeState(enemy.moveState);
+                stateMachine.ChangeState(enemy.MoveState);
             }
         }
-        else if(isDetectingLedge || isDetectingWall)
-        {
-            enemy.idleState.SetFlipAfterIdle(true);
-            stateMachine.ChangeState(enemy.idleState);
-        }
+        
+       // else
+        //{
+          //  Movement?.SetVelocityX(entityData.chargeSpeed * Movement.FacingDirection);
+        //}
     }
 
     public override void PhysicsUpdate()

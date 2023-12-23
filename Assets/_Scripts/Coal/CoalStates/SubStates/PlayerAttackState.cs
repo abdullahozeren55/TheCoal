@@ -68,9 +68,9 @@ public class PlayerAttackState : PlayerAbilityState
         weapon.InitializeWeapon(this, Movement);
     }
 
-    public void SetPlayerVelocity(float velocity)
+    public void SetPlayerVelocity(float velocity, Vector2 angle)
     {
-        Movement?.SetVelocityX(velocity * Movement.FacingDirection);
+        Movement?.SetVelocity(velocity, angle, Movement.FacingDirection);
 
         velocityToSet = velocity;
         setVelocity = true;

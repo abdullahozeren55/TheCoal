@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class MeleeAttackState : AttackState
 {
-    protected D_MeleeAttackState stateData;
-
-    public MeleeAttackState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition, D_MeleeAttackState stateData) : base(entity, stateMachine, animBoolName, attackPosition)
+    protected ParticleManager ParticleManager => particleManager ??= core.GetCoreComponent<ParticleManager>();
+    private ParticleManager particleManager;
+    public MeleeAttackState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_Entity entityData, Transform attackPosition) : base(entity, stateMachine, animBoolName, entityData, attackPosition)
     {
-        this.stateData = stateData;
     }
 
     public override void DoChecks()
@@ -39,31 +38,6 @@ public class MeleeAttackState : AttackState
     public override void TriggerAttack()
     {
         base.TriggerAttack();
-
-        Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attackPosition.position, stateData.attackRadius, stateData.whatIsPlayer);
-
-        foreach (Collider2D collider in detectedObjects)
-        {
-            IDamageable damageable = collider.GetComponent<IDamageable>();
-
-            if(damageable != null)
-            {
-                damageable.Damage(stateData.hpAttackDamage);
-            }
-
-            if(stateData.canKnockback)
-            {
-                IKnockbackable knockbackable = collider.GetComponent<IKnockbackable>();
-            
-
-                if(knockbackable != null)
-                {
-                    knockbackable.Knockback(stateData.knockbackStrength, stateData.knockbackAngle, Movement.FacingDirection);
-                }
-            }
-
-            
-        }
 
     }
     

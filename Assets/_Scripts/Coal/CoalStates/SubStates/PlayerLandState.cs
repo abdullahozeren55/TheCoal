@@ -33,6 +33,10 @@ public class PlayerLandState : PlayerGroundedState
         {
         stateMachine.ChangeState(player.JumpState);
         }
+        else if(dashInput && player.DashState.CheckIfCanDash())
+        {
+            stateMachine.ChangeState(player.DashState);
+        }
         else if (xInput != 0 && (!isTouchingWall || xInput != Movement?.FacingDirection))
         {
             stateMachine.ChangeState(player.MoveState);
@@ -41,7 +45,7 @@ public class PlayerLandState : PlayerGroundedState
         {
             stateMachine.ChangeState(player.IdleState);
         }
-        else if(!isGrounded)
+        else if(!isGrounded && !isOnSlope)
         {
             player.InAirState.StartCoyoteTime();
             stateMachine.ChangeState(player.InAirState);

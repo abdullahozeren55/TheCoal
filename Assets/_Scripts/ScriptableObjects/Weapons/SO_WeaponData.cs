@@ -7,4 +7,5 @@ public class SO_WeaponData : ScriptableObject
 {
     public int amountOfAttacks { get; protected set; }
     public float[] movementSpeed { get; protected set; }
+    public Vector2[] movementAngle { get; protected set; }
 }

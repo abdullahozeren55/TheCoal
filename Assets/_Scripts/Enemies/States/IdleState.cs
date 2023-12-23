@@ -5,25 +5,37 @@ using UnityEngine;
 public class IdleState : State
 {
 
-    protected D_IdleState stateData;
-
     protected bool flipAfterIdle;
     protected bool isIdleTimeOver;
+    protected bool isPlayerInMaxAgroRange;
     protected bool isPlayerInMinAgroRange;
+    protected bool isPlayerInCloseRangeAction;
+    protected bool isDetectingLedge;
+    protected bool isDetectingWall;
 
     protected float idleTime;
 
-    protected Movement Movement { get => movement ??= core.GetCoreComponent<Movement>(); }
+    protected Movement Movement => movement ??= core.GetCoreComponent<Movement>();
     private Movement movement;
-    public IdleState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_IdleState stateData) : base(entity, stateMachine, animBoolName)
+
+    protected CollisionSenses CollisionSenses => collisionSenses ??= core.GetCoreComponent<CollisionSenses>();
+    private CollisionSenses collisionSenses;
+    public IdleState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_Entity entityData) : base(entity, stateMachine, animBoolName, entityData)
     {
-        this.stateData = stateData;
     }
 
     public override void DoChecks()
     {
         base.DoChecks();
+        isPlayerInMaxAgroRange = entity.CheckPlayerInMaxAgroRange();
         isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
+        isPlayerInCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
+
+        if(CollisionSenses)
+        {
+            isDetectingLedge = CollisionSenses.LedgeVertical;
+            isDetectingWall = CollisionSenses.WallFront;
+        }
     }
 
     public override void Enter()
@@ -66,6 +78,6 @@ public class IdleState : State
 
     private void SetRandomIdleTime()
     {
-        idleTime = Random.Range(stateData.minIdleTime, stateData.maxIdleTime);
+        idleTime = Random.Range(entityData.minIdleTime, entityData.maxIdleTime);
     }
 }

@@ -16,6 +16,8 @@ public class PlayerMoveState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
+
+        Movement?.SetVelocityX(playerData.movementVelocity * xInput);
     }
 
     public override void Exit()
@@ -35,11 +37,15 @@ public class PlayerMoveState : PlayerGroundedState
         {
             stateMachine.ChangeState(player.JumpState);
         }
+        else if(dashInput && player.DashState.CheckIfCanDash())
+        {
+            stateMachine.ChangeState(player.DashState);
+        }
         else if(xInput == 0 || (isTouchingWall && xInput == Movement?.FacingDirection))
         {
-            stateMachine.ChangeState(player.IdleState);
+            stateMachine.ChangeState(player.StopMovingState);
         }
-        else if(!isGrounded)
+        else if(!isGrounded && !isOnSlope)
         {
             player.InAirState.StartCoyoteTime();
             stateMachine.ChangeState(player.InAirState);

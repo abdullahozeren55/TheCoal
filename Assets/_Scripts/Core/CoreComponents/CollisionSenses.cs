@@ -24,8 +24,9 @@ public class CollisionSenses : CoreComponent
 		private set => ceilingCheck = value;
 	}
 
-	public float GroundCheckRadius { get => groundCheckRadius; set => groundCheckRadius = value; }
-    public float SlopeCheckRadius { get => slopeCheckRadius; set => slopeCheckRadius = value; }
+	public Vector2 GroundCheckSize { get => groundCheckSize; set => groundCheckSize = value; }
+    public Vector2 SlopeCheckRadius { get => slopeCheckSize; set => slopeCheckSize = value; }
+    public Vector2 LedgeVerticalCheckSize { get => ledgeVerticalCheckSize; set => ledgeVerticalCheckSize = value; }
 	public float WallCheckDistance { get => wallCheckDistance; set => wallCheckDistance = value; }
 
 	public LayerMask WhatIsGround { get => whatIsGround; set => whatIsGround = value; }
@@ -39,9 +40,11 @@ public class CollisionSenses : CoreComponent
     [SerializeField] private Transform ceilingCheck;
     [SerializeField] private Transform ledgeCheckHorizontal;
 
-    [SerializeField] private float groundCheckRadius;
-    [SerializeField] private float slopeCheckRadius;
+    [SerializeField] private Vector2 groundCheckSize;
+    [SerializeField] private Vector2 slopeCheckSize;
+    [SerializeField] private Vector2 ledgeVerticalCheckSize;
     [SerializeField] private float wallCheckDistance;
+    
 
 
     [SerializeField] private LayerMask whatIsGround;
@@ -52,7 +55,7 @@ public class CollisionSenses : CoreComponent
 
     public bool Ground
     {
-        get => Physics2D.OverlapCircle(GroundCheck.position, groundCheckRadius, whatIsGround);
+        get => Physics2D.OverlapBox(GroundCheck.position, groundCheckSize, 0f, whatIsGround);
     }
 
     public bool WallFront
@@ -67,7 +70,7 @@ public class CollisionSenses : CoreComponent
 
     public bool LedgeVertical
     {
-        get => Physics2D.Raycast(GroundCheck.position, Vector2.down, wallCheckDistance, whatIsLedge);
+        get => Physics2D.OverlapBox(GroundCheck.position, ledgeVerticalCheckSize, 0f, whatIsLedge);
     }
 
     public bool LedgeHorizontal
@@ -82,10 +85,11 @@ public class CollisionSenses : CoreComponent
 
     public bool Slope
     {
-        get => Physics2D.OverlapCircle(GroundCheck.position, slopeCheckRadius, whatIsSlope);
+        get => Physics2D.OverlapBox(GroundCheck.position, slopeCheckSize, 0f, whatIsSlope);
     }
 
-    public bool Ceiling {
-		get => Physics2D.OverlapCircle(CeilingCheck.position, groundCheckRadius, whatIsCeiling);
+    public bool Ceiling
+    {
+		get => Physics2D.OverlapBox(CeilingCheck.position, groundCheckSize, 0f, whatIsCeiling);
 	}
 }

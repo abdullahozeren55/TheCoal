@@ -5,14 +5,25 @@ using UnityEngine;
 public class Rat_MoveState : MoveState
 {
     private Rat enemy;
-    public Rat_MoveState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_MoveState stateData, Rat enemy) : base(entity, stateMachine, animBoolName, stateData)
+
+    private bool canDetectLedge;
+
+    public Rat_MoveState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_Entity entityData, Rat enemy) : base(entity, stateMachine, animBoolName, entityData)
     {
         this.enemy = enemy;
+    }
+
+    public override void DoChecks()
+    {
+        base.DoChecks();
     }
 
     public override void Enter()
     {
         base.Enter();
+
+        Movement?.SetVelocityX(entityData.movementSpeed * Movement.FacingDirection);
+        canDetectLedge = false;
     }
 
     public override void Exit()
@@ -26,13 +37,20 @@ public class Rat_MoveState : MoveState
 
         if(isPlayerInMaxAgroRange)
         {
-            stateMachine.ChangeState(enemy.playerDetectedState);
+            stateMachine.ChangeState(enemy.PlayerDetectedState);
         }
-
-        else if(isDetectingWall || isDetectingLedge)
+        else if(isDetectingWall || (isDetectingLedge && canDetectLedge))
         {
-            enemy.idleState.SetFlipAfterIdle(true);
-            stateMachine.ChangeState(enemy.idleState);
+            enemy.IdleState.SetFlipAfterIdle(true);
+            stateMachine.ChangeState(enemy.IdleState);
+        }   
+        else
+        {
+            Movement?.SetVelocityX(entityData.movementSpeed * Movement.FacingDirection);
+            if(Time.time >= startTime + entityData.ledgeDetectionCooldown)
+            {
+                canDetectLedge = true;
+            }
         }
     }
 

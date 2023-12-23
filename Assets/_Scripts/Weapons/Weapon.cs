@@ -62,12 +62,12 @@ public class Weapon : MonoBehaviour
 
     public virtual void AnimationStartMovementTrigger()
     {
-        state.SetPlayerVelocity(weaponData.movementSpeed[attackCounter]);
+        state.SetPlayerVelocity(weaponData.movementSpeed[attackCounter], weaponData.movementAngle[attackCounter]);
     }
 
     public virtual void AnimationStopMovementTrigger()
     {
-        state.SetPlayerVelocity(0f);
+        state.SetPlayerVelocity(0f, Vector2.zero);
     }
 
     public virtual void AnimationTurnOffFlipTrigger()

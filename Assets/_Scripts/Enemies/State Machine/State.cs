@@ -7,17 +7,22 @@ public class State
     protected FiniteStateMachine stateMachine;
     protected Entity entity;
 
+    protected D_Entity entityData;
+
     protected Core core;
 
     protected float startTime;
 
     protected string animBoolName;
 
-    public State(Entity entity, FiniteStateMachine stateMachine, string animBoolName)
+    public bool isAnimationFinished { get; protected set; }
+
+    public State(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_Entity entityData)
     {
         this.entity = entity;
         this.stateMachine = stateMachine;
         this.animBoolName = animBoolName;
+        this.entityData = entityData;
         core = entity.Core;
     }
 
@@ -47,4 +52,8 @@ public class State
     {
         DoChecks();
     }
+
+    public virtual void AnimationTrigger(){}
+
+    public virtual void AnimationFinishTrigger() => isAnimationFinished = true;
 }

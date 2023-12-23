@@ -7,6 +7,8 @@ public class PlayerSuperDashState : PlayerAbilityState
     public bool CanSuperDash { get; private set; }
 	private bool isHolding;
 	private bool dashInputStop;
+    private bool dashInput;
+    private bool holdingDone;
 
 	private float lastDashTime;
 
@@ -45,6 +47,8 @@ public class PlayerSuperDashState : PlayerAbilityState
 		startTime = Time.unscaledTime;
 
 		player.DashDirectionIndicator.gameObject.SetActive(true);
+        player.DashDirectionIndicator.GetComponent<Animator>().Play("Coal_SuperDash_Direction_Indicator", -1, 0f);
+        holdingDone = false;
     }
 
     public override void Exit()
@@ -62,6 +66,8 @@ public class PlayerSuperDashState : PlayerAbilityState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+
+        dashInput = player.InputHandler.DashInput;
 
         player.Anim.SetFloat("yVelocity", Movement.CurrentVelocity.y);
 		player.Anim.SetFloat("xVelocity", Mathf.Abs(Movement.CurrentVelocity.x));
@@ -106,6 +112,7 @@ public class PlayerSuperDashState : PlayerAbilityState
 		}
         else
         {
+            holdingDone = true;
 			Movement?.SetVelocity(playerData.superDashVelocity, dashDirection);
 			CheckIfShouldPlaceAfterImage();
 
@@ -117,7 +124,12 @@ public class PlayerSuperDashState : PlayerAbilityState
 			}
 		}
 
-        if(isAbilityDone)
+        if(holdingDone && dashInput && player.DashState.CheckIfCanDash())
+        {
+            stateMachine.ChangeState(player.DashState);
+        }
+
+        else if(isAbilityDone)
         {
             if(isGrounded)
             {
@@ -138,7 +150,7 @@ public class PlayerSuperDashState : PlayerAbilityState
 
     private void CheckIfShouldPlaceAfterImage()
     {
-		if (Vector2.Distance(player.transform.position, lastAIPos) >= playerData.distBetweenAfterImages) {
+		if (Vector2.Distance(player.transform.position, lastAIPos) >= playerData.superDashDistBetweenAfterImages) {
 			PlaceAfterImage();
 		}
 	}

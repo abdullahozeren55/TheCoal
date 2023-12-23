@@ -5,12 +5,12 @@ using UnityEngine;
 public class LookForPlayerState : State
 {
 
-    protected D_LookForPlayerState stateData;
-
     protected int amountOfTurns;
 
     protected bool turnImmediately;
     protected bool isPlayerInMaxAgroRange;
+    protected bool isPlayerInMinAgroRange;
+    protected bool isPlayerInCloseRangeAction;
 
     protected bool isAllTurnsDone;
     protected bool isAllTurnsTimeDone;
@@ -21,9 +21,8 @@ public class LookForPlayerState : State
 
     protected Movement Movement { get => movement ??= core.GetCoreComponent<Movement>(); }
     private Movement movement;
-    public LookForPlayerState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_LookForPlayerState stateData) : base(entity, stateMachine, animBoolName)
+    public LookForPlayerState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_Entity entityData) : base(entity, stateMachine, animBoolName, entityData)
     {
-        this.stateData = stateData;
     }
 
     public override void DoChecks()
@@ -31,6 +30,8 @@ public class LookForPlayerState : State
         base.DoChecks();
 
         isPlayerInMaxAgroRange = entity.CheckPlayerInMaxAgroRange();
+        isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
+        isPlayerInCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
     }
 
     public override void Enter()
@@ -42,8 +43,6 @@ public class LookForPlayerState : State
 
         lastTurnTime = startTime;
         amountOfTurnsDone = 0;
-
-        Movement?.SetVelocityX(0f);
     }
 
     public override void Exit()
@@ -62,7 +61,7 @@ public class LookForPlayerState : State
             amountOfTurnsDone++;
             turnImmediately = false;
         }
-        else if(Time.time >= lastTurnTime + stateData.timeBetweenTurns && !isAllTurnsDone)
+        else if(Time.time >= lastTurnTime + entityData.timeBetweenTurns && !isAllTurnsDone)
         {
             Movement?.Flip();
             lastTurnTime = Time.time;
@@ -74,7 +73,7 @@ public class LookForPlayerState : State
             isAllTurnsDone = true;
         }
 
-        if(Time.time >= lastTurnTime + stateData.timeBetweenTurns && isAllTurnsDone)
+        if(Time.time >= lastTurnTime + entityData.timeBetweenTurns && isAllTurnsDone)
         {
             isAllTurnsTimeDone = true;
         }
@@ -87,7 +86,7 @@ public class LookForPlayerState : State
 
     private void SetRandomAmountOfTurns()
     {
-        amountOfTurns = Random.Range(stateData.minAmountOfTurns, stateData.maxAmountOfTurns);
+        amountOfTurns = Random.Range(entityData.minAmountOfTurns, entityData.maxAmountOfTurns);
     }
 
     public void SetTurnImmediately(bool flip)

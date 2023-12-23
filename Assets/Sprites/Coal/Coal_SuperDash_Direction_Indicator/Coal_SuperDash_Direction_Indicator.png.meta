@@ -5,6 +5,102 @@ TextureImporter:
   - first:
       213: 2387452258396026790
     second: Coal_SuperDash_Direction_Indicator_0
+  - first:
+      213: -4063035174225442307
+    second: Coal_SuperDash_Direction_Indicator_1
+  - first:
+      213: -5947557548836885951
+    second: Coal_SuperDash_Direction_Indicator_2
+  - first:
+      213: 6531866423242412966
+    second: Coal_SuperDash_Direction_Indicator_3
+  - first:
+      213: -1428438302507595856
+    second: Coal_SuperDash_Direction_Indicator_4
+  - first:
+      213: 8049109999073714839
+    second: Coal_SuperDash_Direction_Indicator_5
+  - first:
+      213: 7967234128968721131
+    second: Coal_SuperDash_Direction_Indicator_6
+  - first:
+      213: 3171009658431595228
+    second: Coal_SuperDash_Direction_Indicator_7
+  - first:
+      213: -3857216442411071364
+    second: Coal_SuperDash_Direction_Indicator_8
+  - first:
+      213: 1232097883682510433
+    second: Coal_SuperDash_Direction_Indicator_9
+  - first:
+      213: -7068642976456762248
+    second: Coal_SuperDash_Direction_Indicator_10
+  - first:
+      213: -922241930841557092
+    second: Coal_SuperDash_Direction_Indicator_11
+  - first:
+      213: -109213717145743392
+    second: Coal_SuperDash_Direction_Indicator_12
+  - first:
+      213: -7554999318137994003
+    second: Coal_SuperDash_Direction_Indicator_13
+  - first:
+      213: -6150827783369401218
+    second: Coal_SuperDash_Direction_Indicator_14
+  - first:
+      213: 1883279571316679620
+    second: Coal_SuperDash_Direction_Indicator_15
+  - first:
+      213: -7070744633870836833
+    second: Coal_SuperDash_Direction_Indicator_16
+  - first:
+      213: -5331080034128579437
+    second: Coal_SuperDash_Direction_Indicator_17
+  - first:
+      213: 6389205965996800636
+    second: Coal_SuperDash_Direction_Indicator_18
+  - first:
+      213: 2744816330962531875
+    second: Coal_SuperDash_Direction_Indicator_19
+  - first:
+      213: -5816360458774906025
+    second: Coal_SuperDash_Direction_Indicator_20
+  - first:
+      213: -4381803929622287832
+    second: Coal_SuperDash_Direction_Indicator_21
+  - first:
+      213: 6031418828512754699
+    second: Coal_SuperDash_Direction_Indicator_22
+  - first:
+      213: -3772461049724843978
+    second: Coal_SuperDash_Direction_Indicator_23
+  - first:
+      213: 8775404894659370103
+    second: Coal_SuperDash_Direction_Indicator_24
+  - first:
+      213: 2097680905805683237
+    second: Coal_SuperDash_Direction_Indicator_25
+  - first:
+      213: 9151518447050236277
+    second: Coal_SuperDash_Direction_Indicator_26
+  - first:
+      213: 4316074944943539767
+    second: Coal_SuperDash_Direction_Indicator_27
+  - first:
+      213: 220093499275013208
+    second: Coal_SuperDash_Direction_Indicator_28
+  - first:
+      213: -5697484123094042325
+    second: Coal_SuperDash_Direction_Indicator_29
+  - first:
+      213: 319846628019712789
+    second: Coal_SuperDash_Direction_Indicator_30
+  - first:
+      213: -3230853133634846874
+    second: Coal_SuperDash_Direction_Indicator_31
+  - first:
+      213: -7498297080918663627
+    second: Coal_SuperDash_Direction_Indicator_32
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +142,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,10 +199,10 @@ TextureImporter:
       name: Coal_SuperDash_Direction_Indicator_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 15
-        width: 34
-        height: 34
+        x: 0
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,10 +216,682 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df9006239033d97c0800000000000000
+      internalID: -4063035174225442307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14a626cbbe7067da0800000000000000
+      internalID: -5947557548836885951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a35aa597e9d5aa50800000000000000
+      internalID: 6531866423242412966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b7097b9eea2d2ce0800000000000000
+      internalID: -1428438302507595856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79265dce5ee24bf60800000000000000
+      internalID: 8049109999073714839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be2ac836a3d419e60800000000000000
+      internalID: 7967234128968721131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd2e52ecb70b10c20800000000000000
+      internalID: 3171009658431595228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c78ca40051a687ac0800000000000000
+      internalID: -3857216442411071364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 166186d4f7a491110800000000000000
+      internalID: 1232097883682510433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87c1c380aa227ed90800000000000000
+      internalID: -7068642976456762248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c97f733a9d98333f0800000000000000
+      internalID: -922241930841557092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ef8de0f3befb7ef0800000000000000
+      internalID: -109213717145743392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de40114f520472790800000000000000
+      internalID: -7554999318137994003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7cd9a138bed3aaa0800000000000000
+      internalID: -6150827783369401218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_15
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c3a415cac0c22a10800000000000000
+      internalID: 1883279571316679620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_16
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9b11a8c73bafdd90800000000000000
+      internalID: -7070744633870836833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_17
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 394b69844f23406b0800000000000000
+      internalID: -5331080034128579437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7abb0089f40ba850800000000000000
+      internalID: 6389205965996800636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_19
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32676bc09eb871620800000000000000
+      internalID: 2744816330962531875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75bf719aaf2284fa0800000000000000
+      internalID: -5816360458774906025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_21
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82ae373ba84b033c0800000000000000
+      internalID: -4381803929622287832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0cfa1df777e3b350800000000000000
+      internalID: 6031418828512754699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_23
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6384722a9a685abc0800000000000000
+      internalID: -3772461049724843978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_24
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77c5562f14088c970800000000000000
+      internalID: 8775404894659370103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_25
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52adaaa7ba57c1d10800000000000000
+      internalID: 2097680905805683237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_26
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5712ddf6a89b00f70800000000000000
+      internalID: 9151518447050236277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_27
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 736c25d7b47c5eb30800000000000000
+      internalID: 4316074944943539767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_28
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85ce8a91fdded0300800000000000000
+      internalID: 220093499275013208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_29
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b293d8960687ee0b0800000000000000
+      internalID: -5697484123094042325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 513b8b540d2507400800000000000000
+      internalID: 319846628019712789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_31
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66fbc385134b923d0800000000000000
+      internalID: -3230853133634846874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_SuperDash_Direction_Indicator_32
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53e9e775882b0f790800000000000000
+      internalID: -7498297080918663627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: aaef26ffc8f2a9740aa3b7cef00db1f2
     internalID: 0
     vertices: []
     indices: 
@@ -132,6 +900,38 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Coal_SuperDash_Direction_Indicator_0: 2387452258396026790
+      Coal_SuperDash_Direction_Indicator_1: -4063035174225442307
+      Coal_SuperDash_Direction_Indicator_10: -7068642976456762248
+      Coal_SuperDash_Direction_Indicator_11: -922241930841557092
+      Coal_SuperDash_Direction_Indicator_12: -109213717145743392
+      Coal_SuperDash_Direction_Indicator_13: -7554999318137994003
+      Coal_SuperDash_Direction_Indicator_14: -6150827783369401218
+      Coal_SuperDash_Direction_Indicator_15: 1883279571316679620
+      Coal_SuperDash_Direction_Indicator_16: -7070744633870836833
+      Coal_SuperDash_Direction_Indicator_17: -5331080034128579437
+      Coal_SuperDash_Direction_Indicator_18: 6389205965996800636
+      Coal_SuperDash_Direction_Indicator_19: 2744816330962531875
+      Coal_SuperDash_Direction_Indicator_2: -5947557548836885951
+      Coal_SuperDash_Direction_Indicator_20: -5816360458774906025
+      Coal_SuperDash_Direction_Indicator_21: -4381803929622287832
+      Coal_SuperDash_Direction_Indicator_22: 6031418828512754699
+      Coal_SuperDash_Direction_Indicator_23: -3772461049724843978
+      Coal_SuperDash_Direction_Indicator_24: 8775404894659370103
+      Coal_SuperDash_Direction_Indicator_25: 2097680905805683237
+      Coal_SuperDash_Direction_Indicator_26: 9151518447050236277
+      Coal_SuperDash_Direction_Indicator_27: 4316074944943539767
+      Coal_SuperDash_Direction_Indicator_28: 220093499275013208
+      Coal_SuperDash_Direction_Indicator_29: -5697484123094042325
+      Coal_SuperDash_Direction_Indicator_3: 6531866423242412966
+      Coal_SuperDash_Direction_Indicator_30: 319846628019712789
+      Coal_SuperDash_Direction_Indicator_31: -3230853133634846874
+      Coal_SuperDash_Direction_Indicator_32: -7498297080918663627
+      Coal_SuperDash_Direction_Indicator_4: -1428438302507595856
+      Coal_SuperDash_Direction_Indicator_5: 8049109999073714839
+      Coal_SuperDash_Direction_Indicator_6: 7967234128968721131
+      Coal_SuperDash_Direction_Indicator_7: 3171009658431595228
+      Coal_SuperDash_Direction_Indicator_8: -3857216442411071364
+      Coal_SuperDash_Direction_Indicator_9: 1232097883682510433
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

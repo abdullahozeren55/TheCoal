@@ -5,14 +5,12 @@ using UnityEngine;
 public class ChargeState : State
 {
 
-    protected D_ChargeState stateData;
-
     protected bool isPlayerInMinAgroRange;
 
     protected bool isPlayerInMaxAgroRange;
     protected bool isDetectingLedge;
     protected bool isDetectingWall;
-    protected bool isChargeTimeOver;
+    //protected bool isChargeTimeOver;
     protected bool performCloseRangeAction;
 
     protected CollisionSenses CollisionSenses { get => collisionSenses ??= core.GetCoreComponent<CollisionSenses>();}
@@ -20,9 +18,8 @@ public class ChargeState : State
 
     protected Movement Movement { get => movement ??= core.GetCoreComponent<Movement>(); }
     private Movement movement;
-    public ChargeState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_ChargeState stateData) : base(entity, stateMachine, animBoolName)
+    public ChargeState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_Entity entityData) : base(entity, stateMachine, animBoolName, entityData)
     {
-        this.stateData = stateData;
     }
 
     public override void DoChecks()
@@ -33,6 +30,7 @@ public class ChargeState : State
         isPlayerInMaxAgroRange = entity.CheckPlayerInMaxAgroRange();
         if(CollisionSenses)
         {
+
             isDetectingLedge = CollisionSenses.LedgeVertical;
             isDetectingWall = CollisionSenses.WallFront;
         }
@@ -43,9 +41,7 @@ public class ChargeState : State
     {
         base.Enter();
 
-        Movement?.SetVelocityX(stateData.chargeSpeed * Movement.FacingDirection);
-
-        isChargeTimeOver = false;
+       // isChargeTimeOver = false;
     }
 
     public override void Exit()
@@ -57,10 +53,10 @@ public class ChargeState : State
     {
         base.LogicUpdate();
 
-        if(Time.time >= startTime + stateData.chargeTime)
-        {
-            isChargeTimeOver = true;
-        }
+        //if(Time.time >= startTime + entityData.chargeTime)
+        //{
+          //  isChargeTimeOver = true;
+        //}
     }
 
     public override void PhysicsUpdate()

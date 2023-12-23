@@ -4,23 +4,22 @@ using UnityEngine;
 
 public class PlayerDetectedState : State
 {
-
-    protected D_PlayerDetectedState stateData;
     protected bool isPlayerInMinAgroRange;
     protected bool isPlayerInMaxAgroRange;
     protected bool performLongRangeAction;
     protected bool performCloseRangeAction;
 
     protected bool isGrounded;
+    protected bool isOnSlope;
+    protected bool isDetectingLedge;
 
-    protected CollisionSenses CollisionSenses { get => collisionSenses ??= core.GetCoreComponent<CollisionSenses>();}
+    protected CollisionSenses CollisionSenses => collisionSenses ??= core.GetCoreComponent<CollisionSenses>();
     private CollisionSenses collisionSenses;
 
-    protected Movement Movement { get => movement ??= core.GetCoreComponent<Movement>(); }
+    protected Movement Movement => movement ??= core.GetCoreComponent<Movement>();
     private Movement movement;
-    public PlayerDetectedState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_PlayerDetectedState stateData) : base(entity, stateMachine, animBoolName)
+    public PlayerDetectedState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_Entity entityData) : base(entity, stateMachine, animBoolName, entityData)
     {
-        this.stateData = stateData;
     }
 
     public override void DoChecks()
@@ -31,6 +30,8 @@ public class PlayerDetectedState : State
         if(CollisionSenses)
         {
             isGrounded = CollisionSenses.Ground;
+            isOnSlope = CollisionSenses.Slope;
+            isDetectingLedge = CollisionSenses.LedgeVertical;
         }
         
         performCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
@@ -54,7 +55,7 @@ public class PlayerDetectedState : State
     {
         base.LogicUpdate();
         
-        if(Time.time >= startTime + stateData.longRangeActionTime)
+        if(Time.time >= startTime + entityData.longRangeActionTime)
         {
             performLongRangeAction = true;
         }

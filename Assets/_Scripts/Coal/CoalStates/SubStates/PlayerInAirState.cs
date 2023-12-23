@@ -22,6 +22,7 @@ public class PlayerInAirState : PlayerState
 	private bool oldIsTouchingWallBack;
     private bool isTouchingLedge;
     private bool isTouchingLedgeBottom;
+    private bool isOnSlope;
 
     private bool isJumping;
 
@@ -51,6 +52,7 @@ public class PlayerInAirState : PlayerState
             isTouchingWallBack = CollisionSenses.WallBack;
             isTouchingLedge = CollisionSenses.LedgeHorizontal;
             isTouchingLedgeBottom = CollisionSenses.LedgeHorizontalBottom;
+            isOnSlope = CollisionSenses.Slope;
         }
 
         if (isTouchingWall && !isTouchingLedge && !isGrounded)
@@ -94,7 +96,7 @@ public class PlayerInAirState : PlayerState
 
         CheckJumpMultiplier();
 
-        if (isGrounded && Movement?.CurrentVelocity.y < 0.01f)
+        if ((isGrounded || isOnSlope) && Movement?.CurrentVelocity.y < 0.01f)
         {
             if(xInput != 0 && !isTouchingWall)
             {
@@ -129,6 +131,10 @@ public class PlayerInAirState : PlayerState
         else if (dashInput && player.SuperDashState.CheckIfCanSuperDash())
         {
 			stateMachine.ChangeState(player.SuperDashState);
+        }
+        else if(dashInput && player.DashState.CheckIfCanDash())
+        {
+            stateMachine.ChangeState(player.DashState);
         }
         else
         {

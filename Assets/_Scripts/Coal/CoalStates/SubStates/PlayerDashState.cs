@@ -1,13 +1,16 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerDashState : PlayerAbilityState
 {
+    public bool CanDash { get; private set; }
+
+    private float lastDashTime;
 
     private Vector2 lastAIPos;
-    private bool isTouchingWall;
-    protected int xInput;
+
+    private int xInput;
 
     public PlayerDashState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
@@ -16,29 +19,26 @@ public class PlayerDashState : PlayerAbilityState
     public override void DoChecks()
     {
         base.DoChecks();
-        isTouchingWall = player.CheckIfTouchingWall();
     }
 
     public override void Enter()
     {
         base.Enter();
-        PlaceAfterImage();
-        player.SetVelocityX(playerData.dashVelocity * player.FacingDirection);
-        playerData.canDash = false;
+
+        CanDash = false;
         player.InputHandler.UseDashInput();
-        playerData.canMove = false;
+
+        Movement?.SetVelocityX(playerData.dashVelocity * Movement.FacingDirection);
+        Movement?.SetVelocityY(0f);
+        CheckIfShouldPlaceAfterImage();
+        Movement?.CheckIfShouldFlip(xInput);
     }
 
     public override void Exit()
     {
         base.Exit();
-        ResetCanDash();
 
-        if(player.CurrentVelocity.y > 0)
-        {
-            player.SetVelocityY(player.CurrentVelocity.y * playerData.dashEndYMultiplier);
-        }
-        playerData.canMove = true;
+        player.InAirState.SetCanWallHold(true);
     }
 
     public override void LogicUpdate()
@@ -47,16 +47,46 @@ public class PlayerDashState : PlayerAbilityState
 
         xInput = player.InputHandler.NormInputX;
 
-        if(!isAbilityDone)
+        if (Time.time >= startTime + playerData.dashTime || isTouchingWall)
         {
-            CheckIfShouldPlaceAfterImage();
+            isAbilityDone = true;
+			lastDashTime = Time.time;
+        }
+        else if(Time.time < startTime + playerData.dashFlipCoyoteTime)
+        {
+            Movement?.CheckIfShouldFlip(xInput);
         }
 
-        if((Time.time >= startTime + playerData.dashTime) || isTouchingWall)
+        if(isAbilityDone)
         {
-            player.RB.drag = 0.0f;
-            isAbilityDone = true;
-            playerData.lastDashTime = Time.time;
+            if(isGrounded)
+            {
+                if(xInput == 0 || (isTouchingWall && xInput == Movement?.FacingDirection))
+                {
+                    stateMachine.ChangeState(player.StopMovingState);
+                }
+                else
+                {
+                    stateMachine.ChangeState(player.MoveState);
+                }
+            }
+            else
+            {
+                if(isTouchingWall)
+                {
+                    stateMachine.ChangeState(player.WallHoldState);
+                }
+                else
+                {
+                    stateMachine.ChangeState(player.InAirState);
+                }
+            }
+        }
+        else
+        {
+            Movement?.SetVelocityX(playerData.dashVelocity * Movement.FacingDirection);
+            Movement?.SetVelocityY(0f);
+            CheckIfShouldPlaceAfterImage();
         }
     }
 
@@ -67,7 +97,7 @@ public class PlayerDashState : PlayerAbilityState
 
     private void CheckIfShouldPlaceAfterImage()
     {
-        if(Vector2.Distance(player.transform.position, lastAIPos) >= playerData.distanceBetweenAfterImages)
+        if(Vector2.Distance(player.transform.position, lastAIPos) >= playerData.dashDistBetweenAfterImages)
         {
             PlaceAfterImage();
         }
@@ -75,15 +105,14 @@ public class PlayerDashState : PlayerAbilityState
 
     private void PlaceAfterImage()
     {
-        PlayerAfterImagePool.Instance.GetFromPool();
+        CoalAfterImagePool.Instance.GetFromPool();
         lastAIPos = player.transform.position;
     }
 
     public bool CheckIfCanDash()
     {
-        return (playerData.canDash && Time.time >= playerData.lastDashTime + playerData.dashCooldown);
-
+        return CanDash && Time.time >= lastDashTime + playerData.dashCooldown;
     }
 
-    public void ResetCanDash() => playerData.canDash = true;
-}*/
+    public void ResetCanDash() => CanDash = true;
+}

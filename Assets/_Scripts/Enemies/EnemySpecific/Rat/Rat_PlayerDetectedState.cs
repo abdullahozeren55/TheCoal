@@ -6,7 +6,7 @@ public class Rat_PlayerDetectedState : PlayerDetectedState
 {
 
     private Rat enemy;
-    public Rat_PlayerDetectedState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_PlayerDetectedState stateData, Rat enemy) : base(entity, stateMachine, animBoolName, stateData)
+    public Rat_PlayerDetectedState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_Entity entityData, Rat enemy) : base(entity, stateMachine, animBoolName, entityData)
     {
         this.enemy = enemy;
     }
@@ -32,15 +32,15 @@ public class Rat_PlayerDetectedState : PlayerDetectedState
 
         if(performCloseRangeAction)
         {
-            stateMachine.ChangeState(enemy.meleeAttackState);
+            stateMachine.ChangeState(enemy.MeleeAttackState);
         }
         else if(performLongRangeAction)
         {
-            stateMachine.ChangeState(enemy.chargeState);
+            stateMachine.ChangeState(enemy.ChargeState);
         }
         else if(!isPlayerInMaxAgroRange)
         {
-            stateMachine.ChangeState(enemy.moveState);
+            stateMachine.ChangeState(enemy.MoveState);
         }
     }
 

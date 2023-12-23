@@ -15,16 +15,22 @@ MonoBehaviour:
   attackDetails:
   - attackName: Left Slash
     movementSpeed: 3
-    damageAmount: 10
-    knockbackStrength: 10
-    knockbackAngle: {x: 1, y: 1}
+    movementAngle: {x: 1, y: 0}
+    damageAmount: 5
+    poiseDamageAmount: 8
+    knockbackStrength: 5
+    knockbackAngle: {x: 1, y: 2}
   - attackName: Right Slash
     movementSpeed: 4
-    damageAmount: 15
-    knockbackStrength: 15
-    knockbackAngle: {x: 1, y: 1}
+    movementAngle: {x: 1, y: 2}
+    damageAmount: 7
+    poiseDamageAmount: 10
+    knockbackStrength: 7.5
+    knockbackAngle: {x: 1, y: 2}
   - attackName: Up Slash
     movementSpeed: 2
-    damageAmount: 20
-    knockbackStrength: 20
-    knockbackAngle: {x: 1, y: 2}
+    movementAngle: {x: 1, y: 1}
+    damageAmount: 9
+    poiseDamageAmount: 12
+    knockbackStrength: 10
+    knockbackAngle: {x: 1, y: 3}

@@ -8,6 +8,15 @@ public class Entity : MonoBehaviour
     protected Movement Movement { get => movement ??= Core.GetCoreComponent<Movement>(); }
     private Movement movement;
 
+    protected ParticleManager ParticleManager => particleManager ??= Core.GetCoreComponent<ParticleManager>(); 
+    private ParticleManager particleManager;
+
+    protected CollisionSenses CollisionSenses => collisionSenses ??= Core.GetCoreComponent<CollisionSenses>();
+    private CollisionSenses collisionSenses;
+
+    protected Stats Stats => stats ??= Core.GetCoreComponent<Stats>();
+    private Stats stats;
+
     public FiniteStateMachine stateMachine;
 
     public D_Entity entityData;
@@ -15,8 +24,12 @@ public class Entity : MonoBehaviour
     public AnimationToStateMachine atsm { get; private set; }
 
     public Core Core { get; private set; }
-    [SerializeField]
-    private Transform playerCheck;
+    [SerializeField] private Transform playerCheck;
+
+    public GameObject damageParticles;
+    public GameObject player;
+
+    [HideInInspector] public bool gotBackAttacked;
 
     private Vector2 velocityWorkspace;
 
@@ -26,7 +39,6 @@ public class Entity : MonoBehaviour
         Core = GetComponentInChildren<Core>();
         anim = GetComponent<Animator>();
         atsm = GetComponent<AnimationToStateMachine>();
-
 
         stateMachine = new FiniteStateMachine();
     }
@@ -49,7 +61,24 @@ public class Entity : MonoBehaviour
 
     public virtual bool CheckPlayerInMaxAgroRange()
     {
-        return Physics2D.Raycast(playerCheck.position, transform.right * Movement.FacingDirection, entityData.maxAgroDistance, entityData.whatIsPlayer);
+        //return Physics2D.Raycast(playerCheck.position, transform.right * Movement.FacingDirection, entityData.maxAgroDistance, entityData.whatIsPlayer);
+        RaycastHit2D hit = Physics2D.Linecast(playerCheck.transform.position, player.transform.position, entityData.whatIsLineCastCanHit);
+
+        if(hit.collider != null && hit.collider.CompareTag("Player") && hit.distance <= entityData.maxAgroDistance)
+        {
+            if((Movement.FacingDirection == 1 && player.transform.position.x >= playerCheck.transform.position.x) || (Movement.FacingDirection == -1 && player.transform.position.x <= playerCheck.transform.position.x))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public virtual bool CheckPlayerInCloseRangeAction()
@@ -57,9 +86,8 @@ public class Entity : MonoBehaviour
         return Physics2D.Raycast(playerCheck.position, transform.right * Movement.FacingDirection, entityData.closeRangeActionDistance, entityData.whatIsPlayer);
     }
 
-    public virtual void OnDrawGizmos()
-    {
+    private void AnimationTrigger() => stateMachine.currentState.AnimationTrigger();
 
-    }
+    private void AnimtionFinishTrigger() => stateMachine.currentState.AnimationFinishTrigger();
 
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Rat_IdleState : IdleState
 {
     private Rat enemy;
-    public Rat_IdleState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_IdleState stateData, Rat enemy) : base(entity, stateMachine, animBoolName, stateData)
+    public Rat_IdleState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_Entity entityData, Rat enemy) : base(entity, stateMachine, animBoolName, entityData)
     {
         this.enemy = enemy;
     }
@@ -25,7 +25,11 @@ public class Rat_IdleState : IdleState
         base.LogicUpdate();
         if(isIdleTimeOver)
         {
-            stateMachine.ChangeState(enemy.moveState);
+            stateMachine.ChangeState(enemy.MoveState);
+        }
+        else
+        {
+            Movement?.SetVelocityZero();
         }
     }
 

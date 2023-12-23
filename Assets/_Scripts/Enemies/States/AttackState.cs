@@ -7,13 +7,19 @@ public class AttackState : State
 
     protected Movement Movement { get => movement ??= core.GetCoreComponent<Movement>(); }
     private Movement movement;
-    protected Transform attackPosition;
 
-    protected bool isAnimationFinished;
+    protected CollisionSenses CollisionSenses => collisionSenses ??= core.GetCoreComponent<CollisionSenses>();
+    private CollisionSenses collisionSenses;
+    protected Transform attackPosition;
     protected bool isPlayerInMinAgroRange;
     protected bool isPlayerInMaxAgroRange;
+    protected bool isPlayerInCloseRangeAction;
 
-    public AttackState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition) : base(entity, stateMachine, animBoolName)
+    protected bool isAttackFinished;
+
+    protected bool isGrounded;
+
+    public AttackState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_Entity entityData, Transform attackPosition) : base(entity, stateMachine, animBoolName, entityData)
     {
         this.attackPosition = attackPosition;
     }
@@ -23,6 +29,12 @@ public class AttackState : State
         base.DoChecks();
         isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
         isPlayerInMaxAgroRange = entity.CheckPlayerInMaxAgroRange();
+        isPlayerInCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
+
+        if(CollisionSenses)
+        {
+            isGrounded = CollisionSenses.Ground;
+        }
     }
 
     public override void Enter()
@@ -31,7 +43,7 @@ public class AttackState : State
 
         entity.atsm.attackState = this;
 
-        isAnimationFinished = false;
+        isAttackFinished = false;
     }
 
     public override void Exit()
@@ -56,6 +68,6 @@ public class AttackState : State
     
     public virtual void FinishAttack()
     {
-        isAnimationFinished = true;
+        isAttackFinished = true;
     }
 }
