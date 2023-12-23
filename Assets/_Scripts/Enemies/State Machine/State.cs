@@ -35,12 +35,14 @@ public class State
     {
         startTime = Time.time;
         entity.anim.SetBool(animBoolName, true);
+        entity.EyesAnim.SetBool(animBoolName, true);
         DoChecks();
     }
 
     public virtual void Exit()
     {
         entity.anim.SetBool(animBoolName, false);
+        entity.EyesAnim.SetBool(animBoolName, false);
     }
 
     public virtual void LogicUpdate()

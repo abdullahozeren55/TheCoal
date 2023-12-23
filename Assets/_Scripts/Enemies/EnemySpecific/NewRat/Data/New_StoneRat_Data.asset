@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5459db0b59a7e014dba13d6f2e00e85a, type: 3}
+  m_Name: New_StoneRat_Data
+  m_EditorClassIdentifier: 
+  minAgroDistance: 2
+  maxAgroDistance: 20
+  closeRangeActionDistance: 1.3
+  shockedTime: 1.2
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 32768
+  whatIsLineCastCanHit:
+    serializedVersion: 2
+    m_Bits: 236544
+  minIdleTime: 0.8
+  maxIdleTime: 2
+  movementSpeed: 2.5
+  ledgeDetectionCooldown: 1
+  longRangeActionTime: 0
+  chargeSpeed: 5.5
+  chargeTime: 10
+  minAmountOfTurns: 1
+  maxAmountOfTurns: 4
+  timeBetweenTurns: 0.7
+  attackDetails:
+  - attackName: NormalAttack
+    hpDamageAmount: 15
+    poiseDamageAmount: 15
+    attackRadius: 0.75
+    canKnockback: 0
+    knockbackStrength: 0
+    knockbackAngle: {x: 0, y: 0}
+    whatIsDamageable:
+      serializedVersion: 2
+      m_Bits: 32768
+  - attackName: JumpAttack
+    hpDamageAmount: 25
+    poiseDamageAmount: 25
+    attackRadius: 0.75
+    canKnockback: 1
+    knockbackStrength: 10
+    knockbackAngle: {x: 1, y: 0.2}
+    whatIsDamageable:
+      serializedVersion: 2
+      m_Bits: 32768
+  attackJumpVelocity: 5
+  attackJumpAngle: {x: 2, y: 0}
+  attackNormalVelocity: 0
+  attackNormalAngle: {x: 0, y: 0}
+  attackNormalCooldown: 1.2
+  poiseRegCooldown: 0.3
+  poiseRegStartTimeAfterDamaged: 2
+  minPoiseRegAmount: 3
+  maxPoiseRegAmount: 20
+  dragTime: 0.15

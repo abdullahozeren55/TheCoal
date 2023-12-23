@@ -222,8 +222,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.45882356, g: 0.5058824, b: 0.5686275, a: 1}
-      maxColor: {r: 0.89019614, g: 0.9294118, b: 0.9960785, a: 1}
+      minColor: {r: 0.0627451, g: 0.10588236, b: 0.17254902, a: 1}
+      maxColor: {r: 0.30588236, g: 0.34901962, b: 0.4156863, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -287,8 +287,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.1
-      minScalar: 0.05
+      scalar: 0.3
+      minScalar: 0.1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -604,7 +604,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 1
-    maxNumParticles: 1000
+    maxNumParticles: 300
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -751,7 +751,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.1
+      value: 0.5
       mode: 0
       spread: 0
       speed:
@@ -980,8 +980,8 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 3
-        scalar: 200
-        minScalar: 100
+        scalar: 300
+        minScalar: 200
         maxCurve:
           serializedVersion: 2
           m_Curve:
@@ -3851,7 +3851,7 @@ ParticleSystem:
     collidesWith:
       serializedVersion: 2
       m_Bits: 203776
-    maxCollisionShapes: 256
+    maxCollisionShapes: 300
     quality: 0
     voxelSize: 0.5
     collisionMessages: 0
@@ -4857,7 +4857,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1970303165
   m_SortingLayer: 16
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0

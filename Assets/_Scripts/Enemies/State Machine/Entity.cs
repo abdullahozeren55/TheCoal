@@ -21,12 +21,15 @@ public class Entity : MonoBehaviour
 
     public D_Entity entityData;
     public Animator anim { get; private set; }
+    public GameObject eyes;
+    public Animator EyesAnim { get; private set; }
     public AnimationToStateMachine atsm { get; private set; }
 
     public Core Core { get; private set; }
     [SerializeField] private Transform playerCheck;
 
     public GameObject damageParticles;
+    public GameObject stunStars;
     public GameObject player;
 
     [HideInInspector] public bool gotBackAttacked;
@@ -38,6 +41,7 @@ public class Entity : MonoBehaviour
 
         Core = GetComponentInChildren<Core>();
         anim = GetComponent<Animator>();
+        EyesAnim = eyes.GetComponent<Animator>();
         atsm = GetComponent<AnimationToStateMachine>();
 
         stateMachine = new FiniteStateMachine();
@@ -88,6 +92,6 @@ public class Entity : MonoBehaviour
 
     private void AnimationTrigger() => stateMachine.currentState.AnimationTrigger();
 
-    private void AnimtionFinishTrigger() => stateMachine.currentState.AnimationFinishTrigger();
+    private void AnimationFinishTrigger() => stateMachine.currentState.AnimationFinishTrigger();
 
 }

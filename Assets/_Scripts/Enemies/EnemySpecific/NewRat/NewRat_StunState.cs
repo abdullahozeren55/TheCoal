@@ -13,6 +13,15 @@ public class NewRat_StunState : StunState
     public override void Enter()
     {
         base.Enter();
+        enemy.stunStars.SetActive(true);
+        enemy.stunStars.GetComponent<Animator>().Play("Stun_Stars");
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+
+        enemy.stunStars.SetActive(false);
     }
 
     public override void LogicUpdate()
