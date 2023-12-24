@@ -31,6 +31,8 @@ public class CollisionSenses : CoreComponent
 
 	public LayerMask WhatIsGround { get => whatIsGround; set => whatIsGround = value; }
     public LayerMask WhatIsSlope { get => whatIsSlope; set => whatIsSlope = value; }
+    public LayerMask WhatIsLeftSlope { get => whatIsLeftSlope; set => whatIsLeftSlope = value; }
+    public LayerMask WhatIsRightSlope { get => whatIsRightSlope; set => whatIsRightSlope = value; }
     public LayerMask WhatIsWall { get => whatIsWall; set => whatIsWall = value; }
     public LayerMask WhatIsLedge { get => whatIsLedge; set => whatIsLedge = value; }
     public LayerMask WhatIsCeiling { get => whatIsCeiling; set => whatIsCeiling = value; }
@@ -49,6 +51,8 @@ public class CollisionSenses : CoreComponent
 
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private LayerMask whatIsSlope;
+    [SerializeField] private LayerMask whatIsLeftSlope;
+    [SerializeField] private LayerMask whatIsRightSlope;
     [SerializeField] private LayerMask whatIsWall;
     [SerializeField] private LayerMask whatIsLedge;
     [SerializeField] private LayerMask whatIsCeiling;
@@ -86,6 +90,16 @@ public class CollisionSenses : CoreComponent
     public bool Slope
     {
         get => Physics2D.OverlapBox(GroundCheck.position, slopeCheckSize, 0f, whatIsSlope);
+    }
+
+    public bool LeftSlope
+    {
+        get => Physics2D.OverlapBox(GroundCheck.position, slopeCheckSize, 0f, whatIsLeftSlope);
+    }
+
+    public bool RightSlope
+    {
+        get => Physics2D.OverlapBox(GroundCheck.position, slopeCheckSize, 0f, whatIsRightSlope);
     }
 
     public bool Ceiling

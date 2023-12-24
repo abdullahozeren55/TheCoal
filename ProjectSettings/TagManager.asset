@@ -19,7 +19,7 @@ TagManager:
   - BLUR FAR FAR Foreground
   - Ground
   - Wall
-  - Slopes
+  - SlopeRight
   - Damageable
   - Dead
   - Player
@@ -27,7 +27,7 @@ TagManager:
   - Ceiling
   - Weapon
   - SlopeCollider
-  - 
+  - SlopeLeft
   - 
   - 
   - 

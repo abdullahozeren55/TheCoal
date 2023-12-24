@@ -1,0 +1,350 @@
+fileFormatVersion: 2
+guid: af8883ed3678e4445a175c651ea67886
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 115177756493436479
+    second: Hit_Particle_Coal_Sword_0
+  - first:
+      213: -3162014963450810433
+    second: Hit_Particle_Coal_Sword_1
+  - first:
+      213: -3231635269965624827
+    second: Hit_Particle_Coal_Sword_2
+  - first:
+      213: 5273004119693350001
+    second: Hit_Particle_Coal_Sword_3
+  - first:
+      213: -5700735629530304
+    second: Hit_Particle_Coal_Sword_4
+  - first:
+      213: -3230112014317651520
+    second: Hit_Particle_Coal_Sword_5
+  - first:
+      213: -8421719527448605200
+    second: Hit_Particle_Coal_Sword_6
+  - first:
+      213: 8452634452332211654
+    second: Hit_Particle_Coal_Sword_7
+  - first:
+      213: 5508290270986692869
+    second: Hit_Particle_Coal_Sword_8
+  - first:
+      213: -581589343017132794
+    second: Hit_Particle_Coal_Sword_9
+  - first:
+      213: 3510718770473921892
+    second: Hit_Particle_Coal_Sword_10
+  - first:
+      213: 1078645853937962126
+    second: Hit_Particle_Coal_Sword_11
+  - first:
+      213: 6213104075392239701
+    second: Hit_Particle_Coal_Sword_12
+  - first:
+      213: 2607129196841101542
+    second: Hit_Particle_Coal_Sword_13
+  - first:
+      213: -1309019421158961085
+    second: Hit_Particle_Coal_Sword_14
+  - first:
+      213: -4367224765803619176
+    second: Hit_Particle_Coal_Sword_15
+  - first:
+      213: -2981373349203157518
+    second: Hit_Particle_Coal_Sword_16
+  - first:
+      213: -6211355861031430421
+    second: Hit_Particle_Coal_Sword_17
+  - first:
+      213: 7048171633157614740
+    second: Hit_Particle_Coal_Sword_18
+  - first:
+      213: -6743298686247765904
+    second: Hit_Particle_Coal_Sword_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hit_Particle_Coal_Sword_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3651dd2f81399100800000000000000
+      internalID: 115177756493436479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit_Particle_Coal_Sword_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf6b01d4244e14d0800000000000000
+      internalID: -3162014963450810433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit_Particle_Coal_Sword_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a431a08dce623d0800000000000000
+      internalID: -3231635269965624827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit_Particle_Coal_Sword_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1745e7d2f497d2940800000000000000
+      internalID: 5273004119693350001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit_Particle_Coal_Sword_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04be7dd063fbbeff0800000000000000
+      internalID: -5700735629530304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit_Particle_Coal_Sword_5
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c9ffd1ac365c23d0800000000000000
+      internalID: -3230112014317651520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit_Particle_Coal_Sword_6
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fd8470c5ba002b80800000000000000
+      internalID: -8421719527448605200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit_Particle_Coal_Sword_7
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd6d7b104acd4570800000000000000
+      internalID: 8452634452332211654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2c8ef9474c7d9db439d330ff6c09fb48
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Hit_Particle_Coal_Sword_0: 115177756493436479
+      Hit_Particle_Coal_Sword_1: -3162014963450810433
+      Hit_Particle_Coal_Sword_2: -3231635269965624827
+      Hit_Particle_Coal_Sword_3: 5273004119693350001
+      Hit_Particle_Coal_Sword_4: -5700735629530304
+      Hit_Particle_Coal_Sword_5: -3230112014317651520
+      Hit_Particle_Coal_Sword_6: -8421719527448605200
+      Hit_Particle_Coal_Sword_7: 8452634452332211654
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

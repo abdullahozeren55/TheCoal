@@ -29,6 +29,7 @@ public class Entity : MonoBehaviour
     [SerializeField] private Transform playerCheck;
 
     public GameObject damageParticles;
+    public GameObject hitParticles;
     public GameObject stunStars;
     public GameObject player;
 

@@ -10,6 +10,9 @@ public class PlayerInAirState : PlayerState
 	private Movement movement;
 	private CollisionSenses collisionSenses;
 
+    private ParticleManager particleManager;
+    private ParticleManager ParticleManager => particleManager ??= core.GetCoreComponent<ParticleManager>();
+
     private int xInput;
     private bool jumpInput;
     private bool jumpInputStop;
@@ -23,6 +26,8 @@ public class PlayerInAirState : PlayerState
     private bool isTouchingLedge;
     private bool isTouchingLedgeBottom;
     private bool isOnSlope;
+    private bool isOnLeftSlope;
+    private bool isOnRightSlope;
 
     private bool isJumping;
 
@@ -53,6 +58,8 @@ public class PlayerInAirState : PlayerState
             isTouchingLedge = CollisionSenses.LedgeHorizontal;
             isTouchingLedgeBottom = CollisionSenses.LedgeHorizontalBottom;
             isOnSlope = CollisionSenses.Slope;
+            isOnLeftSlope = CollisionSenses.LeftSlope;
+            isOnRightSlope = CollisionSenses.RightSlope;
         }
 
         if (isTouchingWall && !isTouchingLedge && !isGrounded)
@@ -108,6 +115,19 @@ public class PlayerInAirState : PlayerState
         }
         else if ((isGrounded || isOnSlope) && Movement?.CurrentVelocity.y < 0.01f)
         {
+            if(isGrounded)
+            {
+                ParticleManager?.StartParticles(player.groundedDustParticle, player.feetParticlePoint.position, Quaternion.identity);
+            }
+            else if(isOnLeftSlope)
+            {
+                ParticleManager?.StartParticles(player.groundedDustParticle, player.feetParticlePoint.position, Quaternion.Euler(0f, 0f, -45f));
+            }
+            else if(isOnRightSlope)
+            {
+                ParticleManager?.StartParticles(player.groundedDustParticle, player.feetParticlePoint.position, Quaternion.Euler(0f, 0f, 45f));
+            }
+            
             if(xInput != 0 && !isTouchingWall)
             {
                 stateMachine.ChangeState(player.MoveState);
@@ -136,7 +156,7 @@ public class PlayerInAirState : PlayerState
         }
         else if (isTouchingWall && xInput == Movement?.FacingDirection && Movement?.CurrentVelocity.y <= 0 && canWallHold)
         {
-                stateMachine.ChangeState(player.WallHoldState);
+            stateMachine.ChangeState(player.WallHoldState);
         }
         else if (dashInput && player.SuperDashState.CheckIfCanSuperDash())
         {

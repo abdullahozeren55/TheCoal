@@ -22,6 +22,7 @@ public class NewRat : Entity, IDamageable, IKnockbackable, IStunable
     [HideInInspector] public float lastKnockbackedTime;
     private float poiseRegAmount;
     private bool shouldRegenPoise;
+    public float knockBackMultiplier = 1f;
 
     public override void Awake()
     {
@@ -56,7 +57,7 @@ public class NewRat : Entity, IDamageable, IKnockbackable, IStunable
 
     public void Knockback(float strength, Vector2 angle, int direction)
     {
-        Movement?.SetVelocity(strength, angle, direction);
+        Movement?.SetVelocity(strength * knockBackMultiplier, angle, direction);
         lastKnockbackedTime = Time.time;
         if(stateMachine.currentState == JumpAttackState || stateMachine.currentState == NormalAttackState)
         {
@@ -82,6 +83,7 @@ public class NewRat : Entity, IDamageable, IKnockbackable, IStunable
         Stats?.DecreaseHealth(amount);
         lastDamageTakenTime = Time.time;
         ParticleManager?.StartParticlesWithRandomRotation(damageParticles);
+        ParticleManager?.StartParticlesWithRandomRotation(hitParticles);
     }
 
     public void PoiseDamage(float amount)
