@@ -13,6 +13,9 @@ public class Movement : CoreComponent
     private Vector2 workspace;
 
     [SerializeField] private GameObject AfterImagePool;
+    [SerializeField] private GameObject cameraFollowObject;
+
+    private CameraFollowObjectController cameraFollowObjectController;
 
     protected override void Awake()
     {
@@ -21,6 +24,11 @@ public class Movement : CoreComponent
         RB = GetComponentInParent<Rigidbody2D>();
         FacingDirection = 1;
         CanSetVelocity = true;
+
+        if(cameraFollowObject != null)
+        {
+            cameraFollowObjectController = cameraFollowObject.GetComponent<CameraFollowObjectController>();
+        }
     }
 
     public override void LogicUpdate()
@@ -74,6 +82,10 @@ public class Movement : CoreComponent
         if(AfterImagePool != null)
         {
             AfterImagePool.transform.localScale = new Vector3(RB.transform.localScale.x, 1f, 1f);
+        }
+        if(cameraFollowObjectController != null)
+        {
+            cameraFollowObjectController.CallTurn();
         }
         
     }

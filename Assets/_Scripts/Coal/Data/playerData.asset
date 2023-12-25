@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementVelocity: 9
   jumpVelocity: 15
-  amountOfJumps: 10
+  amountOfJumps: 500
   wallJumpVelocity: 20
   wallJumpTime: 0.4
   wallJumpAngle: {x: 1, y: 2}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour, IDamageable, IKnockbackable
 {
 
-    protected Movement Movement { get => movement ??= Core.GetCoreComponent<Movement>(); }
+    public Movement Movement { get => movement ??= Core.GetCoreComponent<Movement>(); }
     private Movement movement;
 
     protected ParticleManager ParticleManager => particleManager ??= Core.GetCoreComponent<ParticleManager>(); 
@@ -57,6 +57,8 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     public Transform sideParticlePointFacingDirection;
     public Transform sideParticlePointBack;
 
+    private float fallSpeedYDampingChangeThreshold;
+
     private void Awake()
     {
         Core = GetComponentInChildren<Core>();
@@ -90,6 +92,8 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
 
         AttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.primary]);
 
+        fallSpeedYDampingChangeThreshold = CameraManager.instance.fallSpeedYDampingChangeThreshold;
+
         
 
         StateMachine.Initialize(IdleState);
@@ -99,6 +103,20 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     {
         Core.LogicUpdate();
         StateMachine.CurrentState.LogicUpdate();
+
+        //if we are falling past a certain speed threshold
+        if(Movement.RB.velocity.y < fallSpeedYDampingChangeThreshold && !CameraManager.instance.IsLerpingYDamping && !CameraManager.instance.LerpedFromPlayerFalling)
+        {
+            CameraManager.instance.LerpYDamping(true);
+        }
+
+        //if we are standing still or moving up
+        if(Movement.RB.velocity.y >= 0f && !CameraManager.instance.IsLerpingYDamping && CameraManager.instance.LerpedFromPlayerFalling)
+        {
+            //reset so it can be called again
+            CameraManager.instance.LerpedFromPlayerFalling = false;
+            CameraManager.instance.LerpYDamping(false);
+        }
     }
 
     private void FixedUpdate()

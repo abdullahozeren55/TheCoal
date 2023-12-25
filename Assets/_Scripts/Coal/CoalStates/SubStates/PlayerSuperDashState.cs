@@ -8,7 +8,6 @@ public class PlayerSuperDashState : PlayerAbilityState
 	private bool isHolding;
 	private bool dashInputStop;
     private bool dashInput;
-    private bool holdingDone;
 
 	private float lastDashTime;
 
@@ -48,7 +47,6 @@ public class PlayerSuperDashState : PlayerAbilityState
 
 		player.DashDirectionIndicator.gameObject.SetActive(true);
         player.DashDirectionIndicator.GetComponent<Animator>().Play("Coal_SuperDash_Direction_Indicator", -1, 0f);
-        holdingDone = false;
     }
 
     public override void Exit()
@@ -113,7 +111,6 @@ public class PlayerSuperDashState : PlayerAbilityState
 		}
         else
         {
-            holdingDone = true;
             player.DashState.SetCanDash(true);
 			Movement?.SetVelocity(playerData.superDashVelocity, dashDirection);
 			CheckIfShouldPlaceAfterImage();
