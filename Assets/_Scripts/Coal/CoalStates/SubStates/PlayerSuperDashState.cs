@@ -88,6 +88,7 @@ public class PlayerSuperDashState : PlayerAbilityState
         {
 			dashDirectionInput = player.InputHandler.DashDirectionInput;
 			dashInputStop = player.InputHandler.DashInputStop;
+            player.DashState.SetCanDash(false);
 
 			if (dashDirectionInput != Vector2.zero)
             {
@@ -113,6 +114,7 @@ public class PlayerSuperDashState : PlayerAbilityState
         else
         {
             holdingDone = true;
+            player.DashState.SetCanDash(true);
 			Movement?.SetVelocity(playerData.superDashVelocity, dashDirection);
 			CheckIfShouldPlaceAfterImage();
 
@@ -124,8 +126,10 @@ public class PlayerSuperDashState : PlayerAbilityState
 			}
 		}
 
-        if(holdingDone && dashInput && player.DashState.CheckIfCanDash())
+        if(dashInput && player.DashState.CheckIfCanDash())
         {
+            player.RB.drag = 0f;
+			lastDashTime = Time.time;
             stateMachine.ChangeState(player.DashState);
         }
 

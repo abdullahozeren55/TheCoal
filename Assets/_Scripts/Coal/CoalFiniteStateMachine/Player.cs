@@ -52,6 +52,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
 
     [SerializeField] private GameObject damageParticles;
     public GameObject groundedDustParticle;
+    public GameObject airJumpParticle;
     public Transform feetParticlePoint;
     public Transform sideParticlePointFacingDirection;
     public Transform sideParticlePointBack;

@@ -114,5 +114,8 @@ public class PlayerDashState : PlayerAbilityState
         return CanDash && Time.time >= lastDashTime + playerData.dashCooldown;
     }
 
-    public void ResetCanDash() => CanDash = true;
+    public void SetCanDash(bool value)
+    {
+        CanDash = value;
+    }
 }

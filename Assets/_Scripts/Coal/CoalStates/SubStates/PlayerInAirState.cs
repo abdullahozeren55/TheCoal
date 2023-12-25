@@ -39,6 +39,8 @@ public class PlayerInAirState : PlayerState
 
     private float startWallJumpCoyoteTime;
     private float startWallHoldCoyoteTime;
+
+    private bool canInstantiateAirJumpPrefab;
     public PlayerInAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -151,7 +153,13 @@ public class PlayerInAirState : PlayerState
         }
         else if (jumpInput && player.JumpState.CanJump())
         {
+            if(canInstantiateAirJumpPrefab)
+            {
+                ParticleManager?.StartParticles(player.airJumpParticle, player.feetParticlePoint.position, Quaternion.identity);
+            }
+            
             coyoteTime = false;
+            canInstantiateAirJumpPrefab = true;
 			stateMachine.ChangeState(player.JumpState);
         }
         else if (isTouchingWall && xInput == Movement?.FacingDirection && Movement?.CurrentVelocity.y <= 0 && canWallHold)
@@ -207,6 +215,7 @@ public class PlayerInAirState : PlayerState
 		if (coyoteTime && Time.time > startTime + playerData.coyoteTime)
         {
 			coyoteTime = false;
+            canInstantiateAirJumpPrefab = true;
 			player.JumpState.DecreaseAmountOfJumpsLeft();
 		}
 	}
@@ -248,7 +257,11 @@ public class PlayerInAirState : PlayerState
 
     public void StopWallHoldCoyoteTime() => wallHoldCoyoteTime = false;
 
-    public void StartCoyoteTime() => coyoteTime = true;
+    public void StartCoyoteTime()
+    {
+        coyoteTime = true;
+        canInstantiateAirJumpPrefab = false;
+    }
 
     public void SetIsJumping() => isJumping = true;
 }
