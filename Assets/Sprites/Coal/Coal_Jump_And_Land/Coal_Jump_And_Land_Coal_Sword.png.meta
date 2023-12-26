@@ -1,0 +1,814 @@
+fileFormatVersion: 2
+guid: 5821ee49902ea404a8265be4946ee241
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7537387306277849100
+    second: Coal_Jump_And_Land_Coal_Sword_0
+  - first:
+      213: -8813342976200885611
+    second: Coal_Jump_And_Land_Coal_Sword_1
+  - first:
+      213: -6048477745112783618
+    second: Coal_Jump_And_Land_Coal_Sword_2
+  - first:
+      213: 2007115289064600830
+    second: Coal_Jump_And_Land_Coal_Sword_3
+  - first:
+      213: -3625864059365491113
+    second: Coal_Jump_And_Land_Coal_Sword_4
+  - first:
+      213: 4814551030732796641
+    second: Coal_Jump_And_Land_Coal_Sword_5
+  - first:
+      213: -7591029472350010984
+    second: Coal_Jump_And_Land_Coal_Sword_6
+  - first:
+      213: -2374728240190136175
+    second: Coal_Jump_And_Land_Coal_Sword_7
+  - first:
+      213: -928833883051952171
+    second: Coal_Jump_And_Land_Coal_Sword_8
+  - first:
+      213: 5690494111191070883
+    second: Coal_Jump_And_Land_Coal_Sword_9
+  - first:
+      213: 295123928595052226
+    second: Coal_Jump_And_Land_Coal_Sword_10
+  - first:
+      213: 5663138251395624805
+    second: Coal_Jump_And_Land_Coal_Sword_11
+  - first:
+      213: 4657021420997451446
+    second: Coal_Jump_And_Land_Coal_Sword_12
+  - first:
+      213: 5394429958850420511
+    second: Coal_Jump_And_Land_Coal_Sword_13
+  - first:
+      213: 7862699132651681843
+    second: Coal_Jump_And_Land_Coal_Sword_14
+  - first:
+      213: -5711094917250404294
+    second: Coal_Jump_And_Land_Coal_Sword_15
+  - first:
+      213: 7006466440940082677
+    second: Coal_Jump_And_Land_Coal_Sword_16
+  - first:
+      213: 6116177649999299428
+    second: Coal_Jump_And_Land_Coal_Sword_17
+  - first:
+      213: 227127082468224936
+    second: Coal_Jump_And_Land_Coal_Sword_18
+  - first:
+      213: 2309814624911883504
+    second: Coal_Jump_And_Land_Coal_Sword_19
+  - first:
+      213: 5447060852769109946
+    second: Coal_Jump_And_Land_Coal_Sword_20
+  - first:
+      213: 1428732569382757348
+    second: Coal_Jump_And_Land_Coal_Sword_21
+  - first:
+      213: -7349047327377690206
+    second: Coal_Jump_And_Land_Coal_Sword_22
+  - first:
+      213: 8411869684277346594
+    second: Coal_Jump_And_Land_Coal_Sword_23
+  - first:
+      213: -4430320877716220358
+    second: Coal_Jump_And_Land_Coal_Sword_24
+  - first:
+      213: -2192263888681669645
+    second: Coal_Jump_And_Land_Coal_Sword_25
+  - first:
+      213: -494562132374217039
+    second: Coal_Jump_And_Land_Coal_Sword_26
+  - first:
+      213: -8287106233757546558
+    second: Coal_Jump_And_Land_Coal_Sword_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c08ca3df1dd2a9860800000000000000
+      internalID: 7537387306277849100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59abcdb1247b0b580800000000000000
+      internalID: -8813342976200885611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef462ba798d7f0ca0800000000000000
+      internalID: -6048477745112783618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef473f3a8b4badb10800000000000000
+      internalID: 2007115289064600830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75ef9a149d75eadc0800000000000000
+      internalID: -3625864059365491113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e2b1d367a8b0d240800000000000000
+      internalID: 4814551030732796641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8918e05f9ee37a690800000000000000
+      internalID: -7591029472350010984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 190e0655f354b0fd0800000000000000
+      internalID: -2374728240190136175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d77759218e1c13f0800000000000000
+      internalID: -928833883051952171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a8fefd9e32b8fe40800000000000000
+      internalID: 5690494111191070883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_10
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c630a046ad781400800000000000000
+      internalID: 295123928595052226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56fec5c2c32879e40800000000000000
+      internalID: 5663138251395624805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_12
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6be10f5fe4011a040800000000000000
+      internalID: 4657021420997451446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_13
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f1107777ddcda40800000000000000
+      internalID: 5394429958850420511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 338b979e33bed1d60800000000000000
+      internalID: 7862699132651681843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3030c27e6d1eb0b0800000000000000
+      internalID: -5711094917250404294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5ddee2b18fb3160800000000000000
+      internalID: 7006466440940082677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_17
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4634463fa2701e450800000000000000
+      internalID: 6116177649999299428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_18
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8afa36dc0eae62300800000000000000
+      internalID: 227127082468224936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_19
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fcffd6d92c1e0020800000000000000
+      internalID: 2309814624911883504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_20
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab73d3f5cf8d79b40800000000000000
+      internalID: 5447060852769109946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e3271db3b0e3d310800000000000000
+      internalID: 1428732569382757348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a17e168460f20a90800000000000000
+      internalID: -7349047327377690206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_23
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2218a3ce8e6fcb470800000000000000
+      internalID: 8411869684277346594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_24
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a365ab272a65482c0800000000000000
+      internalID: -4430320877716220358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_25
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fb663dbb938391e0800000000000000
+      internalID: -2192263888681669645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_26
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1be99746c56f229f0800000000000000
+      internalID: -494562132374217039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Jump_And_Land_Coal_Sword_27
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c7c4f099c84efc80800000000000000
+      internalID: -8287106233757546558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 019a4ab30c039ab439e6de94494f5c37
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Coal_Jump_And_Land_Coal_Sword_0: 7537387306277849100
+      Coal_Jump_And_Land_Coal_Sword_1: -8813342976200885611
+      Coal_Jump_And_Land_Coal_Sword_10: 295123928595052226
+      Coal_Jump_And_Land_Coal_Sword_11: 5663138251395624805
+      Coal_Jump_And_Land_Coal_Sword_12: 4657021420997451446
+      Coal_Jump_And_Land_Coal_Sword_13: 5394429958850420511
+      Coal_Jump_And_Land_Coal_Sword_14: 7862699132651681843
+      Coal_Jump_And_Land_Coal_Sword_15: -5711094917250404294
+      Coal_Jump_And_Land_Coal_Sword_16: 7006466440940082677
+      Coal_Jump_And_Land_Coal_Sword_17: 6116177649999299428
+      Coal_Jump_And_Land_Coal_Sword_18: 227127082468224936
+      Coal_Jump_And_Land_Coal_Sword_19: 2309814624911883504
+      Coal_Jump_And_Land_Coal_Sword_2: -6048477745112783618
+      Coal_Jump_And_Land_Coal_Sword_20: 5447060852769109946
+      Coal_Jump_And_Land_Coal_Sword_21: 1428732569382757348
+      Coal_Jump_And_Land_Coal_Sword_22: -7349047327377690206
+      Coal_Jump_And_Land_Coal_Sword_23: 8411869684277346594
+      Coal_Jump_And_Land_Coal_Sword_24: -4430320877716220358
+      Coal_Jump_And_Land_Coal_Sword_25: -2192263888681669645
+      Coal_Jump_And_Land_Coal_Sword_26: -494562132374217039
+      Coal_Jump_And_Land_Coal_Sword_27: -8287106233757546558
+      Coal_Jump_And_Land_Coal_Sword_3: 2007115289064600830
+      Coal_Jump_And_Land_Coal_Sword_4: -3625864059365491113
+      Coal_Jump_And_Land_Coal_Sword_5: 4814551030732796641
+      Coal_Jump_And_Land_Coal_Sword_6: -7591029472350010984
+      Coal_Jump_And_Land_Coal_Sword_7: -2374728240190136175
+      Coal_Jump_And_Land_Coal_Sword_8: -928833883051952171
+      Coal_Jump_And_Land_Coal_Sword_9: 5690494111191070883
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

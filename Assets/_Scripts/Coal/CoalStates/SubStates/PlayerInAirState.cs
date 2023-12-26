@@ -183,6 +183,8 @@ public class PlayerInAirState : PlayerState
 		    player.Anim.SetFloat("xVelocity", Mathf.Abs(Movement.CurrentVelocity.x));
             player.EyesAnim.SetFloat("yVelocity", Movement.CurrentVelocity.y);
 		    player.EyesAnim.SetFloat("xVelocity", Mathf.Abs(Movement.CurrentVelocity.x));
+            player.CoalSwordAnim.SetFloat("yVelocity", Movement.CurrentVelocity.y);
+		    player.CoalSwordAnim.SetFloat("xVelocity", Mathf.Abs(Movement.CurrentVelocity.x));
         }
 
 

@@ -36,6 +36,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
 
     public Animator Anim { get; private set; }
     public Animator EyesAnim { get; private set; }
+    public Animator CoalSwordAnim { get; private set; }
 
     public PlayerInputHandler InputHandler { get; private set; }
 
@@ -47,6 +48,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     public PlayerInventory Inventory { get; private set; }
     
     [SerializeField] private GameObject eyes;
+    [SerializeField] private GameObject coalSword;
 
     [SerializeField] private PlayerData playerData;
 
@@ -85,6 +87,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     {
         Anim = GetComponent<Animator>();
         EyesAnim = eyes.GetComponent<Animator>();
+        CoalSwordAnim = coalSword.GetComponent<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
         RB = GetComponent<Rigidbody2D>();
         DashDirectionIndicator = transform.Find("SuperDash_Direction_Indicator");

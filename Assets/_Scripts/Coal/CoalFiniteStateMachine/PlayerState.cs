@@ -30,6 +30,10 @@ public class PlayerState
         DoChecks();
         player.Anim.SetBool(animBoolName, true);
         player.EyesAnim.SetBool(animBoolName, true);
+        if(stateMachine.CurrentState != player.LedgeClimbState)
+        {
+            player.CoalSwordAnim.SetBool(animBoolName, true);
+        }
         startTime = Time.time;
         isAnimationFinished = false;
     }
@@ -38,6 +42,10 @@ public class PlayerState
     {
         player.Anim.SetBool(animBoolName, false);
         player.EyesAnim.SetBool(animBoolName, false);
+        if(stateMachine.CurrentState != player.LedgeClimbState)
+        {
+            player.CoalSwordAnim.SetBool(animBoolName, false);
+        }
     }
 
     public virtual void LogicUpdate(){}
