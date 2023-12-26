@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Cinemachine;
 
 public class Entity : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class Entity : MonoBehaviour
     protected Stats Stats => stats ??= Core.GetCoreComponent<Stats>();
     private Stats stats;
 
+    protected CinemachineImpulseSource impulseSource;
+
     public FiniteStateMachine stateMachine;
 
     public D_Entity entityData;
@@ -27,6 +30,7 @@ public class Entity : MonoBehaviour
 
     public Core Core { get; private set; }
     [SerializeField] private Transform playerCheck;
+    [SerializeField] protected SO_ScreenShakeProfile screenShakeProfile;
 
     public GameObject damageParticles;
     public GameObject hitParticles;
@@ -44,6 +48,7 @@ public class Entity : MonoBehaviour
         anim = GetComponent<Animator>();
         EyesAnim = eyes.GetComponent<Animator>();
         atsm = GetComponent<AnimationToStateMachine>();
+        impulseSource = GetComponent<CinemachineImpulseSource>();
 
         stateMachine = new FiniteStateMachine();
     }

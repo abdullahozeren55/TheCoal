@@ -82,6 +82,7 @@ public class NewRat : Entity, IDamageable, IKnockbackable, IStunable
     {
         Stats?.DecreaseHealth(amount);
         lastDamageTakenTime = Time.time;
+        CameraShakeManager.instance.ScreenShakeFromProfile(screenShakeProfile, impulseSource);
         ParticleManager?.StartParticlesWithRandomRotation(damageParticles);
         ParticleManager?.StartParticlesWithRandomRotation(hitParticles);
     }
