@@ -38,3 +38,4 @@ MonoBehaviour:
   dashVelocity: 20
   dashDistBetweenAfterImages: 0.8
   dashFlipCoyoteTime: 0.15
+  maxHoldTimeForAttack: 0.25

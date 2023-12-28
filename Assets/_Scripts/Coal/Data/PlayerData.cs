@@ -46,4 +46,8 @@ public class PlayerData : ScriptableObject
     public float dashVelocity = 30f;
     public float dashDistBetweenAfterImages = 0.5f;
     public float dashFlipCoyoteTime = 0.2f;
+
+    [Header("Attack Stuff")]
+
+    public float maxHoldTimeForAttack = 0.2f;
 }

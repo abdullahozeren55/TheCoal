@@ -33,10 +33,12 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     public PlayerDashState DashState { get; private set; }
     public PlayerSuperDashState SuperDashState { get; private set; }
     public PlayerAttackState AttackState { get; private set; }
+    public PlayerWeaponChargeState WeaponChargeState { get; private set; }
 
     public Animator Anim { get; private set; }
     public Animator EyesAnim { get; private set; }
     public Animator CoalSwordAnim { get; private set; }
+    public Animator CoalSwordGlowAnim { get; private set; }
 
     public PlayerInputHandler InputHandler { get; private set; }
 
@@ -49,6 +51,11 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     
     [SerializeField] private GameObject eyes;
     [SerializeField] private GameObject coalSword;
+    [SerializeField] private GameObject coalSwordGlow;
+
+    [HideInInspector] public SpriteRenderer coalSwordSR;
+    
+    public Material[] coalSwordGlowMats;
 
     [SerializeField] private PlayerData playerData;
 
@@ -81,6 +88,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
         DashState = new PlayerDashState(this, StateMachine, playerData, "dash");
         SuperDashState = new PlayerSuperDashState(this, StateMachine, playerData, "inAir");
         AttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
+        WeaponChargeState = new PlayerWeaponChargeState(this, StateMachine, playerData, "weaponCharge");
     }
 
     private void Start()
@@ -88,6 +96,10 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
         Anim = GetComponent<Animator>();
         EyesAnim = eyes.GetComponent<Animator>();
         CoalSwordAnim = coalSword.GetComponent<Animator>();
+        CoalSwordGlowAnim = coalSwordGlow.GetComponent<Animator>();
+
+        coalSwordSR = coalSword.GetComponent<SpriteRenderer>();
+
         InputHandler = GetComponent<PlayerInputHandler>();
         RB = GetComponent<Rigidbody2D>();
         DashDirectionIndicator = transform.Find("SuperDash_Direction_Indicator");

@@ -33,6 +33,7 @@ public class PlayerState
         if(stateMachine.CurrentState != player.LedgeClimbState)
         {
             player.CoalSwordAnim.SetBool(animBoolName, true);
+            player.CoalSwordGlowAnim.SetBool(animBoolName, true);
         }
         startTime = Time.time;
         isAnimationFinished = false;
@@ -45,6 +46,7 @@ public class PlayerState
         if(stateMachine.CurrentState != player.LedgeClimbState)
         {
             player.CoalSwordAnim.SetBool(animBoolName, false);
+            player.CoalSwordGlowAnim.SetBool(animBoolName, false);
         }
     }
 
