@@ -18,6 +18,21 @@ public struct WeaponAttackDetails
 }
 
 [System.Serializable]
+public struct WeaponScreenShakeDetails
+{
+    public string attackName;
+    [Header("Impulse Source Settings")]
+    public float impulseTime;
+    public float impulseForce;
+    public Vector3 defaultVelocity;
+
+    [Header("Impulse Listener Settings")]
+    public float listenerAmplitude;
+    public float listenerFrequency;
+    public float listenerDuration;
+}
+
+[System.Serializable]
 public struct EnemyMeleeAttackDetails
 {
     public string attackName;

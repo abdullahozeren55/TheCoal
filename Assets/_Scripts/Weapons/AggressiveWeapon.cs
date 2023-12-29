@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Cinemachine;
 
 public class AggressiveWeapon : Weapon
 {
@@ -9,11 +10,16 @@ public class AggressiveWeapon : Weapon
     protected SO_AggressiveWeaponData aggressiveWeaponData;
     private List<IDamageable> detectedDamageables = new List<IDamageable>();
     private List<IKnockbackable> detectedKnockbackables = new List<IKnockbackable>();
-    private List <IStunable> detectedStunables = new List <IStunable>();
+    private List<IStunable> detectedStunables = new List<IStunable>();
+    private List<Vector2> contactPoints = new List<Vector2>();
+
+    private bool doneInstantiate;
 
     protected override void Awake()
     {
         base.Awake();
+
+        doneInstantiate = false;
 
         if(weaponData.GetType() == typeof(SO_AggressiveWeaponData))
         {
@@ -35,9 +41,24 @@ public class AggressiveWeapon : Weapon
     {
 
         WeaponAttackDetails details = aggressiveWeaponData.AttackDetails[attackCounter];
+        WeaponScreenShakeDetails shakeDetails = aggressiveWeaponData.ScreenShakeDetails[attackCounter];
+
+        foreach (Vector2 item in contactPoints.ToList())
+        {
+            if (!doneInstantiate)
+            {
+                state.ParticleManager.StartParticlesWithCertainPosRandomRot(weaponData.hitParticle, item);
+                doneInstantiate = true;
+            }
+
+            contactPoints.Remove(item);
+        }
+
+        doneInstantiate = false;
 
         foreach (IDamageable item in detectedDamageables.ToList())
         {
+            ShakeScreen(shakeDetails, impulseSource);
             item.Damage(details.damageAmount);
         }
         foreach (IKnockbackable item in detectedKnockbackables.ToList())
@@ -52,6 +73,14 @@ public class AggressiveWeapon : Weapon
 
     public void AddToDetected(Collider2D collision)
     {
+        Vector2 contactPoint = collision.bounds.ClosestPoint(transform.position);
+        
+        if(contactPoint != null)
+        {      
+            contactPoints.Add(contactPoint);
+        }
+
+
         IDamageable damageable = collision.GetComponent<IDamageable>();
 
         if(damageable != null)
@@ -76,6 +105,13 @@ public class AggressiveWeapon : Weapon
 
     public void RemoveFromDetected(Collider2D collision)
     {
+        Vector2 contactPoint = collision.bounds.ClosestPoint(transform.position);
+        
+        if(contactPoint != null)
+        {      
+            contactPoints.Remove(contactPoint);
+        }
+
         IDamageable damageable = collision.GetComponent<IDamageable>();
 
         if(damageable != null)
@@ -96,5 +132,10 @@ public class AggressiveWeapon : Weapon
         {
             detectedStunables.Remove(stunable);
         }
+    }
+
+    private void ShakeScreen(WeaponScreenShakeDetails screenShakeDetails, CinemachineImpulseSource impulseSource)
+    {
+        CameraShakeManager.instance.ScreenShakeFromWeapon(screenShakeDetails, impulseSource);
     }
 }

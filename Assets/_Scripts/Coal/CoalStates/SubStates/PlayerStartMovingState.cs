@@ -34,7 +34,7 @@ public class PlayerStartMovingState : PlayerGroundedState
         }
         else if (player.InputHandler.AttackInputs[(int)CombatInputs.secondary])
         {
-            player.AttackState.SetAttackIsHeavy(false);
+            player.AttackState.SetAttackIsHeavy(true);
             stateMachine.ChangeState(player.AttackState);
         }     
         else if(jumpInput && player.JumpState.CanJump())

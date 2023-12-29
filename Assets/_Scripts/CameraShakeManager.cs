@@ -26,29 +26,28 @@ public class CameraShakeManager : MonoBehaviour
 
     }
 
-    public void ScreenShakeFromProfile(SO_ScreenShakeProfile profile, CinemachineImpulseSource impulseSource)
+    public void ScreenShakeFromWeapon(WeaponScreenShakeDetails screenShakeDetails, CinemachineImpulseSource impulseSource)
     {
-        //apply settings
-        SetUpScreenShakeSettings(profile, impulseSource);
-
-        //screenshake
-        impulseSource.GenerateImpulseWithForce(profile.impulseForce);
+        SetUpScreenShakeSettings(screenShakeDetails, impulseSource);      
+        impulseSource.GenerateImpulseWithForce(screenShakeDetails.impulseForce);
     }
 
-    private void SetUpScreenShakeSettings(SO_ScreenShakeProfile profile, CinemachineImpulseSource impulseSource)
+    private void SetUpScreenShakeSettings(WeaponScreenShakeDetails screenShakeDetails, CinemachineImpulseSource impulseSource)
     {
         impulseDefinition = impulseSource.m_ImpulseDefinition;
 
         //impulse source settings
-        impulseDefinition.m_ImpulseDuration = profile.impulseTime;
-        impulseSource.m_DefaultVelocity = profile.defaultVelocity;
+        impulseDefinition.m_ImpulseDuration = screenShakeDetails.impulseTime;
+        impulseSource.m_DefaultVelocity = screenShakeDetails.defaultVelocity;
 
         //impulse listener settings
         for (int i = 0; i < listeners.Length; i++)
         {
-            listeners[i].m_ReactionSettings.m_AmplitudeGain = profile.listenerAmplitude;
-            listeners[i].m_ReactionSettings.m_FrequencyGain = profile.listenerFrequency;
-            listeners[i].m_ReactionSettings.m_Duration = profile.listenerDuration;
+
+            listeners[i].m_ReactionSettings.m_AmplitudeGain = screenShakeDetails.listenerAmplitude;
+            listeners[i].m_ReactionSettings.m_FrequencyGain = screenShakeDetails.listenerFrequency;
+            listeners[i].m_ReactionSettings.m_Duration = screenShakeDetails.listenerDuration;
+
         }
 
     }

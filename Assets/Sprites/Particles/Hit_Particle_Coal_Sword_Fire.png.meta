@@ -1,0 +1,319 @@
+fileFormatVersion: 2
+guid: 693e9b823b754bc429259ffd1cccd503
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1823652513854581528
+    second: Hit_Particle_Coal_Sword_Fire_0
+  - first:
+      213: 8256432957334329617
+    second: Hit_Particle_Coal_Sword_Fire_1
+  - first:
+      213: -5158830472970605776
+    second: Hit_Particle_Coal_Sword_Fire_2
+  - first:
+      213: 4158761522028989781
+    second: Hit_Particle_Coal_Sword_Fire_3
+  - first:
+      213: -5594027208712346380
+    second: Hit_Particle_Coal_Sword_Fire_4
+  - first:
+      213: -8784366341283980543
+    second: Hit_Particle_Coal_Sword_Fire_5
+  - first:
+      213: -401871447117291867
+    second: Hit_Particle_Coal_Sword_Fire_6
+  - first:
+      213: 770487690122280266
+    second: Hit_Particle_Coal_Sword_Fire_7
+  - first:
+      213: 5085417270046564012
+    second: Hit_Particle_Coal_Sword_Fire_8
+  - first:
+      213: -8302373784792931278
+    second: Hit_Particle_Coal_Sword_Fire_9
+  - first:
+      213: 7707658286117219637
+    second: Hit_Particle_Coal_Sword_Fire_10
+  - first:
+      213: 8082654339026722118
+    second: Hit_Particle_Coal_Sword_Fire_11
+  - first:
+      213: -5759266640909194961
+    second: Hit_Particle_Coal_Sword_Fire_12
+  - first:
+      213: 8262324237387988376
+    second: Hit_Particle_Coal_Sword_Fire_13
+  - first:
+      213: -7656527160422884347
+    second: Hit_Particle_Coal_Sword_Fire_14
+  - first:
+      213: 8565539483047316957
+    second: Hit_Particle_Coal_Sword_Fire_15
+  - first:
+      213: -9219824169547343745
+    second: Hit_Particle_Coal_Sword_Fire_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hit_Particle_Coal_Sword_Fire_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e413f563b511b6e0800000000000000
+      internalID: -1823652513854581528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit_Particle_Coal_Sword_Fire_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1199dbdb70eb49270800000000000000
+      internalID: 8256432957334329617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit_Particle_Coal_Sword_Fire_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03b602a74072868b0800000000000000
+      internalID: -5158830472970605776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit_Particle_Coal_Sword_Fire_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55dc91af193e6b930800000000000000
+      internalID: 4158761522028989781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit_Particle_Coal_Sword_Fire_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f4a4d064e50e52b0800000000000000
+      internalID: -5594027208712346380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit_Particle_Coal_Sword_Fire_5
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10bdedaaa59a71680800000000000000
+      internalID: -8784366341283980543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hit_Particle_Coal_Sword_Fire_6
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ae933d4c044c6af0800000000000000
+      internalID: -401871447117291867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e3d799b4b08247c4c989e85aa3bcdc5d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Hit_Particle_Coal_Sword_Fire_0: -1823652513854581528
+      Hit_Particle_Coal_Sword_Fire_1: 8256432957334329617
+      Hit_Particle_Coal_Sword_Fire_2: -5158830472970605776
+      Hit_Particle_Coal_Sword_Fire_3: 4158761522028989781
+      Hit_Particle_Coal_Sword_Fire_4: -5594027208712346380
+      Hit_Particle_Coal_Sword_Fire_5: -8784366341283980543
+      Hit_Particle_Coal_Sword_Fire_6: -401871447117291867
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

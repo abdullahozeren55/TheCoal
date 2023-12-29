@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Weapon : MonoBehaviour
 {
 
     [SerializeField] protected SO_WeaponData weaponData;
+    [SerializeField] protected CinemachineImpulseSource impulseSource;
     protected Animator baseAnimator;
     protected Animator weaponAnimator;
 
@@ -27,7 +29,7 @@ public class Weapon : MonoBehaviour
     {
         gameObject.SetActive(true);
 
-        if(attackCounter >= weaponData.amountOfAttacks - 5)
+        if(attackCounter >= weaponData.amountOfNormalAttacks)
         {
             attackCounter = 0;
         }
@@ -43,7 +45,10 @@ public class Weapon : MonoBehaviour
     {
         gameObject.SetActive(true);
 
-        attackCounter = weaponData.amountOfAttacks - 1;
+        if(attackCounter < weaponData.amountOfAttacks - weaponData.amountOfAirAttacks || attackCounter >= weaponData.amountOfAttacks)
+        {
+            attackCounter = weaponData.amountOfAttacks - weaponData.amountOfAirAttacks;
+        }
 
         baseAnimator.SetBool("attack", true);
         weaponAnimator.SetBool("attack", true);
@@ -55,8 +60,10 @@ public class Weapon : MonoBehaviour
     public virtual void EnterWeaponHeavy()
     {
         gameObject.SetActive(true);
-
-        attackCounter = weaponData.amountOfAttacks - 2;
+        if(attackCounter < weaponData.amountOfAttacks - (weaponData.amountOfAirAttacks + weaponData.amountOfMoveHeavyAttacks + weaponData.amountOfMoveAttacks + weaponData.amountOfHeavyAttacks) || attackCounter >= weaponData.amountOfAttacks - (weaponData.amountOfAirAttacks + weaponData.amountOfMoveHeavyAttacks + weaponData.amountOfMoveAttacks))
+        {
+            attackCounter = weaponData.amountOfAttacks - (weaponData.amountOfAirAttacks + weaponData.amountOfMoveHeavyAttacks + weaponData.amountOfMoveAttacks + weaponData.amountOfHeavyAttacks);
+        }
 
         baseAnimator.SetBool("attack", true);
         weaponAnimator.SetBool("attack", true);
@@ -69,9 +76,25 @@ public class Weapon : MonoBehaviour
     {
         gameObject.SetActive(true);
 
-        if((attackCounter >= weaponData.amountOfAttacks - 2) || (attackCounter <= 2))
+        if(attackCounter < weaponData.amountOfAttacks - (weaponData.amountOfAirAttacks + weaponData.amountOfMoveHeavyAttacks + weaponData.amountOfMoveAttacks) || attackCounter >= weaponData.amountOfAttacks - (weaponData.amountOfAirAttacks + weaponData.amountOfMoveHeavyAttacks))
         {
-            attackCounter = 3;
+            attackCounter = weaponData.amountOfAttacks - (weaponData.amountOfAirAttacks + weaponData.amountOfMoveHeavyAttacks + weaponData.amountOfMoveAttacks);
+        }
+
+        baseAnimator.SetBool("attack", true);
+        weaponAnimator.SetBool("attack", true);
+
+        baseAnimator.SetInteger("attackCounter", attackCounter);
+        weaponAnimator.SetInteger("attackCounter", attackCounter);
+    }
+
+    public virtual void EnterWeaponMoveHeavy()
+    {
+        gameObject.SetActive(true);
+
+        if(attackCounter < weaponData.amountOfAttacks - (weaponData.amountOfAirAttacks + weaponData.amountOfMoveHeavyAttacks) || attackCounter >= weaponData.amountOfAttacks - weaponData.amountOfAirAttacks)
+        {
+            attackCounter = weaponData.amountOfAttacks - (weaponData.amountOfAirAttacks + weaponData.amountOfMoveHeavyAttacks);
         }
 
         baseAnimator.SetBool("attack", true);

@@ -85,10 +85,10 @@ public class PlayerIdleState : PlayerGroundedState
             stateMachine.ChangeState(player.AttackState);
             canSecondaryAttack = false;
         }
-        /*else if((player.InputHandler.AttackInputs[(int)CombatInputs.secondary] || player.InputHandler.AttackInputs[(int)CombatInputs.primary]) && canChargeWeapon)
+        else if((player.InputHandler.AttackInputs[(int)CombatInputs.secondary] || player.InputHandler.AttackInputs[(int)CombatInputs.primary]) && canChargeWeapon)
         {
             stateMachine.ChangeState(player.WeaponChargeState);
-        }*/
+        }
         else if(jumpInput && player.JumpState.CanJump())
         {
             stateMachine.ChangeState(player.JumpState);

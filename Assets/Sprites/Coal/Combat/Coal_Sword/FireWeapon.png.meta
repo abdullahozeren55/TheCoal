@@ -1,0 +1,1379 @@
+fileFormatVersion: 2
+guid: 4ec33eb72ba7f1843be4aed91fb81df8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8379454641853806708
+    second: FireWeapon_0
+  - first:
+      213: -724858361690748537
+    second: FireWeapon_1
+  - first:
+      213: 9044610207825465460
+    second: FireWeapon_2
+  - first:
+      213: 6737198030535963918
+    second: FireWeapon_3
+  - first:
+      213: 1204100033603317060
+    second: FireWeapon_4
+  - first:
+      213: -5730201220446538827
+    second: FireWeapon_5
+  - first:
+      213: -2213897809642869516
+    second: FireWeapon_6
+  - first:
+      213: 6312439259264316374
+    second: FireWeapon_7
+  - first:
+      213: 4763472786907164788
+    second: FireWeapon_8
+  - first:
+      213: 4868320083773216614
+    second: FireWeapon_9
+  - first:
+      213: 3529159383035879931
+    second: FireWeapon_10
+  - first:
+      213: -6002773804562528779
+    second: FireWeapon_11
+  - first:
+      213: 5602992461649266335
+    second: FireWeapon_12
+  - first:
+      213: -3477868977058083546
+    second: FireWeapon_13
+  - first:
+      213: 777952239545710234
+    second: FireWeapon_14
+  - first:
+      213: -3112129580909981809
+    second: FireWeapon_15
+  - first:
+      213: 6786221960895391168
+    second: FireWeapon_16
+  - first:
+      213: 292660924904374041
+    second: FireWeapon_17
+  - first:
+      213: -3663801579629302217
+    second: FireWeapon_18
+  - first:
+      213: -6725597882717919998
+    second: FireWeapon_19
+  - first:
+      213: -3726191945499710303
+    second: FireWeapon_20
+  - first:
+      213: 8510760792200492358
+    second: FireWeapon_21
+  - first:
+      213: 5114002954044072792
+    second: FireWeapon_22
+  - first:
+      213: -1273372971169963965
+    second: FireWeapon_23
+  - first:
+      213: -5706411687588348463
+    second: FireWeapon_24
+  - first:
+      213: 6774556262945544316
+    second: FireWeapon_25
+  - first:
+      213: -3238778562979932690
+    second: FireWeapon_26
+  - first:
+      213: 1158868594988731380
+    second: FireWeapon_27
+  - first:
+      213: 7453465911847105216
+    second: FireWeapon_28
+  - first:
+      213: 5395959453216872807
+    second: FireWeapon_29
+  - first:
+      213: -1303924584187255104
+    second: FireWeapon_30
+  - first:
+      213: 9031826020586947605
+    second: FireWeapon_31
+  - first:
+      213: 4117355272348548559
+    second: FireWeapon_32
+  - first:
+      213: -7543116873453422600
+    second: FireWeapon_33
+  - first:
+      213: -2476723766699436900
+    second: FireWeapon_34
+  - first:
+      213: -6463989314053031003
+    second: FireWeapon_35
+  - first:
+      213: 8633243683270630621
+    second: FireWeapon_36
+  - first:
+      213: -5263207430415098767
+    second: FireWeapon_37
+  - first:
+      213: -693330874542555592
+    second: FireWeapon_38
+  - first:
+      213: 5255634064329918862
+    second: FireWeapon_39
+  - first:
+      213: 4618309157558898719
+    second: FireWeapon_40
+  - first:
+      213: -37381546247201950
+    second: FireWeapon_41
+  - first:
+      213: -7475569872559869140
+    second: FireWeapon_42
+  - first:
+      213: 816597273712033849
+    second: FireWeapon_43
+  - first:
+      213: 2105968840673418810
+    second: FireWeapon_44
+  - first:
+      213: -5120751410172125820
+    second: FireWeapon_45
+  - first:
+      213: 6873626367414877219
+    second: FireWeapon_46
+  - first:
+      213: 776186182680084886
+    second: FireWeapon_47
+  - first:
+      213: -1489446974745260030
+    second: FireWeapon_48
+  - first:
+      213: 5267117122716683167
+    second: FireWeapon_49
+  - first:
+      213: 1119089403050669403
+    second: FireWeapon_50
+  - first:
+      213: -3867160313085417969
+    second: FireWeapon_51
+  - first:
+      213: 7792303135476826721
+    second: FireWeapon_52
+  - first:
+      213: -627807979664553387
+    second: FireWeapon_53
+  - first:
+      213: -8870651951093187521
+    second: FireWeapon_54
+  - first:
+      213: -7296714707585294109
+    second: FireWeapon_55
+  - first:
+      213: -6306851114418685094
+    second: FireWeapon_56
+  - first:
+      213: 8889347738614359370
+    second: FireWeapon_57
+  - first:
+      213: 4873527771408572587
+    second: FireWeapon_58
+  - first:
+      213: -2995394730837557228
+    second: FireWeapon_59
+  - first:
+      213: -3278759760975904839
+    second: FireWeapon_60
+  - first:
+      213: 4525934239051296146
+    second: FireWeapon_61
+  - first:
+      213: -4134760066336716612
+    second: FireWeapon_62
+  - first:
+      213: 8684124243167832382
+    second: FireWeapon_63
+  - first:
+      213: 936661300047185988
+    second: FireWeapon_64
+  - first:
+      213: -3040985287666996761
+    second: FireWeapon_65
+  - first:
+      213: 8274683170855815659
+    second: FireWeapon_66
+  - first:
+      213: 3587991636332573278
+    second: FireWeapon_67
+  - first:
+      213: -5187796527755633785
+    second: FireWeapon_68
+  - first:
+      213: 3827402568227704526
+    second: FireWeapon_69
+  - first:
+      213: -5305289951724910394
+    second: FireWeapon_70
+  - first:
+      213: -4838035789680979444
+    second: FireWeapon_71
+  - first:
+      213: -3273416060923254659
+    second: FireWeapon_72
+  - first:
+      213: -1936073921684247867
+    second: FireWeapon_73
+  - first:
+      213: 5235543310060650996
+    second: FireWeapon_74
+  - first:
+      213: -7802776950874884240
+    second: FireWeapon_75
+  - first:
+      213: 2176014765887422240
+    second: FireWeapon_76
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FireWeapon_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c874ec4466236bb80800000000000000
+      internalID: -8379454641853806708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 768
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78983f61929c0f5f0800000000000000
+      internalID: -724858361690748537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 768
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4701f494019e48d70800000000000000
+      internalID: 9044610207825465460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 768
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e05be8fd9e55f7d50800000000000000
+      internalID: 6737198030535963918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44d26f8d992d5b010800000000000000
+      internalID: 1204100033603317060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b336c3995c3a70b0800000000000000
+      internalID: -5730201220446538827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 672
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fca83ffba7a641e0800000000000000
+      internalID: -2213897809642869516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 672
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d3fda2cf0a4a9750800000000000000
+      internalID: 6312439259264316374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_8
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 672
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47077d003414b1240800000000000000
+      internalID: 4763472786907164788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 672
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 667d33e925fbf8340800000000000000
+      internalID: 4868320083773216614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf12795b2c71af030800000000000000
+      internalID: 3529159383035879931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5c700670dd1bca0800000000000000
+      internalID: -6002773804562528779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f96cbcb35f3d1cd40800000000000000
+      internalID: 5602992461649266335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_13
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62d0a1787902cbfc0800000000000000
+      internalID: -3477868977058083546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_14
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 576
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a96775aa077dbca00800000000000000
+      internalID: 777952239545710234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8f00ea82ae7fc4d0800000000000000
+      internalID: -3112129580909981809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_16
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 480
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c5ef122be08d2e50800000000000000
+      internalID: 6786221960895391168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_17
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 480
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91fff848f8dbf0400800000000000000
+      internalID: 292660924904374041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_18
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 480
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73e2eaeffdf872dc0800000000000000
+      internalID: -3663801579629302217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 480
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 205aa720c50e9a2a0800000000000000
+      internalID: -6725597882717919998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_20
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac6193fa28e94cc0800000000000000
+      internalID: -3726191945499710303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_21
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 480
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 645be6b39db4c1670800000000000000
+      internalID: 8510760792200492358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8536810779698f640800000000000000
+      internalID: 5114002954044072792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_23
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 340a4d28702145ee0800000000000000
+      internalID: -1273372971169963965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_24
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ddb823ddc0cec0b0800000000000000
+      internalID: -5706411687588348463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_25
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 384
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7854cb270f040e50800000000000000
+      internalID: 6774556262945544316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_26
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee55e678e0c8d03d0800000000000000
+      internalID: -3238778562979932690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_27
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 384
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fbc8a1e8d0251010800000000000000
+      internalID: 1158868594988731380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_28
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c23125b1c7007760800000000000000
+      internalID: 7453465911847105216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_29
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 384
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 769176f988c42ea40800000000000000
+      internalID: 5395959453216872807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c6ae99cf7787ede0800000000000000
+      internalID: -1303924584187255104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_31
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 514073eb9ed775d70800000000000000
+      internalID: 9031826020586947605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_32
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcdba663ec8c32930800000000000000
+      internalID: 4117355272348548559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_33
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f7bd823b27715790800000000000000
+      internalID: -7543116873453422600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c94dc1f3bd8e0add0800000000000000
+      internalID: -2476723766699436900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5abb2ff67fb4b46a0800000000000000
+      internalID: -6463989314053031003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_36
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddc1bb893617fc770800000000000000
+      internalID: 8633243683270630621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_37
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17c59ea4ab455f6b0800000000000000
+      internalID: -5263207430415098767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_38
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e74173e3bc066f0800000000000000
+      internalID: -693330874542555592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e89c3d10653cfe840800000000000000
+      internalID: 5255634064329918862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_40
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f105b3fb5b7871040800000000000000
+      internalID: 4618309157558898719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_41
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26bd7c68ea13b7ff0800000000000000
+      internalID: -37381546247201950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_42
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c23f474eec0714890800000000000000
+      internalID: -7475569872559869140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9308828d4e2255b00800000000000000
+      internalID: 816597273712033849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_44
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3e5160b087e93d10800000000000000
+      internalID: 2105968840673418810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_45
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d1c9d29bf6fe8b0800000000000000
+      internalID: -5120751410172125820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireWeapon_46
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32cb58c53c6046f50800000000000000
+      internalID: 6873626367414877219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1289637b86d6a8341a8c3f549a530725
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FireWeapon_0: -8379454641853806708
+      FireWeapon_1: -724858361690748537
+      FireWeapon_10: 3529159383035879931
+      FireWeapon_11: -6002773804562528779
+      FireWeapon_12: 5602992461649266335
+      FireWeapon_13: -3477868977058083546
+      FireWeapon_14: 777952239545710234
+      FireWeapon_15: -3112129580909981809
+      FireWeapon_16: 6786221960895391168
+      FireWeapon_17: 292660924904374041
+      FireWeapon_18: -3663801579629302217
+      FireWeapon_19: -6725597882717919998
+      FireWeapon_2: 9044610207825465460
+      FireWeapon_20: -3726191945499710303
+      FireWeapon_21: 8510760792200492358
+      FireWeapon_22: 5114002954044072792
+      FireWeapon_23: -1273372971169963965
+      FireWeapon_24: -5706411687588348463
+      FireWeapon_25: 6774556262945544316
+      FireWeapon_26: -3238778562979932690
+      FireWeapon_27: 1158868594988731380
+      FireWeapon_28: 7453465911847105216
+      FireWeapon_29: 5395959453216872807
+      FireWeapon_3: 6737198030535963918
+      FireWeapon_30: -1303924584187255104
+      FireWeapon_31: 9031826020586947605
+      FireWeapon_32: 4117355272348548559
+      FireWeapon_33: -7543116873453422600
+      FireWeapon_34: -2476723766699436900
+      FireWeapon_35: -6463989314053031003
+      FireWeapon_36: 8633243683270630621
+      FireWeapon_37: -5263207430415098767
+      FireWeapon_38: -693330874542555592
+      FireWeapon_39: 5255634064329918862
+      FireWeapon_4: 1204100033603317060
+      FireWeapon_40: 4618309157558898719
+      FireWeapon_41: -37381546247201950
+      FireWeapon_42: -7475569872559869140
+      FireWeapon_43: 816597273712033849
+      FireWeapon_44: 2105968840673418810
+      FireWeapon_45: -5120751410172125820
+      FireWeapon_46: 6873626367414877219
+      FireWeapon_5: -5730201220446538827
+      FireWeapon_6: -2213897809642869516
+      FireWeapon_7: 6312439259264316374
+      FireWeapon_8: 4763472786907164788
+      FireWeapon_9: 4868320083773216614
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

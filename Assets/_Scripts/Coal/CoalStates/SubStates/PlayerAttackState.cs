@@ -13,6 +13,9 @@ public class PlayerAttackState : PlayerAbilityState
     private bool attackIsHeavy;
 
     private int xInput;
+
+    public ParticleManager ParticleManager => particleManager ??= core.GetCoreComponent<ParticleManager>();
+    private ParticleManager particleManager;
     public PlayerAttackState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -29,7 +32,15 @@ public class PlayerAttackState : PlayerAbilityState
         }
         else if(attackIsHeavy)
         {
-            weapon.EnterWeaponHeavy();
+            if(xInput == 0)
+            {
+                weapon.EnterWeaponHeavy();
+            }
+            else
+            {
+                weapon.EnterWeaponMoveHeavy();
+            }
+            
         }
         else if((isGrounded || isOnSlope) && xInput != 0)
         {

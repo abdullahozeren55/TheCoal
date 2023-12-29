@@ -47,6 +47,9 @@ public class PlayerData : ScriptableObject
     public float dashDistBetweenAfterImages = 0.5f;
     public float dashFlipCoyoteTime = 0.2f;
 
+    [Header("Weapon Charge State")]
+    public float timeForFirstCharge = 1.5f;
+
     [Header("Attack Stuff")]
 
     public float maxHoldTimeForAttack = 0.2f;

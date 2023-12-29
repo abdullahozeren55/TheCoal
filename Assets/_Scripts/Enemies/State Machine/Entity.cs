@@ -18,8 +18,6 @@ public class Entity : MonoBehaviour
     protected Stats Stats => stats ??= Core.GetCoreComponent<Stats>();
     private Stats stats;
 
-    protected CinemachineImpulseSource impulseSource;
-
     public FiniteStateMachine stateMachine;
 
     public D_Entity entityData;
@@ -30,10 +28,8 @@ public class Entity : MonoBehaviour
 
     public Core Core { get; private set; }
     [SerializeField] private Transform playerCheck;
-    [SerializeField] protected SO_ScreenShakeProfile screenShakeProfile;
 
     public GameObject damageParticles;
-    public GameObject hitParticles;
     public GameObject stunStars;
     public GameObject player;
 
@@ -48,7 +44,6 @@ public class Entity : MonoBehaviour
         anim = GetComponent<Animator>();
         EyesAnim = eyes.GetComponent<Animator>();
         atsm = GetComponent<AnimationToStateMachine>();
-        impulseSource = GetComponent<CinemachineImpulseSource>();
 
         stateMachine = new FiniteStateMachine();
     }
@@ -71,7 +66,6 @@ public class Entity : MonoBehaviour
 
     public virtual bool CheckPlayerInMaxAgroRange()
     {
-        //return Physics2D.Raycast(playerCheck.position, transform.right * Movement.FacingDirection, entityData.maxAgroDistance, entityData.whatIsPlayer);
         RaycastHit2D hit = Physics2D.Linecast(playerCheck.transform.position, player.transform.position, entityData.whatIsLineCastCanHit);
 
         if(hit.collider != null && hit.collider.CompareTag("Player") && hit.distance <= entityData.maxAgroDistance)

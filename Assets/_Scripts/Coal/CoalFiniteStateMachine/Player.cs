@@ -48,6 +48,8 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     public Rigidbody2D RB { get; private set; }
 
     public PlayerInventory Inventory { get; private set; }
+
+    public int currentWeapon;
     
     [SerializeField] private GameObject eyes;
     [SerializeField] private GameObject coalSword;
@@ -105,7 +107,8 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
         DashDirectionIndicator = transform.Find("SuperDash_Direction_Indicator");
         Inventory = GetComponent<PlayerInventory>();
 
-        AttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.primary]);
+        AttackState.SetWeapon(Inventory.weapons[0]);
+        currentWeapon = 0;
 
         fallSpeedYDampingChangeThreshold = CameraManager.instance.fallSpeedYDampingChangeThreshold;
 

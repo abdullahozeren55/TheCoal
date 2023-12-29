@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8e8a90070c71144a59c4f5ea55c315, type: 3}
+  m_Name: Coal_Sword_Fire
+  m_EditorClassIdentifier: 
+  normalAttackCount: 3
+  heavyAttackCount: 1
+  moveAttackCount: 3
+  moveHeavyAttackCount: 1
+  airAttackCount: 1
+  attackDetails:
+  - attackName: NormalAttack1
+    movementSpeed: 3
+    movementAngle: {x: 1, y: 0}
+    damageAmount: 10
+    poiseDamageAmount: 8
+    knockbackStrength: 5
+    knockbackAngle: {x: 1, y: 2}
+  - attackName: NormalAttack2
+    movementSpeed: 4
+    movementAngle: {x: 1, y: 2}
+    damageAmount: 14
+    poiseDamageAmount: 10
+    knockbackStrength: 7.5
+    knockbackAngle: {x: 1, y: 2}
+  - attackName: NormalAttack3
+    movementSpeed: 2
+    movementAngle: {x: 1, y: 1}
+    damageAmount: 18
+    poiseDamageAmount: 12
+    knockbackStrength: 10
+    knockbackAngle: {x: 1, y: 3}
+  - attackName: HeavyAttack
+    movementSpeed: 10
+    movementAngle: {x: 0, y: -10}
+    damageAmount: 40
+    poiseDamageAmount: 15
+    knockbackStrength: 8
+    knockbackAngle: {x: 2, y: 0.2}
+  - attackName: MoveAttack1
+    movementSpeed: 6
+    movementAngle: {x: 1, y: 0.25}
+    damageAmount: 10
+    poiseDamageAmount: 5
+    knockbackStrength: 10
+    knockbackAngle: {x: 2, y: 1}
+  - attackName: MoveAttack2
+    movementSpeed: 6
+    movementAngle: {x: 1, y: 0.1}
+    damageAmount: 14
+    poiseDamageAmount: 10
+    knockbackStrength: 8
+    knockbackAngle: {x: 1, y: 0.1}
+  - attackName: MoveAttack3
+    movementSpeed: 10
+    movementAngle: {x: 0, y: -10}
+    damageAmount: 12
+    poiseDamageAmount: 8
+    knockbackStrength: 9
+    knockbackAngle: {x: 1, y: 0.2}
+  - attackName: MoveHeavyAttack
+    movementSpeed: 6
+    movementAngle: {x: 1, y: 0.1}
+    damageAmount: 20
+    poiseDamageAmount: 12
+    knockbackStrength: 8
+    knockbackAngle: {x: 2, y: 0.2}
+  - attackName: Air Attack
+    movementSpeed: 10
+    movementAngle: {x: 0, y: -10}
+    damageAmount: 30
+    poiseDamageAmount: 50
+    knockbackStrength: 15
+    knockbackAngle: {x: 2, y: 0.1}
+  screenShakeDetails:
+  - attackName: NormalAttack1
+    impulseTime: 0.25
+    impulseForce: 0.15
+    defaultVelocity: {x: 0, y: -1, z: 0}
+    listenerAmplitude: 3
+    listenerFrequency: 2
+    listenerDuration: 0.4
+  - attackName: NormalAttack2
+    impulseTime: 0.25
+    impulseForce: 0.15
+    defaultVelocity: {x: 0, y: -1, z: 0}
+    listenerAmplitude: 3
+    listenerFrequency: 2
+    listenerDuration: 0.4
+  - attackName: NormalAttack3
+    impulseTime: 0.25
+    impulseForce: 0.17
+    defaultVelocity: {x: 0, y: -1, z: 0}
+    listenerAmplitude: 3
+    listenerFrequency: 2
+    listenerDuration: 0.4
+  - attackName: HeavyAttack
+    impulseTime: 0.25
+    impulseForce: 0.2
+    defaultVelocity: {x: 0, y: -1, z: 0}
+    listenerAmplitude: 3
+    listenerFrequency: 2
+    listenerDuration: 0.4
+  - attackName: MoveAttack1
+    impulseTime: 0.22
+    impulseForce: 0.09
+    defaultVelocity: {x: 0, y: -1, z: 0}
+    listenerAmplitude: 3
+    listenerFrequency: 2
+    listenerDuration: 0.4
+  - attackName: MoveAttack2
+    impulseTime: 0.22
+    impulseForce: 0.11
+    defaultVelocity: {x: 0, y: -1, z: 0}
+    listenerAmplitude: 3
+    listenerFrequency: 2
+    listenerDuration: 0.4
+  - attackName: MoveAttack3
+    impulseTime: 0.22
+    impulseForce: 0.1
+    defaultVelocity: {x: 0, y: -1, z: 0}
+    listenerAmplitude: 3
+    listenerFrequency: 2
+    listenerDuration: 0.4
+  - attackName: MoveHeavyAttack
+    impulseTime: 0.22
+    impulseForce: 0.15
+    defaultVelocity: {x: 0, y: -1, z: 0}
+    listenerAmplitude: 3
+    listenerFrequency: 2
+    listenerDuration: 0.4
+  - attackName: AirAttack
+    impulseTime: 0.3
+    impulseForce: 0.3
+    defaultVelocity: {x: 0, y: -1, z: 0}
+    listenerAmplitude: 3
+    listenerFrequency: 2
+    listenerDuration: 0.4
+  hitPart: {fileID: 2725514736123334029, guid: 5a04c87e642c7ff4d8d1ec3344f4da8b, type: 3}
