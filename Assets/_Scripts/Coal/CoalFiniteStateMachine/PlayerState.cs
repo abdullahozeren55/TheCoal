@@ -32,8 +32,15 @@ public class PlayerState
         player.EyesAnim.SetBool(animBoolName, true);
         if(stateMachine.CurrentState != player.LedgeClimbState)
         {
-            player.CoalSwordAnim.SetBool(animBoolName, true);
-            player.CoalSwordGlowAnim.SetBool(animBoolName, true);
+            if(player.coalSword.activeSelf)
+            {
+                player.CoalSwordAnim.SetBool(animBoolName, true);
+            }
+            
+            if(player.coalSwordGlow.activeSelf)
+            {
+                player.CoalSwordGlowAnim.SetBool(animBoolName, true);
+            }
         }
         startTime = Time.time;
         isAnimationFinished = false;
@@ -45,8 +52,15 @@ public class PlayerState
         player.EyesAnim.SetBool(animBoolName, false);
         if(stateMachine.CurrentState != player.LedgeClimbState)
         {
+            if(player.coalSword.activeSelf)
+            {
             player.CoalSwordAnim.SetBool(animBoolName, false);
+            }
+
+            if(player.coalSwordGlow.activeSelf)
+            {
             player.CoalSwordGlowAnim.SetBool(animBoolName, false);
+            }
         }
     }
 

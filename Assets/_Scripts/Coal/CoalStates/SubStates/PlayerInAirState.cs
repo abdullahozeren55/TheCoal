@@ -139,7 +139,7 @@ public class PlayerInAirState : PlayerState
 			    stateMachine.ChangeState(player.LandState);
             }
         }
-        else if (isTouchingLedgeBottom && !isTouchingLedge && !isGrounded)
+        else if (!isGrounded && !isOnSlope && isTouchingLedgeBottom && !isTouchingLedge)
         {
 			stateMachine.ChangeState(player.LedgeClimbState);
         }
@@ -183,10 +183,18 @@ public class PlayerInAirState : PlayerState
 		    player.Anim.SetFloat("xVelocity", Mathf.Abs(Movement.CurrentVelocity.x));
             player.EyesAnim.SetFloat("yVelocity", Movement.CurrentVelocity.y);
 		    player.EyesAnim.SetFloat("xVelocity", Mathf.Abs(Movement.CurrentVelocity.x));
-            player.CoalSwordAnim.SetFloat("yVelocity", Movement.CurrentVelocity.y);
-		    player.CoalSwordAnim.SetFloat("xVelocity", Mathf.Abs(Movement.CurrentVelocity.x));
-            player.CoalSwordGlowAnim.SetFloat("yVelocity", Movement.CurrentVelocity.y);
-		    player.CoalSwordGlowAnim.SetFloat("xVelocity", Mathf.Abs(Movement.CurrentVelocity.x));
+            if(player.coalSword.activeSelf)
+            {
+                player.CoalSwordAnim.SetFloat("yVelocity", Movement.CurrentVelocity.y);
+		        player.CoalSwordAnim.SetFloat("xVelocity", Mathf.Abs(Movement.CurrentVelocity.x));
+            }
+            
+            if(player.coalSwordGlow.activeSelf)
+            {
+                player.CoalSwordGlowAnim.SetFloat("yVelocity", Movement.CurrentVelocity.y);
+		        player.CoalSwordGlowAnim.SetFloat("xVelocity", Mathf.Abs(Movement.CurrentVelocity.x));
+            }
+            
         }
 
 

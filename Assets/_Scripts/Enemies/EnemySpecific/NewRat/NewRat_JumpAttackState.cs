@@ -5,7 +5,6 @@ using UnityEngine;
 public class NewRat_JumpAttackState : MeleeAttackState
 {
     private NewRat enemy;
-    private bool isFlipDone;
     public NewRat_JumpAttackState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_Entity entityData, Transform attackPosition, NewRat enemy) : base(entity, stateMachine, animBoolName, entityData, attackPosition)
     {
         this.enemy = enemy;
@@ -16,7 +15,6 @@ public class NewRat_JumpAttackState : MeleeAttackState
         base.Enter();
 
         Movement?.SetVelocity(entityData.attackJumpVelocity, entityData.attackJumpAngle, Movement.FacingDirection);
-        isFlipDone = false;
     }
 
     public override void Exit()
@@ -31,15 +29,10 @@ public class NewRat_JumpAttackState : MeleeAttackState
         base.LogicUpdate();
 
         if(isGrounded && isAttackFinished)
-        {
-            if(!isPlayerInMaxAgroRange && !isFlipDone)
-            {
-                Movement?.Flip();
-                isFlipDone = true;
-            }
-            
+        {  
             if(isPlayerInCloseRangeAction)
             {
+                enemy.IdleState.SetFlipAfterIdle(false);
                 stateMachine.ChangeState(enemy.IdleState);
             }
             else if(isPlayerInMaxAgroRange)
@@ -48,6 +41,7 @@ public class NewRat_JumpAttackState : MeleeAttackState
             }
             else
             {
+                enemy.LookForPlayerState.SetTurnImmediately(true);
                 stateMachine.ChangeState(enemy.LookForPlayerState);
             }
         }

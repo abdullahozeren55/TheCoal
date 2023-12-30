@@ -1,0 +1,661 @@
+fileFormatVersion: 2
+guid: ec6ff799131f9134881ab10c8ffd93ef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6055320529571364742
+    second: Coal_Sword_Charge_Coal_Sword_0
+  - first:
+      213: 5086505629515153096
+    second: Coal_Sword_Charge_Coal_Sword_1
+  - first:
+      213: -5570000499841467741
+    second: Coal_Sword_Charge_Coal_Sword_2
+  - first:
+      213: 3977399739402110033
+    second: Coal_Sword_Charge_Coal_Sword_3
+  - first:
+      213: 4747791010038831995
+    second: Coal_Sword_Charge_Coal_Sword_4
+  - first:
+      213: 5808591617317522088
+    second: Coal_Sword_Charge_Coal_Sword_5
+  - first:
+      213: 6227543050450067103
+    second: Coal_Sword_Charge_Coal_Sword_6
+  - first:
+      213: -7738404207840760089
+    second: Coal_Sword_Charge_Coal_Sword_7
+  - first:
+      213: 6953265697444587107
+    second: Coal_Sword_Charge_Coal_Sword_8
+  - first:
+      213: 3767604520897752688
+    second: Coal_Sword_Charge_Coal_Sword_9
+  - first:
+      213: -5906811784268129511
+    second: Coal_Sword_Charge_Coal_Sword_10
+  - first:
+      213: -9140203783741384600
+    second: Coal_Sword_Charge_Coal_Sword_11
+  - first:
+      213: -4728099746117515419
+    second: Coal_Sword_Charge_Coal_Sword_12
+  - first:
+      213: 7792713321270352035
+    second: Coal_Sword_Charge_Coal_Sword_13
+  - first:
+      213: -748191662577929887
+    second: Coal_Sword_Charge_Coal_Sword_14
+  - first:
+      213: 827105948965672652
+    second: Coal_Sword_Charge_Coal_Sword_15
+  - first:
+      213: 645994790574488310
+    second: Coal_Sword_Charge_Coal_Sword_16
+  - first:
+      213: -9176638916702115607
+    second: Coal_Sword_Charge_Coal_Sword_17
+  - first:
+      213: 51883762065233782
+    second: Coal_Sword_Charge_Coal_Sword_18
+  - first:
+      213: 2267069651612181157
+    second: Coal_Sword_Charge_Coal_Sword_19
+  - first:
+      213: -8654344982076691949
+    second: Coal_Sword_Charge_Coal_Sword_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68f3b3e60f1d80450800000000000000
+      internalID: 6055320529571364742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ce764babe5e69640800000000000000
+      internalID: 5086505629515153096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aa73387e0263b2b0800000000000000
+      internalID: -5570000499841467741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1544bc46dff823730800000000000000
+      internalID: 3977399739402110033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7b582dc4ca83e140800000000000000
+      internalID: 4747791010038831995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aac58bfc434c9050800000000000000
+      internalID: 5808591617317522088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9e5781d86dac6650800000000000000
+      internalID: 6227543050450067103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee634f6f5aab9490800000000000000
+      internalID: -7738404207840760089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 366e715df46fe7060800000000000000
+      internalID: 6953265697444587107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_9
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07e2442a958394430800000000000000
+      internalID: 3767604520897752688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_10
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91b5b935af9c60ea0800000000000000
+      internalID: -5906811784268129511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_11
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 868d967e519772180800000000000000
+      internalID: -9140203783741384600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_12
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5670d0ad45a626eb0800000000000000
+      internalID: -4728099746117515419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_13
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a816c66a77452c60800000000000000
+      internalID: 7792713321270352035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_14
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1613220a5a3ed95f0800000000000000
+      internalID: -748191662577929887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_15
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc616b77a787a7b00800000000000000
+      internalID: 827105948965672652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_16
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6faf1f2e6d807f800800000000000000
+      internalID: 645994790574488310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_17
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e8e1f1768706a080800000000000000
+      internalID: -9176638916702115607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_18
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6775287b10458b000800000000000000
+      internalID: 51883762065233782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_19
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a2a96136df367f10800000000000000
+      internalID: 2267069651612181157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_20
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31a62ab671795e780800000000000000
+      internalID: -8654344982076691949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal_Sword_Charge_Coal_Sword_21
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b3000f248b01040811625015c890ea
+      internalID: -2026223667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1802bece073d99b44b0a1ac256e3edf6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Coal_Sword_Charge_Coal_Sword_0: 6055320529571364742
+      Coal_Sword_Charge_Coal_Sword_1: 5086505629515153096
+      Coal_Sword_Charge_Coal_Sword_10: -5906811784268129511
+      Coal_Sword_Charge_Coal_Sword_11: -9140203783741384600
+      Coal_Sword_Charge_Coal_Sword_12: -4728099746117515419
+      Coal_Sword_Charge_Coal_Sword_13: 7792713321270352035
+      Coal_Sword_Charge_Coal_Sword_14: -748191662577929887
+      Coal_Sword_Charge_Coal_Sword_15: 827105948965672652
+      Coal_Sword_Charge_Coal_Sword_16: 645994790574488310
+      Coal_Sword_Charge_Coal_Sword_17: -9176638916702115607
+      Coal_Sword_Charge_Coal_Sword_18: 51883762065233782
+      Coal_Sword_Charge_Coal_Sword_19: 2267069651612181157
+      Coal_Sword_Charge_Coal_Sword_2: -5570000499841467741
+      Coal_Sword_Charge_Coal_Sword_20: -8654344982076691949
+      Coal_Sword_Charge_Coal_Sword_21: -2026223667
+      Coal_Sword_Charge_Coal_Sword_3: 3977399739402110033
+      Coal_Sword_Charge_Coal_Sword_4: 4747791010038831995
+      Coal_Sword_Charge_Coal_Sword_5: 5808591617317522088
+      Coal_Sword_Charge_Coal_Sword_6: 6227543050450067103
+      Coal_Sword_Charge_Coal_Sword_7: -7738404207840760089
+      Coal_Sword_Charge_Coal_Sword_8: 6953265697444587107
+      Coal_Sword_Charge_Coal_Sword_9: 3767604520897752688
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

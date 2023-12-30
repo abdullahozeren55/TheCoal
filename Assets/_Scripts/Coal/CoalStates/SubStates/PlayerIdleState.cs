@@ -76,17 +76,27 @@ public class PlayerIdleState : PlayerGroundedState
         if (player.InputHandler.AttackInputsStop[(int)CombatInputs.primary] && canPrimaryAttack)
         {
             player.AttackState.SetAttackIsHeavy(false);
+            player.AttackState.SetIsMoving(false);
             stateMachine.ChangeState(player.AttackState);
             canPrimaryAttack = false;
         }
         else if (player.InputHandler.AttackInputsStop[(int)CombatInputs.secondary] && canSecondaryAttack)
         {
             player.AttackState.SetAttackIsHeavy(true);
+            player.AttackState.SetIsMoving(false);
             stateMachine.ChangeState(player.AttackState);
             canSecondaryAttack = false;
         }
-        else if((player.InputHandler.AttackInputs[(int)CombatInputs.secondary] || player.InputHandler.AttackInputs[(int)CombatInputs.primary]) && canChargeWeapon)
+        else if(player.InputHandler.AttackInputs[(int)CombatInputs.primary] && canChargeWeapon)
         {
+            player.coalSwordGlow.SetActive(true);
+            player.WeaponChargeState.EnteredWithPrimaryAttackButton();
+            stateMachine.ChangeState(player.WeaponChargeState);
+        }
+        else if(player.InputHandler.AttackInputs[(int)CombatInputs.secondary] && canChargeWeapon)
+        {
+            player.coalSwordGlow.SetActive(true);
+            player.WeaponChargeState.EnteredWithSecondaryAttackButton();
             stateMachine.ChangeState(player.WeaponChargeState);
         }
         else if(jumpInput && player.JumpState.CanJump())

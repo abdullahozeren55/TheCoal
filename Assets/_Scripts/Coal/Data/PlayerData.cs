@@ -49,6 +49,7 @@ public class PlayerData : ScriptableObject
 
     [Header("Weapon Charge State")]
     public float timeForFirstCharge = 1.5f;
+    public float weaponCoolOffTime = 5f;
 
     [Header("Attack Stuff")]
 

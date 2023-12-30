@@ -95,21 +95,14 @@ public class PlayerLedgeClimbState : PlayerState
 
         if (isAnimationFinished)
         {
-			//if (isTouchingCeiling)
-            //{
-			//	stateMachine.ChangeState(player.CrouchIdleState);
-			//} else
-            //{
-                if(xInput != 0 && (!isTouchingWall || xInput != Movement?.FacingDirection))
-                {
-                    stateMachine.ChangeState(player.MoveState);
-                }
-                else
-                {
-			        stateMachine.ChangeState(player.IdleState);
-                }
-            //TODO: ADD CROUCH
-			//}
+            if(xInput != 0 && (!isTouchingWall || xInput != Movement?.FacingDirection))
+            {
+                stateMachine.ChangeState(player.MoveState);
+            }
+            else
+            {
+			    stateMachine.ChangeState(player.IdleState);
+            }
 		}
         else
         {
@@ -127,7 +120,6 @@ public class PlayerLedgeClimbState : PlayerState
 			}
 			else if (jumpInput || (jumpInput && xInput == Movement.FacingDirection && isHanging && !isClimbing))
             {
-			    //CheckForSpace(); //FOR CROUCH
 				isClimbing = true;
 				player.Anim.SetBool("climbLedge", true);
                 player.EyesAnim.SetBool("climbLedge", true);

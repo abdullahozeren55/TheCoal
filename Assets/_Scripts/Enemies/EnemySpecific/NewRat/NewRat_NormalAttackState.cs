@@ -33,6 +33,7 @@ public class NewRat_NormalAttackState : MeleeAttackState
         {
             if(isPlayerInCloseRangeAction)
             {
+                enemy.IdleState.SetFlipAfterIdle(false);
                 stateMachine.ChangeState(enemy.IdleState);
             }
             else if(isPlayerInMaxAgroRange)

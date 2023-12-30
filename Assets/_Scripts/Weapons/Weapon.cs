@@ -60,6 +60,7 @@ public class Weapon : MonoBehaviour
     public virtual void EnterWeaponHeavy()
     {
         gameObject.SetActive(true);
+
         if(attackCounter < weaponData.amountOfAttacks - (weaponData.amountOfAirAttacks + weaponData.amountOfMoveHeavyAttacks + weaponData.amountOfMoveAttacks + weaponData.amountOfHeavyAttacks) || attackCounter >= weaponData.amountOfAttacks - (weaponData.amountOfAirAttacks + weaponData.amountOfMoveHeavyAttacks + weaponData.amountOfMoveAttacks))
         {
             attackCounter = weaponData.amountOfAttacks - (weaponData.amountOfAirAttacks + weaponData.amountOfMoveHeavyAttacks + weaponData.amountOfMoveAttacks + weaponData.amountOfHeavyAttacks);

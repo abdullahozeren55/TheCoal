@@ -7,10 +7,16 @@ public class PlayerAttackState : PlayerAbilityState
 
     private Weapon weapon;
 
+    public float lastAttackTime;
+
+    public bool hitEnemy;
+
     private float velocityToSet;
     private bool setVelocity;
     private bool shouldCheckFlip;
     private bool attackIsHeavy;
+
+    private bool isMoving;
 
     private int xInput;
 
@@ -25,37 +31,48 @@ public class PlayerAttackState : PlayerAbilityState
         base.Enter();
 
         setVelocity = false;
+        hitEnemy = false;
 
-        if(!isGrounded && !isOnSlope)
+        if(isGrounded || isOnSlope)
         {
-            weapon.EnterWeaponInAir();
-        }
-        else if(attackIsHeavy)
-        {
-            if(xInput == 0)
+            if(!isMoving)
             {
-                weapon.EnterWeaponHeavy();
+                if(attackIsHeavy)
+                {
+                    weapon.EnterWeaponHeavy();
+                }
+                else
+                {
+                    weapon.EnterWeapon();
+                }  
             }
             else
             {
-                weapon.EnterWeaponMoveHeavy();
+                if(attackIsHeavy)
+                {
+                    weapon.EnterWeaponMoveHeavy();
+                }
+                else
+                {
+                    weapon.EnterWeaponMove();
+                }    
             }
-            
-        }
-        else if((isGrounded || isOnSlope) && xInput != 0)
-        {
-            weapon.EnterWeaponMove();
         }
         else
         {
-            weapon.EnterWeapon();
+            weapon.EnterWeaponInAir();
         }
-        
     }
 
     public override void Exit()
     {
         base.Exit();
+
+        if(hitEnemy)
+        {
+            lastAttackTime = Time.time;
+        }
+
 
         weapon.ExitWeapon();
     }
@@ -65,6 +82,15 @@ public class PlayerAttackState : PlayerAbilityState
         base.LogicUpdate();
 
         xInput = player.InputHandler.NormInputX;
+
+        if(xInput == 0)
+        {
+            isMoving = false;
+        }
+        else
+        {
+            isMoving = true;
+        }
 
         if(shouldCheckFlip)
         {
@@ -80,7 +106,14 @@ public class PlayerAttackState : PlayerAbilityState
         {
             if(isGrounded || isOnSlope)
             {
-                stateMachine.ChangeState(player.IdleState);
+                if(xInput == 0)
+                {
+                    stateMachine.ChangeState(player.IdleState);
+                }
+                else
+                {
+                    stateMachine.ChangeState(player.MoveState);
+                }
             }
             else
             {
@@ -120,6 +153,11 @@ public class PlayerAttackState : PlayerAbilityState
     public void SetAttackIsHeavy(bool value)
     {
         attackIsHeavy = value;
+    }
+
+    public void SetIsMoving(bool value)
+    {
+        isMoving = value;
     }
 
     

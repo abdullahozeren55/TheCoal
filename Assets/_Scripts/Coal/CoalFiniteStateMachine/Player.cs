@@ -52,8 +52,8 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     public int currentWeapon;
     
     [SerializeField] private GameObject eyes;
-    [SerializeField] private GameObject coalSword;
-    [SerializeField] private GameObject coalSwordGlow;
+    public GameObject coalSword;
+    public GameObject coalSwordGlow;
 
     [HideInInspector] public SpriteRenderer coalSwordSR;
     
@@ -90,7 +90,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
         DashState = new PlayerDashState(this, StateMachine, playerData, "dash");
         SuperDashState = new PlayerSuperDashState(this, StateMachine, playerData, "inAir");
         AttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
-        WeaponChargeState = new PlayerWeaponChargeState(this, StateMachine, playerData, "weaponCharge");
+        WeaponChargeState = new PlayerWeaponChargeState(this, StateMachine, playerData, "weaponChargeState");
     }
 
     private void Start()
@@ -135,6 +135,22 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
             CameraManager.instance.LerpedFromPlayerFalling = false;
             CameraManager.instance.LerpYDamping(false);
         }
+
+        if(WeaponChargeState.shouldTurnBackToNormalWeapon && StateMachine.CurrentState != AttackState)
+        {
+            WeaponChargeState.weaponCharged = false;
+            AttackState.SetWeapon(Inventory.weapons[0]);
+            currentWeapon = 0;
+        }
+        else if(WeaponChargeState.weaponCharged && !WeaponChargeState.shouldStartCharging && Time.time >= AttackState.lastAttackTime + playerData.weaponCoolOffTime && StateMachine.CurrentState != WeaponChargeState)
+        {
+            StartCoroutine(IncreaseNormalAlpha());
+        }
+        else
+        {
+            StopCoroutine(IncreaseNormalAlpha());
+        }
+        
     }
 
     private void FixedUpdate()
@@ -156,4 +172,24 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     private void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();
 
     private void AnimtionFinishTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();
+
+    private IEnumerator IncreaseNormalAlpha()
+    {
+        Color currentColor = coalSwordSR.color;
+        float newAlpha = 0f;
+        float elapsedTime = 0f;
+
+        while(newAlpha < 1f)
+        {
+            elapsedTime += Time.deltaTime;
+
+            newAlpha = Mathf.Lerp(0f, 1f, elapsedTime/(playerData.timeForFirstCharge));
+            coalSwordSR.color = new Color(currentColor.r, currentColor.g, currentColor.b, newAlpha);
+            yield return null;
+        }
+        WeaponChargeState.shouldTurnBackToNormalWeapon = true;
+        
+
+        
+    }
 }

@@ -36,11 +36,13 @@ public class PlayerMoveState : PlayerGroundedState
         if (player.InputHandler.AttackInputs[(int)CombatInputs.primary])
         {
             player.AttackState.SetAttackIsHeavy(false);
+            player.AttackState.SetIsMoving(true);
             stateMachine.ChangeState(player.AttackState);
         }
         else if (player.InputHandler.AttackInputs[(int)CombatInputs.secondary])
         {
             player.AttackState.SetAttackIsHeavy(true);
+            player.AttackState.SetIsMoving(true);
             stateMachine.ChangeState(player.AttackState);
         }
         else if(jumpInput && player.JumpState.CanJump())
