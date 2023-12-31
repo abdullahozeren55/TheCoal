@@ -115,7 +115,7 @@ public class PlayerSuperDashState : PlayerAbilityState
 			Movement?.SetVelocity(playerData.superDashVelocity, dashDirection);
 			CheckIfShouldPlaceAfterImage();
 
-			if ((Time.time >= startTime + playerData.superDashTime) || isTouchingWall || (isGrounded && Movement?.CurrentVelocity.y < 0.01f && Mathf.Abs(Movement.CurrentVelocity.x) <= 0))
+			if ((Time.time >= startTime + playerData.superDashTime) || isTouchingWall || ((isGrounded || isOnSlope) && Movement?.CurrentVelocity.y < 0.01f && Mathf.Abs(Movement.CurrentVelocity.x) <= 0))
             {
 				player.RB.drag = 0f;
 				isAbilityDone = true;
@@ -132,9 +132,16 @@ public class PlayerSuperDashState : PlayerAbilityState
 
         else if(isAbilityDone)
         {
-            if(isGrounded)
+            if(isGrounded || isOnSlope)
             {
-                stateMachine.ChangeState(player.LandState);
+                if(xInput == 0 || (isTouchingWall && xInput == Movement?.FacingDirection))
+                {
+                    stateMachine.ChangeState(player.StopMovingState);
+                }
+                else
+                {
+                    stateMachine.ChangeState(player.MoveState);
+                }
             }
             else
             {

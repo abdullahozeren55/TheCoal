@@ -10,8 +10,6 @@ public class PlayerDashState : PlayerAbilityState
 
     private Vector2 lastAIPos;
 
-    private int xInput;
-
     public PlayerDashState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -59,7 +57,7 @@ public class PlayerDashState : PlayerAbilityState
 
         if(isAbilityDone)
         {
-            if(isGrounded)
+            if(isGrounded || isOnSlope)
             {
                 if(xInput == 0 || (isTouchingWall && xInput == Movement?.FacingDirection))
                 {

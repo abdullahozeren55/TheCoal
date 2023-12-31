@@ -5,16 +5,17 @@ using UnityEngine;
 
 public class PlayerWeaponChargeState : PlayerState
 {
-    public bool weaponCharged;
-    public bool shouldTurnBackToNormalWeapon;
 
     private bool enteredStateWithPrimaryAttackButton;
     private bool enteredStateWithSecondaryAttackButton;
+    public bool isWeaponCharged;
+    private bool isCharging;
     public bool shouldStartCharging;
-    private bool shouldFinishCharging;
+    public bool chargeFailed;
 
-    private float elapsedTime;
-    private float newAlpha;
+    private float lastAlphaDecreaseTime;
+    private float lastAlphaIncreaseTime;
+    private float currentAlpha;
     //private Color[] oldColors1;
     //private Color[] oldColors2;
 
@@ -33,10 +34,7 @@ public class PlayerWeaponChargeState : PlayerState
     {
         base.Enter();
 
-        elapsedTime = 0f;
-
         shouldStartCharging = false;
-        shouldFinishCharging = false;
 
         if(player.currentWeapon == 0 || player.currentWeapon == 1)
         {
@@ -84,8 +82,6 @@ public class PlayerWeaponChargeState : PlayerState
     {
         base.Exit();
 
-        shouldStartCharging = false;
-
         enteredStateWithPrimaryAttackButton = false;
         enteredStateWithSecondaryAttackButton = false;
 
@@ -111,15 +107,23 @@ public class PlayerWeaponChargeState : PlayerState
         {
             stateMachine.ChangeState(player.IdleState);
         }
-        else if(shouldStartCharging)
+        
+        if(shouldStartCharging)
         {
-            CoroutineRunner.instance.StartCoroutine(DecreaseNormalAlpha());
+            SetWeaponOnFire(playerData.alphaChangeCooldown, playerData.alphaChangeAmount);
+        }
+
+        if(isCharging && player.coalSwordSR.color.a <= 0f)
+        {
+            lastAlphaDecreaseTime = Time.time;
         }
 
         if ((enteredStateWithPrimaryAttackButton && player.InputHandler.AttackInputsStop[(int)CombatInputs.primary]) || (enteredStateWithSecondaryAttackButton && player.InputHandler.AttackInputsStop[(int)CombatInputs.secondary]))
         {
             player.Anim.SetBool("chargeStateExiting", true);
             player.EyesAnim.SetBool("chargeStateExiting", true);
+            isCharging = false;
+
             if(player.coalSword.activeSelf)
             {
                 player.CoalSwordAnim.SetBool("chargeStateExiting", true);
@@ -127,6 +131,12 @@ public class PlayerWeaponChargeState : PlayerState
             if(player.coalSwordGlow.activeSelf)
             {
                 player.CoalSwordGlowAnim.SetBool("chargeStateExiting", true);
+            }
+
+            if(player.coalSwordSR.color.a > playerData.maxDecreasedAlphaForCompleteTheCharge)
+            {
+                shouldStartCharging = false;
+                chargeFailed = true;
             }
         }
         
@@ -154,35 +164,56 @@ public class PlayerWeaponChargeState : PlayerState
         enteredStateWithSecondaryAttackButton = true;
     }
 
-    private IEnumerator DecreaseNormalAlpha()
+    public void CheckWeaponCoolOff()
     {
-        Color currentColor = player.coalSwordSR.color;
-        newAlpha = player.coalSwordSR.color.a;
-        float startingAlpha = newAlpha;
-        
-        while(newAlpha > 0)
+        if(!isCharging && Time.time >= lastAlphaDecreaseTime + playerData.weaponCoolOffTime && Time.time >= player.AttackState.lastAttackTime + playerData.weaponCoolOffTime)
         {
-            elapsedTime += Time.deltaTime;
-
-            newAlpha = Mathf.Lerp(startingAlpha, 0f, elapsedTime/(playerData.timeForFirstCharge * 40f));
-            player.coalSwordSR.color = new Color(currentColor.r, currentColor.g, currentColor.b, newAlpha);
-            yield return null;
+            CoolWeaponOff(playerData.alphaChangeCooldown, playerData.alphaChangeAmount);
         }
-
-        if(player.currentWeapon == 0)
-        {
-            player.AttackState.SetWeapon(player.Inventory.weapons[1]);
-            player.currentWeapon = 1;
-                
-            weaponCharged = true;
-            shouldTurnBackToNormalWeapon = false;
-            player.AttackState.lastAttackTime = Time.time;
-        } 
-        
     }
 
-    public void SetWeaponAlpha(float alpha)
+    public void CoolWeaponOff(float cooldown, float increaseAmount)
     {
-        player.coalSwordSR.color = new Color(255f, 255f, 255f, alpha);
+        currentAlpha = player.coalSwordSR.color.a;
+        if(Time.time >= lastAlphaIncreaseTime + cooldown)
+        {
+            currentAlpha += increaseAmount;
+            player.coalSwordSR.color = new Color(255f, 255f, 255f, currentAlpha);
+            lastAlphaIncreaseTime = Time.time;
+
+            if(currentAlpha >= 1f && stateMachine.CurrentState != player.AttackState)
+            {
+                player.AttackState.SetWeapon(player.Inventory.weapons[0]);
+                player.currentWeapon = 0;
+                chargeFailed = false;
+                isWeaponCharged = false;
+            }
+        }
     }
+
+    public void SetWeaponOnFire(float cooldown, float decreaseAmount)
+    {
+        if(stateMachine.CurrentState == player.WeaponChargeState)
+        {
+            isCharging = true;
+        }
+        currentAlpha = player.coalSwordSR.color.a;
+        chargeFailed = false;
+
+        if(Time.time >= lastAlphaDecreaseTime + cooldown)
+        {
+            currentAlpha -= decreaseAmount;
+            player.coalSwordSR.color = new Color(255f, 255f, 255f, currentAlpha);
+            lastAlphaDecreaseTime = Time.time;
+
+            if(currentAlpha <= 0f)
+            {
+                player.AttackState.SetWeapon(player.Inventory.weapons[1]);
+                player.currentWeapon = 1;
+                shouldStartCharging = false;
+                isWeaponCharged = true;
+            }
+        }
+    }
+
 }

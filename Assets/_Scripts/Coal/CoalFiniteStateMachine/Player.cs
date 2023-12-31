@@ -135,20 +135,17 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
             CameraManager.instance.LerpedFromPlayerFalling = false;
             CameraManager.instance.LerpYDamping(false);
         }
-
-        if(WeaponChargeState.shouldTurnBackToNormalWeapon && StateMachine.CurrentState != AttackState)
+        if(WeaponChargeState.shouldStartCharging && StateMachine.CurrentState != WeaponChargeState)
         {
-            WeaponChargeState.weaponCharged = false;
-            AttackState.SetWeapon(Inventory.weapons[0]);
-            currentWeapon = 0;
+            WeaponChargeState.SetWeaponOnFire(playerData.fastAlphaChangeCooldown, playerData.fastAlphaChangeAmount);
         }
-        else if(WeaponChargeState.weaponCharged && !WeaponChargeState.shouldStartCharging && Time.time >= AttackState.lastAttackTime + playerData.weaponCoolOffTime && StateMachine.CurrentState != WeaponChargeState)
+        else if(WeaponChargeState.chargeFailed && StateMachine.CurrentState != WeaponChargeState)
         {
-            StartCoroutine(IncreaseNormalAlpha());
+            WeaponChargeState.CoolWeaponOff(playerData.alphaChangeCooldown, playerData.alphaChangeAmount);
         }
-        else
+        if(WeaponChargeState.isWeaponCharged)
         {
-            StopCoroutine(IncreaseNormalAlpha());
+            WeaponChargeState.CheckWeaponCoolOff();
         }
         
     }
@@ -172,24 +169,4 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     private void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();
 
     private void AnimtionFinishTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();
-
-    private IEnumerator IncreaseNormalAlpha()
-    {
-        Color currentColor = coalSwordSR.color;
-        float newAlpha = 0f;
-        float elapsedTime = 0f;
-
-        while(newAlpha < 1f)
-        {
-            elapsedTime += Time.deltaTime;
-
-            newAlpha = Mathf.Lerp(0f, 1f, elapsedTime/(playerData.timeForFirstCharge));
-            coalSwordSR.color = new Color(currentColor.r, currentColor.g, currentColor.b, newAlpha);
-            yield return null;
-        }
-        WeaponChargeState.shouldTurnBackToNormalWeapon = true;
-        
-
-        
-    }
 }

@@ -48,8 +48,12 @@ public class PlayerData : ScriptableObject
     public float dashFlipCoyoteTime = 0.2f;
 
     [Header("Weapon Charge State")]
-    public float timeForFirstCharge = 1.5f;
     public float weaponCoolOffTime = 5f;
+    public float alphaChangeCooldown = 0.1f;
+    public float alphaChangeAmount = 0.05f;
+    public float fastAlphaChangeCooldown = 0.3f;
+    public float fastAlphaChangeAmount = 1f;
+    public float maxDecreasedAlphaForCompleteTheCharge = 0.2f;
 
     [Header("Attack Stuff")]
 

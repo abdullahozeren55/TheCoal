@@ -18,8 +18,6 @@ public class PlayerAttackState : PlayerAbilityState
 
     private bool isMoving;
 
-    private int xInput;
-
     public ParticleManager ParticleManager => particleManager ??= core.GetCoreComponent<ParticleManager>();
     private ParticleManager particleManager;
     public PlayerAttackState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
