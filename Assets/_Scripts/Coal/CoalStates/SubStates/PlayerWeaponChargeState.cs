@@ -6,8 +6,12 @@ using UnityEngine;
 public class PlayerWeaponChargeState : PlayerState
 {
 
+    private ParticleManager particleManager;
+    private ParticleManager ParticleManager => particleManager ??= core.GetCoreComponent<ParticleManager>();
+
     private bool enteredStateWithPrimaryAttackButton;
     private bool enteredStateWithSecondaryAttackButton;
+    private bool particlesInstantiated;
     public bool isWeaponCharged;
     private bool isCharging;
     public bool shouldStartCharging;
@@ -16,6 +20,9 @@ public class PlayerWeaponChargeState : PlayerState
     private float lastAlphaDecreaseTime;
     private float lastAlphaIncreaseTime;
     private float currentAlpha;
+
+    private GameObject coalSwordChargeParticleFront;
+    private GameObject coalSwordChargeParticleBack;
     //private Color[] oldColors1;
     //private Color[] oldColors2;
 
@@ -35,6 +42,10 @@ public class PlayerWeaponChargeState : PlayerState
         base.Enter();
 
         shouldStartCharging = false;
+        particlesInstantiated = false;
+
+        coalSwordChargeParticleFront = player.coalSwordChargeParticleFront;
+        coalSwordChargeParticleBack = player.coalSwordChargeParticleBack;
 
         if(player.currentWeapon == 0 || player.currentWeapon == 1)
         {
@@ -96,6 +107,9 @@ public class PlayerWeaponChargeState : PlayerState
         {
             player.CoalSwordGlowAnim.SetBool("chargeStateExiting", false);
         }
+        Object.Destroy(coalSwordChargeParticleFront);
+        Object.Destroy(coalSwordChargeParticleBack);
+        
     }
 
     public override void LogicUpdate()
@@ -110,6 +124,13 @@ public class PlayerWeaponChargeState : PlayerState
         
         if(shouldStartCharging)
         {
+            if(!particlesInstantiated)
+            {
+                coalSwordChargeParticleFront = ParticleManager.StartParticles(coalSwordChargeParticleFront, player.feetParticlePoint.position, Quaternion.identity);
+                coalSwordChargeParticleBack = ParticleManager.StartParticles(coalSwordChargeParticleBack, player.feetParticlePoint.position, Quaternion.identity);
+                particlesInstantiated = true;
+            }
+            
             SetWeaponOnFire(playerData.alphaChangeCooldown, playerData.alphaChangeAmount);
         }
 
@@ -138,6 +159,9 @@ public class PlayerWeaponChargeState : PlayerState
                 shouldStartCharging = false;
                 chargeFailed = true;
             }
+
+            coalSwordChargeParticleBack.GetComponent<ParticleSystem>().Stop();
+            coalSwordChargeParticleFront.GetComponent<ParticleSystem>().Stop();
         }
         
     }

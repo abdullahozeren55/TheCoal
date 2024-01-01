@@ -55,6 +55,9 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     public GameObject coalSword;
     public GameObject coalSwordGlow;
 
+    public GameObject coalSwordChargeParticleFront;
+    public GameObject coalSwordChargeParticleBack;
+
     [HideInInspector] public SpriteRenderer coalSwordSR;
     
     public Material[] coalSwordGlowMats;
