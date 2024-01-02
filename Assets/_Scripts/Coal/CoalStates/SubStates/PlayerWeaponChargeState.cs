@@ -20,6 +20,7 @@ public class PlayerWeaponChargeState : PlayerState
     private float lastAlphaDecreaseTime;
     private float lastAlphaIncreaseTime;
     private float currentAlpha;
+    private float startingAlpha;
 
     private GameObject coalSwordChargeParticleFront;
     private GameObject coalSwordChargeParticleBack;
@@ -203,6 +204,12 @@ public class PlayerWeaponChargeState : PlayerState
         {
             currentAlpha += increaseAmount;
             player.coalSwordSR.color = new Color(255f, 255f, 255f, currentAlpha);
+
+            for (int i = 0; i < player.coalSwordGlowLights.Length; i++)
+            {
+                player.coalSwordGlowLights[i].intensity -= playerData.coalSwordGlowLightsChangeAmounts[i];
+            }
+
             lastAlphaIncreaseTime = Time.time;
 
             if(currentAlpha >= 1f && stateMachine.CurrentState != player.AttackState)
@@ -222,12 +229,19 @@ public class PlayerWeaponChargeState : PlayerState
             isCharging = true;
         }
         currentAlpha = player.coalSwordSR.color.a;
+        startingAlpha = currentAlpha;
         chargeFailed = false;
 
         if(Time.time >= lastAlphaDecreaseTime + cooldown)
         {
             currentAlpha -= decreaseAmount;
             player.coalSwordSR.color = new Color(255f, 255f, 255f, currentAlpha);
+            
+            for (int i = 0; i < player.coalSwordGlowLights.Length; i++)
+            {
+                player.coalSwordGlowLights[i].intensity += playerData.coalSwordGlowLightsChangeAmounts[i];
+            }
+
             lastAlphaDecreaseTime = Time.time;
 
             if(currentAlpha <= 0f)

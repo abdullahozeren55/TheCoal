@@ -31,6 +31,8 @@ public class PlayerAttackState : PlayerAbilityState
         setVelocity = false;
         hitEnemy = false;
 
+        player.eyeLights.SetActive(false);
+
         if(isGrounded || isOnSlope)
         {
             if(!isMoving)
@@ -65,6 +67,8 @@ public class PlayerAttackState : PlayerAbilityState
     public override void Exit()
     {
         base.Exit();
+
+        player.eyeLights.SetActive(true);
 
         if(hitEnemy)
         {

@@ -39,9 +39,16 @@ MonoBehaviour:
   dashDistBetweenAfterImages: 0.8
   dashFlipCoyoteTime: 0.15
   weaponCoolOffTime: 5
-  alphaChangeCooldown: 0.08
-  alphaChangeAmount: 0.08
-  fastAlphaChangeCooldown: 0.3
-  fastAlphaChangeAmount: 1
+  alphaChangeCooldown: 0.05
+  alphaChangeAmount: 0.05
   maxDecreasedAlphaForCompleteTheCharge: 0.2
+  coalSwordGlowLightsChangeAmounts:
+  - 0.005
+  - 0.01
+  - 0.015
+  - 0.02
+  - 0.025
+  - 0.03
+  - 0.035
+  - 0.04
   maxHoldTimeForAttack: 0.25

@@ -27,6 +27,9 @@ public class PlayerIdleState : PlayerGroundedState
 
         canChargeWeapon = false;
         lastAttackPressedTimeIsSet = false;
+
+        canPrimaryAttack = false;
+        canSecondaryAttack = false;
     }
 
     public override void Exit()

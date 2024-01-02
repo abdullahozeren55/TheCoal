@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Player : MonoBehaviour, IDamageable, IKnockbackable
 {
@@ -48,12 +49,15 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     public Rigidbody2D RB { get; private set; }
 
     public PlayerInventory Inventory { get; private set; }
-
     public int currentWeapon;
+
+    public GameObject eyeLights;
     
     [SerializeField] private GameObject eyes;
     public GameObject coalSword;
     public GameObject coalSwordGlow;
+
+    public Light2D[] coalSwordGlowLights;
 
     public GameObject coalSwordChargeParticleFront;
     public GameObject coalSwordChargeParticleBack;
@@ -140,7 +144,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
         }
         if(WeaponChargeState.shouldStartCharging && StateMachine.CurrentState != WeaponChargeState)
         {
-            WeaponChargeState.SetWeaponOnFire(playerData.fastAlphaChangeCooldown, playerData.fastAlphaChangeAmount);
+            WeaponChargeState.SetWeaponOnFire(playerData.alphaChangeCooldown, playerData.alphaChangeAmount);
         }
         else if(WeaponChargeState.chargeFailed && StateMachine.CurrentState != WeaponChargeState)
         {

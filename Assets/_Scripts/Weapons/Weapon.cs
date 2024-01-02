@@ -10,6 +10,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] protected CinemachineImpulseSource impulseSource;
     protected Animator baseAnimator;
     protected Animator weaponAnimator;
+    protected Animator eyesAnimator;
 
     protected PlayerAttackState state;
 
@@ -21,6 +22,7 @@ public class Weapon : MonoBehaviour
     {
         baseAnimator = transform.Find("Base").GetComponent<Animator>();
         weaponAnimator = transform.Find("Weapon").GetComponent<Animator>();
+        eyesAnimator = transform.Find("Eyes").GetComponent<Animator>();
 
         gameObject.SetActive(false);
     }
@@ -36,9 +38,11 @@ public class Weapon : MonoBehaviour
 
         baseAnimator.SetBool("attack", true);
         weaponAnimator.SetBool("attack", true);
+        eyesAnimator.SetBool("attack", true);
 
         baseAnimator.SetInteger("attackCounter", attackCounter);
         weaponAnimator.SetInteger("attackCounter", attackCounter);
+        eyesAnimator.SetInteger("attackCounter", attackCounter);
     }
 
     public virtual void EnterWeaponInAir()
@@ -52,9 +56,11 @@ public class Weapon : MonoBehaviour
 
         baseAnimator.SetBool("attack", true);
         weaponAnimator.SetBool("attack", true);
+        eyesAnimator.SetBool("attack", true);
 
         baseAnimator.SetInteger("attackCounter", attackCounter);
         weaponAnimator.SetInteger("attackCounter", attackCounter);
+        eyesAnimator.SetInteger("attackCounter", attackCounter);
     }
 
     public virtual void EnterWeaponHeavy()
@@ -68,9 +74,11 @@ public class Weapon : MonoBehaviour
 
         baseAnimator.SetBool("attack", true);
         weaponAnimator.SetBool("attack", true);
+        eyesAnimator.SetBool("attack", true);
 
         baseAnimator.SetInteger("attackCounter", attackCounter);
         weaponAnimator.SetInteger("attackCounter", attackCounter);
+        eyesAnimator.SetInteger("attackCounter", attackCounter);
     }
 
     public virtual void EnterWeaponMove()
@@ -84,9 +92,11 @@ public class Weapon : MonoBehaviour
 
         baseAnimator.SetBool("attack", true);
         weaponAnimator.SetBool("attack", true);
+        eyesAnimator.SetBool("attack", true);
 
         baseAnimator.SetInteger("attackCounter", attackCounter);
         weaponAnimator.SetInteger("attackCounter", attackCounter);
+        eyesAnimator.SetInteger("attackCounter", attackCounter);
     }
 
     public virtual void EnterWeaponMoveHeavy()
@@ -100,15 +110,18 @@ public class Weapon : MonoBehaviour
 
         baseAnimator.SetBool("attack", true);
         weaponAnimator.SetBool("attack", true);
+        eyesAnimator.SetBool("attack", true);
 
         baseAnimator.SetInteger("attackCounter", attackCounter);
         weaponAnimator.SetInteger("attackCounter", attackCounter);
+        eyesAnimator.SetInteger("attackCounter", attackCounter);
     }
 
     public virtual void ExitWeapon()
     {
         baseAnimator.SetBool("attack", false);
         weaponAnimator.SetBool("attack", false);
+        eyesAnimator.SetBool("attack", false);
 
         attackCounter++;
 
