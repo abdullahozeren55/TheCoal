@@ -34,12 +34,10 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     public PlayerDashState DashState { get; private set; }
     public PlayerSuperDashState SuperDashState { get; private set; }
     public PlayerAttackState AttackState { get; private set; }
-    public PlayerWeaponChargeState WeaponChargeState { get; private set; }
 
     public Animator Anim { get; private set; }
     public Animator EyesAnim { get; private set; }
     public Animator CoalSwordAnim { get; private set; }
-    public Animator CoalSwordGlowAnim { get; private set; }
 
     public PlayerInputHandler InputHandler { get; private set; }
 
@@ -55,16 +53,8 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     
     [SerializeField] private GameObject eyes;
     public GameObject coalSword;
-    public GameObject coalSwordGlow;
-
-    public Light2D[] coalSwordGlowLights;
-
-    public GameObject coalSwordChargeParticleFront;
-    public GameObject coalSwordChargeParticleBack;
 
     [HideInInspector] public SpriteRenderer coalSwordSR;
-    
-    public Material[] coalSwordGlowMats;
 
     [SerializeField] private PlayerData playerData;
 
@@ -76,6 +66,9 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     public Transform sideParticlePointBack;
 
     private float fallSpeedYDampingChangeThreshold;
+
+    private bool isKnockbacking;
+    private float knockBackStartTime;
 
     private void Awake()
     {
@@ -97,7 +90,6 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
         DashState = new PlayerDashState(this, StateMachine, playerData, "dash");
         SuperDashState = new PlayerSuperDashState(this, StateMachine, playerData, "inAir");
         AttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
-        WeaponChargeState = new PlayerWeaponChargeState(this, StateMachine, playerData, "weaponChargeState");
     }
 
     private void Start()
@@ -105,7 +97,6 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
         Anim = GetComponent<Animator>();
         EyesAnim = eyes.GetComponent<Animator>();
         CoalSwordAnim = coalSword.GetComponent<Animator>();
-        CoalSwordGlowAnim = coalSwordGlow.GetComponent<Animator>();
 
         coalSwordSR = coalSword.GetComponent<SpriteRenderer>();
 
@@ -142,17 +133,10 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
             CameraManager.instance.LerpedFromPlayerFalling = false;
             CameraManager.instance.LerpYDamping(false);
         }
-        if(WeaponChargeState.shouldStartCharging && StateMachine.CurrentState != WeaponChargeState)
+
+        if(isKnockbacking)
         {
-            WeaponChargeState.SetWeaponOnFire(playerData.alphaChangeCooldown, playerData.alphaChangeAmount);
-        }
-        else if(WeaponChargeState.chargeFailed && StateMachine.CurrentState != WeaponChargeState)
-        {
-            WeaponChargeState.CoolWeaponOff(playerData.alphaChangeCooldown, playerData.alphaChangeAmount);
-        }
-        if(WeaponChargeState.isWeaponCharged)
-        {
-            WeaponChargeState.CheckWeaponCoolOff();
+            CheckFinishKnockback();
         }
         
     }
@@ -171,6 +155,19 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     public void Knockback(float strength, Vector2 angle, int direction)
     {
         Movement?.SetVelocity(strength, angle, direction);
+        Movement.CanSetVelocity = false;
+        knockBackStartTime = Time.time;
+        isKnockbacking = true;
+
+    }
+
+    private void CheckFinishKnockback()
+    {
+        if(Time.time >= knockBackStartTime + playerData.knockBackTime)
+        {
+            Movement.CanSetVelocity = true;
+            isKnockbacking = false;
+        }
     }
 
     private void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();

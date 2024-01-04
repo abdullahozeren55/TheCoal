@@ -36,11 +36,6 @@ public class PlayerState
             {
                 player.CoalSwordAnim.SetBool(animBoolName, true);
             }
-            
-            if(player.coalSwordGlow.activeSelf)
-            {
-                player.CoalSwordGlowAnim.SetBool(animBoolName, true);
-            }
         }
         startTime = Time.time;
         isAnimationFinished = false;
@@ -55,11 +50,6 @@ public class PlayerState
             if(player.coalSword.activeSelf)
             {
             player.CoalSwordAnim.SetBool(animBoolName, false);
-            }
-
-            if(player.coalSwordGlow.activeSelf)
-            {
-            player.CoalSwordGlowAnim.SetBool(animBoolName, false);
             }
         }
     }

@@ -13,8 +13,6 @@ public class NewRat_HitState : HitState
     public override void Exit()
     {
         base.Exit();
-
-        Movement.CanSetVelocity = true;
         isAnimationFinished = false;
     }
 

@@ -189,12 +189,6 @@ public class PlayerInAirState : PlayerState
 		        player.CoalSwordAnim.SetFloat("xVelocity", Mathf.Abs(Movement.CurrentVelocity.x));
             }
             
-            if(player.coalSwordGlow.activeSelf)
-            {
-                player.CoalSwordGlowAnim.SetFloat("yVelocity", Movement.CurrentVelocity.y);
-		        player.CoalSwordGlowAnim.SetFloat("xVelocity", Mathf.Abs(Movement.CurrentVelocity.x));
-            }
-            
         }
 
 

@@ -47,15 +47,7 @@ public class PlayerData : ScriptableObject
     public float dashDistBetweenAfterImages = 0.5f;
     public float dashFlipCoyoteTime = 0.2f;
 
-    [Header("Weapon Charge State")]
-    public float weaponCoolOffTime = 5f;
-    public float alphaChangeCooldown = 0.1f;
-    public float alphaChangeAmount = 0.05f;
-    public float maxDecreasedAlphaForCompleteTheCharge = 0.2f;
-
-    public float[] coalSwordGlowLightsChangeAmounts;
-
     [Header("Attack Stuff")]
-
-    public float maxHoldTimeForAttack = 0.2f;
+    
+    public float knockBackTime = 0.2f;
 }

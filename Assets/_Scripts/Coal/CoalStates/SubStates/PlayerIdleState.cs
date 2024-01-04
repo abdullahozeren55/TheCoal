@@ -4,13 +4,6 @@ using UnityEngine;
 
 public class PlayerIdleState : PlayerGroundedState
 {
-    private bool canPrimaryAttack;
-    private bool canSecondaryAttack;
-    private bool canChargeWeapon;
-    private bool lastAttackPressedTimeIsSet;
-
-    private float lastPrimaryAttackPressedTime;
-    private float lastSecondaryAttackPressedTime;
     public PlayerIdleState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -24,12 +17,6 @@ public class PlayerIdleState : PlayerGroundedState
     {
         base.Enter();
         Movement?.SetVelocityZero();
-
-        canChargeWeapon = false;
-        lastAttackPressedTimeIsSet = false;
-
-        canPrimaryAttack = false;
-        canSecondaryAttack = false;
     }
 
     public override void Exit()
@@ -40,67 +27,18 @@ public class PlayerIdleState : PlayerGroundedState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        if(player.InputHandler.AttackInputs[(int)CombatInputs.primary])
-        {
-            if(!lastAttackPressedTimeIsSet)
-            {
-                lastPrimaryAttackPressedTime = Time.time;
-                lastAttackPressedTimeIsSet = true;
-            }
-            
-            if(Time.time < lastPrimaryAttackPressedTime + playerData.maxHoldTimeForAttack)
-            {
-                canPrimaryAttack = true;
-            }
-            else
-            {
-                canPrimaryAttack = false;
-                canChargeWeapon = true;
-            } 
-        }
-        else if(player.InputHandler.AttackInputs[(int)CombatInputs.secondary])
-        {
-            if(!lastAttackPressedTimeIsSet)
-            {
-                lastSecondaryAttackPressedTime = Time.time;
-                lastAttackPressedTimeIsSet = true;
-            }
-
-            if(Time.time < lastSecondaryAttackPressedTime + playerData.maxHoldTimeForAttack)
-            {
-                canSecondaryAttack = true;
-            }
-            else
-            {
-                canSecondaryAttack = false;
-                canChargeWeapon = true;
-            } 
-        }
-        if (player.InputHandler.AttackInputsStop[(int)CombatInputs.primary] && canPrimaryAttack)
+        
+        if (player.InputHandler.AttackInputs[(int)CombatInputs.primary])
         {
             player.AttackState.SetAttackIsHeavy(false);
             player.AttackState.SetIsMoving(false);
             stateMachine.ChangeState(player.AttackState);
-            canPrimaryAttack = false;
         }
-        else if (player.InputHandler.AttackInputsStop[(int)CombatInputs.secondary] && canSecondaryAttack)
+        else if (player.InputHandler.AttackInputs[(int)CombatInputs.secondary])
         {
             player.AttackState.SetAttackIsHeavy(true);
             player.AttackState.SetIsMoving(false);
             stateMachine.ChangeState(player.AttackState);
-            canSecondaryAttack = false;
-        }
-        else if(player.InputHandler.AttackInputs[(int)CombatInputs.primary] && canChargeWeapon)
-        {
-            player.coalSwordGlow.SetActive(true);
-            player.WeaponChargeState.EnteredWithPrimaryAttackButton();
-            stateMachine.ChangeState(player.WeaponChargeState);
-        }
-        else if(player.InputHandler.AttackInputs[(int)CombatInputs.secondary] && canChargeWeapon)
-        {
-            player.coalSwordGlow.SetActive(true);
-            player.WeaponChargeState.EnteredWithSecondaryAttackButton();
-            stateMachine.ChangeState(player.WeaponChargeState);
         }
         else if(jumpInput && player.JumpState.CanJump())
         {
