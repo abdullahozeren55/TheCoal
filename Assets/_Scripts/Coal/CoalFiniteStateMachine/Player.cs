@@ -34,6 +34,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     public PlayerDashState DashState { get; private set; }
     public PlayerSuperDashState SuperDashState { get; private set; }
     public PlayerAttackState AttackState { get; private set; }
+    public PlayerHitState HitState { get; private set; }
 
     public Animator Anim { get; private set; }
     public Animator EyesAnim { get; private set; }
@@ -67,9 +68,6 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
 
     private float fallSpeedYDampingChangeThreshold;
 
-    private bool isKnockbacking;
-    private float knockBackStartTime;
-
     private void Awake()
     {
         Core = GetComponentInChildren<Core>();
@@ -90,6 +88,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
         DashState = new PlayerDashState(this, StateMachine, playerData, "dash");
         SuperDashState = new PlayerSuperDashState(this, StateMachine, playerData, "inAir");
         AttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
+        HitState = new PlayerHitState(this, StateMachine, playerData, "hit");
     }
 
     private void Start()
@@ -133,11 +132,6 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
             CameraManager.instance.LerpedFromPlayerFalling = false;
             CameraManager.instance.LerpYDamping(false);
         }
-
-        if(isKnockbacking)
-        {
-            CheckFinishKnockback();
-        }
         
     }
 
@@ -155,19 +149,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     public void Knockback(float strength, Vector2 angle, int direction)
     {
         Movement?.SetVelocity(strength, angle, direction);
-        Movement.CanSetVelocity = false;
-        knockBackStartTime = Time.time;
-        isKnockbacking = true;
-
-    }
-
-    private void CheckFinishKnockback()
-    {
-        if(Time.time >= knockBackStartTime + playerData.knockBackTime)
-        {
-            Movement.CanSetVelocity = true;
-            isKnockbacking = false;
-        }
+        StateMachine.ChangeState(HitState);
     }
 
     private void AnimationTrigger() => StateMachine.CurrentState.AnimationTrigger();
