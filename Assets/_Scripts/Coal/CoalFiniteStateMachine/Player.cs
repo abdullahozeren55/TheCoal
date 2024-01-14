@@ -144,6 +144,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     {
         Stats?.DecreaseHealth(amount);
         ParticleManager?.StartParticlesWithRandomRotation(damageParticles);
+        
     }
 
     public void Knockback(float strength, Vector2 angle, int direction)

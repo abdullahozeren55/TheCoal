@@ -14,6 +14,7 @@ public class AttackState : State
     protected bool isPlayerInMinAgroRange;
     protected bool isPlayerInMaxAgroRange;
     protected bool isPlayerInCloseRangeAction;
+    protected bool isDetectingWall;
 
     protected bool isAttackFinished;
 
@@ -34,6 +35,7 @@ public class AttackState : State
         if(CollisionSenses)
         {
             isGrounded = CollisionSenses.Ground;
+            isDetectingWall = CollisionSenses.WallFront;
         }
     }
 

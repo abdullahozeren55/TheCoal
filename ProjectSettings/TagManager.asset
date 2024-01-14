@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - ParticleContainer
+  - StoneEnemy
+  - WoodEnemy
+  - DashingPlayer
   layers:
   - Default
   - TransparentFX
@@ -20,7 +23,7 @@ TagManager:
   - Ground
   - Wall
   - SlopeRight
-  - Damageable
+  - 
   - Dead
   - Player
   - Ledges
@@ -28,11 +31,11 @@ TagManager:
   - Weapon
   - SlopeCollider
   - SlopeLeft
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Collideable Wood Enemies
+  - Collideable Stone Enemies
+  - Uncollideable Wood Enemies
+  - Uncollideable Stone Enemies
+  - DashingPlayer
   - 
   - 
   - 
@@ -88,8 +91,14 @@ TagManager:
   - name: Outside Platform
     uniqueID: 4232990605
     locked: 0
-  - name: Player-Enemy
+  - name: Enemy Behind Player
+    uniqueID: 762044199
+    locked: 0
+  - name: Player
     uniqueID: 1970303165
+    locked: 0
+  - name: Enemy in Front Of Player
+    uniqueID: 2271316571
     locked: 0
   - name: Foreground
     uniqueID: 1529557549

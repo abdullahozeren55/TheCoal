@@ -31,7 +31,7 @@ public class NewRat_MoveState : MoveState
 
         if(isPlayerInCloseRangeAction)
         {
-            stateMachine.ChangeState(enemy.NormalAttackState);
+            stateMachine.ChangeState(enemy.IdleState);
         }
         else if(isPlayerInMaxAgroRange && !isDetectingLedge && !isDetectingWall)
         {

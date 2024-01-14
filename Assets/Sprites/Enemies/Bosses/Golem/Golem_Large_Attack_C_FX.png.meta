@@ -27,7 +27,7 @@ TextureImporter:
       213: -3335028340848080835
     second: Golem_Large_Attack_C_FX_7
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -45,7 +45,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -69,7 +69,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
@@ -93,7 +93,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -101,6 +101,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -113,6 +114,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -122,10 +124,10 @@ TextureImporter:
       name: Golem_Large_Attack_C_FX_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 63
-        width: 102
-        height: 110
+        x: 0
+        y: 128
+        width: 208
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,10 +145,10 @@ TextureImporter:
       name: Golem_Large_Attack_C_FX_1
       rect:
         serializedVersion: 2
-        x: 183
-        y: 166
-        width: 6
-        height: 8
+        x: 208
+        y: 128
+        width: 208
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,10 +166,10 @@ TextureImporter:
       name: Golem_Large_Attack_C_FX_2
       rect:
         serializedVersion: 2
-        x: 338
-        y: 63
-        width: 82
-        height: 106
+        x: 416
+        y: 128
+        width: 208
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,10 +187,10 @@ TextureImporter:
       name: Golem_Large_Attack_C_FX_3
       rect:
         serializedVersion: 2
-        x: 485
-        y: 127
-        width: 63
-        height: 40
+        x: 624
+        y: 128
+        width: 208
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,10 +208,10 @@ TextureImporter:
       name: Golem_Large_Attack_C_FX_4
       rect:
         serializedVersion: 2
-        x: 197
-        y: 63
-        width: 89
-        height: 40
+        x: 0
+        y: 64
+        width: 208
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,10 +229,10 @@ TextureImporter:
       name: Golem_Large_Attack_C_FX_5
       rect:
         serializedVersion: 2
-        x: 485
-        y: 63
-        width: 63
-        height: 40
+        x: 208
+        y: 64
+        width: 208
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,10 +250,10 @@ TextureImporter:
       name: Golem_Large_Attack_C_FX_6
       rect:
         serializedVersion: 2
-        x: 53
-        y: 0
-        width: 55
-        height: 39
+        x: 416
+        y: 64
+        width: 208
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,10 +271,10 @@ TextureImporter:
       name: Golem_Large_Attack_C_FX_7
       rect:
         serializedVersion: 2
-        x: 194
-        y: 0
-        width: 54
-        height: 41
+        x: 624
+        y: 64
+        width: 208
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,10 +288,52 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Golem_Large_Attack_C_FX_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 208
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddda04a7bd2d3034e9ebe60d7c7408d2
+      internalID: 2124875475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem_Large_Attack_C_FX_9
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 208
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99b4d8cd5480234ba1eada42054a336
+      internalID: -911107457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5dc905858f5d3274ca3176c389cbb289
     internalID: 0
     vertices: []
     indices: 
@@ -305,6 +349,8 @@ TextureImporter:
       Golem_Large_Attack_C_FX_5: -3159843430551422798
       Golem_Large_Attack_C_FX_6: 3792988587931684786
       Golem_Large_Attack_C_FX_7: -3335028340848080835
+      Golem_Large_Attack_C_FX_8: 2124875475
+      Golem_Large_Attack_C_FX_9: -911107457
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -20,7 +20,7 @@ public class CoalAfterImageSprite : MonoBehaviour
     void OnEnable()
     {
         SR = GetComponent<SpriteRenderer>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.Find("Coal").transform;
         playerSR = player.GetComponent<SpriteRenderer>();
 
         alpha = alphaSet;

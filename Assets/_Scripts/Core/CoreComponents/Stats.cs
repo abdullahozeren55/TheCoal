@@ -2,12 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Stats : CoreComponent
 {
     public event Action OnHealthZero;
     [SerializeField] private float maxHealth;
     [SerializeField] private float maxPoise;
+    [SerializeField] private Slider healthBarSlider;
+    [SerializeField] private Slider easeHealthBarSlider;
     private float currentHealth;
     private float currentPoise;
 
@@ -20,15 +23,48 @@ public class Stats : CoreComponent
 
         currentHealth = maxHealth;
         currentPoise = maxPoise;
+        if(healthBarSlider != null && easeHealthBarSlider != null)
+        {
+            healthBarSlider.maxValue = maxHealth;
+            easeHealthBarSlider.maxValue = maxHealth;
+            healthBarSlider.value = currentHealth;
+            easeHealthBarSlider.value = currentHealth;
+        }
+    }
+
+    private void Update()
+    {
+        if(easeHealthBarSlider != null && healthBarSlider != null)
+        {
+            if(easeHealthBarSlider.value != currentHealth)
+            {
+                easeHealthBarSlider.value = Mathf.Lerp(easeHealthBarSlider.value, currentHealth, 0.05f);
+
+                if(easeHealthBarSlider.value - currentHealth <= maxHealth/200f)
+                {
+                    easeHealthBarSlider.value = currentHealth;
+                }
+            }
+
+            
+        }
     }
 
     public void DecreaseHealth(float amount)
     {
         currentHealth -= amount;
+        if(healthBarSlider != null)
+        {
+            healthBarSlider.value = currentHealth;
+        }
 
         if(currentHealth <= 0)
         {
             currentHealth = 0;
+            if(easeHealthBarSlider != null)
+            {
+                easeHealthBarSlider.value = currentHealth;
+            }
 
             OnHealthZero?.Invoke();
 
@@ -39,6 +75,10 @@ public class Stats : CoreComponent
     public void IncreaseHealth(float amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0f, maxHealth);
+        if(healthBarSlider != null)
+        {
+            healthBarSlider.value = currentHealth;
+        }
     }
 
     public void DecreasePoise(float amount)

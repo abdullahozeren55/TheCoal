@@ -27,6 +27,9 @@ public class PlayerSuperDashState : PlayerAbilityState
     {
         base.Enter();
 
+        player.gameObject.layer = LayerMask.NameToLayer("DashingPlayer");
+        player.gameObject.tag = "DashingPlayer";
+
         CanSuperDash = false;
 		player.InputHandler.UseDashInput();
 
@@ -52,6 +55,9 @@ public class PlayerSuperDashState : PlayerAbilityState
     public override void Exit()
     {
         base.Exit();
+
+        player.gameObject.layer = LayerMask.NameToLayer("Player");
+        player.gameObject.tag = "Player";
 
         player.InAirState.SetCanWallHold(true);
 
@@ -165,7 +171,7 @@ public class PlayerSuperDashState : PlayerAbilityState
 
 	private void PlaceAfterImage()
     {
-		CoalAfterImagePool.Instance.GetFromPool();
+		CoalAfterImagePool.Instance.GetFromPool(player.transform.localScale);
 		lastAIPos = player.transform.position;
 	}
 

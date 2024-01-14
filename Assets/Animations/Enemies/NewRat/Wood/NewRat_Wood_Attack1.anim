@@ -64,6 +64,15 @@ AnimationClip:
     classID: 212
     script: {fileID: 0}
     flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: 2100000, guid: 04deff75afb982e4794d72fa2562f37c, type: 2}
+    attribute: 'm_Materials.Array.data[0]'
+    path: 
+    classID: 212
+    script: {fileID: 0}
+    flags: 2
   m_SampleRate: 16
   m_WrapMode: 0
   m_Bounds:
@@ -89,6 +98,15 @@ AnimationClip:
       isPPtrCurve: 1
       isIntCurve: 0
       isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 21
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     pptrCurveMapping:
     - {fileID: 6934013284892070054, guid: bca853da8cbf7ec4e835359a4ca778d4, type: 3}
     - {fileID: -7957278214813060823, guid: bca853da8cbf7ec4e835359a4ca778d4, type: 3}
@@ -97,6 +115,7 @@ AnimationClip:
     - {fileID: -5639509438907974925, guid: bca853da8cbf7ec4e835359a4ca778d4, type: 3}
     - {fileID: 452926297546027425, guid: bca853da8cbf7ec4e835359a4ca778d4, type: 3}
     - {fileID: 6238536850125145498, guid: bca853da8cbf7ec4e835359a4ca778d4, type: 3}
+    - {fileID: 2100000, guid: 04deff75afb982e4794d72fa2562f37c, type: 2}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

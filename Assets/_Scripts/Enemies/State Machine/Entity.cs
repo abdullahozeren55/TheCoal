@@ -21,17 +21,21 @@ public class Entity : MonoBehaviour
     public FiniteStateMachine stateMachine;
 
     public D_Entity entityData;
+
+    private SpriteRenderer SR;
+    private SpriteRenderer eyesSR;
     public Animator anim { get; private set; }
     public GameObject eyes;
     public Animator EyesAnim { get; private set; }
     public AnimationToStateMachine atsm { get; private set; }
 
     public Core Core { get; private set; }
-    [SerializeField] private Transform playerCheck;
+    public Transform playerCheck;
 
     public GameObject damageParticles;
     public GameObject stunStars;
     public GameObject player;
+    public bool shouldCheckSortingLayerWithPlayerInMaxAgroRange;
 
     [HideInInspector] public bool gotBackAttacked;
 
@@ -42,14 +46,22 @@ public class Entity : MonoBehaviour
 
         Core = GetComponentInChildren<Core>();
         anim = GetComponent<Animator>();
-        EyesAnim = eyes.GetComponent<Animator>();
         atsm = GetComponent<AnimationToStateMachine>();
+        SR = GetComponent<SpriteRenderer>();
+
+        if(eyes != null)
+        {
+            EyesAnim = eyes.GetComponent<Animator>();
+            eyesSR = eyes.GetComponent<SpriteRenderer>();
+        }
 
         stateMachine = new FiniteStateMachine();
     }
 
     public virtual void Update()
     {
+        CheckIfInFrontOfPlayerOrBehind();
+
         Core.LogicUpdate();
         stateMachine.currentState.LogicUpdate();
     }
@@ -88,6 +100,95 @@ public class Entity : MonoBehaviour
     public virtual bool CheckPlayerInCloseRangeAction()
     {
         return Physics2D.Raycast(playerCheck.position, transform.right * Movement.FacingDirection, entityData.closeRangeActionDistance, entityData.whatIsPlayer);
+    }
+
+    private void CheckIfInFrontOfPlayerOrBehind()
+    {
+        if(shouldCheckSortingLayerWithPlayerInMaxAgroRange)
+        {
+            if(CheckPlayerInMaxAgroRange())
+            {
+                if(SR.sortingLayerName != "Enemy Behind Player")
+                {
+                    SR.sortingLayerName = "Enemy Behind Player";
+                    SR.sortingOrder = GameManager.instance.enemyBehindPlayerSortingOrder;
+
+                    GameManager.instance.enemyBehindPlayerSortingOrder++;
+
+                    if(eyesSR != null)
+                    {
+                        eyesSR.sortingLayerName = "Enemy Behind Player";
+                        eyesSR.sortingOrder = GameManager.instance.enemyBehindPlayerSortingOrder;
+
+                        GameManager.instance.enemyBehindPlayerSortingOrder++;
+                    }
+                }
+            }
+            else
+            {
+                if(SR.sortingLayerName != "Enemy in Front Of Player")
+                {
+                    SR.sortingLayerName = "Enemy in Front Of Player";
+                    SR.sortingOrder = GameManager.instance.enemyInFrontOfPlayerSortingOrder;
+
+                    GameManager.instance.enemyInFrontOfPlayerSortingOrder++;
+
+                    if(eyesSR != null)
+                    {
+                        eyesSR.sortingLayerName = "Enemy in Front Of Player";
+                        eyesSR.sortingOrder = GameManager.instance.enemyInFrontOfPlayerSortingOrder;
+
+                        GameManager.instance.enemyInFrontOfPlayerSortingOrder++;
+
+                    }
+                }
+            }
+        }
+        else
+        {
+            if(transform.position.x >= player.transform.position.x)
+            {
+                if(SR.sortingLayerName != "Enemy in Front Of Player")
+                {
+                    SR.sortingLayerName = "Enemy in Front Of Player";
+                    SR.sortingOrder = GameManager.instance.enemyInFrontOfPlayerSortingOrder;
+
+                    GameManager.instance.enemyInFrontOfPlayerSortingOrder++;
+
+                    if(eyesSR != null)
+                    {
+                        eyesSR.sortingLayerName = "Enemy in Front Of Player";
+                        eyesSR.sortingOrder = GameManager.instance.enemyInFrontOfPlayerSortingOrder;
+
+                        GameManager.instance.enemyInFrontOfPlayerSortingOrder++;
+
+                    }
+                }
+            
+            }
+            else
+            {
+
+                if(SR.sortingLayerName != "Enemy Behind Player")
+                {
+                    SR.sortingLayerName = "Enemy Behind Player";
+                    SR.sortingOrder = GameManager.instance.enemyBehindPlayerSortingOrder;
+
+                    GameManager.instance.enemyBehindPlayerSortingOrder++;
+
+                    if(eyesSR != null)
+                    {
+                        eyesSR.sortingLayerName = "Enemy Behind Player";
+                        eyesSR.sortingOrder = GameManager.instance.enemyBehindPlayerSortingOrder;
+
+                        GameManager.instance.enemyBehindPlayerSortingOrder++;
+                    }
+                }
+            
+            }
+        }
+        
+        
     }
 
     private void AnimationTrigger() => stateMachine.currentState.AnimationTrigger();

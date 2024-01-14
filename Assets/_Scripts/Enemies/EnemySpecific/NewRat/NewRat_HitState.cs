@@ -25,7 +25,7 @@ public class NewRat_HitState : HitState
             
             if(performCloseRangeAction)
             {
-                stateMachine.ChangeState(enemy.NormalAttackState);
+                stateMachine.ChangeState(enemy.IdleState);
             }
             else if(isPlayerInMaxAgroRange)
             {

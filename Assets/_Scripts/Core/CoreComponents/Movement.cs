@@ -11,11 +11,11 @@ public class Movement : CoreComponent
     public bool CanSetVelocity { get; set; }
     public Vector2 CurrentVelocity { get; private set; }
     private Vector2 workspace;
-
     [SerializeField] private GameObject AfterImagePool;
     [SerializeField] private GameObject cameraFollowObject;
 
     private CameraFollowObjectController cameraFollowObjectController;
+    private bool canFlipAfterImage;
 
     protected override void Awake()
     {
@@ -79,10 +79,7 @@ public class Movement : CoreComponent
     {
         FacingDirection *= -1;
         RB.transform.localScale = new Vector3(RB.transform.localScale.x * -1f, 1f, 1f);
-        if(AfterImagePool != null)
-        {
-            AfterImagePool.transform.localScale = new Vector3(RB.transform.localScale.x, 1f, 1f);
-        }
+
         if(cameraFollowObjectController != null)
         {
             cameraFollowObjectController.CallTurn();

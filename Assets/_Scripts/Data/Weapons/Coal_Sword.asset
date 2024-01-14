@@ -80,7 +80,7 @@ MonoBehaviour:
     damageAmount: 15
     poiseDamageAmount: 50
     knockbackStrength: 15
-    knockbackAngle: {x: 2, y: 0.1}
+    knockbackAngle: {x: 2, y: 2}
   screenShakeDetails:
   - attackName: NormalAttack1
     impulseTime: 0.25

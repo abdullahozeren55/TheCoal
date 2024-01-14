@@ -50,4 +50,7 @@ public class D_Entity : ScriptableObject
     public float maxPoiseRegAmount = 30f;
 
     public float dragTime = 0.5f;
+
+    [Header("Hit State")]
+    public float knockBackMultiplier = 1f;
 }

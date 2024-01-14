@@ -32,7 +32,7 @@ public class CoalAfterImagePool : MonoBehaviour
         availableObjects.Enqueue(instance);
     }
 
-    public GameObject GetFromPool()
+    public GameObject GetFromPool(Vector3 scale)
     {
         if(availableObjects.Count == 0)
         {
@@ -40,6 +40,7 @@ public class CoalAfterImagePool : MonoBehaviour
         }
 
         var instance = availableObjects.Dequeue();
+        instance.transform.localScale = scale;
         instance.SetActive(true);
         return instance;
     }

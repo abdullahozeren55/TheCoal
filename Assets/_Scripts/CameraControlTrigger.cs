@@ -4,7 +4,6 @@ using UnityEngine;
 using Cinemachine;
 using UnityEditor;
 using Unity.VisualScripting;
-using Cinemachine.Editor;
 
 public class CameraControlTrigger : MonoBehaviour
 {

@@ -18,10 +18,10 @@ MonoBehaviour:
   shockedTime: 1.2
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 32768
+    m_Bits: 21004288
   whatIsLineCastCanHit:
     serializedVersion: 2
-    m_Bits: 236544
+    m_Bits: 1285120
   minIdleTime: 0.5
   maxIdleTime: 1.5
   movementSpeed: 4
@@ -42,17 +42,17 @@ MonoBehaviour:
     knockbackAngle: {x: 0, y: 0}
     whatIsDamageable:
       serializedVersion: 2
-      m_Bits: 32768
+      m_Bits: 21004288
   - attackName: JumpAttack
     hpDamageAmount: 10
     poiseDamageAmount: 10
     attackRadius: 0.75
     canKnockback: 1
-    knockbackStrength: 4
+    knockbackStrength: 8
     knockbackAngle: {x: 1, y: 0.1}
     whatIsDamageable:
       serializedVersion: 2
-      m_Bits: 32768
+      m_Bits: 21004288
   attackJumpVelocity: 8
   attackJumpAngle: {x: 2, y: 0}
   attackNormalVelocity: 0
@@ -63,3 +63,4 @@ MonoBehaviour:
   minPoiseRegAmount: 1
   maxPoiseRegAmount: 10
   dragTime: 0.25
+  knockBackMultiplier: 1

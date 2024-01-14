@@ -143,7 +143,7 @@ public class PlayerInAirState : PlayerState
         {
 			stateMachine.ChangeState(player.LedgeClimbState);
         }
-        else if (jumpInput && (isTouchingWall || isTouchingWallBack || wallJumpCoyoteTime) && (canWallHold || wallHoldCoyoteTime))
+        else if (jumpInput && !isTouchingLedgeBottom && (isTouchingWall || isTouchingWallBack || wallJumpCoyoteTime) && (canWallHold || wallHoldCoyoteTime))
         {
 			StopWallJumpCoyoteTime();
             StopWallHoldCoyoteTime();

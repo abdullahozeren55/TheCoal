@@ -6,8 +6,23 @@ public class PlayerHitState : PlayerState
 {
     private Movement Movement => movement ??= core.GetCoreComponent<Movement>();
     private Movement movement;
+
+    private CollisionSenses CollisionSenses => collisionSenses ??= core.GetCoreComponent<CollisionSenses>();
+    private CollisionSenses collisionSenses;
+
+    private bool isGrounded;
     public PlayerHitState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
+    }
+
+    public override void DoChecks()
+    {
+        base.DoChecks();
+
+        if(CollisionSenses)
+        {
+            isGrounded = CollisionSenses.Ground;
+        }
     }
 
     public override void Enter()
@@ -30,7 +45,15 @@ public class PlayerHitState : PlayerState
 
         if(isAnimationFinished)
         {
-            stateMachine.ChangeState(player.IdleState);
+            if(isGrounded)
+            {
+
+                stateMachine.ChangeState(player.IdleState);
+            }
+            else
+            {
+                stateMachine.ChangeState(player.InAirState);
+            }
         }
     }
 

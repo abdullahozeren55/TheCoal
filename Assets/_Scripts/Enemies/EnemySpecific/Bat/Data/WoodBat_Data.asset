@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5459db0b59a7e014dba13d6f2e00e85a, type: 3}
+  m_Name: WoodBat_Data
+  m_EditorClassIdentifier: 
+  minAgroDistance: 6
+  maxAgroDistance: 1.5
+  closeRangeActionDistance: 4
+  shockedTime: 1
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 21004288
+  whatIsLineCastCanHit:
+    serializedVersion: 2
+    m_Bits: 1285120
+  minIdleTime: 0.5
+  maxIdleTime: 2
+  movementSpeed: 25
+  ledgeDetectionCooldown: 1
+  longRangeActionTime: 1
+  chargeSpeed: 35
+  chargeTime: 0.2
+  minAmountOfTurns: 1
+  maxAmountOfTurns: 4
+  timeBetweenTurns: 0.5
+  attackDetails:
+  - attackName: DashAttack
+    hpDamageAmount: 10
+    poiseDamageAmount: 10
+    attackRadius: 0.5
+    canKnockback: 0
+    knockbackStrength: 15
+    knockbackAngle: {x: 2, y: 0.2}
+    whatIsDamageable:
+      serializedVersion: 2
+      m_Bits: 21004288
+  attackJumpVelocity: 10
+  attackJumpAngle: {x: 0, y: 0}
+  attackNormalVelocity: 3
+  attackNormalAngle: {x: 0, y: 0}
+  attackNormalCooldown: 1
+  poiseRegCooldown: 0.3
+  poiseRegStartTimeAfterDamaged: 2
+  minPoiseRegAmount: 1
+  maxPoiseRegAmount: 30
+  dragTime: 0.5
+  knockBackMultiplier: 3

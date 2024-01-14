@@ -47,7 +47,7 @@ public class Bat_SleepState : IdleState
 
         if(isAnimationFinished)
         {
-            stateMachine.ChangeState(enemy.IdleState);
+            stateMachine.ChangeState(enemy.FollowPlayerState);
         }
     }
 
