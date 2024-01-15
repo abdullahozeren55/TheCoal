@@ -56,10 +56,10 @@ public class PlayerSuperDashState : PlayerAbilityState
     {
         base.Exit();
 
-        player.gameObject.layer = LayerMask.NameToLayer("Player");
-        player.gameObject.tag = "Player";
-
         player.InAirState.SetCanWallHold(true);
+
+        player.gameObject.layer = LayerMask.NameToLayer("Player");
+        player.lastUncollidableTime = Time.time;
 
         if (Movement?.CurrentVelocity.y > 0)
         {

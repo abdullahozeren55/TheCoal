@@ -57,6 +57,8 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
 
     [HideInInspector] public SpriteRenderer coalSwordSR;
 
+    [HideInInspector] public float lastUncollidableTime;
+
     [SerializeField] private PlayerData playerData;
 
     [SerializeField] private GameObject damageParticles;
@@ -118,6 +120,14 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     {
         Core.LogicUpdate();
         StateMachine.CurrentState.LogicUpdate();
+
+        if(gameObject.tag == "DashingPlayer" && StateMachine.CurrentState != DashState && StateMachine.CurrentState != SuperDashState)
+        {
+            if(Time.time >= lastUncollidableTime + playerData.uncollidableTimeAfterDashing)
+            {
+                gameObject.tag = "Player";
+            }
+        }
 
         //if we are falling past a certain speed threshold
         if(Movement.RB.velocity.y < fallSpeedYDampingChangeThreshold && !CameraManager.instance.IsLerpingYDamping && !CameraManager.instance.LerpedFromPlayerFalling)

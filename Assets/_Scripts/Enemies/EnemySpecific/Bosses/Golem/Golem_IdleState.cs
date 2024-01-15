@@ -18,8 +18,6 @@ public class Golem_IdleState : IdleState
     public override void Enter()
     {
         base.Enter();
-
-        SetRandomAction();
     }
 
     public override void Exit()
@@ -39,21 +37,31 @@ public class Golem_IdleState : IdleState
 
         if(Time.time >= startTime + idleTime)
         {
-            switch (actionNumber)
+            if(enemy.isPlayerOnHead)
             {
-                case 0:
-                    stateMachine.ChangeState(enemy.Attack0State);
-                    break;
-                case 1:
-                    stateMachine.ChangeState(enemy.Attack1State);
-                    break;
-                case 2:
-                    stateMachine.ChangeState(enemy.Attack2State);
-                    break;
-                default:
-                    stateMachine.ChangeState(enemy.Attack0State);
-                    break;
+                stateMachine.ChangeState(enemy.AttackHeadState);
             }
+            else
+            {
+                SetRandomAction();
+                
+                switch (actionNumber)
+                {
+                    case 0:
+                        stateMachine.ChangeState(enemy.Attack0State);
+                        break;
+                    case 1:
+                        stateMachine.ChangeState(enemy.Attack1State);
+                        break;
+                    case 2:
+                        stateMachine.ChangeState(enemy.Attack2State);
+                        break;
+                    default:
+                        stateMachine.ChangeState(enemy.Attack0State);
+                        break;
+                }
+            }
+            
         }
 
         if(isPlayerInMaxAgroRange)
@@ -69,7 +77,7 @@ public class Golem_IdleState : IdleState
                 lastNotSeeingPlayerTimeIsSet = true;
                 shouldFlipBeforeExit = true;
             }
-            if(Time.time >= lastNotSeeingPlayerTime + enemy.flipCooldown)
+            if(Time.time >= lastNotSeeingPlayerTime + enemy.flipCooldown && !enemy.attack0SpikesParent.activeSelf)
             {
                 Movement?.Flip();
                 shouldFlipBeforeExit = false;

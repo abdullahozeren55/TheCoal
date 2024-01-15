@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TrapController : MonoBehaviour
 {
+    [SerializeField] private bool shouldDamageEveryone;
+    [SerializeField] private bool shouldDisableParent;
+    [SerializeField] private string enemyTagName;
     [SerializeField] private float hpDamageAmount = 10f;
     [SerializeField] private float knockbackStrength = 15f;
     [SerializeField] private Vector2 knockbackAngle;
@@ -11,26 +14,68 @@ public class TrapController : MonoBehaviour
     {
         
 
-        if(other.CompareTag("Player") || other.CompareTag("DashingPlayer"))
+        if(other.CompareTag("Player"))
         {
             other.GetComponent<Player>().JumpState.ResetAmountOfJumpsLeft();
             other.GetComponent<Player>().JumpState.DecreaseAmountOfJumpsLeft();
         }
 
-        IDamageable damageable = other.GetComponent<IDamageable>();
-
-        if(damageable != null)
+        if(shouldDamageEveryone)
         {
-            damageable.Damage(hpDamageAmount);
+            if(!other.CompareTag("DashingPlayer"))
+            {
+                IDamageable damageable = other.GetComponent<IDamageable>();
+
+                if(damageable != null)
+                {
+                    damageable.Damage(hpDamageAmount);
+                }
+
+                IKnockbackable knockbackable = other.GetComponent<IKnockbackable>();
+
+                if(knockbackable != null)
+                {
+                    int facingDirection = other.GetComponentInChildren<Movement>().FacingDirection;
+                    knockbackable.Knockback(knockbackStrength, knockbackAngle, facingDirection);
+                }
+            }
+        }
+        else
+        {
+            if(other.CompareTag("Player") || other.CompareTag(enemyTagName))
+            {
+                IDamageable damageable = other.GetComponent<IDamageable>();
+
+                if(damageable != null)
+                {
+                    damageable.Damage(hpDamageAmount);
+                }
+
+                IKnockbackable knockbackable = other.GetComponent<IKnockbackable>();
+
+                if(knockbackable != null)
+                {
+                    int facingDirection = other.GetComponentInChildren<Movement>().FacingDirection;
+                    knockbackable.Knockback(knockbackStrength, knockbackAngle, facingDirection);
+                }
+            }
         }
 
-        IKnockbackable knockbackable = other.GetComponent<IKnockbackable>();
+        
 
-        if(knockbackable != null)
+        
+
+    }
+
+    private void DisableParentObject()
+    {
+        if(shouldDisableParent)
         {
-            int facingDirection = other.GetComponentInChildren<Movement>().FacingDirection;
-            knockbackable.Knockback(knockbackStrength, knockbackAngle, facingDirection);
+            transform.parent.gameObject.SetActive(false);
         }
-
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

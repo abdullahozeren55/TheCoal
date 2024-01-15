@@ -40,7 +40,7 @@ public class PlayerDashState : PlayerAbilityState
         base.Exit();
 
         player.gameObject.layer = LayerMask.NameToLayer("Player");
-        player.gameObject.tag = "Player";
+        player.lastUncollidableTime = Time.time;
 
         player.InAirState.SetCanWallHold(true);
     }

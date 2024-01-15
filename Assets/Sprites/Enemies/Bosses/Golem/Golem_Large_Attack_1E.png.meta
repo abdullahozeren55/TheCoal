@@ -15,7 +15,7 @@ TextureImporter:
       213: -5274385928737483750
     second: Golem_Large_Attack_1E_3
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -89,6 +89,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -101,6 +102,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -110,10 +112,10 @@ TextureImporter:
       name: Golem_Large_Attack_1E_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 0
-        width: 23
-        height: 12
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,10 +133,10 @@ TextureImporter:
       name: Golem_Large_Attack_1E_1
       rect:
         serializedVersion: 2
-        x: 35
+        x: 16
         y: 0
-        width: 7
-        height: 10
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +154,10 @@ TextureImporter:
       name: Golem_Large_Attack_1E_2
       rect:
         serializedVersion: 2
-        x: 51
+        x: 32
         y: 0
-        width: 7
-        height: 9
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +175,10 @@ TextureImporter:
       name: Golem_Large_Attack_1E_3
       rect:
         serializedVersion: 2
-        x: 67
+        x: 48
         y: 0
-        width: 20
-        height: 6
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,10 +192,52 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Golem_Large_Attack_1E_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9595e8cd4e62c0f4fa683204e877ca1c
+      internalID: 1561528020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem_Large_Attack_1E_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 479a76cf50b20ab43b186938755e1896
+      internalID: 257355409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -205,6 +249,8 @@ TextureImporter:
       Golem_Large_Attack_1E_1: -2870253013847484092
       Golem_Large_Attack_1E_2: 4734675880445912221
       Golem_Large_Attack_1E_3: -5274385928737483750
+      Golem_Large_Attack_1E_4: 1561528020
+      Golem_Large_Attack_1E_5: 257355409
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

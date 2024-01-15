@@ -50,4 +50,5 @@ public class PlayerData : ScriptableObject
     [Header("Attack Stuff")]
     
     public float knockBackTime = 0.2f;
+    public float uncollidableTimeAfterDashing = 0.3f;
 }

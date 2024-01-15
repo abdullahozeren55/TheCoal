@@ -39,3 +39,4 @@ MonoBehaviour:
   dashDistBetweenAfterImages: 0.8
   dashFlipCoyoteTime: 0.15
   knockBackTime: 0.2
+  uncollidableTimeAfterDashing: 0.2

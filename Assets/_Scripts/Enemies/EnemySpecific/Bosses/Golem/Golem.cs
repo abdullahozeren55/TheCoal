@@ -8,12 +8,21 @@ public class Golem : Entity, IDamageable, IStunable
     public Golem_Attack0State Attack0State { get; private set; }
     public Golem_Attack1State Attack1State { get; private set; }
     public Golem_Attack2State Attack2State { get; private set; }
+    public Golem_AttackHeadState AttackHeadState { get; private set; }
 
     public bool IsStunned { get; private set; }
 
     public float flipCooldown = 0.5f;
 
+    public GameObject attack0SpikesParent;
+    public Animator[] attack0SpikesAnims;
+    public GameObject headSpike;
+    [HideInInspector] public Animator headSpikeAnim;
+
     [SerializeField] private Transform meleeAttackPosition;
+
+    [HideInInspector] public bool isPlayerOnHead;
+    
 
     private float lastDamageTakenTime;
     private float lastPoiseRegTime;
@@ -23,11 +32,16 @@ public class Golem : Entity, IDamageable, IStunable
     public override void Awake()
     {
         base.Awake();
+        attack0SpikesParent.SetActive(false);
+
+        headSpikeAnim = headSpike.GetComponent<Animator>();
+        headSpike.SetActive(false);
 
         IdleState = new Golem_IdleState(this, stateMachine, "idle", entityData, this);
         Attack0State = new Golem_Attack0State(this, stateMachine, "attack0", entityData, meleeAttackPosition, this);
         Attack1State = new Golem_Attack1State(this, stateMachine, "attack1", entityData, meleeAttackPosition, this);
         Attack2State = new Golem_Attack2State(this, stateMachine, "attack2", entityData, meleeAttackPosition, this);
+        AttackHeadState = new Golem_AttackHeadState(this, stateMachine, "attack0", entityData, meleeAttackPosition, this);
     }
 
     private void Start()
