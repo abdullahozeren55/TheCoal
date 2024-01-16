@@ -12,16 +12,15 @@ public class TrapController : MonoBehaviour
     [SerializeField] private Vector2 knockbackAngle;
     void OnTriggerEnter2D(Collider2D other)
     {
-        
-
-        if(other.CompareTag("Player"))
-        {
-            other.GetComponent<Player>().JumpState.ResetAmountOfJumpsLeft();
-            other.GetComponent<Player>().JumpState.DecreaseAmountOfJumpsLeft();
-        }
 
         if(shouldDamageEveryone)
         {
+            if(other.CompareTag("Player") || other.CompareTag("DashingPlayer"))
+            {
+                other.GetComponent<Player>().JumpState.ResetAmountOfJumpsLeft();
+                other.GetComponent<Player>().JumpState.DecreaseAmountOfJumpsLeft();
+            }
+
             if(!other.CompareTag("DashingPlayer"))
             {
                 IDamageable damageable = other.GetComponent<IDamageable>();
@@ -30,18 +29,24 @@ public class TrapController : MonoBehaviour
                 {
                     damageable.Damage(hpDamageAmount);
                 }
+            }
 
-                IKnockbackable knockbackable = other.GetComponent<IKnockbackable>();
+            IKnockbackable knockbackable = other.GetComponent<IKnockbackable>();
 
-                if(knockbackable != null)
-                {
-                    int facingDirection = other.GetComponentInChildren<Movement>().FacingDirection;
-                    knockbackable.Knockback(knockbackStrength, knockbackAngle, facingDirection);
-                }
+            if(knockbackable != null)
+            {
+                int facingDirection = other.GetComponentInChildren<Movement>().FacingDirection;
+                knockbackable.Knockback(knockbackStrength, knockbackAngle, facingDirection);
             }
         }
         else
         {
+            if(other.CompareTag("Player"))
+            {
+                other.GetComponent<Player>().JumpState.ResetAmountOfJumpsLeft();
+                other.GetComponent<Player>().JumpState.DecreaseAmountOfJumpsLeft();
+            }
+
             if(other.CompareTag("Player") || other.CompareTag(enemyTagName))
             {
                 IDamageable damageable = other.GetComponent<IDamageable>();

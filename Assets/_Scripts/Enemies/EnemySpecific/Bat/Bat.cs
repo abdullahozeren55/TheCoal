@@ -66,7 +66,7 @@ public class Bat : Entity, IDamageable, IKnockbackable
 
     public void CheckFlip()
     {
-        if((transform.position.x < player.transform.position.x && Movement.FacingDirection == -1) || (transform.position.x >= player.transform.position.x && Movement.FacingDirection == 1))
+        if((Movement.RB.velocity.x > 0f && Movement.FacingDirection == -1) || (Movement.RB.velocity.x < 0f && Movement.FacingDirection == 1))
         {
             Movement.Flip();
         }
