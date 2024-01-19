@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementVelocity: 9
   jumpVelocity: 15
-  amountOfJumps: 3
+  amountOfJumps: 1
   wallJumpVelocity: 20
   wallJumpTime: 0.4
   wallJumpAngle: {x: 1, y: 2}
@@ -33,7 +33,7 @@ MonoBehaviour:
   drag: 10
   superDashEndYMultiplier: 0.3
   superDashDistBetweenAfterImages: 0.5
-  dashCooldown: 0.5
+  dashCooldown: 0
   dashTime: 0.3
   dashVelocity: 20
   dashDistBetweenAfterImages: 0.8

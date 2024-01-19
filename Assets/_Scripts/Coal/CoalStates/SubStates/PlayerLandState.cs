@@ -29,9 +29,16 @@ public class PlayerLandState : PlayerGroundedState
     {
         base.LogicUpdate();
 
-        if(jumpInput && player.JumpState.CanJump())
+        if(player.shouldLandFreeze)
         {
-        stateMachine.ChangeState(player.JumpState);
+            if(isAnimationFinished)
+            {
+                stateMachine.ChangeState(player.IdleState);
+            }
+        }
+        else if(jumpInput && player.JumpState.CanJump())
+        {
+            stateMachine.ChangeState(player.JumpState);
         }
         else if(dashInput && player.DashState.CheckIfCanDash())
         {

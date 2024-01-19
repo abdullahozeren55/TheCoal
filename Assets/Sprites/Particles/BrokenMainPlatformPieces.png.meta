@@ -1,0 +1,1107 @@
+fileFormatVersion: 2
+guid: 83431b1206af0e44ab8ef22bb79fc261
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1273642135941475588
+    second: BrokenMainPlatformPieces_0
+  - first:
+      213: 3094217440339394866
+    second: BrokenMainPlatformPieces_1
+  - first:
+      213: 5457898509993083802
+    second: BrokenMainPlatformPieces_2
+  - first:
+      213: 6910130385890331883
+    second: BrokenMainPlatformPieces_3
+  - first:
+      213: 3828155806878326833
+    second: BrokenMainPlatformPieces_4
+  - first:
+      213: 4649235448444822359
+    second: BrokenMainPlatformPieces_5
+  - first:
+      213: 2094907179107903771
+    second: BrokenMainPlatformPieces_6
+  - first:
+      213: -2352643697951842154
+    second: BrokenMainPlatformPieces_7
+  - first:
+      213: -1584557764053488158
+    second: BrokenMainPlatformPieces_8
+  - first:
+      213: 7940618791509265452
+    second: BrokenMainPlatformPieces_9
+  - first:
+      213: -8201981621383100538
+    second: BrokenMainPlatformPieces_10
+  - first:
+      213: 6272318794004567134
+    second: BrokenMainPlatformPieces_11
+  - first:
+      213: -6763996323844814770
+    second: BrokenMainPlatformPieces_12
+  - first:
+      213: -6390601338797314300
+    second: BrokenMainPlatformPieces_13
+  - first:
+      213: 4034171271090328973
+    second: BrokenMainPlatformPieces_14
+  - first:
+      213: 761719795333798256
+    second: BrokenMainPlatformPieces_15
+  - first:
+      213: -2348120331164315661
+    second: BrokenMainPlatformPieces_16
+  - first:
+      213: 334148319150260728
+    second: BrokenMainPlatformPieces_17
+  - first:
+      213: -7568996532873379681
+    second: BrokenMainPlatformPieces_18
+  - first:
+      213: -913821162219332857
+    second: BrokenMainPlatformPieces_19
+  - first:
+      213: 7637651754177302217
+    second: BrokenMainPlatformPieces_20
+  - first:
+      213: -6688850841970142946
+    second: BrokenMainPlatformPieces_21
+  - first:
+      213: 2954705365716720552
+    second: BrokenMainPlatformPieces_22
+  - first:
+      213: 7723728299788603733
+    second: BrokenMainPlatformPieces_23
+  - first:
+      213: -8451985167546779444
+    second: BrokenMainPlatformPieces_24
+  - first:
+      213: 2309396215365041047
+    second: BrokenMainPlatformPieces_25
+  - first:
+      213: -1037932290093786328
+    second: BrokenMainPlatformPieces_26
+  - first:
+      213: 3785738079677757243
+    second: BrokenMainPlatformPieces_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 92
+        width: 6
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3, y: 1.5}
+        - {x: -3, y: 1.5}
+        - {x: -1, y: -1.5}
+        - {x: 1, y: -1.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40de2cb46c2eca110800000000000000
+      internalID: 1273642135941475588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 89
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -1.5}
+        - {x: 5, y: 0.5}
+        - {x: 3, y: 2.5}
+        - {x: -3, y: 2.5}
+        - {x: -5, y: 0.5}
+        - {x: -5, y: -0.5}
+        - {x: -3, y: -2.5}
+        - {x: 4, y: -2.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2318f3d3e5ed0fa20800000000000000
+      internalID: 3094217440339394866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 90
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 6, y: 0.5}
+        - {x: 6, y: 1.5}
+        - {x: -2, y: 2.5}
+        - {x: -6, y: 2.5}
+        - {x: -6, y: 1.5}
+        - {x: -2, y: -1.5}
+        - {x: 1, y: -2.5}
+        - {x: 4, y: -1.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93854417c95ebb40800000000000000
+      internalID: 5457898509993083802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_3
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 88
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 2.5, y: 0.5}
+        - {x: 1.5, y: 1.5}
+        - {x: 0.5, y: 2.5}
+        - {x: -2.5, y: 2.5}
+        - {x: -2.5, y: -0.5}
+        - {x: -1.5, y: -0.5}
+        - {x: -1.5, y: -2.5}
+        - {x: 2.5, y: -2.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec40aa79f6b5ef50800000000000000
+      internalID: 6910130385890331883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_4
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 88
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1.5, y: 1.5}
+        - {x: -1.5, y: 1.5}
+        - {x: -1.5, y: 0.5}
+        - {x: -0.5, y: 0.5}
+        - {x: -0.5, y: -1.5}
+        - {x: 1.5, y: -1.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 130e4d58c67502530800000000000000
+      internalID: 3828155806878326833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_5
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 61
+        width: 10
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75325b5f107658040800000000000000
+      internalID: 4649235448444822359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_6
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 81
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 7, y: 1.5}
+        - {x: 7, y: 2.5}
+        - {x: 3, y: 5.5}
+        - {x: -4, y: 5.5}
+        - {x: -7, y: 3.566681}
+        - {x: -7, y: 1.5}
+        - {x: -5, y: -2.5}
+        - {x: -2, y: -5.5}
+        - {x: 0, y: -5.5}
+        - {x: 4, y: -3.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b196428eafa921d10800000000000000
+      internalID: 2094907179107903771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 81
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690e484850bb95fd0800000000000000
+      internalID: -2352643697951842154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 78
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed2183eb15820ae0800000000000000
+      internalID: -1584557764053488158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_9
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 80
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c83bc38beb23e60800000000000000
+      internalID: 7940618791509265452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_10
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 81
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6878d2bdb25bc2e80800000000000000
+      internalID: -8201981621383100538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_11
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 80
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5416a206b0cb0750800000000000000
+      internalID: 6272318794004567134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_12
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 77
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e488e2f3e257122a0800000000000000
+      internalID: -6763996323844814770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 75
+        width: 3
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40fa9d3f0f50057a0800000000000000
+      internalID: -6390601338797314300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_14
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 71
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d85dc68a5614cf730800000000000000
+      internalID: 4034171271090328973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_15
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 75
+        width: 3
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079114b3e1c229a00800000000000000
+      internalID: 761719795333798256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_16
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 66
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff041beffcc96fd0800000000000000
+      internalID: -2348120331164315661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_17
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 60
+        width: 4
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1ce39302223a400800000000000000
+      internalID: 334148319150260728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_18
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 82
+        width: 3
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f904bef61c585f690800000000000000
+      internalID: -7568996532873379681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_19
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 75
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b9ead9e747153f0800000000000000
+      internalID: -913821162219332857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_20
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 73
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce80ededc36ef960800000000000000
+      internalID: 7637651754177302217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_21
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 79
+        width: 3
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e111cc8299d6c23a0800000000000000
+      internalID: -6688850841970142946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_22
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 78
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab5c7b10e8310920800000000000000
+      internalID: 2954705365716720552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_23
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 81
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 7.5, y: -4.5}
+        - {x: 7.5, y: 2.5}
+        - {x: 4.5, y: 5.5}
+        - {x: -4.5, y: 5.5}
+        - {x: -7.5, y: 3.5}
+        - {x: -7.5, y: 2.5}
+        - {x: -6.5, y: -1.5}
+        - {x: -0.5, y: -4.5}
+        - {x: 4.5, y: -5.5}
+        - {x: 6.5, y: -5.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 551188277f1303b60800000000000000
+      internalID: 7723728299788603733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_24
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 68
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5.5, y: -4.5}
+        - {x: 5.5, y: -0.5}
+        - {x: 1.5, y: 6.5}
+        - {x: 0.5, y: 6.5}
+        - {x: -0.5, y: 4.5}
+        - {x: -1.5, y: 2.5}
+        - {x: -4.5, y: 1.5}
+        - {x: -5.5, y: 0.5}
+        - {x: -5.5, y: -2.5}
+        - {x: -1.5, y: -6.5}
+        - {x: 2.5, y: -6.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8f089454484ba80800000000000000
+      internalID: -8451985167546779444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_25
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 56
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79bf6764f9f9c0020800000000000000
+      internalID: 2309396215365041047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 44
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b5d04d4168891f0800000000000000
+      internalID: -1037932290093786328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_27
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 44
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37bcdbc9b4a98430800000000000000
+      internalID: 3785738079677757243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_28
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 36
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac65d1a4e23b1fc469858d66ff5237e0
+      internalID: -1794730979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_29
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 28
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89eed7e0c687e8e4aa9425d0245d0810
+      internalID: 1554066388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_30
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 30
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -3, y: -2.5}
+        - {x: -2, y: -1.5}
+        - {x: 0, y: -3.5}
+        - {x: 3, y: -3.5}
+        - {x: 4, y: -2.5}
+        - {x: 4, y: 0.5}
+        - {x: 6, y: 0.5}
+        - {x: 6, y: -0.5}
+        - {x: 7, y: -0.5}
+        - {x: 7, y: 1.5}
+        - {x: 8, y: 1.5}
+        - {x: 8, y: 5.5}
+        - {x: 6, y: 7.5}
+        - {x: -4, y: 7.5}
+        - {x: -8, y: 4.5}
+        - {x: -8, y: -7.5}
+        - {x: -7, y: -7.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 986e12a98abc90145ad110603ecacb98
+      internalID: -440113777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_31
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 32
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 8, y: 3.5}
+        - {x: 3, y: 6.5}
+        - {x: -5, y: 6.5}
+        - {x: -8, y: 4.5}
+        - {x: -8, y: 0.5}
+        - {x: -4, y: 0.5}
+        - {x: -4, y: -1.5}
+        - {x: -1, y: -6.5}
+        - {x: 0, y: -6.5}
+        - {x: 3, y: -2.5}
+        - {x: 4, y: -5.5}
+        - {x: 5, y: -5.5}
+        - {x: 8, y: -2.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e43d3a4247d4eb74983cc69720a3c54c
+      internalID: 223455093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_32
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 14
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2aff87592c45304cbe673292737c012
+      internalID: -743011746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_33
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 19
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbdd794e23d73004ebeaed8476b81348
+      internalID: 1777770042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_34
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 7
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95ef52867570294fb48bfb22d740c72
+      internalID: -1473003234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_35
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 17
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d32a03beacca67479bacd3d5b83d19b
+      internalID: -663969683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenMainPlatformPieces_36
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 3
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3dacf5c6d15de4ab85730119b44d5c
+      internalID: -1599580580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7c840ef3576860a47a3c336f42337ba1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BrokenMainPlatformPieces_0: 1273642135941475588
+      BrokenMainPlatformPieces_1: 3094217440339394866
+      BrokenMainPlatformPieces_10: -8201981621383100538
+      BrokenMainPlatformPieces_11: 6272318794004567134
+      BrokenMainPlatformPieces_12: -6763996323844814770
+      BrokenMainPlatformPieces_13: -6390601338797314300
+      BrokenMainPlatformPieces_14: 4034171271090328973
+      BrokenMainPlatformPieces_15: 761719795333798256
+      BrokenMainPlatformPieces_16: -2348120331164315661
+      BrokenMainPlatformPieces_17: 334148319150260728
+      BrokenMainPlatformPieces_18: -7568996532873379681
+      BrokenMainPlatformPieces_19: -913821162219332857
+      BrokenMainPlatformPieces_2: 5457898509993083802
+      BrokenMainPlatformPieces_20: 7637651754177302217
+      BrokenMainPlatformPieces_21: -6688850841970142946
+      BrokenMainPlatformPieces_22: 2954705365716720552
+      BrokenMainPlatformPieces_23: 7723728299788603733
+      BrokenMainPlatformPieces_24: -8451985167546779444
+      BrokenMainPlatformPieces_25: 2309396215365041047
+      BrokenMainPlatformPieces_26: -1037932290093786328
+      BrokenMainPlatformPieces_27: 3785738079677757243
+      BrokenMainPlatformPieces_28: -1794730979
+      BrokenMainPlatformPieces_29: 1554066388
+      BrokenMainPlatformPieces_3: 6910130385890331883
+      BrokenMainPlatformPieces_30: -440113777
+      BrokenMainPlatformPieces_31: 223455093
+      BrokenMainPlatformPieces_32: -743011746
+      BrokenMainPlatformPieces_33: 1777770042
+      BrokenMainPlatformPieces_34: -1473003234
+      BrokenMainPlatformPieces_35: -663969683
+      BrokenMainPlatformPieces_36: -1599580580
+      BrokenMainPlatformPieces_4: 3828155806878326833
+      BrokenMainPlatformPieces_5: 4649235448444822359
+      BrokenMainPlatformPieces_6: 2094907179107903771
+      BrokenMainPlatformPieces_7: -2352643697951842154
+      BrokenMainPlatformPieces_8: -1584557764053488158
+      BrokenMainPlatformPieces_9: 7940618791509265452
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

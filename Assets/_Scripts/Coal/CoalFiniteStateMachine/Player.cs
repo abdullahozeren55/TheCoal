@@ -59,6 +59,9 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
 
     [HideInInspector] public float lastUncollidableTime;
 
+    [HideInInspector] public bool shouldFreeze;
+    [HideInInspector] public bool shouldLandFreeze;
+
     [SerializeField] private PlayerData playerData;
 
     [SerializeField] private GameObject damageParticles;
@@ -120,6 +123,15 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     {
         Core.LogicUpdate();
         StateMachine.CurrentState.LogicUpdate();
+
+        if(shouldFreeze && StateMachine.CurrentState != StopMovingState)
+        {
+            StateMachine.ChangeState(StopMovingState);
+        }
+        else if(shouldLandFreeze && StateMachine.CurrentState != LandState)
+        {
+            StateMachine.ChangeState(LandState);
+        }
 
         if(gameObject.tag == "DashingPlayer" && StateMachine.CurrentState != DashState && StateMachine.CurrentState != SuperDashState)
         {

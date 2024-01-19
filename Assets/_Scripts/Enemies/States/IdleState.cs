@@ -12,11 +12,16 @@ public class IdleState : State
     protected bool isPlayerInCloseRangeAction;
     protected bool isDetectingLedge;
     protected bool isDetectingWall;
+    protected bool isGrounded;
 
     protected float idleTime;
 
     protected Movement Movement => movement ??= core.GetCoreComponent<Movement>();
     private Movement movement;
+
+    protected ParticleManager ParticleManager => particleManager ??= core.GetCoreComponent<ParticleManager>();
+
+    private ParticleManager particleManager;
 
     protected CollisionSenses CollisionSenses => collisionSenses ??= core.GetCoreComponent<CollisionSenses>();
     private CollisionSenses collisionSenses;
@@ -35,6 +40,7 @@ public class IdleState : State
         {
             isDetectingLedge = CollisionSenses.LedgeVertical;
             isDetectingWall = CollisionSenses.WallFront;
+            isGrounded = CollisionSenses.Ground;
         }
     }
 

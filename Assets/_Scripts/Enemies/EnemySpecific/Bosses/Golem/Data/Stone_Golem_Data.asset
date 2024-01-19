@@ -36,7 +36,7 @@ MonoBehaviour:
   - attackName: Attack0
     hpDamageAmount: 15
     poiseDamageAmount: 15
-    attackRadius: 0.75
+    attackRadius: 1
     canKnockback: 1
     knockbackStrength: 15
     knockbackAngle: {x: 1, y: 0.1}
@@ -46,7 +46,7 @@ MonoBehaviour:
   - attackName: Attack1
     hpDamageAmount: 25
     poiseDamageAmount: 25
-    attackRadius: 1
+    attackRadius: 1.5
     canKnockback: 1
     knockbackStrength: 30
     knockbackAngle: {x: 1, y: 0.2}
@@ -56,7 +56,7 @@ MonoBehaviour:
   - attackName: Attack2
     hpDamageAmount: 50
     poiseDamageAmount: 50
-    attackRadius: 0.75
+    attackRadius: 1
     canKnockback: 1
     knockbackStrength: 20
     knockbackAngle: {x: -1, y: 0.1}

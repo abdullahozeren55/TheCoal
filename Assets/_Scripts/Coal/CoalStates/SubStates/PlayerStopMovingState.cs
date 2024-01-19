@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerStopMovingState : PlayerGroundedState
@@ -22,8 +23,16 @@ public class PlayerStopMovingState : PlayerGroundedState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-
-        Movement?.CheckIfShouldFlip(xInput);
+        if(player.shouldFreeze)
+        {
+            if(isAnimationFinished)
+            {
+                stateMachine.ChangeState(player.IdleState);
+            }
+        }
+        else
+        {
+            Movement?.CheckIfShouldFlip(xInput);
 
         
         if (player.InputHandler.AttackInputs[(int)CombatInputs.primary])
@@ -71,6 +80,8 @@ public class PlayerStopMovingState : PlayerGroundedState
         {
             Movement?.SetVelocityZero();
         }
+        }
+        
     }
 
     public override void AnimationFinishTrigger()

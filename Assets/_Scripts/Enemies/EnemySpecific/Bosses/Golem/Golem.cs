@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Golem : Entity, IDamageable, IStunable
 {
+    public Golem_FreezeState FreezeState { get; private set; }
     public Golem_IdleState IdleState { get; private set; }
     public Golem_Attack0State Attack0State { get; private set; }
     public Golem_Attack1State Attack1State { get; private set; }
@@ -18,8 +19,12 @@ public class Golem : Entity, IDamageable, IStunable
     public Animator[] attack0SpikesAnims;
     public GameObject headSpike;
     [HideInInspector] public Animator headSpikeAnim;
+    public bool shouldFreeze;
+    public GameObject groundedDustParticle;
+    public Transform groundedDustPoint;
 
     [SerializeField] private Transform meleeAttackPosition;
+    public int startFacingDirection;
 
     [HideInInspector] public bool isPlayerOnHead;
     
@@ -37,6 +42,9 @@ public class Golem : Entity, IDamageable, IStunable
         headSpikeAnim = headSpike.GetComponent<Animator>();
         headSpike.SetActive(false);
 
+        
+
+        FreezeState = new Golem_FreezeState(this, stateMachine, "idle", entityData, this);
         IdleState = new Golem_IdleState(this, stateMachine, "idle", entityData, this);
         Attack0State = new Golem_Attack0State(this, stateMachine, "attack0", entityData, meleeAttackPosition, this);
         Attack1State = new Golem_Attack1State(this, stateMachine, "attack1", entityData, meleeAttackPosition, this);
@@ -46,7 +54,7 @@ public class Golem : Entity, IDamageable, IStunable
 
     private void Start()
     {
-        stateMachine.Initialize(IdleState);
+        stateMachine.Initialize(FreezeState);
     }
 
     public override void Update()

@@ -27,8 +27,12 @@ public class PlayerIdleState : PlayerGroundedState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        
-        if (player.InputHandler.AttackInputs[(int)CombatInputs.primary])
+
+        if(player.shouldFreeze)
+        {
+            Movement?.SetVelocityZero();
+        } 
+        else if (player.InputHandler.AttackInputs[(int)CombatInputs.primary])
         {
             player.AttackState.SetAttackIsHeavy(false);
             player.AttackState.SetIsMoving(false);

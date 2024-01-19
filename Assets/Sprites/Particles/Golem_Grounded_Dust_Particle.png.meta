@@ -1,0 +1,456 @@
+fileFormatVersion: 2
+guid: 70d634fbd7348b74fa4f45ed37d8bc95
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6517349302154805459
+    second: Golem_Grounded_Dust_Particle_0
+  - first:
+      213: 4232266709104199077
+    second: Golem_Grounded_Dust_Particle_1
+  - first:
+      213: 3601689329198220838
+    second: Golem_Grounded_Dust_Particle_2
+  - first:
+      213: -6986387090791780029
+    second: Golem_Grounded_Dust_Particle_3
+  - first:
+      213: 5207596821979405511
+    second: Golem_Grounded_Dust_Particle_4
+  - first:
+      213: -2981286690618862590
+    second: Golem_Grounded_Dust_Particle_5
+  - first:
+      213: 3129828019030289180
+    second: Golem_Grounded_Dust_Particle_6
+  - first:
+      213: 4124453311211211402
+    second: Golem_Grounded_Dust_Particle_7
+  - first:
+      213: 642361950542169999
+    second: Golem_Grounded_Dust_Particle_8
+  - first:
+      213: 5498422151143204866
+    second: Golem_Grounded_Dust_Particle_9
+  - first:
+      213: 8391803085674687415
+    second: Golem_Grounded_Dust_Particle_10
+  - first:
+      213: 7293243764130084845
+    second: Golem_Grounded_Dust_Particle_11
+  - first:
+      213: 9109205416085668974
+    second: Golem_Grounded_Dust_Particle_12
+  - first:
+      213: 1712061421314395668
+    second: Golem_Grounded_Dust_Particle_13
+  - first:
+      213: 817775169275976382
+    second: Golem_Grounded_Dust_Particle_14
+  - first:
+      213: 8887860670121610284
+    second: Golem_Grounded_Dust_Particle_15
+  - first:
+      213: -5409344534075196321
+    second: Golem_Grounded_Dust_Particle_16
+  - first:
+      213: -10978577230574556
+    second: Golem_Grounded_Dust_Particle_17
+  - first:
+      213: -6835535990806644656
+    second: Golem_Grounded_Dust_Particle_18
+  - first:
+      213: -2014315478382726520
+    second: Golem_Grounded_Dust_Particle_19
+  - first:
+      213: 8946358143573777757
+    second: Golem_Grounded_Dust_Particle_20
+  - first:
+      213: 5422973348887208070
+    second: Golem_Grounded_Dust_Particle_21
+  - first:
+      213: 230141740997463295
+    second: Golem_Grounded_Dust_Particle_22
+  - first:
+      213: -7967140969698677046
+    second: Golem_Grounded_Dust_Particle_23
+  - first:
+      213: -2526408066780595541
+    second: Golem_Grounded_Dust_Particle_24
+  - first:
+      213: 7239819443533144806
+    second: Golem_Grounded_Dust_Particle_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Golem_Grounded_Dust_Particle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f3cef0759bd85a0800000000000000
+      internalID: -6517349302154805459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem_Grounded_Dust_Particle_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a50edef5280cba30800000000000000
+      internalID: 4232266709104199077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem_Grounded_Dust_Particle_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 626cc22cc55cbf130800000000000000
+      internalID: 3601689329198220838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem_Grounded_Dust_Particle_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3413bf5d4fd5b0f90800000000000000
+      internalID: -6986387090791780029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem_Grounded_Dust_Particle_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cc1983f7b9154840800000000000000
+      internalID: 5207596821979405511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem_Grounded_Dust_Particle_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2041018ec8750a6d0800000000000000
+      internalID: -2981286690618862590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem_Grounded_Dust_Particle_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b6d5230026f6b20800000000000000
+      internalID: 3129828019030289180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem_Grounded_Dust_Particle_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a8d6b2f600d3930800000000000000
+      internalID: 4124453311211211402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem_Grounded_Dust_Particle_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f870b476ac02ae800800000000000000
+      internalID: 642361950542169999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem_Grounded_Dust_Particle_9
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 208a70880d15e4c40800000000000000
+      internalID: 5498422151143204866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem_Grounded_Dust_Particle_10
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bbaaaad17ca57470800000000000000
+      internalID: 8391803085674687415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem_Grounded_Dust_Particle_11
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de77e4def8ec63560800000000000000
+      internalID: 7293243764130084845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 423880332dfde0a4b9c870bb4f916b19
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Golem_Grounded_Dust_Particle_0: -6517349302154805459
+      Golem_Grounded_Dust_Particle_1: 4232266709104199077
+      Golem_Grounded_Dust_Particle_10: 8391803085674687415
+      Golem_Grounded_Dust_Particle_11: 7293243764130084845
+      Golem_Grounded_Dust_Particle_2: 3601689329198220838
+      Golem_Grounded_Dust_Particle_3: -6986387090791780029
+      Golem_Grounded_Dust_Particle_4: 5207596821979405511
+      Golem_Grounded_Dust_Particle_5: -2981286690618862590
+      Golem_Grounded_Dust_Particle_6: 3129828019030289180
+      Golem_Grounded_Dust_Particle_7: 4124453311211211402
+      Golem_Grounded_Dust_Particle_8: 642361950542169999
+      Golem_Grounded_Dust_Particle_9: 5498422151143204866
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
