@@ -56,10 +56,19 @@ public class PlayerGroundedState : PlayerState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+        if(player.shouldCheckInputs)
+        {
+            xInput = player.InputHandler.NormInputX;
+            jumpInput = player.InputHandler.JumpInput;
+            dashInput = player.InputHandler.DashInput;
+        }
+        else
+        {
+            xInput = 0;
+            jumpInput = false;
+            dashInput = false;
+        }
         
-        xInput = player.InputHandler.NormInputX;
-        jumpInput = player.InputHandler.JumpInput;
-        dashInput = player.InputHandler.DashInput;
     }
 
     public override void PhysicsUpdate()

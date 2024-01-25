@@ -61,6 +61,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
 
     [HideInInspector] public bool shouldFreeze;
     [HideInInspector] public bool shouldLandFreeze;
+    [HideInInspector] public bool shouldCheckInputs;
 
     [SerializeField] private PlayerData playerData;
 
@@ -113,6 +114,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
         currentWeapon = 0;
 
         fallSpeedYDampingChangeThreshold = CameraManager.instance.fallSpeedYDampingChangeThreshold;
+        shouldCheckInputs = true;
 
         
 
@@ -124,11 +126,11 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
         Core.LogicUpdate();
         StateMachine.CurrentState.LogicUpdate();
 
-        if(shouldFreeze && StateMachine.CurrentState != StopMovingState)
+        if(shouldFreeze && StateMachine.CurrentState != StopMovingState && StateMachine.CurrentState != IdleState)
         {
             StateMachine.ChangeState(StopMovingState);
         }
-        else if(shouldLandFreeze && StateMachine.CurrentState != LandState)
+        else if(shouldLandFreeze && StateMachine.CurrentState != LandState && StateMachine.CurrentState != IdleState)
         {
             StateMachine.ChangeState(LandState);
         }

@@ -12,18 +12,20 @@ public class PlayerLedgeClimbState : PlayerState
 
     private Vector2 detectedPos;
     private Vector2 cornerPos;
-    private Vector2 startPos;
-	private Vector2 stopPos;
+    public Vector2 startPos;
+	public Vector2 stopPos;
 	private Vector2 workspace;
 
     private bool isHanging;
-	private bool isClimbing;
+	public bool isClimbing;
 
     private int xInput;
     private int yInput;
     private bool jumpInput;
 
     private bool isTouchingWall;
+
+    public bool positionsSet;
 
     public PlayerLedgeClimbState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
@@ -65,6 +67,8 @@ public class PlayerLedgeClimbState : PlayerState
         startPos.Set(cornerPos.x - (Movement.FacingDirection * playerData.startOffset.x), cornerPos.y - playerData.startOffset.y);
 		stopPos.Set(cornerPos.x + (Movement.FacingDirection * playerData.stopOffset.x), cornerPos.y + playerData.stopOffset.y);
 
+        positionsSet = true;
+
 		player.transform.position = startPos;
 
         player.SuperDashState.SetCanSuperDash(true);
@@ -76,6 +80,7 @@ public class PlayerLedgeClimbState : PlayerState
         base.Exit();
 
         isHanging = false;
+        positionsSet = false;
 
 		if (isClimbing)
         {

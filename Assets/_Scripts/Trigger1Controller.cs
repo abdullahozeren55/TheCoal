@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class Trigger1Controller : MonoBehaviour
 {
@@ -8,8 +9,9 @@ public class Trigger1Controller : MonoBehaviour
     [SerializeField] private float timeToSetGolemFree;
     [SerializeField] private Golem golem;
     [SerializeField] private GameObject bigParticle;
-    [SerializeField] private Transform bigParticleInstantiateTransform;
+    [SerializeField] private Transform[] bigParticleInstantiateTransforms;
     [SerializeField] private GameObject golemHoldingPlatform;
+    [SerializeField] private PlayableDirector cutscene;
     private Player player;
 
     void OnTriggerEnter2D(Collider2D other)
@@ -18,6 +20,8 @@ public class Trigger1Controller : MonoBehaviour
         {
             player = other.GetComponent<Player>();
             player.shouldLandFreeze = true;
+            player.shouldCheckInputs = false;
+            cutscene.Play();
             Invoke("SetGolemFree", timeToSetGolemFree);
             Destroy(gameObject, timeToDestroyAfterTrigger);
         }
@@ -26,12 +30,16 @@ public class Trigger1Controller : MonoBehaviour
     void OnDestroy()
     {
         player.shouldLandFreeze = false;
+        player.shouldCheckInputs = true;
         golem.shouldFreeze = false;
     }
 
     void SetGolemFree()
     {
         Destroy(golemHoldingPlatform);
-        Instantiate(bigParticle, bigParticleInstantiateTransform.position, Quaternion.identity);
+        foreach (Transform point in bigParticleInstantiateTransforms)
+        {
+            Instantiate(bigParticle, point.position, Quaternion.identity);
+        }
     }
 }
