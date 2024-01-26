@@ -5,7 +5,7 @@ using UnityEngine;
 public class Parallax : MonoBehaviour
 {
     private float length, startPos;
-    public GameObject cameraThatFollowsObject;
+    public GameObject mainCamera;
     public float parallaxEffect;
     private float distance;
     private float temp;
@@ -19,9 +19,9 @@ public class Parallax : MonoBehaviour
     void FixedUpdate()
     {
 
-        temp = cameraThatFollowsObject.transform.position.x * (1 - parallaxEffect);
+        temp = mainCamera.transform.position.x * (1 - parallaxEffect);
 
-        distance = cameraThatFollowsObject.transform.position.x * (parallaxEffect);
+        distance = mainCamera.transform.position.x * (parallaxEffect);
 
         transform.position = new Vector3(startPos + distance, transform.position.y, transform.position.z);
 

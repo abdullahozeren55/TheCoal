@@ -8,7 +8,7 @@ public class ParallaxLayer : MonoBehaviour
 
     void Start()
     {
-        minAmountToMove = parallaxFactor/100f;
+        minAmountToMove = parallaxFactor/90f;
     }
 
     public void Move(float delta)

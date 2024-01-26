@@ -62,10 +62,16 @@ public class CameraControlTrigger : MonoBehaviour
 
             Vector2 exitDirection = (collision.transform.position - coll.bounds.center).normalized;
 
-            if(customInspectorObjects.swapCameras && customInspectorObjects.cameraOnLeft != null && customInspectorObjects.cameraOnRight != null)
+            if(customInspectorObjects.swapCamerasHorizontal && customInspectorObjects.cameraOnLeft != null && customInspectorObjects.cameraOnRight != null)
             {
                 //swap cameras
-                CameraManager.instance.SwapCamera(customInspectorObjects.cameraOnLeft, customInspectorObjects.cameraOnRight, exitDirection);
+                CameraManager.instance.SwapCameraHorizontal(customInspectorObjects.cameraOnLeft, customInspectorObjects.cameraOnRight, exitDirection);
+            }
+
+            if(customInspectorObjects.swapCamerasVertical && customInspectorObjects.cameraOnBottom != null && customInspectorObjects.cameraOnTop != null)
+            {
+                //swap cameras
+                CameraManager.instance.SwapCameraVertical(customInspectorObjects.cameraOnBottom, customInspectorObjects.cameraOnTop, exitDirection);
             }
 
             if(customInspectorObjects.panCameraOnContact)
@@ -91,11 +97,14 @@ public class CameraControlTrigger : MonoBehaviour
 [System.Serializable]
 public class CustomInspectorObjects
 {
-    public bool swapCameras = false;
+    public bool swapCamerasHorizontal = false;
+    public bool swapCamerasVertical = false;
     public bool panCameraOnContact = false;
 
     [HideInInspector] public CinemachineVirtualCamera cameraOnLeft;
     [HideInInspector] public CinemachineVirtualCamera cameraOnRight;
+    [HideInInspector] public CinemachineVirtualCamera cameraOnBottom;
+    [HideInInspector] public CinemachineVirtualCamera cameraOnTop;
 
     [HideInInspector] public PanDirection panDirection;
     [HideInInspector] public float panDistance = 3f;
@@ -127,12 +136,21 @@ public class MyScriptEditor : Editor
     {
         DrawDefaultInspector();
 
-        if(cameraControlTrigger.customInspectorObjects.swapCameras)
+        if(cameraControlTrigger.customInspectorObjects.swapCamerasHorizontal)
         {
             cameraControlTrigger.customInspectorObjects.cameraOnLeft = EditorGUILayout.ObjectField("Camera on Left", cameraControlTrigger.customInspectorObjects.cameraOnLeft,
                 typeof(CinemachineVirtualCamera), true) as CinemachineVirtualCamera;
 
             cameraControlTrigger.customInspectorObjects.cameraOnRight = EditorGUILayout.ObjectField("Camera on Right", cameraControlTrigger.customInspectorObjects.cameraOnRight,
+                typeof(CinemachineVirtualCamera), true) as CinemachineVirtualCamera;
+        }
+
+        if(cameraControlTrigger.customInspectorObjects.swapCamerasVertical)
+        {
+            cameraControlTrigger.customInspectorObjects.cameraOnBottom = EditorGUILayout.ObjectField("Camera on Bottom", cameraControlTrigger.customInspectorObjects.cameraOnBottom,
+                typeof(CinemachineVirtualCamera), true) as CinemachineVirtualCamera;
+
+            cameraControlTrigger.customInspectorObjects.cameraOnTop = EditorGUILayout.ObjectField("Camera on Top", cameraControlTrigger.customInspectorObjects.cameraOnTop,
                 typeof(CinemachineVirtualCamera), true) as CinemachineVirtualCamera;
         }
 

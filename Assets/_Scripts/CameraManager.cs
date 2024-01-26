@@ -19,7 +19,7 @@ public class CameraManager : MonoBehaviour
     private Coroutine lerpYPanCoroutine;
     private Coroutine panCameraCoroutine;
 
-    private CinemachineVirtualCamera currentCamera;
+    public CinemachineVirtualCamera currentCamera;
     private CinemachineFramingTransposer framingTransposer;
 
     private float normYPanAmount;
@@ -119,10 +119,10 @@ public class CameraManager : MonoBehaviour
                 case PanDirection.Down:
                     endPos = Vector2.down;
                     break;
-                case PanDirection.Left:
+                case PanDirection.Right:
                     endPos = Vector2.right;
                     break;
-                case PanDirection.Right:
+                case PanDirection.Left:
                     endPos = Vector2.left;
                     break;
                 default:
@@ -162,7 +162,7 @@ public class CameraManager : MonoBehaviour
 
     #region Swap Cameras
 
-    public void SwapCamera(CinemachineVirtualCamera cameraFromLeft, CinemachineVirtualCamera cameraFromRight, Vector2 triggerExitDirection)
+    public void SwapCameraHorizontal(CinemachineVirtualCamera cameraFromLeft, CinemachineVirtualCamera cameraFromRight, Vector2 triggerExitDirection)
     {
         //if the currrent camera is the camera on the left and our exit direction was on the right
         if(currentCamera == cameraFromLeft && triggerExitDirection.x > 0f)
@@ -190,6 +190,40 @@ public class CameraManager : MonoBehaviour
 
             //set the new camera as the current camera
             currentCamera = cameraFromLeft;
+
+            //update our composer variable
+            framingTransposer = currentCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
+        }
+    }
+
+    public void SwapCameraVertical(CinemachineVirtualCamera cameraFromBottom, CinemachineVirtualCamera cameraFromTop, Vector2 triggerExitDirection)
+    {
+        //if the currrent camera is the camera on the left and our exit direction was on the right
+        if(currentCamera == cameraFromBottom && triggerExitDirection.y > 0f)
+        {
+            //activate the new camera
+            cameraFromTop.enabled = true;
+
+            //deactivate the old camera
+            cameraFromBottom.enabled = false;
+
+            //set the new camera as the current camera
+            currentCamera = cameraFromTop;
+
+            //update our composer variable
+            framingTransposer = currentCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
+        }
+        //if the currrent camera is the camera on the right and our exit direction was on the left
+        else if(currentCamera == cameraFromTop && triggerExitDirection.y < 0f)
+        {
+            //activate the new camera
+            cameraFromBottom.enabled = true;
+
+            //deactivate the old camera
+            cameraFromTop.enabled = false;
+
+            //set the new camera as the current camera
+            currentCamera = cameraFromBottom;
 
             //update our composer variable
             framingTransposer = currentCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
