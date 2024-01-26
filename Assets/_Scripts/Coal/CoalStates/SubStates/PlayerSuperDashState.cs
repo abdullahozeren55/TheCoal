@@ -14,7 +14,7 @@ public class PlayerSuperDashState : PlayerAbilityState
 	private Vector2 dashDirection;
 	private Vector2 dashDirectionInput;
 	private Vector2 lastAIPos;
-    public PlayerSuperDashState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    public PlayerSuperDashState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName, int normalMapMaterialForPlayer) : base(player, stateMachine, playerData, animBoolName, normalMapMaterialForPlayer)
     {
     }
 

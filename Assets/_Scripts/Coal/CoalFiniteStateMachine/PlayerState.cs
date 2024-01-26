@@ -15,13 +15,15 @@ public class PlayerState
     protected float startTime;
 
     private string animBoolName;
+    private int normalMapMaterialForPlayer;
 
-    public PlayerState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName)
+    public PlayerState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName, int normalMapMaterialForPlayer)
     {
         this.player = player;
         this.stateMachine = stateMachine;
         this.playerData = playerData;
         this.animBoolName = animBoolName;
+        this.normalMapMaterialForPlayer = normalMapMaterialForPlayer;
         core = player.Core;
     }
 
@@ -29,6 +31,14 @@ public class PlayerState
     {
         DoChecks();
         player.Anim.SetBool(animBoolName, true);
+        if(!player.isInStatueLevel)
+        {
+            player.SR.material = player.stateNormalMapMaterialsForPlayer[normalMapMaterialForPlayer];
+        }
+        else
+        {
+            player.SR.material = player.statueLevelMaterialForPlayer;
+        }
         player.EyesAnim.SetBool(animBoolName, true);
         if(stateMachine.CurrentState != player.LedgeClimbState)
         {

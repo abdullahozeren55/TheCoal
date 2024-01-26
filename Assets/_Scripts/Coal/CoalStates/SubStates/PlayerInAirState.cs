@@ -41,7 +41,7 @@ public class PlayerInAirState : PlayerState
     private float startWallHoldCoyoteTime;
 
     private bool canInstantiateAirJumpPrefab;
-    public PlayerInAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    public PlayerInAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName, int normalMapMaterialForPlayer) : base(player, stateMachine, playerData, animBoolName, normalMapMaterialForPlayer)
     {
     }
 

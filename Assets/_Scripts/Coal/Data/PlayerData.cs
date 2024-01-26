@@ -16,6 +16,7 @@ public class PlayerData : ScriptableObject
     public float wallJumpVelocity = 20;
     public float wallJumpTime = 0.4f;
     public Vector2 wallJumpAngle = new Vector2(1, 2);
+    public float cameraNotFlipTimeAfterWallJumped = 0.3f;
 
     [Header("Ledge Climb State")]
     public Vector2 startOffset;

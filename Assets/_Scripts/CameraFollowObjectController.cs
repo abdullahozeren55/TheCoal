@@ -55,6 +55,11 @@ public class CameraFollowObjectController : MonoBehaviour
                     transform.position = Vector3.Lerp(playerScript.LedgeClimbState.startPos, playerScript.LedgeClimbState.stopPos, t);
                 }
             }
+            else if((playerScript.LedgeClimbState.isTurning && ((isFacingRight && movement.FacingDirection == 1) || (!isFacingRight && movement.FacingDirection == -1))) || (!playerScript.LedgeClimbState.isTurning && ((isFacingRight && movement.FacingDirection == -1) || (!isFacingRight && movement.FacingDirection == 1))))
+            {
+                elapsedTimeForLedgeClimb = 0f;
+                CallTurn();
+            }
             else
             {
                 elapsedTimeForLedgeClimb = 0f;
@@ -83,7 +88,7 @@ public class CameraFollowObjectController : MonoBehaviour
 
 
 
-        if((isFacingRight && movement.FacingDirection == -1) || (!isFacingRight && movement.FacingDirection == 1))
+        if(((isFacingRight && movement.FacingDirection == -1) || (!isFacingRight && movement.FacingDirection == 1)) && playerScript.StateMachine.CurrentState != playerScript.LedgeClimbState)
         {
             CallTurn();
         }

@@ -7,30 +7,57 @@ using Unity.VisualScripting;
 
 public class CameraControlTrigger : MonoBehaviour
 {
+    public Movement playerMovement;
+    private Player playerScript;
     public CustomInspectorObjects customInspectorObjects;
 
     private Collider2D coll;
+    private bool shouldPanInStay;
 
     private void Start()
     {
         coll = GetComponent<Collider2D>();
+        playerScript = playerMovement.GetComponentInParent<Player>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if(collision.CompareTag("Player") || collision.CompareTag("DashingPlayer"))
         {
-            if(customInspectorObjects.panCameraOnContact)
+
+            shouldPanInStay = false;
+
+            if(customInspectorObjects.panCameraOnContact && playerMovement.FacingDirection == customInspectorObjects.playerFacingDirectionForPan)
             {
                 //pan the camera
-                CameraManager.instance.PanCameraOnContact(customInspectorObjects.panDistance, customInspectorObjects.panTime, customInspectorObjects.panDirection, false);
+                PanCamera();
+            }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player") || collision.CompareTag("DashingPlayer"))
+        {
+            if(customInspectorObjects.panCameraOnContact && ((playerMovement.FacingDirection == customInspectorObjects.playerFacingDirectionForPan && !playerScript.LedgeClimbState.isTurning) || (playerMovement.FacingDirection != customInspectorObjects.playerFacingDirectionForPan && playerScript.LedgeClimbState.isTurning)) && shouldPanInStay && (playerScript.StateMachine.CurrentState != playerScript.InAirState && playerScript.StateMachine.CurrentState != playerScript.WallJumpState))
+            {
+                //pan the camera
+                Invoke("PanCamera", 0.15f);
+                shouldPanInStay = false;
+            }
+            else if(customInspectorObjects.panCameraOnContact && ((playerMovement.FacingDirection != customInspectorObjects.playerFacingDirectionForPan && !playerScript.LedgeClimbState.isTurning) || (playerMovement.FacingDirection == customInspectorObjects.playerFacingDirectionForPan && playerScript.LedgeClimbState.isTurning)) && !shouldPanInStay && (playerScript.StateMachine.CurrentState != playerScript.InAirState && playerScript.StateMachine.CurrentState != playerScript.WallJumpState))
+            {
+                //pan the camera
+                Invoke("PanCameraBack", 0.15f);
+
+                shouldPanInStay = true;
             }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if(collision.CompareTag("Player") || collision.CompareTag("DashingPlayer"))
         {
 
             Vector2 exitDirection = (collision.transform.position - coll.bounds.center).normalized;
@@ -44,10 +71,20 @@ public class CameraControlTrigger : MonoBehaviour
             if(customInspectorObjects.panCameraOnContact)
             {
                 //pan the camera
-                CameraManager.instance.PanCameraOnContact(customInspectorObjects.panDistance, customInspectorObjects.panTime, customInspectorObjects.panDirection, true);
+                PanCameraBack();
             }
         }
         
+    }
+
+    private void PanCamera()
+    {
+        CameraManager.instance.PanCameraOnContact(customInspectorObjects.panDistance, customInspectorObjects.panTime, customInspectorObjects.panDirection, false);   
+    }
+
+    private void PanCameraBack()
+    {
+        CameraManager.instance.PanCameraOnContact(customInspectorObjects.panDistance, customInspectorObjects.panTime, customInspectorObjects.panDirection, true);
     }
 }
 
@@ -63,6 +100,7 @@ public class CustomInspectorObjects
     [HideInInspector] public PanDirection panDirection;
     [HideInInspector] public float panDistance = 3f;
     [HideInInspector] public float panTime = 0.35f;
+    [HideInInspector] public int playerFacingDirectionForPan = 1;
 }
 
 public enum PanDirection
@@ -105,6 +143,7 @@ public class MyScriptEditor : Editor
 
             cameraControlTrigger.customInspectorObjects.panDistance = EditorGUILayout.FloatField("Pan Distance", cameraControlTrigger.customInspectorObjects.panDistance);
             cameraControlTrigger.customInspectorObjects.panTime = EditorGUILayout.FloatField("Pan Time", cameraControlTrigger.customInspectorObjects.panTime);
+            cameraControlTrigger.customInspectorObjects.playerFacingDirectionForPan = EditorGUILayout.IntField("Player Facing Direction For Pan", cameraControlTrigger.customInspectorObjects.playerFacingDirectionForPan);
         }
 
         if(GUI.changed)

@@ -20,7 +20,7 @@ public class PlayerAttackState : PlayerAbilityState
 
     public ParticleManager ParticleManager => particleManager ??= core.GetCoreComponent<ParticleManager>();
     private ParticleManager particleManager;
-    public PlayerAttackState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    public PlayerAttackState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName, int normalMapMaterialForPlayer) : base(player, stateMachine, playerData, animBoolName, normalMapMaterialForPlayer)
     {
     }
 

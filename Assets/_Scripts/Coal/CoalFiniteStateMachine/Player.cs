@@ -46,9 +46,11 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
 
     public Transform DashDirectionIndicator { get; private set; }
     public Rigidbody2D RB { get; private set; }
+    public SpriteRenderer SR { get; private set; }
 
     public PlayerInventory Inventory { get; private set; }
     public int currentWeapon;
+    public bool isInStatueLevel;
 
     public GameObject eyeLights;
     
@@ -62,6 +64,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     [HideInInspector] public bool shouldFreeze;
     [HideInInspector] public bool shouldLandFreeze;
     [HideInInspector] public bool shouldCheckInputs;
+    [HideInInspector] public bool wallJumpCombo;
 
     [SerializeField] private PlayerData playerData;
 
@@ -71,6 +74,8 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     public Transform feetParticlePoint;
     public Transform sideParticlePointFacingDirection;
     public Transform sideParticlePointBack;
+    public Material[] stateNormalMapMaterialsForPlayer;
+    public Material statueLevelMaterialForPlayer;
 
     private float fallSpeedYDampingChangeThreshold;
 
@@ -80,21 +85,21 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
 
         StateMachine = new PlayerStateMachine();
 
-        IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle");
-        StartMovingState = new PlayerStartMovingState(this, StateMachine, playerData, "startMoving");
-        MoveState = new PlayerMoveState(this, StateMachine, playerData, "move");
-        StopMovingState = new PlayerStopMovingState(this, StateMachine, playerData, "stopMoving");
-        JumpState = new PlayerJumpState(this, StateMachine, playerData, "inAir");
-        InAirState = new PlayerInAirState(this, StateMachine, playerData, "inAir");
-        LandState = new PlayerLandState(this, StateMachine, playerData, "land");
-        WallHoldState = new PlayerWallHoldState(this, StateMachine, playerData, "wallHold");
-        WallSlideState = new PlayerWallSlideState(this, StateMachine, playerData, "wallSlide");
-        WallJumpState = new PlayerWallJumpState(this, StateMachine, playerData, "inAir");
-        LedgeClimbState = new PlayerLedgeClimbState(this, StateMachine, playerData, "ledgeClimbState");
-        DashState = new PlayerDashState(this, StateMachine, playerData, "dash");
-        SuperDashState = new PlayerSuperDashState(this, StateMachine, playerData, "inAir");
-        AttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
-        HitState = new PlayerHitState(this, StateMachine, playerData, "hit");
+        IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle", 0);
+        StartMovingState = new PlayerStartMovingState(this, StateMachine, playerData, "startMoving", 1);
+        MoveState = new PlayerMoveState(this, StateMachine, playerData, "move", 2);
+        StopMovingState = new PlayerStopMovingState(this, StateMachine, playerData, "stopMoving", 3);
+        JumpState = new PlayerJumpState(this, StateMachine, playerData, "inAir", 4);
+        InAirState = new PlayerInAirState(this, StateMachine, playerData, "inAir", 4);
+        LandState = new PlayerLandState(this, StateMachine, playerData, "land", 4);
+        WallHoldState = new PlayerWallHoldState(this, StateMachine, playerData, "wallHold", 5);
+        WallSlideState = new PlayerWallSlideState(this, StateMachine, playerData, "wallSlide", 5);
+        WallJumpState = new PlayerWallJumpState(this, StateMachine, playerData, "inAir", 4);
+        LedgeClimbState = new PlayerLedgeClimbState(this, StateMachine, playerData, "ledgeClimbState", 6);
+        DashState = new PlayerDashState(this, StateMachine, playerData, "dash", 2);
+        SuperDashState = new PlayerSuperDashState(this, StateMachine, playerData, "inAir", 4);
+        AttackState = new PlayerAttackState(this, StateMachine, playerData, "attack", 7);
+        HitState = new PlayerHitState(this, StateMachine, playerData, "hit", 8);
     }
 
     private void Start()
@@ -107,6 +112,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
 
         InputHandler = GetComponent<PlayerInputHandler>();
         RB = GetComponent<Rigidbody2D>();
+        SR = GetComponent<SpriteRenderer>();
         DashDirectionIndicator = transform.Find("SuperDash_Direction_Indicator");
         Inventory = GetComponent<PlayerInventory>();
 
@@ -155,6 +161,14 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
             //reset so it can be called again
             CameraManager.instance.LerpedFromPlayerFalling = false;
             CameraManager.instance.LerpYDamping(false);
+        }
+
+        if(wallJumpCombo && StateMachine.CurrentState != WallJumpState)
+        {
+            if(Time.time >= WallJumpState.lastWallJumpedTime + playerData.cameraNotFlipTimeAfterWallJumped)
+            {
+                wallJumpCombo = false;
+            }
         }
         
     }

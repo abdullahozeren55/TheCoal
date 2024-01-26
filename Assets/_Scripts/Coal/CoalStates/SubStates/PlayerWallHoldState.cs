@@ -15,7 +15,7 @@ public class PlayerWallHoldState : PlayerState
 
     private int xInput;
     private bool jumpInput;
-    public PlayerWallHoldState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    public PlayerWallHoldState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName, int normalMapMaterialForPlayer) : base(player, stateMachine, playerData, animBoolName, normalMapMaterialForPlayer)
     {
     }
 

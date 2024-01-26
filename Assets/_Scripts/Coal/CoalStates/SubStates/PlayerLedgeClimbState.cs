@@ -26,8 +26,9 @@ public class PlayerLedgeClimbState : PlayerState
     private bool isTouchingWall;
 
     public bool positionsSet;
+    public bool isTurning;
 
-    public PlayerLedgeClimbState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    public PlayerLedgeClimbState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName, int normalMapMaterialForPlayer) : base(player, stateMachine, playerData, animBoolName, normalMapMaterialForPlayer)
     {
     }
 
@@ -73,6 +74,8 @@ public class PlayerLedgeClimbState : PlayerState
 
         player.SuperDashState.SetCanSuperDash(true);
         player.InAirState.SetCanWallHold(true);
+
+        isTurning = false;
     }
 
     public override void Exit()
@@ -81,6 +84,7 @@ public class PlayerLedgeClimbState : PlayerState
 
         isHanging = false;
         positionsSet = false;
+        isTurning = false;
 
 		if (isClimbing)
         {
@@ -137,11 +141,13 @@ public class PlayerLedgeClimbState : PlayerState
 
             if(xInput == -Movement.FacingDirection)
             {
+                isTurning = true;
                 player.Anim.SetBool("ledgeTurn", true);
                 player.EyesAnim.SetBool("ledgeTurn", true);
             }
             else
             {
+                isTurning = false;
                 player.Anim.SetBool("ledgeTurn", false);
                 player.EyesAnim.SetBool("ledgeTurn", false);
             }
