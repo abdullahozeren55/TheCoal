@@ -21,6 +21,10 @@ public class Trigger1Controller : MonoBehaviour
             player = other.GetComponent<Player>();
             player.shouldLandFreeze = true;
             player.shouldCheckInputs = false;
+            if(player.Movement.FacingDirection == -1)
+            {
+                player.Movement.Flip();
+            }
             cutscene.Play();
             Invoke("SetGolemFree", timeToSetGolemFree);
             Destroy(gameObject, timeToDestroyAfterTrigger);
