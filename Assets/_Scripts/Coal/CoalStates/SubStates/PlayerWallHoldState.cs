@@ -32,6 +32,8 @@ public class PlayerWallHoldState : PlayerState
     public override void Enter()
     {
         base.Enter();
+
+        player.InAirState.shouldInstantiateAirJumpPrefab = false;
     }
 
     public override void Exit()

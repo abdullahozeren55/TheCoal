@@ -29,6 +29,8 @@ public class PlayerJumpState : PlayerAbilityState
     public override void Exit()
     {
         base.Exit();
+
+        player.InAirState.shouldInstantiateAirJumpPrefab = true;
     }
 
     public override void LogicUpdate()

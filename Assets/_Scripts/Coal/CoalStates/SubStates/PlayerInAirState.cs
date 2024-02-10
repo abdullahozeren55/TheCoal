@@ -36,11 +36,10 @@ public class PlayerInAirState : PlayerState
     private bool coyoteTime;
     private bool wallJumpCoyoteTime;
     private bool wallHoldCoyoteTime;
+    public bool shouldInstantiateAirJumpPrefab;
 
     private float startWallJumpCoyoteTime;
     private float startWallHoldCoyoteTime;
-
-    private bool canInstantiateAirJumpPrefab;
     public PlayerInAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName, int normalMapMaterialForPlayer) : base(player, stateMachine, playerData, animBoolName, normalMapMaterialForPlayer)
     {
     }
@@ -64,7 +63,7 @@ public class PlayerInAirState : PlayerState
             isOnRightSlope = CollisionSenses.RightSlope;
         }
 
-        if (isTouchingWall && !isTouchingLedge && !isGrounded)
+        if (isTouchingLedgeBottom && !isTouchingLedge && !isGrounded && !isOnSlope)
         {
 			player.LedgeClimbState.SetDetectedPosition(player.transform.position);
 		}
@@ -78,6 +77,8 @@ public class PlayerInAirState : PlayerState
     public override void Enter()
     {
         base.Enter();
+
+        StartCoyoteTime();
     }
 
     public override void Exit()
@@ -143,7 +144,7 @@ public class PlayerInAirState : PlayerState
         {
 			stateMachine.ChangeState(player.LedgeClimbState);
         }
-        else if (jumpInput && (isTouchingWall || isTouchingWallBack || wallJumpCoyoteTime) && (canWallHold || wallHoldCoyoteTime))
+        else if (jumpInput && (isTouchingWall || isTouchingWallBack || wallJumpCoyoteTime) && (canWallHold || wallHoldCoyoteTime) && (xInput == Movement?.FacingDirection || player.WallJumpState.inWallJumpCombo))
         {
 			StopWallJumpCoyoteTime();
             StopWallHoldCoyoteTime();
@@ -153,13 +154,13 @@ public class PlayerInAirState : PlayerState
         }
         else if (jumpInput && player.JumpState.CanJump())
         {
-            if(canInstantiateAirJumpPrefab)
+            if(shouldInstantiateAirJumpPrefab)
             {
                 ParticleManager?.StartParticles(player.airJumpParticle, player.feetParticlePoint.position, Quaternion.identity);
             }
             
             coyoteTime = false;
-            canInstantiateAirJumpPrefab = true;
+            shouldInstantiateAirJumpPrefab = true;
 			stateMachine.ChangeState(player.JumpState);
         }
         else if (isTouchingWall && xInput == Movement?.FacingDirection && Movement?.CurrentVelocity.y <= 0 && canWallHold)
@@ -221,8 +222,11 @@ public class PlayerInAirState : PlayerState
 		if (coyoteTime && Time.time > startTime + playerData.coyoteTime)
         {
 			coyoteTime = false;
-            canInstantiateAirJumpPrefab = true;
-			player.JumpState.DecreaseAmountOfJumpsLeft();
+            shouldInstantiateAirJumpPrefab = true;
+            if((stateMachine.PreviousState == player.IdleState || stateMachine.PreviousState == player.MoveState || stateMachine.PreviousState == player.StartMovingState || stateMachine.PreviousState == player.StopMovingState || stateMachine.PreviousState == player.LandState) && stateMachine.CurrentState != player.LedgeClimbState)
+            {
+			    player.JumpState.DecreaseAmountOfJumpsLeft();
+            }
 		}
 	}
 
@@ -263,10 +267,9 @@ public class PlayerInAirState : PlayerState
 
     public void StopWallHoldCoyoteTime() => wallHoldCoyoteTime = false;
 
-    public void StartCoyoteTime()
+    private void StartCoyoteTime()
     {
         coyoteTime = true;
-        canInstantiateAirJumpPrefab = false;
     }
 
     public void SetIsJumping() => isJumping = true;

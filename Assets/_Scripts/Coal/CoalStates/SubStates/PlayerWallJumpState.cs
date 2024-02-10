@@ -7,6 +7,7 @@ public class PlayerWallJumpState : PlayerAbilityState
 
     private int wallJumpDirection;
 
+    public bool inWallJumpCombo;
     public float lastWallJumpedTime;
     public PlayerWallJumpState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName, int normalMapMaterialForPlayer) : base(player, stateMachine, playerData, animBoolName, normalMapMaterialForPlayer)
     {
@@ -22,17 +23,19 @@ public class PlayerWallJumpState : PlayerAbilityState
         base.Enter();
 
         player.InputHandler.UseJumpInput();
-		player.JumpState.ResetAmountOfJumpsLeft();
+        player.JumpState.DecreaseAmountOfJumpsLeft();
 		Movement?.SetVelocity(playerData.wallJumpVelocity, playerData.wallJumpAngle, wallJumpDirection);
 		Movement?.CheckIfShouldFlip(wallJumpDirection);
-		player.JumpState.DecreaseAmountOfJumpsLeft();
         player.InAirState.SetCanWallHold(true);
+
+        inWallJumpCombo = true;
     }
 
     public override void Exit()
     {
         base.Exit();
-
+        
+        player.InAirState.shouldInstantiateAirJumpPrefab = true;
         lastWallJumpedTime = Time.time;
     }
 

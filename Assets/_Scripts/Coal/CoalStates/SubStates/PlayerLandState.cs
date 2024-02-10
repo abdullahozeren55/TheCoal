@@ -54,7 +54,6 @@ public class PlayerLandState : PlayerGroundedState
         }
         else if(!isGrounded && !isOnSlope)
         {
-            player.InAirState.StartCoyoteTime();
             stateMachine.ChangeState(player.InAirState);
         }      
     }

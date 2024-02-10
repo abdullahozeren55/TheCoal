@@ -24,6 +24,7 @@ public class PlayerLedgeClimbState : PlayerState
     private bool jumpInput;
 
     private bool isTouchingWall;
+    private bool isFalling;
 
     public bool positionsSet;
     public bool isTurning;
@@ -61,6 +62,8 @@ public class PlayerLedgeClimbState : PlayerState
     {
         base.Enter();
 
+        player.InAirState.shouldInstantiateAirJumpPrefab = false;
+
         Movement?.SetVelocityZero();
         player.transform.position = detectedPos;
         cornerPos = DetermineCornerPosition();
@@ -76,6 +79,7 @@ public class PlayerLedgeClimbState : PlayerState
         player.InAirState.SetCanWallHold(true);
 
         isTurning = false;
+        isFalling = false;
     }
 
     public override void Exit()
@@ -85,6 +89,11 @@ public class PlayerLedgeClimbState : PlayerState
         isHanging = false;
         positionsSet = false;
         isTurning = false;
+
+        if(!isFalling)
+        {
+            player.JumpState.ResetAmountOfJumpsLeft();
+        }
 
 		if (isClimbing)
         {
@@ -136,6 +145,8 @@ public class PlayerLedgeClimbState : PlayerState
             else if (yInput == -1 && isHanging && !isClimbing)
             {
                 player.InAirState.SetCanWallHold(true);
+                isFalling = true;
+                player.JumpState.DecreaseAmountOfJumpsLeft();
 				stateMachine.ChangeState(player.InAirState);
 			}
 

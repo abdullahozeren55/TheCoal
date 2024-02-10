@@ -140,6 +140,11 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
             StateMachine.ChangeState(LandState);
         }
 
+        if(WallJumpState.inWallJumpCombo && StateMachine.CurrentState != WallJumpState && Time.time >= WallJumpState.lastWallJumpedTime + playerData.wallJumpComboTime)
+        {
+            WallJumpState.inWallJumpCombo = false;
+        }
+
         if(gameObject.tag == "DashingPlayer" && StateMachine.CurrentState != DashState && StateMachine.CurrentState != SuperDashState)
         {
             if(Time.time >= lastUncollidableTime + playerData.uncollidableTimeAfterDashing)

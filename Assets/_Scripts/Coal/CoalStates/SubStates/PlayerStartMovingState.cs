@@ -61,7 +61,6 @@ public class PlayerStartMovingState : PlayerGroundedState
         }
         else if(!isGrounded && !isOnSlope)
         {
-            player.InAirState.StartCoyoteTime();
             stateMachine.ChangeState(player.InAirState);
         }
         else if(isAnimationFinished && xInput != 0 && (!isTouchingWall || xInput != Movement?.FacingDirection))
