@@ -30,6 +30,7 @@ public class NewRat_LookForPlayerState : LookForPlayerState
         
         if(isPlayerInCloseRangeAction)
         {
+            enemy.IdleState.SetFlipAfterIdle(false);
             stateMachine.ChangeState(enemy.IdleState);
         }
         else if(isPlayerInMaxAgroRange)

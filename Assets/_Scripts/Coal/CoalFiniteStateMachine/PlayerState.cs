@@ -59,7 +59,7 @@ public class PlayerState
         {
             if(player.coalSword.activeSelf)
             {
-            player.CoalSwordAnim.SetBool(animBoolName, false);
+                player.CoalSwordAnim.SetBool(animBoolName, false);
             }
         }
     }

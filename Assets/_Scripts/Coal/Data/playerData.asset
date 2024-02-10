@@ -34,10 +34,12 @@ MonoBehaviour:
   drag: 10
   superDashEndYMultiplier: 0.3
   superDashDistBetweenAfterImages: 0.5
+  superDashUnlocked: 0
   dashCooldown: 0
   dashTime: 0.3
   dashVelocity: 20
   dashDistBetweenAfterImages: 0.8
   dashFlipCoyoteTime: 0.15
+  dashUnlocked: 1
   knockBackTime: 0.2
   uncollidableTimeAfterDashing: 0.2

@@ -27,7 +27,6 @@ public class PlayerWallJumpState : PlayerAbilityState
 		Movement?.CheckIfShouldFlip(wallJumpDirection);
 		player.JumpState.DecreaseAmountOfJumpsLeft();
         player.InAirState.SetCanWallHold(true);
-        player.wallJumpCombo = true;
     }
 
     public override void Exit()
@@ -66,7 +65,8 @@ public class PlayerWallJumpState : PlayerAbilityState
 		if (isTouchingWall)
         {
 			wallJumpDirection = -Movement.FacingDirection;
-		} else
+		}
+        else
         {
 			wallJumpDirection = Movement.FacingDirection;
 		}

@@ -61,6 +61,11 @@ public class PlayerSuperDashState : PlayerAbilityState
         player.gameObject.layer = LayerMask.NameToLayer("Player");
         player.lastUncollidableTime = Time.time;
 
+        if(Time.timeScale != 1f)
+        {
+            Time.timeScale = 1f;
+        }
+
         if (Movement?.CurrentVelocity.y > 0)
         {
 			Movement?.SetVelocityY(Movement.CurrentVelocity.y * playerData.superDashEndYMultiplier);

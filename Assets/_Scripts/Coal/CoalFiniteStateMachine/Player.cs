@@ -64,7 +64,6 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     [HideInInspector] public bool shouldFreeze;
     [HideInInspector] public bool shouldLandFreeze;
     [HideInInspector] public bool shouldCheckInputs;
-    [HideInInspector] public bool wallJumpCombo;
 
     [SerializeField] private PlayerData playerData;
 
@@ -161,14 +160,6 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
             //reset so it can be called again
             CameraManager.instance.LerpedFromPlayerFalling = false;
             CameraManager.instance.LerpYDamping(false);
-        }
-
-        if(wallJumpCombo && StateMachine.CurrentState != WallJumpState)
-        {
-            if(Time.time >= WallJumpState.lastWallJumpedTime + playerData.cameraNotFlipTimeAfterWallJumped)
-            {
-                wallJumpCombo = false;
-            }
         }
         
     }

@@ -47,7 +47,7 @@ MonoBehaviour:
     hpDamageAmount: 25
     poiseDamageAmount: 400
     attackRadius: 0.75
-    canKnockback: 1
+    canKnockback: 0
     knockbackStrength: 12
     knockbackAngle: {x: 1, y: 0.2}
     whatIsDamageable:

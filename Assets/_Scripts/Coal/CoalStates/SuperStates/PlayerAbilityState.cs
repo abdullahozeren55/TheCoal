@@ -13,6 +13,8 @@ public class PlayerAbilityState : PlayerState
     protected bool isAbilityDone;
     protected bool isGrounded;
     protected bool isTouchingWall;
+    protected bool isTouchingWallLong;
+    protected bool isTouchingWallBackLong;
     protected bool isOnSlope;
 
     protected int xInput;
@@ -28,6 +30,9 @@ public class PlayerAbilityState : PlayerState
 			isGrounded = CollisionSenses.Ground;
             isTouchingWall = CollisionSenses.WallFront;
             isOnSlope = CollisionSenses.Slope;
+
+            isTouchingWallLong = CollisionSenses.WallFrontLong;
+            isTouchingWallBackLong = CollisionSenses.WallBackLong;
 		}
     }
 

@@ -40,6 +40,7 @@ public class PlayerData : ScriptableObject
     public float drag = 10f;
     public float superDashEndYMultiplier = 0.2f;
     public float superDashDistBetweenAfterImages = 0.5f;
+    public bool superDashUnlocked = false;
 
     [Header("Dash State")]
     public float dashCooldown = 0.5f;
@@ -47,6 +48,7 @@ public class PlayerData : ScriptableObject
     public float dashVelocity = 30f;
     public float dashDistBetweenAfterImages = 0.5f;
     public float dashFlipCoyoteTime = 0.2f;
+    public bool dashUnlocked = false;
 
     [Header("Attack Stuff")]
     

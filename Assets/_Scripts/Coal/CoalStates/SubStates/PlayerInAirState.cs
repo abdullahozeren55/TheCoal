@@ -143,7 +143,7 @@ public class PlayerInAirState : PlayerState
         {
 			stateMachine.ChangeState(player.LedgeClimbState);
         }
-        else if (jumpInput && !isTouchingLedgeBottom && (isTouchingWall || isTouchingWallBack || wallJumpCoyoteTime) && (canWallHold || wallHoldCoyoteTime))
+        else if (jumpInput && (isTouchingWall || isTouchingWallBack || wallJumpCoyoteTime) && (canWallHold || wallHoldCoyoteTime))
         {
 			StopWallJumpCoyoteTime();
             StopWallHoldCoyoteTime();
@@ -166,11 +166,11 @@ public class PlayerInAirState : PlayerState
         {
             stateMachine.ChangeState(player.WallHoldState);
         }
-        else if (dashInput && player.SuperDashState.CheckIfCanSuperDash())
+        else if (playerData.superDashUnlocked && dashInput && player.SuperDashState.CheckIfCanSuperDash())
         {
 			stateMachine.ChangeState(player.SuperDashState);
         }
-        else if(dashInput && player.DashState.CheckIfCanDash() && !player.SuperDashState.CheckIfCanSuperDash())
+        else if(playerData.dashUnlocked && dashInput && player.DashState.CheckIfCanDash() && (!playerData.superDashUnlocked || !player.SuperDashState.CheckIfCanSuperDash()))
         {
             stateMachine.ChangeState(player.DashState);
         }

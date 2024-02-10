@@ -28,6 +28,7 @@ public class CollisionSenses : CoreComponent
     public Vector2 SlopeCheckRadius { get => slopeCheckSize; set => slopeCheckSize = value; }
     public Vector2 LedgeVerticalCheckSize { get => ledgeVerticalCheckSize; set => ledgeVerticalCheckSize = value; }
 	public float WallCheckDistance { get => wallCheckDistance; set => wallCheckDistance = value; }
+    public float WallCheckDistanceLong { get => wallCheckDistanceLong; set => wallCheckDistanceLong = value; }
 
 	public LayerMask WhatIsGround { get => whatIsGround; set => whatIsGround = value; }
     public LayerMask WhatIsSlope { get => whatIsSlope; set => whatIsSlope = value; }
@@ -46,6 +47,7 @@ public class CollisionSenses : CoreComponent
     [SerializeField] private Vector2 slopeCheckSize;
     [SerializeField] private Vector2 ledgeVerticalCheckSize;
     [SerializeField] private float wallCheckDistance;
+    [SerializeField] private float wallCheckDistanceLong;
     
 
 
@@ -67,9 +69,19 @@ public class CollisionSenses : CoreComponent
         get => Physics2D.Raycast(WallCheck.position, Vector2.right * Movement.FacingDirection, wallCheckDistance, whatIsWall);
     }
 
+    public bool WallFrontLong
+    {
+        get => Physics2D.Raycast(WallCheck.position, Vector2.right * Movement.FacingDirection, wallCheckDistanceLong, whatIsWall);
+    }
+
     public bool WallBack
     {
         get => Physics2D.Raycast(WallCheck.position, Vector2.right * -Movement.FacingDirection, wallCheckDistance, whatIsWall);
+    }
+
+    public bool WallBackLong
+    {
+        get => Physics2D.Raycast(WallCheck.position, Vector2.right * -Movement.FacingDirection, wallCheckDistanceLong, whatIsWall);
     }
 
     public bool LedgeVertical
