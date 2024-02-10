@@ -29,6 +29,8 @@ public class PlayerLedgeClimbState : PlayerState
     public bool positionsSet;
     public bool isTurning;
 
+    private RigidbodyConstraints2D originalConstraints;
+
     public PlayerLedgeClimbState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName, int normalMapMaterialForPlayer) : base(player, stateMachine, playerData, animBoolName, normalMapMaterialForPlayer)
     {
     }
@@ -62,10 +64,14 @@ public class PlayerLedgeClimbState : PlayerState
     {
         base.Enter();
 
+        originalConstraints = Movement.RB.constraints;
+
         player.InAirState.shouldInstantiateAirJumpPrefab = false;
 
         Movement?.SetVelocityZero();
         player.transform.position = detectedPos;
+        Movement.RB.constraints = RigidbodyConstraints2D.FreezeAll;
+
         cornerPos = DetermineCornerPosition();
 
         startPos.Set(cornerPos.x - (Movement.FacingDirection * playerData.startOffset.x), cornerPos.y - playerData.startOffset.y);
@@ -85,6 +91,8 @@ public class PlayerLedgeClimbState : PlayerState
     public override void Exit()
     {
         base.Exit();
+
+        Movement.RB.constraints = originalConstraints;
 
         isHanging = false;
         positionsSet = false;
@@ -129,7 +137,7 @@ public class PlayerLedgeClimbState : PlayerState
 			jumpInput = player.InputHandler.JumpInput;
 
 			Movement?.SetVelocityZero();
-			player.transform.position = startPos;
+            //player.transform.position = startPos;
 
             if (jumpInput && !isClimbing && xInput == -Movement.FacingDirection)
             {
