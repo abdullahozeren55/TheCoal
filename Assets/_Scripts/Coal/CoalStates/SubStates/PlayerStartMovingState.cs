@@ -14,7 +14,14 @@ public class PlayerStartMovingState : PlayerGroundedState
     {
         base.Enter();
 
-        Movement?.SetVelocityX(playerData.movementVelocity * xInput);
+        if(player.transform.parent == null)
+        {
+            Movement?.SetVelocityX(playerData.movementVelocity * xInput);
+        }
+        else
+        {
+            Movement?.SetVelocityXY(playerData.movementVelocity * xInput + player.transform.parent.GetComponent<Rigidbody2D>().velocityX, player.transform.parent.GetComponent<Rigidbody2D>().velocityY);
+        }
 
         startScarfUp = false;
     }
@@ -25,7 +32,14 @@ public class PlayerStartMovingState : PlayerGroundedState
 
         Movement?.CheckIfShouldFlip(xInput);
 
-        Movement?.SetVelocityX(playerData.movementVelocity * xInput);
+        if(player.transform.parent == null)
+        {
+            Movement?.SetVelocityX(playerData.movementVelocity * xInput);
+        }
+        else
+        {
+            Movement?.SetVelocityXY(playerData.movementVelocity * xInput + player.transform.parent.GetComponent<Rigidbody2D>().velocityX, player.transform.parent.GetComponent<Rigidbody2D>().velocityY);
+        }
 
         if (player.InputHandler.AttackInputs[(int)CombatInputs.primary])
         {

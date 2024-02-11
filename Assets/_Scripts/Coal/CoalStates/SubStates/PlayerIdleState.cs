@@ -16,7 +16,15 @@ public class PlayerIdleState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
-        Movement?.SetVelocityX(0f);
+        
+        if(player.transform.parent == null)
+        {
+            Movement?.SetVelocityX(0f);
+        }
+        else
+        {
+            Movement?.SetVelocityXY(player.transform.parent.GetComponent<Rigidbody2D>().velocityX, player.transform.parent.GetComponent<Rigidbody2D>().velocityY);
+        }
     }
 
     public override void Exit()
@@ -62,7 +70,14 @@ public class PlayerIdleState : PlayerGroundedState
         }
         else
         {
-            Movement?.SetVelocityX(0f);
+            if(player.transform.parent == null)
+            {
+                Movement?.SetVelocityX(0f);
+            }
+            else
+            {
+                Movement?.SetVelocityXY(player.transform.parent.GetComponent<Rigidbody2D>().velocityX, player.transform.parent.GetComponent<Rigidbody2D>().velocityY);
+            }
         }
     }
 

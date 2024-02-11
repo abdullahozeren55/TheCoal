@@ -58,6 +58,12 @@ public class Movement : CoreComponent
         SetFinalVelocity();
     }
 
+    public void SetVelocityXY(float velocityX, float velocityY)
+    {
+        workspace.Set(velocityX, velocityY);
+        SetFinalVelocity();
+    }
+
     private void SetFinalVelocity()
     {
         if(CanSetVelocity)

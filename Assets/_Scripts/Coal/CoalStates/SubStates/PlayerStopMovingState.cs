@@ -15,7 +15,14 @@ public class PlayerStopMovingState : PlayerGroundedState
     {
         base.Enter();
 
-        Movement?.SetVelocityZero();
+        if(player.transform.parent == null)
+        {
+            Movement?.SetVelocityX(0f);
+        }
+        else
+        {
+            Movement?.SetVelocityXY(player.transform.parent.GetComponent<Rigidbody2D>().velocityX, player.transform.parent.GetComponent<Rigidbody2D>().velocityY);
+        }
 
         stopScarfUp = true;
     }
@@ -35,50 +42,57 @@ public class PlayerStopMovingState : PlayerGroundedState
             Movement?.CheckIfShouldFlip(xInput);
 
         
-        if (player.InputHandler.AttackInputs[(int)CombatInputs.primary])
-        {
-            player.AttackState.SetAttackIsHeavy(false);
-            player.AttackState.SetIsMoving(false);
-            stateMachine.ChangeState(player.AttackState);
-        }
-        else if (player.InputHandler.AttackInputs[(int)CombatInputs.secondary])
-        {
-            player.AttackState.SetAttackIsHeavy(true);
-            player.AttackState.SetIsMoving(false);
-            stateMachine.ChangeState(player.AttackState);
-        }
-        else if(jumpInput && player.JumpState.CanJump())
-        {
-            stateMachine.ChangeState(player.JumpState);
-        }
-        else if(dashInput && player.DashState.CheckIfCanDash())
-        {
-            stateMachine.ChangeState(player.DashState);
-        }
-        else if(xInput != 0 && (!isTouchingWall || xInput != Movement?.FacingDirection))
-        {
-            if(stopScarfUp)
+            if (player.InputHandler.AttackInputs[(int)CombatInputs.primary])
             {
-                stateMachine.ChangeState(player.MoveState);
+                player.AttackState.SetAttackIsHeavy(false);
+                player.AttackState.SetIsMoving(false);
+                stateMachine.ChangeState(player.AttackState);
+            }
+            else if (player.InputHandler.AttackInputs[(int)CombatInputs.secondary])
+            {
+                player.AttackState.SetAttackIsHeavy(true);
+                player.AttackState.SetIsMoving(false);
+                stateMachine.ChangeState(player.AttackState);
+            }
+            else if(jumpInput && player.JumpState.CanJump())
+            {
+                stateMachine.ChangeState(player.JumpState);
+            }
+            else if(dashInput && player.DashState.CheckIfCanDash())
+            {
+                stateMachine.ChangeState(player.DashState);
+            }
+            else if(xInput != 0 && (!isTouchingWall || xInput != Movement?.FacingDirection))
+            {
+                if(stopScarfUp)
+                {
+                    stateMachine.ChangeState(player.MoveState);
+                }
+                else
+                {
+                    stateMachine.ChangeState(player.StartMovingState);
+                }
+            
+            }
+            else if(!isGrounded && !isOnSlope)
+            {
+                stateMachine.ChangeState(player.InAirState);
+            }
+            else if(isAnimationFinished && xInput == 0 || (isTouchingWall && xInput == Movement?.FacingDirection))
+            {
+                stateMachine.ChangeState(player.IdleState);
             }
             else
             {
-                stateMachine.ChangeState(player.StartMovingState);
+                if(player.transform.parent == null)
+                {
+                    Movement?.SetVelocityX(0f);
+                }
+                else
+                {
+                    Movement?.SetVelocityXY(player.transform.parent.GetComponent<Rigidbody2D>().velocityX, player.transform.parent.GetComponent<Rigidbody2D>().velocityY);
+                }
             }
-            
-        }
-        else if(!isGrounded && !isOnSlope)
-        {
-            stateMachine.ChangeState(player.InAirState);
-        }
-        else if(isAnimationFinished && xInput == 0 || (isTouchingWall && xInput == Movement?.FacingDirection))
-        {
-            stateMachine.ChangeState(player.IdleState);
-        }
-        else
-        {
-            Movement?.SetVelocityZero();
-        }
         }
         
     }

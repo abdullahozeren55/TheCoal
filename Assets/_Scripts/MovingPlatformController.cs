@@ -36,7 +36,10 @@ public class MovingPlatformController : MonoBehaviour
     {
         if(other.collider.CompareTag("Player") || other.collider.CompareTag("DashingPlayer"))
         {
-            other.transform.SetParent(transform);
+            if(other.transform.parent != transform)
+            {
+                other.transform.SetParent(transform);
+            }
         }
     }
 

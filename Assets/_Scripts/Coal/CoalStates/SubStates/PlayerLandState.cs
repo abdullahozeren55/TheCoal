@@ -17,7 +17,14 @@ public class PlayerLandState : PlayerGroundedState
     {
         base.Enter();
 
-        Movement?.SetVelocityZero();
+        if(player.transform.parent == null)
+        {
+            Movement?.SetVelocityX(0f);
+        }
+        else
+        {
+            Movement?.SetVelocityXY(player.transform.parent.GetComponent<Rigidbody2D>().velocityX, player.transform.parent.GetComponent<Rigidbody2D>().velocityY);
+        }
     }
 
     public override void Exit()
