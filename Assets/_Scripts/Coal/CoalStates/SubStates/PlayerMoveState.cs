@@ -17,13 +17,11 @@ public class PlayerMoveState : PlayerGroundedState
     {
         base.Enter();
 
-        if(player.transform.parent == null)
+        Movement?.CheckIfShouldFlip(xInput);
+
+        if(Movement?.CurrentVelocity.x != playerData.movementVelocity * xInput)
         {
             Movement?.SetVelocityX(playerData.movementVelocity * xInput);
-        }
-        else
-        {
-            Movement?.SetVelocityXY(playerData.movementVelocity * xInput + player.transform.parent.GetComponent<Rigidbody2D>().velocityX, player.transform.parent.GetComponent<Rigidbody2D>().velocityY);
         }
     }
 
@@ -36,17 +34,6 @@ public class PlayerMoveState : PlayerGroundedState
     {
         base.LogicUpdate();
 
-        Movement?.CheckIfShouldFlip(xInput);
-
-		if(player.transform.parent == null)
-        {
-            Movement?.SetVelocityX(playerData.movementVelocity * xInput);
-        }
-        else
-        {
-            Movement?.SetVelocityXY(playerData.movementVelocity * xInput + player.transform.parent.GetComponent<Rigidbody2D>().velocityX, player.transform.parent.GetComponent<Rigidbody2D>().velocityY);
-        }
-
         if (player.InputHandler.AttackInputs[(int)CombatInputs.primary])
         {
             player.AttackState.SetAttackIsHeavy(false);
@@ -58,6 +45,10 @@ public class PlayerMoveState : PlayerGroundedState
             player.AttackState.SetAttackIsHeavy(true);
             player.AttackState.SetIsMoving(true);
             stateMachine.ChangeState(player.AttackState);
+        }
+        else if (isTouchingLedgeBottom && !isTouchingLedge)
+        {
+			stateMachine.ChangeState(player.LedgeClimbState);
         }
         else if(jumpInput && player.JumpState.CanJump())
         {
@@ -74,6 +65,15 @@ public class PlayerMoveState : PlayerGroundedState
         else if(!isGrounded && !isOnSlope)
         {
             stateMachine.ChangeState(player.InAirState);
+        }
+        else
+        {
+            Movement?.CheckIfShouldFlip(xInput);
+
+            if(Movement?.CurrentVelocity.x != playerData.movementVelocity * xInput)
+            {
+                Movement?.SetVelocityX(playerData.movementVelocity * xInput);
+            }
         }
     }
 

@@ -15,13 +15,9 @@ public class PlayerStopMovingState : PlayerGroundedState
     {
         base.Enter();
 
-        if(player.transform.parent == null)
+        if(Movement?.CurrentVelocity.x != 0f)
         {
             Movement?.SetVelocityX(0f);
-        }
-        else
-        {
-            Movement?.SetVelocityXY(player.transform.parent.GetComponent<Rigidbody2D>().velocityX, player.transform.parent.GetComponent<Rigidbody2D>().velocityY);
         }
 
         stopScarfUp = true;
@@ -54,6 +50,10 @@ public class PlayerStopMovingState : PlayerGroundedState
                 player.AttackState.SetIsMoving(false);
                 stateMachine.ChangeState(player.AttackState);
             }
+            else if (isTouchingLedgeBottom && !isTouchingLedge)
+            {
+			    stateMachine.ChangeState(player.LedgeClimbState);
+            }
             else if(jumpInput && player.JumpState.CanJump())
             {
                 stateMachine.ChangeState(player.JumpState);
@@ -84,13 +84,9 @@ public class PlayerStopMovingState : PlayerGroundedState
             }
             else
             {
-                if(player.transform.parent == null)
+                if(Movement?.CurrentVelocity.x != 0f)
                 {
                     Movement?.SetVelocityX(0f);
-                }
-                else
-                {
-                    Movement?.SetVelocityXY(player.transform.parent.GetComponent<Rigidbody2D>().velocityX, player.transform.parent.GetComponent<Rigidbody2D>().velocityY);
                 }
             }
         }

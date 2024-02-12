@@ -14,13 +14,11 @@ public class PlayerStartMovingState : PlayerGroundedState
     {
         base.Enter();
 
-        if(player.transform.parent == null)
+        Movement?.CheckIfShouldFlip(xInput);
+
+        if(Movement?.CurrentVelocity.x != playerData.movementVelocity * xInput)
         {
             Movement?.SetVelocityX(playerData.movementVelocity * xInput);
-        }
-        else
-        {
-            Movement?.SetVelocityXY(playerData.movementVelocity * xInput + player.transform.parent.GetComponent<Rigidbody2D>().velocityX, player.transform.parent.GetComponent<Rigidbody2D>().velocityY);
         }
 
         startScarfUp = false;
@@ -29,17 +27,6 @@ public class PlayerStartMovingState : PlayerGroundedState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-
-        Movement?.CheckIfShouldFlip(xInput);
-
-        if(player.transform.parent == null)
-        {
-            Movement?.SetVelocityX(playerData.movementVelocity * xInput);
-        }
-        else
-        {
-            Movement?.SetVelocityXY(playerData.movementVelocity * xInput + player.transform.parent.GetComponent<Rigidbody2D>().velocityX, player.transform.parent.GetComponent<Rigidbody2D>().velocityY);
-        }
 
         if (player.InputHandler.AttackInputs[(int)CombatInputs.primary])
         {
@@ -52,7 +39,11 @@ public class PlayerStartMovingState : PlayerGroundedState
             player.AttackState.SetAttackIsHeavy(true);
             player.AttackState.SetIsMoving(true);
             stateMachine.ChangeState(player.AttackState);
-        }     
+        }
+        else if (isTouchingLedgeBottom && !isTouchingLedge)
+        {
+			stateMachine.ChangeState(player.LedgeClimbState);
+        }
         else if(jumpInput && player.JumpState.CanJump())
         {
             stateMachine.ChangeState(player.JumpState);
@@ -80,6 +71,15 @@ public class PlayerStartMovingState : PlayerGroundedState
         else if(isAnimationFinished && xInput != 0 && (!isTouchingWall || xInput != Movement?.FacingDirection))
         {
             stateMachine.ChangeState(player.MoveState);
+        }
+        else
+        {
+            Movement?.CheckIfShouldFlip(xInput);
+
+            if(Movement?.CurrentVelocity.x != playerData.movementVelocity * xInput)
+            {
+                Movement?.SetVelocityX(playerData.movementVelocity * xInput);
+            }
         }
         
         

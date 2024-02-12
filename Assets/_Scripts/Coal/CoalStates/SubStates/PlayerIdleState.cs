@@ -16,14 +16,10 @@ public class PlayerIdleState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
-        
-        if(player.transform.parent == null)
+
+        if(Movement?.CurrentVelocity.x != 0f)
         {
             Movement?.SetVelocityX(0f);
-        }
-        else
-        {
-            Movement?.SetVelocityXY(player.transform.parent.GetComponent<Rigidbody2D>().velocityX, player.transform.parent.GetComponent<Rigidbody2D>().velocityY);
         }
     }
 
@@ -52,6 +48,10 @@ public class PlayerIdleState : PlayerGroundedState
             player.AttackState.SetIsMoving(false);
             stateMachine.ChangeState(player.AttackState);
         }
+        else if (isTouchingLedgeBottom && !isTouchingLedge)
+        {
+			stateMachine.ChangeState(player.LedgeClimbState);
+        }
         else if(jumpInput && player.JumpState.CanJump())
         {
             stateMachine.ChangeState(player.JumpState);
@@ -70,13 +70,9 @@ public class PlayerIdleState : PlayerGroundedState
         }
         else
         {
-            if(player.transform.parent == null)
+            if(Movement?.CurrentVelocity.x != 0f)
             {
                 Movement?.SetVelocityX(0f);
-            }
-            else
-            {
-                Movement?.SetVelocityXY(player.transform.parent.GetComponent<Rigidbody2D>().velocityX, player.transform.parent.GetComponent<Rigidbody2D>().velocityY);
             }
         }
     }

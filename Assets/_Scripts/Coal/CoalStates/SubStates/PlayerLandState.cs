@@ -17,13 +17,9 @@ public class PlayerLandState : PlayerGroundedState
     {
         base.Enter();
 
-        if(player.transform.parent == null)
+        if(Movement?.CurrentVelocity.x != 0f)
         {
             Movement?.SetVelocityX(0f);
-        }
-        else
-        {
-            Movement?.SetVelocityXY(player.transform.parent.GetComponent<Rigidbody2D>().velocityX, player.transform.parent.GetComponent<Rigidbody2D>().velocityY);
         }
     }
 
@@ -42,6 +38,10 @@ public class PlayerLandState : PlayerGroundedState
             {
                 stateMachine.ChangeState(player.IdleState);
             }
+        }
+        else if (isTouchingLedgeBottom && !isTouchingLedge)
+        {
+			stateMachine.ChangeState(player.LedgeClimbState);
         }
         else if(jumpInput && player.JumpState.CanJump())
         {

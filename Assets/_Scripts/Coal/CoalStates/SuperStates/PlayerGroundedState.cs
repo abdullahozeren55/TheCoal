@@ -18,6 +18,8 @@ public class PlayerGroundedState : PlayerState
     protected bool isGrounded;
     protected bool isTouchingWall;
     protected bool isOnSlope;
+    protected bool isTouchingLedge;
+    protected bool isTouchingLedgeBottom;
 
     
 
@@ -35,6 +37,13 @@ public class PlayerGroundedState : PlayerState
             isGrounded = CollisionSenses.Ground;
             isTouchingWall = CollisionSenses.WallFront;
             isOnSlope = CollisionSenses.Slope;
+            isTouchingLedge = CollisionSenses.LedgeHorizontal;
+            isTouchingLedgeBottom = CollisionSenses.LedgeHorizontalBottom;
+
+            if (isTouchingLedgeBottom && !isTouchingLedge)
+            {
+			    player.LedgeClimbState.SetDetectedPosition(player.transform.position);
+		    }
         }
     }
 

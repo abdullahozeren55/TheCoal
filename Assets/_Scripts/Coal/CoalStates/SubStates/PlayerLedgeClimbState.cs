@@ -29,7 +29,7 @@ public class PlayerLedgeClimbState : PlayerState
     public bool positionsSet;
     public bool isTurning;
 
-    private RigidbodyConstraints2D originalConstraints;
+    private float originalGravity;
 
     public PlayerLedgeClimbState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName, int normalMapMaterialForPlayer) : base(player, stateMachine, playerData, animBoolName, normalMapMaterialForPlayer)
     {
@@ -64,13 +64,13 @@ public class PlayerLedgeClimbState : PlayerState
     {
         base.Enter();
 
-        originalConstraints = Movement.RB.constraints;
+        originalGravity = Movement.RB.gravityScale;
+        Movement.RB.gravityScale = 0f;
 
         player.InAirState.shouldInstantiateAirJumpPrefab = false;
 
-        Movement?.SetVelocityZero();
         player.transform.position = detectedPos;
-        Movement.RB.constraints = RigidbodyConstraints2D.FreezeAll;
+        
 
         cornerPos = DetermineCornerPosition();
 
@@ -80,6 +80,11 @@ public class PlayerLedgeClimbState : PlayerState
         positionsSet = true;
 
 		player.transform.position = startPos;
+
+        if(Movement?.CurrentVelocity != new Vector2(0f, 0f))
+        {
+            Movement?.SetVelocityZero();
+        }
 
         player.SuperDashState.SetCanSuperDash(true);
         player.InAirState.SetCanWallHold(true);
@@ -92,7 +97,7 @@ public class PlayerLedgeClimbState : PlayerState
     {
         base.Exit();
 
-        Movement.RB.constraints = originalConstraints;
+        Movement.RB.gravityScale = originalGravity;
 
         isHanging = false;
         positionsSet = false;
@@ -136,8 +141,10 @@ public class PlayerLedgeClimbState : PlayerState
             yInput = player.InputHandler.NormInputY;
 			jumpInput = player.InputHandler.JumpInput;
 
-			Movement?.SetVelocityZero();
-            //player.transform.position = startPos;
+            if(Movement?.CurrentVelocity != new Vector2(0f, 0f))
+            {
+                Movement?.SetVelocityZero();
+            }
 
             if (jumpInput && !isClimbing && xInput == -Movement.FacingDirection)
             {
