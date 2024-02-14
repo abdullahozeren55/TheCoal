@@ -69,21 +69,6 @@ public class CollisionSenses : CoreComponent
         get => Physics2D.Raycast(WallCheck.position, Vector2.right * Movement.FacingDirection, wallCheckDistance, whatIsWall);
     }
 
-    public bool WallFrontLong
-    {
-        get => Physics2D.Raycast(WallCheck.position, Vector2.right * Movement.FacingDirection, wallCheckDistanceLong, whatIsWall);
-    }
-
-    public bool WallBack
-    {
-        get => Physics2D.Raycast(WallCheck.position, Vector2.right * -Movement.FacingDirection, wallCheckDistance, whatIsWall);
-    }
-
-    public bool WallBackLong
-    {
-        get => Physics2D.Raycast(WallCheck.position, Vector2.right * -Movement.FacingDirection, wallCheckDistanceLong, whatIsWall);
-    }
-
     public bool LedgeVertical
     {
         get => Physics2D.OverlapBox(GroundCheck.position, ledgeVerticalCheckSize, 0f, whatIsLedge);

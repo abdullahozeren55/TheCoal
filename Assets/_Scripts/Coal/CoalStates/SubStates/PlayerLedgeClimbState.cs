@@ -148,7 +148,6 @@ public class PlayerLedgeClimbState : PlayerState
 
             if (jumpInput && !isClimbing && xInput == -Movement.FacingDirection)
             {
-				player.WallJumpState.DetermineWallJumpDirection(true);
 				stateMachine.ChangeState(player.WallJumpState);
 			}
 			else if (jumpInput || (jumpInput && xInput == Movement.FacingDirection && isHanging && !isClimbing))

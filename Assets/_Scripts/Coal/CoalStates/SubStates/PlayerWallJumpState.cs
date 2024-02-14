@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerWallJumpState : PlayerAbilityState
 {
 
-    private int wallJumpDirection;
-
     public bool inWallJumpCombo;
     public float lastWallJumpedTime;
     public PlayerWallJumpState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName, int normalMapMaterialForPlayer) : base(player, stateMachine, playerData, animBoolName, normalMapMaterialForPlayer)
@@ -22,10 +20,12 @@ public class PlayerWallJumpState : PlayerAbilityState
     {
         base.Enter();
 
+        
+        player.InAirState.SetCanWallHold(false);
+        player.Movement?.Flip();
         player.InputHandler.UseJumpInput();
         player.JumpState.DecreaseAmountOfJumpsLeft();
-		Movement?.SetVelocity(playerData.wallJumpVelocity, playerData.wallJumpAngle, wallJumpDirection);
-		Movement?.CheckIfShouldFlip(wallJumpDirection);
+		Movement?.SetVelocity(playerData.wallJumpVelocity, playerData.wallJumpAngle, Movement.FacingDirection);
         player.InAirState.SetCanWallHold(true);
 
         inWallJumpCombo = true;
@@ -48,30 +48,14 @@ public class PlayerWallJumpState : PlayerAbilityState
         player.EyesAnim.SetFloat("yVelocity", Movement.CurrentVelocity.y);
 		player.EyesAnim.SetFloat("xVelocity", Mathf.Abs(Movement.CurrentVelocity.x));
 
-        if (Time.time >= startTime + playerData.wallJumpTime) {
-			isAbilityDone = true;
-		}
-
-        if(isAbilityDone)
+        if (Time.time >= startTime + playerData.wallJumpTime)
         {
-            stateMachine.ChangeState(player.InAirState);
-        }
+			stateMachine.ChangeState(player.InAirState);
+		}
     }
 
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
     }
-
-    public void DetermineWallJumpDirection(bool isTouchingWall)
-    {
-		if (isTouchingWall)
-        {
-			wallJumpDirection = -Movement.FacingDirection;
-		}
-        else
-        {
-			wallJumpDirection = Movement.FacingDirection;
-		}
-	}
 }

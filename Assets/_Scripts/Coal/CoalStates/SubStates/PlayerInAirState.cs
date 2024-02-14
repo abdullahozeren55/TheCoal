@@ -20,9 +20,6 @@ public class PlayerInAirState : PlayerState
 
     private bool isGrounded;
     private bool isTouchingWall;
-    private bool isTouchingWallBack;
-    private bool oldIsTouchingWall;
-	private bool oldIsTouchingWallBack;
     private bool isTouchingLedge;
     private bool isTouchingLedgeBottom;
     private bool isOnSlope;
@@ -34,7 +31,6 @@ public class PlayerInAirState : PlayerState
     private bool canWallHold;
 
     private bool coyoteTime;
-    private bool wallJumpCoyoteTime;
     private bool wallHoldCoyoteTime;
     public bool shouldInstantiateAirJumpPrefab;
 
@@ -48,14 +44,10 @@ public class PlayerInAirState : PlayerState
     {
         base.DoChecks();
 
-        oldIsTouchingWall = isTouchingWall;
-		oldIsTouchingWallBack = isTouchingWallBack;
-
         if (CollisionSenses)
         {
 			isGrounded = CollisionSenses.Ground;
             isTouchingWall = CollisionSenses.WallFront;
-            isTouchingWallBack = CollisionSenses.WallBack;
             isTouchingLedge = CollisionSenses.LedgeHorizontal;
             isTouchingLedgeBottom = CollisionSenses.LedgeHorizontalBottom;
             isOnSlope = CollisionSenses.Slope;
@@ -65,11 +57,6 @@ public class PlayerInAirState : PlayerState
             if (isTouchingLedgeBottom && !isTouchingLedge)
             {
 			    player.LedgeClimbState.SetDetectedPosition(player.transform.position);
-		    }
-
-            if (!wallJumpCoyoteTime && !isTouchingWall && !isTouchingWallBack && (oldIsTouchingWall || oldIsTouchingWallBack))
-            {
-			    StartWallJumpCoyoteTime();
 		    }
         }
 
@@ -87,10 +74,7 @@ public class PlayerInAirState : PlayerState
     {
         base.Exit();
 
-        oldIsTouchingWall = false;
-		oldIsTouchingWallBack = false;
-        isTouchingWall = false;
-		isTouchingWallBack = false;
+        //isTouchingWall = false;
     }
 
     public override void LogicUpdate()
@@ -98,7 +82,6 @@ public class PlayerInAirState : PlayerState
         base.LogicUpdate();
 
         CheckCoyoteTime();
-        CheckWallJumpCoyoteTime();
         CheckWallHoldCoyoteTime();
 
         xInput = player.InputHandler.NormInputX;
@@ -146,12 +129,9 @@ public class PlayerInAirState : PlayerState
 			    stateMachine.ChangeState(player.LandState);
             }
         }
-        else if (jumpInput && (isTouchingWall || isTouchingWallBack || wallJumpCoyoteTime) && (canWallHold || wallHoldCoyoteTime) && (xInput == Movement?.FacingDirection || player.WallJumpState.inWallJumpCombo))
+        else if (jumpInput && isTouchingWall && (canWallHold || wallHoldCoyoteTime) && (xInput == Movement?.FacingDirection || player.WallJumpState.inWallJumpCombo))
         {
-			StopWallJumpCoyoteTime();
             StopWallHoldCoyoteTime();
-			isTouchingWall = CollisionSenses.WallFront;
-			player.WallJumpState.DetermineWallJumpDirection(isTouchingWall);
 			stateMachine.ChangeState(player.WallJumpState);
         }
         else if (jumpInput && player.JumpState.CanJump())
@@ -237,14 +217,6 @@ public class PlayerInAirState : PlayerState
         canWallHold = value;
     }
 
-    private void CheckWallJumpCoyoteTime()
-    {
-		if (wallJumpCoyoteTime && Time.time > startWallJumpCoyoteTime + playerData.coyoteTime)
-        {
-			wallJumpCoyoteTime = false;
-		}
-	}
-
     private void CheckWallHoldCoyoteTime()
     {
 		if (wallHoldCoyoteTime && Time.time > startWallHoldCoyoteTime + playerData.coyoteTime)
@@ -253,19 +225,11 @@ public class PlayerInAirState : PlayerState
 		}
 	}
 
-    public void StartWallJumpCoyoteTime()
-    {
-		wallJumpCoyoteTime = true;
-		startWallJumpCoyoteTime = Time.time;
-	}
-
     public void StartWallHoldCoyoteTime()
     {
 		wallHoldCoyoteTime = true;
 		startWallHoldCoyoteTime = Time.time;
 	}
-
-	public void StopWallJumpCoyoteTime() => wallJumpCoyoteTime = false;
 
     public void StopWallHoldCoyoteTime() => wallHoldCoyoteTime = false;
 

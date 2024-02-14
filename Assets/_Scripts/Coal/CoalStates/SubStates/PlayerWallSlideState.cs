@@ -50,7 +50,6 @@ public class PlayerWallSlideState : PlayerState
 
         if (jumpInput)
         {
-			player.WallJumpState.DetermineWallJumpDirection(isTouchingWall);
 			stateMachine.ChangeState(player.WallJumpState);
         }
         else if(isGrounded)
