@@ -28,7 +28,6 @@ public class CollisionSenses : CoreComponent
     public Vector2 SlopeCheckRadius { get => slopeCheckSize; set => slopeCheckSize = value; }
     public Vector2 LedgeVerticalCheckSize { get => ledgeVerticalCheckSize; set => ledgeVerticalCheckSize = value; }
 	public float WallCheckDistance { get => wallCheckDistance; set => wallCheckDistance = value; }
-    public float WallCheckDistanceLong { get => wallCheckDistanceLong; set => wallCheckDistanceLong = value; }
 
 	public LayerMask WhatIsGround { get => whatIsGround; set => whatIsGround = value; }
     public LayerMask WhatIsSlope { get => whatIsSlope; set => whatIsSlope = value; }
@@ -47,7 +46,6 @@ public class CollisionSenses : CoreComponent
     [SerializeField] private Vector2 slopeCheckSize;
     [SerializeField] private Vector2 ledgeVerticalCheckSize;
     [SerializeField] private float wallCheckDistance;
-    [SerializeField] private float wallCheckDistanceLong;
     
 
 
