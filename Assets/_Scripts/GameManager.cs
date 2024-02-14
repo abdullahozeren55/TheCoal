@@ -16,9 +16,4 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
     }
-
-    private void Start()
-    {
-        Application.targetFrameRate = 60;
-    }
 }
