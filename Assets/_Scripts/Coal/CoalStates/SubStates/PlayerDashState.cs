@@ -30,7 +30,14 @@ public class PlayerDashState : PlayerAbilityState
         player.InputHandler.UseDashInput();
 
         Movement?.SetVelocityX(playerData.dashVelocity * Movement.FacingDirection);
-        Movement?.SetVelocityY(0f);
+        if(isOnSlope)
+        {
+            Movement?.SetVelocityY(0.5f);
+        }
+        else
+        {
+            Movement?.SetVelocityY(0f);
+        }
         CheckIfShouldPlaceAfterImage();
         Movement?.CheckIfShouldFlip(xInput);
     }
@@ -89,7 +96,14 @@ public class PlayerDashState : PlayerAbilityState
         else
         {
             Movement?.SetVelocityX(playerData.dashVelocity * Movement.FacingDirection);
-            Movement?.SetVelocityY(0f);
+            if(isOnSlope)
+            {
+                Movement?.SetVelocityY(0.5f);
+            }
+            else
+            {
+                Movement?.SetVelocityY(0f);
+            }
             CheckIfShouldPlaceAfterImage();
         }
     }
