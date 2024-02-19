@@ -101,4 +101,9 @@ public class CollisionSenses : CoreComponent
     {
 		get => Physics2D.OverlapBox(CeilingCheck.position, groundCheckSize, 0f, whatIsCeiling);
 	}
+
+    void OnDrawGizmos()
+    {
+        //Gizmos.DrawCube(GroundCheck.position, slopeCheckSize);
+    }
 }

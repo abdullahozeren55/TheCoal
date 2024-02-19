@@ -58,7 +58,7 @@ public class PlayerDashState : PlayerAbilityState
 
         xInput = player.InputHandler.NormInputX;
 
-        if (Time.time >= startTime + playerData.dashTime || isTouchingWall)
+        if (Time.time >= startTime + playerData.dashTime || isTouchingWall || isTouchingLedgeBottom || isTouchingLedge)
         {
             isAbilityDone = true;
 			lastDashTime = Time.time;
@@ -83,7 +83,11 @@ public class PlayerDashState : PlayerAbilityState
             }
             else
             {
-                if(isTouchingWall)
+                if(isTouchingLedgeBottom && !isTouchingLedge)
+                {
+                    stateMachine.ChangeState(player.LedgeClimbState);
+                }
+                else if(isTouchingWall)
                 {
                     stateMachine.ChangeState(player.WallHoldState);
                 }
