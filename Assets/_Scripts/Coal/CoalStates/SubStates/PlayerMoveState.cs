@@ -17,8 +17,6 @@ public class PlayerMoveState : PlayerGroundedState
     {
         base.Enter();
 
-        Movement?.CheckIfShouldFlip(xInput);
-
         if(Movement?.CurrentVelocity.x != playerData.movementVelocity * xInput)
         {
             Movement?.SetVelocityX(playerData.movementVelocity * xInput);
@@ -58,7 +56,7 @@ public class PlayerMoveState : PlayerGroundedState
         {
             stateMachine.ChangeState(player.DashState);
         }
-        else if(xInput == 0 || (isTouchingWall && xInput == Movement?.FacingDirection))
+        else if(xInput == 0 || isTouchingWall)
         {
             stateMachine.ChangeState(player.StopMovingState);
         }
@@ -66,9 +64,12 @@ public class PlayerMoveState : PlayerGroundedState
         {
             stateMachine.ChangeState(player.InAirState);
         }
+        else if(xInput != 0 && xInput != Movement?.FacingDirection)
+        {
+            stateMachine.ChangeState(player.FlipState);
+        }
         else
         {
-            Movement?.CheckIfShouldFlip(xInput);
 
             if(Movement?.CurrentVelocity.x != playerData.movementVelocity * xInput)
             {

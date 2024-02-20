@@ -20,7 +20,8 @@ public class PlayerStopMovingState : PlayerGroundedState
             Movement?.SetVelocityX(0f);
         }
 
-        stopScarfUp = true;
+        //stopScarfUp = true;
+        //player.StartMovingState.startScarfUp = true;
     }
 
     public override void LogicUpdate()
@@ -34,10 +35,7 @@ public class PlayerStopMovingState : PlayerGroundedState
             }
         }
         else
-        {
-            Movement?.CheckIfShouldFlip(xInput);
-
-        
+        {   
             if (player.InputHandler.AttackInputs[(int)CombatInputs.primary])
             {
                 player.AttackState.SetAttackIsHeavy(false);
@@ -62,7 +60,7 @@ public class PlayerStopMovingState : PlayerGroundedState
             {
                 stateMachine.ChangeState(player.DashState);
             }
-            else if(xInput != 0 && (!isTouchingWall || xInput != Movement?.FacingDirection))
+            else if(xInput == Movement?.FacingDirection && !isTouchingWall)
             {
                 if(stopScarfUp)
                 {
@@ -78,7 +76,11 @@ public class PlayerStopMovingState : PlayerGroundedState
             {
                 stateMachine.ChangeState(player.InAirState);
             }
-            else if(isAnimationFinished && xInput == 0 || (isTouchingWall && xInput == Movement?.FacingDirection))
+            else if(xInput != 0 && xInput != Movement?.FacingDirection)
+            {
+                stateMachine.ChangeState(player.FlipState);
+            }
+            else if(isAnimationFinished && (xInput == 0 || isTouchingWall ))
             {
                 stateMachine.ChangeState(player.IdleState);
             }
@@ -102,5 +104,6 @@ public class PlayerStopMovingState : PlayerGroundedState
     {
         base.AnimationTrigger();
         stopScarfUp = false;
+        player.StartMovingState.startScarfUp = false;
     }
 }

@@ -60,13 +60,17 @@ public class PlayerIdleState : PlayerGroundedState
         {
             stateMachine.ChangeState(player.DashState);
         }
-        else if(xInput != 0 && (!isTouchingWall || xInput != Movement?.FacingDirection))
+        else if(xInput == Movement?.FacingDirection && !isTouchingWall)
         {
             stateMachine.ChangeState(player.StartMovingState);
         }
         else if(!isGrounded && !isOnSlope)
         {
             stateMachine.ChangeState(player.InAirState);
+        }
+        else if(xInput != 0 && xInput != Movement?.FacingDirection)
+        {
+            stateMachine.ChangeState(player.FlipState);
         }
         else
         {

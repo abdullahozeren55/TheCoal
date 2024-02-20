@@ -128,7 +128,7 @@ public class PlayerLedgeClimbState : PlayerState
         {
             if(xInput != 0 && (!isTouchingWall || xInput != Movement?.FacingDirection))
             {
-                stateMachine.ChangeState(player.MoveState);
+                stateMachine.ChangeState(player.StartMovingState);
             }
             else
             {

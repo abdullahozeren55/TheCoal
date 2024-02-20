@@ -14,14 +14,13 @@ public class PlayerStartMovingState : PlayerGroundedState
     {
         base.Enter();
 
-        Movement?.CheckIfShouldFlip(xInput);
-
-        if(Movement?.CurrentVelocity.x != playerData.movementVelocity * xInput)
+        if(Movement?.CurrentVelocity.x != playerData.startMovementVelocity * xInput)
         {
-            Movement?.SetVelocityX(playerData.movementVelocity * xInput);
+            Movement?.SetVelocityX(playerData.startMovementVelocity * xInput);
         }
 
-        startScarfUp = false;
+        //startScarfUp = false;
+        //player.StopMovingState.stopScarfUp = false;
     }
 
     public override void LogicUpdate()
@@ -52,7 +51,7 @@ public class PlayerStartMovingState : PlayerGroundedState
         {
             stateMachine.ChangeState(player.DashState);
         }
-        else if(xInput == 0 || (isTouchingWall && xInput == Movement?.FacingDirection))
+        else if(xInput == 0 || isTouchingWall)
         {
             if(startScarfUp)
             {
@@ -62,23 +61,24 @@ public class PlayerStartMovingState : PlayerGroundedState
             {
                 stateMachine.ChangeState(player.IdleState);
             }
-            
         }
         else if(!isGrounded && !isOnSlope)
         {
             stateMachine.ChangeState(player.InAirState);
         }
-        else if(isAnimationFinished && xInput != 0 && (!isTouchingWall || xInput != Movement?.FacingDirection))
+        else if(xInput != 0 && xInput != Movement?.FacingDirection)
+        {
+            stateMachine.ChangeState(player.FlipState);
+        }
+        else if(isAnimationFinished && xInput == Movement?.FacingDirection && !isTouchingWall)
         {
             stateMachine.ChangeState(player.MoveState);
         }
         else
         {
-            Movement?.CheckIfShouldFlip(xInput);
-
-            if(Movement?.CurrentVelocity.x != playerData.movementVelocity * xInput)
+            if(Movement?.CurrentVelocity.x != playerData.startMovementVelocity * xInput)
             {
-                Movement?.SetVelocityX(playerData.movementVelocity * xInput);
+                Movement?.SetVelocityX(playerData.startMovementVelocity * xInput);
             }
         }
         
@@ -94,5 +94,6 @@ public class PlayerStartMovingState : PlayerGroundedState
     {
         base.AnimationTrigger();
         startScarfUp = true;
+        player.StopMovingState.stopScarfUp = true;
     }
 }

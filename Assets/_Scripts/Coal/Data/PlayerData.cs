@@ -7,6 +7,11 @@ public class PlayerData : ScriptableObject
 {
     [Header("Move State")]
     public float movementVelocity = 10f;
+    public float startMovementVelocity = 9f;
+    public float flipMovementVelocity = 8f;
+
+    [Header("Flip State")]
+    public float flipTime = 0.1f;
 
     [Header("Jump State")]
     public float jumpVelocity = 15f;

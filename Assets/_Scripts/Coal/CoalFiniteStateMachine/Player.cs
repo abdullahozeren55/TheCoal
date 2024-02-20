@@ -35,6 +35,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
     public PlayerSuperDashState SuperDashState { get; private set; }
     public PlayerAttackState AttackState { get; private set; }
     public PlayerHitState HitState { get; private set; }
+    public PlayerFlipState FlipState { get; private set; }
 
     public Animator Anim { get; private set; }
     public Animator EyesAnim { get; private set; }
@@ -99,6 +100,7 @@ public class Player : MonoBehaviour, IDamageable, IKnockbackable
         SuperDashState = new PlayerSuperDashState(this, StateMachine, playerData, "inAir", 4);
         AttackState = new PlayerAttackState(this, StateMachine, playerData, "attack", 7);
         HitState = new PlayerHitState(this, StateMachine, playerData, "hit", 8);
+        FlipState = new PlayerFlipState(this, StateMachine, playerData, "flip", 9);
     }
 
     private void Start()
