@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: playerData
   m_EditorClassIdentifier: 
   movementVelocity: 8
-  startMovementVelocity: 6.8
-  flipMovementVelocity: 5.6
+  startMovementVelocity: 6.5
+  flipMovementVelocity: 5.5
   flipTime: 0.13
   jumpVelocity: 15
   amountOfJumps: 50

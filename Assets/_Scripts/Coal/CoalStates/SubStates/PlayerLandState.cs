@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerLandState : PlayerGroundedState
 {
+    public bool landScarfUp;
     public PlayerLandState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName, int normalMapMaterialForPlayer) : base(player, stateMachine, playerData, animBoolName, normalMapMaterialForPlayer)
     {
     }
@@ -21,11 +22,17 @@ public class PlayerLandState : PlayerGroundedState
         {
             Movement?.SetVelocityX(0f);
         }
+        landScarfUp = true;
     }
 
     public override void Exit()
     {
         base.Exit();
+
+        if(landScarfUp)
+        {
+            landScarfUp = false;
+        }
     }
 
     public override void LogicUpdate()
@@ -53,7 +60,14 @@ public class PlayerLandState : PlayerGroundedState
         }
         else if (xInput == Movement?.FacingDirection && !isTouchingWall)
         {
-            stateMachine.ChangeState(player.StartMovingState);
+            if(landScarfUp)
+            {
+                stateMachine.ChangeState(player.MoveState);
+            }
+            else
+            {
+                stateMachine.ChangeState(player.StartMovingState);
+            }
         }
         else if(xInput != 0 && xInput != Movement?.FacingDirection)
         {
@@ -72,5 +86,11 @@ public class PlayerLandState : PlayerGroundedState
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
+    }
+
+    public override void AnimationTrigger()
+    {
+        base.AnimationTrigger();
+        landScarfUp = false;
     }
 }

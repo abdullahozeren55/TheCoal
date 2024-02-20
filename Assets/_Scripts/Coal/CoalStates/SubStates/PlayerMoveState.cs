@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerMoveState : PlayerGroundedState
 {
+    private float elapsedTime;
+    private float lerpedAmount;
+    private float stateLength = 0.5f;
+    private bool shouldAccel;
+    private float startingAccelSpeed;
     public PlayerMoveState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName, int normalMapMaterialForPlayer) : base(player, stateMachine, playerData, animBoolName, normalMapMaterialForPlayer)
     {
     }
@@ -17,10 +22,39 @@ public class PlayerMoveState : PlayerGroundedState
     {
         base.Enter();
 
-        if(Movement?.CurrentVelocity.x != playerData.movementVelocity * xInput)
+        if(stateMachine.PreviousState == player.FlipState || stateMachine.PreviousState == player.LandState)
         {
-            Movement?.SetVelocityX(playerData.movementVelocity * xInput);
+            lerpedAmount = 0f;
+            elapsedTime = 0f;
+            shouldAccel = true;
+            startingAccelSpeed = playerData.flipMovementVelocity;
+
+            if(Movement?.CurrentVelocity.x != playerData.flipMovementVelocity * xInput)
+            {
+                Movement?.SetVelocityX(playerData.flipMovementVelocity * xInput);
+            }
         }
+        else if(stateMachine.PreviousState == player.DashState)
+        {
+            lerpedAmount = 0f;
+            elapsedTime = 0f;
+            shouldAccel = true;
+            startingAccelSpeed = playerData.dashVelocity/1.5f;
+
+            if(Movement?.CurrentVelocity.x != playerData.dashVelocity/1.5f * xInput)
+            {
+                Movement?.SetVelocityX(playerData.dashVelocity/1.5f * xInput);
+            }
+        }
+        else
+        {
+            shouldAccel = false;
+            if(Movement?.CurrentVelocity.x != playerData.movementVelocity * xInput)
+            {
+                Movement?.SetVelocityX(playerData.movementVelocity * xInput);
+            }
+        }
+        
     }
 
     public override void Exit()
@@ -70,11 +104,31 @@ public class PlayerMoveState : PlayerGroundedState
         }
         else
         {
-
-            if(Movement?.CurrentVelocity.x != playerData.movementVelocity * xInput)
+            if(shouldAccel)
             {
-                Movement?.SetVelocityX(playerData.movementVelocity * xInput);
+                if(elapsedTime <= stateLength)
+                {
+                    elapsedTime += Time.deltaTime;
+                    lerpedAmount = Mathf.Lerp(startingAccelSpeed, playerData.movementVelocity, (elapsedTime/stateLength));
+                    Movement?.SetVelocityX(lerpedAmount * xInput);
+                }
+                else
+                {
+                    if(Movement?.CurrentVelocity.x != playerData.movementVelocity * xInput)
+                    {
+                        Movement?.SetVelocityX(playerData.movementVelocity * xInput);
+                    }
+                }
             }
+            else
+            {
+                if(Movement?.CurrentVelocity.x != playerData.movementVelocity * xInput)
+                {
+                    Movement?.SetVelocityX(playerData.movementVelocity * xInput);
+                }
+            }
+
+            
         }
     }
 

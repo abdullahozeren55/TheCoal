@@ -36,6 +36,12 @@ public class PlayerInAirState : PlayerState
 
     private float startWallJumpCoyoteTime;
     private float startWallHoldCoyoteTime;
+
+    private float elapsedTime;
+    private float lerpedAmount;
+    private float stateLength = 0.2f;
+    private bool shouldAccel;
+    private float startingAccelSpeed;
     public PlayerInAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName, int normalMapMaterialForPlayer) : base(player, stateMachine, playerData, animBoolName, normalMapMaterialForPlayer)
     {
     }
@@ -68,6 +74,27 @@ public class PlayerInAirState : PlayerState
         base.Enter();
 
         StartCoyoteTime();
+
+        if(stateMachine.PreviousState == player.DashState)
+        {
+            lerpedAmount = 0f;
+            elapsedTime = 0f;
+            shouldAccel = true;
+            startingAccelSpeed = playerData.dashVelocity/1.5f;
+
+            if(Movement?.CurrentVelocity.x != playerData.dashVelocity/1.5f * xInput)
+            {
+                Movement?.SetVelocityX(playerData.dashVelocity/1.5f * xInput);
+            }
+        }
+        else
+        {
+            shouldAccel = false;
+            if(Movement?.CurrentVelocity.x != playerData.movementVelocity * xInput)
+            {
+                Movement?.SetVelocityX(playerData.movementVelocity * xInput);
+            }
+        }
     }
 
     public override void Exit()
@@ -160,9 +187,29 @@ public class PlayerInAirState : PlayerState
         else
         {
             Movement?.CheckIfShouldFlip(xInput);
-		    Movement?.SetVelocityX(playerData.movementVelocity * xInput);
 
-		    player.Anim.SetFloat("yVelocity", Movement.CurrentVelocity.y);
+            if(shouldAccel)
+            {
+                if(elapsedTime <= stateLength)
+                {
+                    elapsedTime += Time.deltaTime;
+                    lerpedAmount = Mathf.Lerp(startingAccelSpeed, playerData.movementVelocity, (elapsedTime/stateLength));
+                    Movement?.SetVelocityX(lerpedAmount * xInput);
+                }
+                else
+                {
+                    if(Movement?.CurrentVelocity.x != playerData.movementVelocity * xInput)
+                    {
+                        Movement?.SetVelocityX(playerData.movementVelocity * xInput);
+                    }
+                }
+            }
+            else
+            {
+		        Movement?.SetVelocityX(playerData.movementVelocity * xInput);
+            }
+
+            player.Anim.SetFloat("yVelocity", Movement.CurrentVelocity.y);
 		    player.Anim.SetFloat("xVelocity", Mathf.Abs(Movement.CurrentVelocity.x));
             player.EyesAnim.SetFloat("yVelocity", Movement.CurrentVelocity.y);
 		    player.EyesAnim.SetFloat("xVelocity", Mathf.Abs(Movement.CurrentVelocity.x));
@@ -171,6 +218,8 @@ public class PlayerInAirState : PlayerState
                 player.CoalSwordAnim.SetFloat("yVelocity", Movement.CurrentVelocity.y);
 		        player.CoalSwordAnim.SetFloat("xVelocity", Mathf.Abs(Movement.CurrentVelocity.x));
             }
+
+		    
             
         }
 

@@ -7,6 +7,11 @@ public class PlayerStopMovingState : PlayerGroundedState
 {
 
     public bool stopScarfUp;
+
+    private float elapsedTime;
+    private float lerpedAmount;
+    private float stateLength = 0.2f;
+    private float startingAccelSpeed;
     public PlayerStopMovingState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName, int normalMapMaterialForPlayer) : base(player, stateMachine, playerData, animBoolName, normalMapMaterialForPlayer)
     {
     }
@@ -15,13 +20,15 @@ public class PlayerStopMovingState : PlayerGroundedState
     {
         base.Enter();
 
-        if(Movement?.CurrentVelocity.x != 0f)
+        startingAccelSpeed = Mathf.Abs(Movement.CurrentVelocity.x/2f);
+
+        if(Movement?.CurrentVelocity.x != startingAccelSpeed * Movement.FacingDirection)
         {
-            Movement?.SetVelocityX(0f);
+            Movement?.SetVelocityX(startingAccelSpeed * Movement.FacingDirection);
         }
 
-        //stopScarfUp = true;
-        //player.StartMovingState.startScarfUp = true;
+        lerpedAmount = 0f;
+        elapsedTime = 0f;
     }
 
     public override void LogicUpdate()
@@ -86,9 +93,11 @@ public class PlayerStopMovingState : PlayerGroundedState
             }
             else
             {
-                if(Movement?.CurrentVelocity.x != 0f)
+                if(elapsedTime <= stateLength)
                 {
-                    Movement?.SetVelocityX(0f);
+                    elapsedTime += Time.deltaTime;
+                    lerpedAmount = Mathf.Lerp(startingAccelSpeed, 0f, (elapsedTime/stateLength));
+                    Movement?.SetVelocityX(lerpedAmount * Movement.FacingDirection);
                 }
             }
         }
