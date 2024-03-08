@@ -8,7 +8,11 @@ public class PlayerMoveState : PlayerGroundedState
     private float lerpedAmount;
     private float stateLength = 0.5f;
     private bool shouldAccel;
+    private bool shouldAccelForSoundFX;
     private float startingAccelSpeed;
+    private float walkOnGrassSoundFXCooldownForState;
+    private float startingSoundFXCooldown;
+
     public PlayerMoveState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName, int normalMapMaterialForPlayer) : base(player, stateMachine, playerData, animBoolName, normalMapMaterialForPlayer)
     {
     }
@@ -27,32 +31,25 @@ public class PlayerMoveState : PlayerGroundedState
             lerpedAmount = 0f;
             elapsedTime = 0f;
             shouldAccel = true;
+            shouldAccelForSoundFX = false;
             startingAccelSpeed = playerData.flipMovementVelocity;
-
-            if(Movement?.CurrentVelocity.x != playerData.flipMovementVelocity * xInput)
-            {
-                Movement?.SetVelocityX(playerData.flipMovementVelocity * xInput);
-            }
+            walkOnGrassSoundFXCooldownForState = playerData.walkOnGrassSoundFXCooldown;
         }
         else if(stateMachine.PreviousState == player.DashState)
         {
             lerpedAmount = 0f;
             elapsedTime = 0f;
             shouldAccel = true;
-            startingAccelSpeed = playerData.dashVelocity/1.5f;
-
-            if(Movement?.CurrentVelocity.x != playerData.dashVelocity/1.5f * xInput)
-            {
-                Movement?.SetVelocityX(playerData.dashVelocity/1.5f * xInput);
-            }
+            shouldAccelForSoundFX = true;
+            startingAccelSpeed = playerData.dashVelocity/2f;
+            walkOnGrassSoundFXCooldownForState = playerData.walkOnGrassSoundFXCooldown/3f;
+            startingSoundFXCooldown = walkOnGrassSoundFXCooldownForState;
         }
         else
         {
             shouldAccel = false;
-            if(Movement?.CurrentVelocity.x != playerData.movementVelocity * xInput)
-            {
-                Movement?.SetVelocityX(playerData.movementVelocity * xInput);
-            }
+            shouldAccelForSoundFX = false;
+            walkOnGrassSoundFXCooldownForState = playerData.walkOnGrassSoundFXCooldown;
         }
         
     }
@@ -111,6 +108,11 @@ public class PlayerMoveState : PlayerGroundedState
                     elapsedTime += Time.deltaTime;
                     lerpedAmount = Mathf.Lerp(startingAccelSpeed, playerData.movementVelocity, (elapsedTime/stateLength));
                     Movement?.SetVelocityX(lerpedAmount * xInput);
+
+                    if(shouldAccelForSoundFX)
+                    {
+                        walkOnGrassSoundFXCooldownForState = Mathf.Lerp(startingSoundFXCooldown, playerData.walkOnGrassSoundFXCooldown, (elapsedTime/stateLength));
+                    }
                 }
                 else
                 {
@@ -127,6 +129,20 @@ public class PlayerMoveState : PlayerGroundedState
                     Movement?.SetVelocityX(playerData.movementVelocity * xInput);
                 }
             }
+
+            if(player.isInStatueLevel)
+            {
+                if(playerData.walkOnGrassSoundFXTimer >= walkOnGrassSoundFXCooldownForState)
+                {
+                    SoundFXManager.instance.PlaySoundFXClip(playerData.walkOnGrassSoundFX, player.transform, 0.6f, 0.8f, 1.2f);
+                    playerData.walkOnGrassSoundFXTimer = 0f;
+                }
+                else
+                {
+                    playerData.walkOnGrassSoundFXTimer += Time.deltaTime;
+                }
+            }
+            
 
             
         }

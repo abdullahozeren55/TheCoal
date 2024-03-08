@@ -17,7 +17,7 @@ MonoBehaviour:
   flipMovementVelocity: 5.5
   flipTime: 0.13
   jumpVelocity: 15
-  amountOfJumps: 50
+  amountOfJumps: 2
   wallJumpVelocity: 18
   wallJumpTime: 0.4
   wallJumpComboTime: 0.3
@@ -46,3 +46,21 @@ MonoBehaviour:
   dashUnlocked: 1
   knockBackTime: 0.2
   uncollidableTimeAfterDashing: 0.2
+  walkOnGrassSoundFX:
+  - {fileID: 8300000, guid: 0b1fae4ee30b7ae47b74ee165f5292e4, type: 3}
+  - {fileID: 8300000, guid: 6114fa2f0de3dc14ca3d7614ae171aec, type: 3}
+  - {fileID: 8300000, guid: b7d12efa9d84c884fbb49de198faecab, type: 3}
+  - {fileID: 8300000, guid: 64a3c823660093840afaccb82e7f163b, type: 3}
+  - {fileID: 8300000, guid: ef8f8b94ef28e794c950bf82c39554ea, type: 3}
+  - {fileID: 8300000, guid: 171bd318f7456c1419d866a06c042f46, type: 3}
+  - {fileID: 8300000, guid: 35779ae16cffe9a4b9f77125cd7323c6, type: 3}
+  - {fileID: 8300000, guid: 939c664ebfe3ad34093c445d40af3728, type: 3}
+  jumpOnGrassSoundFX:
+  - {fileID: 8300000, guid: ff103ff4745fd884e89e33fbc09a994f, type: 3}
+  - {fileID: 8300000, guid: eb24989afd4788440a5894de4d300c99, type: 3}
+  landOnGrassSoundFX:
+  - {fileID: 8300000, guid: 3e8de6ce18dd9004fa51ab54601b3218, type: 3}
+  - {fileID: 8300000, guid: ae4a6cb723b071543861a832c2a9950c, type: 3}
+  dashSoundFX: {fileID: 8300000, guid: 3b95f019d0d71354e94c7f9f9b96f5ed, type: 3}
+  walkOnGrassSoundFXCooldown: 0.35
+  walkOnGrassSoundFXTimer: 0.0845469

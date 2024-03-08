@@ -36,6 +36,8 @@ public class Weapon : MonoBehaviour
             attackCounter = 0;
         }
 
+        SoundFXManager.instance.PlaySoundFXClip(weaponData.weaponNormalSoundFX, movement.transform, 0.7f, 0.5f, 1f);
+
         baseAnimator.SetBool("attack", true);
         weaponAnimator.SetBool("attack", true);
         eyesAnimator.SetBool("attack", true);
@@ -53,6 +55,8 @@ public class Weapon : MonoBehaviour
         {
             attackCounter = weaponData.amountOfAttacks - weaponData.amountOfAirAttacks;
         }
+
+        SoundFXManager.instance.PlaySoundFXClip(weaponData.weaponInAirSoundFX, movement.transform, 0.7f, 1.2f, 2f);
 
         baseAnimator.SetBool("attack", true);
         weaponAnimator.SetBool("attack", true);
@@ -72,6 +76,8 @@ public class Weapon : MonoBehaviour
             attackCounter = weaponData.amountOfAttacks - (weaponData.amountOfAirAttacks + weaponData.amountOfMoveHeavyAttacks + weaponData.amountOfMoveAttacks + weaponData.amountOfHeavyAttacks);
         }
 
+        SoundFXManager.instance.PlaySoundFXClip(weaponData.weaponHeavySoundFX, movement.transform, 0.7f, 0.5f, 1f);
+
         baseAnimator.SetBool("attack", true);
         weaponAnimator.SetBool("attack", true);
         eyesAnimator.SetBool("attack", true);
@@ -90,6 +96,8 @@ public class Weapon : MonoBehaviour
             attackCounter = weaponData.amountOfAttacks - (weaponData.amountOfAirAttacks + weaponData.amountOfMoveHeavyAttacks + weaponData.amountOfMoveAttacks);
         }
 
+        SoundFXManager.instance.PlaySoundFXClip(weaponData.weaponMoveSoundFX, movement.transform, 0.7f, 0.7f, 1.4f);
+
         baseAnimator.SetBool("attack", true);
         weaponAnimator.SetBool("attack", true);
         eyesAnimator.SetBool("attack", true);
@@ -107,6 +115,8 @@ public class Weapon : MonoBehaviour
         {
             attackCounter = weaponData.amountOfAttacks - (weaponData.amountOfAirAttacks + weaponData.amountOfMoveHeavyAttacks);
         }
+
+        SoundFXManager.instance.PlaySoundFXClip(weaponData.weaponMoveHeavySoundFX, movement.transform, 0.7f, 0.7f, 1.4f);
 
         baseAnimator.SetBool("attack", true);
         weaponAnimator.SetBool("attack", true);
@@ -128,11 +138,11 @@ public class Weapon : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void InitializeWeapon(PlayerAttackState state, Movement movement)
+    /*public void InitializeWeapon(PlayerAttackState state, Movement movement)
     {
         this.state = state;
         this.movement = movement;
-    }
+    }*/
 
     public virtual void AnimationFinishTrigger()
     {

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerFlipState : PlayerGroundedState
 {
+    private float elapsedTime;
+    private float lerpedAmount;
+    private float startingAccelSpeed;
     public PlayerFlipState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName, int normalMapMaterialForPlayer) : base(player, stateMachine, playerData, animBoolName, normalMapMaterialForPlayer)
     {
     }
@@ -14,10 +17,15 @@ public class PlayerFlipState : PlayerGroundedState
 
         Movement?.Flip();
 
-        if(Movement?.CurrentVelocity.x != playerData.flipMovementVelocity * xInput)
+        startingAccelSpeed = Mathf.Abs(Movement.CurrentVelocity.x/2f);
+
+        if(Movement?.CurrentVelocity.x != startingAccelSpeed * -Movement.FacingDirection)
         {
-            Movement?.SetVelocityX(playerData.flipMovementVelocity * xInput);
+            Movement?.SetVelocityX(startingAccelSpeed * -Movement.FacingDirection);
         }
+
+        lerpedAmount = 0f;
+        elapsedTime = 0f;
     }
 
     public override void LogicUpdate()
@@ -81,10 +89,12 @@ public class PlayerFlipState : PlayerGroundedState
         }
         else
         {
-            if(Movement?.CurrentVelocity.x != playerData.flipMovementVelocity * xInput)
-            {
-                Movement?.SetVelocityX(playerData.flipMovementVelocity * xInput);
-            }
+            if(elapsedTime <= playerData.flipTime)
+                {
+                    elapsedTime += Time.deltaTime;
+                    lerpedAmount = Mathf.Lerp(startingAccelSpeed * -Movement.FacingDirection, playerData.flipMovementVelocity * Movement.FacingDirection, (elapsedTime/playerData.flipTime));
+                    Movement?.SetVelocityX(lerpedAmount);
+                }
         }
     }
 }

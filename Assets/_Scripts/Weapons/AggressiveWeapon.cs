@@ -11,6 +11,7 @@ public class AggressiveWeapon : Weapon
     private List<IDamageable> detectedDamageables = new List<IDamageable>();
     private List<IKnockbackable> detectedKnockbackables = new List<IKnockbackable>();
     private List<IStunable> detectedStunables = new List<IStunable>();
+    private List<IDestroyable> detectedDestroyables = new List<IDestroyable>();
     private List<Vector2> contactPoints = new List<Vector2>();
 
     private bool doneInstantiate;
@@ -43,12 +44,13 @@ public class AggressiveWeapon : Weapon
         WeaponAttackDetails details = aggressiveWeaponData.AttackDetails[attackCounter];
         WeaponScreenShakeDetails shakeDetails = aggressiveWeaponData.ScreenShakeDetails[attackCounter];
 
+        if(detectedDamageables.ToList().Count >= 1)
+        {
+            state.hitEnemy = true;
+        }
+
         foreach (IDamageable item in detectedDamageables.ToList())
         {
-            if(detectedDamageables.ToList().Count >= 1)
-            {
-                state.hitEnemy = true;
-            }
             ShakeScreen(shakeDetails, impulseSource);
             item.Damage(details.damageAmount);
             foreach (Vector2 iteme in contactPoints.ToList())
@@ -72,11 +74,10 @@ public class AggressiveWeapon : Weapon
         {
             item.PoiseDamage(details.poiseDamageAmount);
         }
-
-        detectedDamageables.Clear();
-        contactPoints.Clear();
-        detectedKnockbackables.Clear();
-        detectedStunables.Clear();
+        foreach(IDestroyable item in detectedDestroyables.ToList())
+        {
+            item.Destroy();
+        }
     }
 
     public void AddToDetected(Collider2D collision)
@@ -103,6 +104,13 @@ public class AggressiveWeapon : Weapon
         if(stunable != null)
         {
             detectedStunables.Add(stunable);
+        }
+
+        IDestroyable destroyable = collision.GetComponent<IDestroyable>();
+
+        if(destroyable != null)
+        {
+            detectedDestroyables.Add(destroyable);
         }
         
     }
@@ -132,7 +140,29 @@ public class AggressiveWeapon : Weapon
         {
             detectedStunables.Remove(stunable);
         }
+
+        IDestroyable destroyable = collision.GetComponent<IDestroyable>();
+
+        if(destroyable != null)
+        {
+            detectedDestroyables.Remove(destroyable);
+        }
         
+    }
+
+    public void InitializeWeapon(PlayerAttackState state, Movement movement)
+    {
+        this.state = state;
+        this.movement = movement;
+    }
+
+    public void ClearLists()
+    {
+        detectedDamageables.Clear();
+        contactPoints.Clear();
+        detectedKnockbackables.Clear();
+        detectedStunables.Clear();
+        detectedDestroyables.Clear();
     }
 
     private void ShakeScreen(WeaponScreenShakeDetails screenShakeDetails, CinemachineImpulseSource impulseSource)

@@ -1,0 +1,542 @@
+fileFormatVersion: 2
+guid: b64c5b48e7473ef499a7695a44735f64
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6974805094959105103
+    second: Ambivalence_JumpUp_SFX_Foreground2_0
+  - first:
+      213: -4420786320346773875
+    second: Ambivalence_JumpUp_SFX_Foreground2_1
+  - first:
+      213: -1410848869685446052
+    second: Ambivalence_JumpUp_SFX_Foreground2_2
+  - first:
+      213: 5518687593595789505
+    second: Ambivalence_JumpUp_SFX_Foreground2_3
+  - first:
+      213: -9125695196166458138
+    second: Ambivalence_JumpUp_SFX_Foreground2_4
+  - first:
+      213: -925064654539959839
+    second: Ambivalence_JumpUp_SFX_Foreground2_5
+  - first:
+      213: -951402057931262281
+    second: Ambivalence_JumpUp_SFX_Foreground2_6
+  - first:
+      213: -8941308976713892836
+    second: Ambivalence_JumpUp_SFX_Foreground2_7
+  - first:
+      213: 1026934172770207729
+    second: Ambivalence_JumpUp_SFX_Foreground2_8
+  - first:
+      213: -7161048611736528123
+    second: Ambivalence_JumpUp_SFX_Foreground2_9
+  - first:
+      213: 8787772897726932321
+    second: Ambivalence_JumpUp_SFX_Foreground2_10
+  - first:
+      213: 7896464518424601828
+    second: Ambivalence_JumpUp_SFX_Foreground2_11
+  - first:
+      213: -8099019314635284987
+    second: Ambivalence_JumpUp_SFX_Foreground2_12
+  - first:
+      213: -4120126810900908413
+    second: Ambivalence_JumpUp_SFX_Foreground2_13
+  - first:
+      213: 8954660291269431655
+    second: Ambivalence_JumpUp_SFX_Foreground2_14
+  - first:
+      213: -8155603660431949799
+    second: Ambivalence_JumpUp_SFX_Foreground2_15
+  - first:
+      213: -839269794499151515
+    second: Ambivalence_JumpUp_SFX_Foreground2_16
+  - first:
+      213: -3970443310662337799
+    second: Ambivalence_JumpUp_SFX_Foreground2_17
+  - first:
+      213: -742038555757545697
+    second: Ambivalence_JumpUp_SFX_Foreground2_18
+  - first:
+      213: 1926151729097138221
+    second: Ambivalence_JumpUp_SFX_Foreground2_19
+  - first:
+      213: -9102494135927993552
+    second: Ambivalence_JumpUp_SFX_Foreground2_20
+  - first:
+      213: 8821511930041077812
+    second: Ambivalence_JumpUp_SFX_Foreground2_21
+  - first:
+      213: 1059754919741652506
+    second: Ambivalence_JumpUp_SFX_Foreground2_22
+  - first:
+      213: -560312828057597608
+    second: Ambivalence_JumpUp_SFX_Foreground2_23
+  - first:
+      213: -8613938798920587810
+    second: Ambivalence_JumpUp_SFX_Foreground2_24
+  - first:
+      213: -1057514003781564686
+    second: Ambivalence_JumpUp_SFX_Foreground2_25
+  - first:
+      213: 1055798391423422642
+    second: Ambivalence_JumpUp_SFX_Foreground2_26
+  - first:
+      213: -8170095813629776799
+    second: Ambivalence_JumpUp_SFX_Foreground2_27
+  - first:
+      213: -8011003129853848269
+    second: Ambivalence_JumpUp_SFX_Foreground2_28
+  - first:
+      213: 3360083536822431250
+    second: Ambivalence_JumpUp_SFX_Foreground2_29
+  - first:
+      213: 9009392153219750731
+    second: Ambivalence_JumpUp_SFX_Foreground2_30
+  - first:
+      213: -5569343656126461202
+    second: Ambivalence_JumpUp_SFX_Foreground2_31
+  - first:
+      213: -1651339558423656453
+    second: Ambivalence_JumpUp_SFX_Foreground2_32
+  - first:
+      213: -6585132053843099850
+    second: Ambivalence_JumpUp_SFX_Foreground2_33
+  - first:
+      213: -7675436257805001645
+    second: Ambivalence_JumpUp_SFX_Foreground2_34
+  - first:
+      213: -7607094499227803098
+    second: Ambivalence_JumpUp_SFX_Foreground2_35
+  - first:
+      213: -515496688332059733
+    second: Ambivalence_JumpUp_SFX_Foreground2_36
+  - first:
+      213: -678414573356340805
+    second: Ambivalence_JumpUp_SFX_Foreground2_37
+  - first:
+      213: -8589573626070635725
+    second: Ambivalence_JumpUp_SFX_Foreground2_38
+  - first:
+      213: 9030392263051810561
+    second: Ambivalence_JumpUp_SFX_Foreground2_39
+  - first:
+      213: -6600001260933498249
+    second: Ambivalence_JumpUp_SFX_Foreground2_40
+  - first:
+      213: 3224093614298335807
+    second: Ambivalence_JumpUp_SFX_Foreground2_41
+  - first:
+      213: 4982027585391496724
+    second: Ambivalence_JumpUp_SFX_Foreground2_42
+  - first:
+      213: 1869296086339660393
+    second: Ambivalence_JumpUp_SFX_Foreground2_43
+  - first:
+      213: 1509338576025781667
+    second: Ambivalence_JumpUp_SFX_Foreground2_44
+  - first:
+      213: -3217338427451322531
+    second: Ambivalence_JumpUp_SFX_Foreground2_45
+  - first:
+      213: -2593530435444179759
+    second: Ambivalence_JumpUp_SFX_Foreground2_46
+  - first:
+      213: -9150549382276552162
+    second: Ambivalence_JumpUp_SFX_Foreground2_47
+  - first:
+      213: -568966064885305081
+    second: Ambivalence_JumpUp_SFX_Foreground2_48
+  - first:
+      213: -3137550416388505797
+    second: Ambivalence_JumpUp_SFX_Foreground2_49
+  - first:
+      213: -7118489035566163986
+    second: Ambivalence_JumpUp_SFX_Foreground2_50
+  - first:
+      213: -4290634014926176591
+    second: Ambivalence_JumpUp_SFX_Foreground2_51
+  - first:
+      213: -2852455163888745743
+    second: Ambivalence_JumpUp_SFX_Foreground2_52
+  - first:
+      213: -2297460668290411889
+    second: Ambivalence_JumpUp_SFX_Foreground2_53
+  - first:
+      213: 2989902830786163653
+    second: Ambivalence_JumpUp_SFX_Foreground2_54
+  - first:
+      213: -678720438602671361
+    second: Ambivalence_JumpUp_SFX_Foreground2_55
+  - first:
+      213: 8027425514831653699
+    second: Ambivalence_JumpUp_SFX_Foreground2_56
+  - first:
+      213: -843536964367891491
+    second: Ambivalence_JumpUp_SFX_Foreground2_57
+  - first:
+      213: -7383040265453560113
+    second: Ambivalence_JumpUp_SFX_Foreground2_58
+  - first:
+      213: 346428052000487595
+    second: Ambivalence_JumpUp_SFX_Foreground2_59
+  - first:
+      213: 1287262775576611632
+    second: Ambivalence_JumpUp_SFX_Foreground2_60
+  - first:
+      213: -792560263712267384
+    second: Ambivalence_JumpUp_SFX_Foreground2_61
+  - first:
+      213: 6285158939617522870
+    second: Ambivalence_JumpUp_SFX_Foreground2_62
+  - first:
+      213: 3387585265242874117
+    second: Ambivalence_JumpUp_SFX_Foreground2_63
+  - first:
+      213: -6596107931807975554
+    second: Ambivalence_JumpUp_SFX_Foreground2_64
+  - first:
+      213: 4493778734126630041
+    second: Ambivalence_JumpUp_SFX_Foreground2_65
+  - first:
+      213: 2736118974148573780
+    second: Ambivalence_JumpUp_SFX_Foreground2_66
+  - first:
+      213: -8391002252286596003
+    second: Ambivalence_JumpUp_SFX_Foreground2_67
+  - first:
+      213: 8200055781628239560
+    second: Ambivalence_JumpUp_SFX_Foreground2_68
+  - first:
+      213: 608711000046774756
+    second: Ambivalence_JumpUp_SFX_Foreground2_69
+  - first:
+      213: 6757270067501517072
+    second: Ambivalence_JumpUp_SFX_Foreground2_70
+  - first:
+      213: -2726315045437686667
+    second: Ambivalence_JumpUp_SFX_Foreground2_71
+  - first:
+      213: -533739624376467148
+    second: Ambivalence_JumpUp_SFX_Foreground2_72
+  - first:
+      213: -2039122755414969897
+    second: Ambivalence_JumpUp_SFX_Foreground2_73
+  - first:
+      213: 3554700297586753448
+    second: Ambivalence_JumpUp_SFX_Foreground2_74
+  - first:
+      213: 2438183868599000337
+    second: Ambivalence_JumpUp_SFX_Foreground2_75
+  - first:
+      213: 3860603745605387892
+    second: Ambivalence_JumpUp_SFX_Foreground2_76
+  - first:
+      213: -3203603361414172767
+    second: Ambivalence_JumpUp_SFX_Foreground2_77
+  - first:
+      213: 4159871086083972754
+    second: Ambivalence_JumpUp_SFX_Foreground2_78
+  - first:
+      213: -3027756601283501045
+    second: Ambivalence_JumpUp_SFX_Foreground2_79
+  - first:
+      213: -5908840764954524602
+    second: Ambivalence_JumpUp_SFX_Foreground2_80
+  - first:
+      213: -7106038426243296225
+    second: Ambivalence_JumpUp_SFX_Foreground2_81
+  - first:
+      213: -6871641993159069494
+    second: Ambivalence_JumpUp_SFX_Foreground2_82
+  - first:
+      213: -1965052624913062874
+    second: Ambivalence_JumpUp_SFX_Foreground2_83
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ambivalence_JumpUp_SFX_Foreground2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f444f9e974c7bc060800000000000000
+      internalID: 6974805094959105103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_JumpUp_SFX_Foreground2_1
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8603d3934636a2c0800000000000000
+      internalID: -4420786320346773875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_JumpUp_SFX_Foreground2_2
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5a33a29d68ab6ce0800000000000000
+      internalID: -1410848869685446052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_JumpUp_SFX_Foreground2_3
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c0e1aa8021569c40800000000000000
+      internalID: 5518687593595789505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_JumpUp_SFX_Foreground2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e47200b1940b5180800000000000000
+      internalID: -9125695196166458138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_JumpUp_SFX_Foreground2_5
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 0
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e150ef09928923f0800000000000000
+      internalID: -925064654539959839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_JumpUp_SFX_Foreground2_6
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 0
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b67e6a7ed0fbc2f0800000000000000
+      internalID: -951402057931262281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_JumpUp_SFX_Foreground2_7
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 0
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1cf4f7dbd61ae380800000000000000
+      internalID: -8941308976713892836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e66aecb486b9f564ea9a9a0f03dd0ae8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Ambivalence_JumpUp_SFX_Foreground2_0: 6974805094959105103
+      Ambivalence_JumpUp_SFX_Foreground2_1: -4420786320346773875
+      Ambivalence_JumpUp_SFX_Foreground2_2: -1410848869685446052
+      Ambivalence_JumpUp_SFX_Foreground2_3: 5518687593595789505
+      Ambivalence_JumpUp_SFX_Foreground2_4: -9125695196166458138
+      Ambivalence_JumpUp_SFX_Foreground2_5: -925064654539959839
+      Ambivalence_JumpUp_SFX_Foreground2_6: -951402057931262281
+      Ambivalence_JumpUp_SFX_Foreground2_7: -8941308976713892836
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

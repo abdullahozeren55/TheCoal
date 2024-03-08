@@ -1,0 +1,587 @@
+fileFormatVersion: 2
+guid: 02eacabac8597364fb2ced2b3ffa99ce
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 877035671619014877
+    second: Ambivalence_Idle_Eyes_Foreground2_0
+  - first:
+      213: 2743991448766815096
+    second: Ambivalence_Idle_Eyes_Foreground2_1
+  - first:
+      213: -373902858973753576
+    second: Ambivalence_Idle_Eyes_Foreground2_2
+  - first:
+      213: 1918923797137127322
+    second: Ambivalence_Idle_Eyes_Foreground2_3
+  - first:
+      213: 5248529472214263560
+    second: Ambivalence_Idle_Eyes_Foreground2_4
+  - first:
+      213: -7466745857850163102
+    second: Ambivalence_Idle_Eyes_Foreground2_5
+  - first:
+      213: 4152002541106415497
+    second: Ambivalence_Idle_Eyes_Foreground2_6
+  - first:
+      213: -8507334764693945129
+    second: Ambivalence_Idle_Eyes_Foreground2_7
+  - first:
+      213: -3309123760415153834
+    second: Ambivalence_Idle_Eyes_Foreground2_8
+  - first:
+      213: 4944082324914767646
+    second: Ambivalence_Idle_Eyes_Foreground2_9
+  - first:
+      213: -1762907955326132706
+    second: Ambivalence_Idle_Eyes_Foreground2_10
+  - first:
+      213: 8314803728826579205
+    second: Ambivalence_Idle_Eyes_Foreground2_11
+  - first:
+      213: 240723945094814131
+    second: Ambivalence_Idle_Eyes_Foreground2_12
+  - first:
+      213: -2805511273145728474
+    second: Ambivalence_Idle_Eyes_Foreground2_13
+  - first:
+      213: 4461303053282837358
+    second: Ambivalence_Idle_Eyes_Foreground2_14
+  - first:
+      213: -6023980434310261870
+    second: Ambivalence_Idle_Eyes_Foreground2_15
+  - first:
+      213: 348993799226077361
+    second: Ambivalence_Idle_Eyes_Foreground2_16
+  - first:
+      213: 1541772704430706976
+    second: Ambivalence_Idle_Eyes_Foreground2_17
+  - first:
+      213: 576542260804961817
+    second: Ambivalence_Idle_Eyes_Foreground2_18
+  - first:
+      213: -6283509935774123468
+    second: Ambivalence_Idle_Eyes_Foreground2_19
+  - first:
+      213: -7444713232490996407
+    second: Ambivalence_Idle_Eyes_Foreground2_20
+  - first:
+      213: 8092051625140747816
+    second: Ambivalence_Idle_Eyes_Foreground2_21
+  - first:
+      213: -4482033720417423224
+    second: Ambivalence_Idle_Eyes_Foreground2_22
+  - first:
+      213: -2870977674008103077
+    second: Ambivalence_Idle_Eyes_Foreground2_23
+  - first:
+      213: -4825864952185660792
+    second: Ambivalence_Idle_Eyes_Foreground2_24
+  - first:
+      213: -9005433125414258213
+    second: Ambivalence_Idle_Eyes_Foreground2_25
+  - first:
+      213: -1715249962629624732
+    second: Ambivalence_Idle_Eyes_Foreground2_26
+  - first:
+      213: -451620040362518849
+    second: Ambivalence_Idle_Eyes_Foreground2_27
+  - first:
+      213: -2731781878002180365
+    second: Ambivalence_Idle_Eyes_Foreground2_28
+  - first:
+      213: 6824501910982769149
+    second: Ambivalence_Idle_Eyes_Foreground2_29
+  - first:
+      213: 2173919081040599
+    second: Ambivalence_Idle_Eyes_Foreground2_30
+  - first:
+      213: 8245240381243270506
+    second: Ambivalence_Idle_Eyes_Foreground2_31
+  - first:
+      213: -1076136814076711517
+    second: Ambivalence_Idle_Eyes_Foreground2_32
+  - first:
+      213: 706472100740400957
+    second: Ambivalence_Idle_Eyes_Foreground2_33
+  - first:
+      213: 2487350099047193386
+    second: Ambivalence_Idle_Eyes_Foreground2_34
+  - first:
+      213: -3962491504111550931
+    second: Ambivalence_Idle_Eyes_Foreground2_35
+  - first:
+      213: 6483703853002165888
+    second: Ambivalence_Idle_Eyes_Foreground2_36
+  - first:
+      213: -1659658902961732585
+    second: Ambivalence_Idle_Eyes_Foreground2_37
+  - first:
+      213: 5515059271477689976
+    second: Ambivalence_Idle_Eyes_Foreground2_38
+  - first:
+      213: -6019438290211809749
+    second: Ambivalence_Idle_Eyes_Foreground2_39
+  - first:
+      213: -1457310564355505550
+    second: Ambivalence_Idle_Eyes_Foreground2_40
+  - first:
+      213: 1562849576155079104
+    second: Ambivalence_Idle_Eyes_Foreground2_41
+  - first:
+      213: 4526267155116792615
+    second: Ambivalence_Idle_Eyes_Foreground2_42
+  - first:
+      213: -4591223158382533794
+    second: Ambivalence_Idle_Eyes_Foreground2_43
+  - first:
+      213: -1058433369640189542
+    second: Ambivalence_Idle_Eyes_Foreground2_44
+  - first:
+      213: -6672096418200064401
+    second: Ambivalence_Idle_Eyes_Foreground2_45
+  - first:
+      213: -4514062712293600508
+    second: Ambivalence_Idle_Eyes_Foreground2_46
+  - first:
+      213: -1275546874989721500
+    second: Ambivalence_Idle_Eyes_Foreground2_47
+  - first:
+      213: -2559661010271909934
+    second: Ambivalence_Idle_Eyes_Foreground2_48
+  - first:
+      213: 2797618154157681876
+    second: Ambivalence_Idle_Eyes_Foreground2_49
+  - first:
+      213: -530888400681682959
+    second: Ambivalence_Idle_Eyes_Foreground2_50
+  - first:
+      213: 5558935172182186392
+    second: Ambivalence_Idle_Eyes_Foreground2_51
+  - first:
+      213: -1210910266291876779
+    second: Ambivalence_Idle_Eyes_Foreground2_52
+  - first:
+      213: 7188101916663289324
+    second: Ambivalence_Idle_Eyes_Foreground2_53
+  - first:
+      213: -5334769019417934649
+    second: Ambivalence_Idle_Eyes_Foreground2_54
+  - first:
+      213: 199345099914205968
+    second: Ambivalence_Idle_Eyes_Foreground2_55
+  - first:
+      213: 7000762742244531209
+    second: Ambivalence_Idle_Eyes_Foreground2_56
+  - first:
+      213: -8494522273300939183
+    second: Ambivalence_Idle_Eyes_Foreground2_57
+  - first:
+      213: 1109088052196140763
+    second: Ambivalence_Idle_Eyes_Foreground2_58
+  - first:
+      213: 2688803734289879992
+    second: Ambivalence_Idle_Eyes_Foreground2_59
+  - first:
+      213: -4238613358885605359
+    second: Ambivalence_Idle_Eyes_Foreground2_60
+  - first:
+      213: 2079016333394805530
+    second: Ambivalence_Idle_Eyes_Foreground2_61
+  - first:
+      213: -1846496898217801762
+    second: Ambivalence_Idle_Eyes_Foreground2_62
+  - first:
+      213: -8754323825064083246
+    second: Ambivalence_Idle_Eyes_Foreground2_63
+  - first:
+      213: -5323982212180676649
+    second: Ambivalence_Idle_Eyes_Foreground2_64
+  - first:
+      213: -2510962828270693410
+    second: Ambivalence_Idle_Eyes_Foreground2_65
+  - first:
+      213: 6855089062325895378
+    second: Ambivalence_Idle_Eyes_Foreground2_66
+  - first:
+      213: -7400836907612404277
+    second: Ambivalence_Idle_Eyes_Foreground2_67
+  - first:
+      213: -7229072135736805374
+    second: Ambivalence_Idle_Eyes_Foreground2_68
+  - first:
+      213: 1028238230239295083
+    second: Ambivalence_Idle_Eyes_Foreground2_69
+  - first:
+      213: -2105311219593021473
+    second: Ambivalence_Idle_Eyes_Foreground2_70
+  - first:
+      213: 5188117070006141082
+    second: Ambivalence_Idle_Eyes_Foreground2_71
+  - first:
+      213: 3392658615940604959
+    second: Ambivalence_Idle_Eyes_Foreground2_72
+  - first:
+      213: 510561644753517808
+    second: Ambivalence_Idle_Eyes_Foreground2_73
+  - first:
+      213: 61842180383883263
+    second: Ambivalence_Idle_Eyes_Foreground2_74
+  - first:
+      213: -3935608274765347776
+    second: Ambivalence_Idle_Eyes_Foreground2_75
+  - first:
+      213: -4417583420355807449
+    second: Ambivalence_Idle_Eyes_Foreground2_76
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ambivalence_Idle_Eyes_Foreground2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd0923eeb4bdb2c00800000000000000
+      internalID: 877035671619014877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Idle_Eyes_Foreground2_1
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87b94723fad941620800000000000000
+      internalID: 2743991448766815096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Idle_Eyes_Foreground2_2
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81fcd5ea451afcaf0800000000000000
+      internalID: -373902858973753576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Idle_Eyes_Foreground2_3
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a97f66fc60361aa10800000000000000
+      internalID: 1918923797137127322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Idle_Eyes_Foreground2_4
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807ef704fb586d840800000000000000
+      internalID: 5248529472214263560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Idle_Eyes_Foreground2_5
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 260c8bae33ac06890800000000000000
+      internalID: -7466745857850163102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Idle_Eyes_Foreground2_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987ca291050ee9930800000000000000
+      internalID: 4152002541106415497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Idle_Eyes_Foreground2_7
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 0
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d40615fa10efe980800000000000000
+      internalID: -8507334764693945129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Idle_Eyes_Foreground2_8
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 0
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65166aee871a312d0800000000000000
+      internalID: -3309123760415153834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Idle_Eyes_Foreground2_9
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 0
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1705dcfda8ec9440800000000000000
+      internalID: 4944082324914767646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Idle_Eyes_Foreground2_10
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 0
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1e531f0e84e887e0800000000000000
+      internalID: -1762907955326132706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6655beeb0588ad64d86d09d83016917c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Ambivalence_Idle_Eyes_Foreground2_0: 877035671619014877
+      Ambivalence_Idle_Eyes_Foreground2_1: 2743991448766815096
+      Ambivalence_Idle_Eyes_Foreground2_10: -1762907955326132706
+      Ambivalence_Idle_Eyes_Foreground2_2: -373902858973753576
+      Ambivalence_Idle_Eyes_Foreground2_3: 1918923797137127322
+      Ambivalence_Idle_Eyes_Foreground2_4: 5248529472214263560
+      Ambivalence_Idle_Eyes_Foreground2_5: -7466745857850163102
+      Ambivalence_Idle_Eyes_Foreground2_6: 4152002541106415497
+      Ambivalence_Idle_Eyes_Foreground2_7: -8507334764693945129
+      Ambivalence_Idle_Eyes_Foreground2_8: -3309123760415153834
+      Ambivalence_Idle_Eyes_Foreground2_9: 4944082324914767646
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

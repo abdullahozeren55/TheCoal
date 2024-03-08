@@ -18,11 +18,6 @@ public class PlayerStartMovingState : PlayerGroundedState
     {
         base.Enter();
 
-        if(Movement?.CurrentVelocity.x != playerData.startMovementVelocity * xInput)
-        {
-            Movement?.SetVelocityX(playerData.startMovementVelocity * xInput);
-        }
-
         lerpedAmount = 0f;
         elapsedTime = 0f;
     }
@@ -86,6 +81,19 @@ public class PlayerStartMovingState : PlayerGroundedState
                 elapsedTime += Time.deltaTime;
                 lerpedAmount = Mathf.Lerp(playerData.startMovementVelocity, playerData.movementVelocity, (elapsedTime/stateLength));
                 Movement?.SetVelocityX(lerpedAmount * xInput);
+            }
+
+            if(player.isInStatueLevel)
+            {
+                if(playerData.walkOnGrassSoundFXTimer >= playerData.walkOnGrassSoundFXCooldown)
+                {
+                    SoundFXManager.instance.PlaySoundFXClip(playerData.walkOnGrassSoundFX, player.transform, 0.6f, 0.8f, 1.2f);
+                    playerData.walkOnGrassSoundFXTimer = 0f;
+                }
+                else
+                {
+                    playerData.walkOnGrassSoundFXTimer += Time.deltaTime;
+                }
             }
         }
         

@@ -12,7 +12,7 @@ public class PlantExternalVelocityTrigger : MonoBehaviour
     private bool easeOutCoroutineRunning;
 
     private int externalInfluence = Shader.PropertyToID("_ExternalInfluence");
-    private float startingXVelocity;
+    private float startingXVelocity = 1f;
     private float velocityLastFrame;
 
     private void Start()
@@ -21,14 +21,27 @@ public class PlantExternalVelocityTrigger : MonoBehaviour
         playerRB = player.GetComponent<Rigidbody2D>();
         plantVelocityController = GetComponentInParent<PlantVelocityController>();
         material = GetComponent<SpriteRenderer>().material;
-        startingXVelocity = material.GetFloat(externalInfluence);
+
+        material.SetFloat(plantVelocityController.windIntensity, 0f);
+        material.SetFloat(plantVelocityController.windScale, 0f);
+        material.SetFloat(plantVelocityController.windSpeed, 0f);
+    }
+
+    void Update()
+    {
+        if(!easeInCoroutineRunning && !easeOutCoroutineRunning && material.GetFloat(externalInfluence) == startingXVelocity)
+        {
+            material.SetFloat(plantVelocityController.windIntensity, 0f);
+            material.SetFloat(plantVelocityController.windScale, 0f);
+            material.SetFloat(plantVelocityController.windSpeed, 0f);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject == player)
         {
-            if(!easeInCoroutineRunning && Mathf.Abs(playerRB.velocityX) > Mathf.Abs(plantVelocityController.VelocityThreshold))
+            if(!easeInCoroutineRunning && !easeOutCoroutineRunning && Mathf.Abs(playerRB.velocityX) > Mathf.Abs(plantVelocityController.VelocityThreshold))
             {
                 StartCoroutine(EaseIn(playerRB.velocityX * plantVelocityController.ExternalInfluenceStrength));
             }
@@ -40,20 +53,17 @@ public class PlantExternalVelocityTrigger : MonoBehaviour
         if(other.gameObject == player)
         {
 
-            if(Mathf.Abs(velocityLastFrame) > Mathf.Abs(plantVelocityController.VelocityThreshold) &&
-               Mathf.Abs(playerRB.velocityX) < Mathf.Abs(plantVelocityController.VelocityThreshold))
+            if(!easeOutCoroutineRunning && !easeOutCoroutineRunning &&
+                Mathf.Abs(velocityLastFrame) > Mathf.Abs(plantVelocityController.VelocityThreshold) &&
+                Mathf.Abs(playerRB.velocityX) < Mathf.Abs(plantVelocityController.VelocityThreshold))
             {
                 StartCoroutine(EaseOut());
             }
-            else if(Mathf.Abs(velocityLastFrame) < Mathf.Abs(plantVelocityController.VelocityThreshold) &&
+            else if(!easeInCoroutineRunning && !easeOutCoroutineRunning &&
+                    Mathf.Abs(velocityLastFrame) < Mathf.Abs(plantVelocityController.VelocityThreshold) &&
                     Mathf.Abs(playerRB.velocityX) > Mathf.Abs(plantVelocityController.VelocityThreshold))
             {
                 StartCoroutine(EaseIn(playerRB.velocityX * plantVelocityController.ExternalInfluenceStrength));
-            }
-            else if(!easeInCoroutineRunning && !easeOutCoroutineRunning && 
-                    Mathf.Abs(playerRB.velocityX) > Mathf.Abs(plantVelocityController.VelocityThreshold))
-            {
-                plantVelocityController.InfluencePlant(material, playerRB.velocityX * plantVelocityController.ExternalInfluenceStrength);
             }
 
             velocityLastFrame = playerRB.velocityX;
@@ -71,6 +81,10 @@ public class PlantExternalVelocityTrigger : MonoBehaviour
     private IEnumerator EaseIn(float XVelocity)
     {
         easeInCoroutineRunning = true;
+
+        material.SetFloat(plantVelocityController.windIntensity, plantVelocityController.windIntensityValue);
+        material.SetFloat(plantVelocityController.windScale, plantVelocityController.windScaleValue);
+        material.SetFloat(plantVelocityController.windSpeed, plantVelocityController.windSpeedValue);
 
         float elapsedTime = 0f;
         while(elapsedTime < plantVelocityController.EaseInTime)
@@ -90,6 +104,10 @@ public class PlantExternalVelocityTrigger : MonoBehaviour
     {
         easeOutCoroutineRunning = true;
 
+        material.SetFloat(plantVelocityController.windIntensity, plantVelocityController.windIntensityValue);
+        material.SetFloat(plantVelocityController.windScale, plantVelocityController.windScaleValue);
+        material.SetFloat(plantVelocityController.windSpeed, plantVelocityController.windSpeedValue);
+
         float currentXInfluence = material.GetFloat(externalInfluence);
 
         float elapsedTime = 0f;
@@ -105,5 +123,4 @@ public class PlantExternalVelocityTrigger : MonoBehaviour
 
         easeOutCoroutineRunning = false;
     }
-
 }

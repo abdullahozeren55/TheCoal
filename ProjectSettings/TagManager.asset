@@ -31,13 +31,13 @@ TagManager:
   - Weapon
   - SlopeCollider
   - SlopeLeft
-  - Collideable Wood Enemies
-  - Collideable Stone Enemies
-  - Uncollideable Wood Enemies
-  - Uncollideable Stone Enemies
+  - Collidable Wood Enemies
+  - Collidable Stone Enemies
+  - Uncollidable Wood Enemies
+  - Uncollidable Stone Enemies
   - DashingPlayer
-  - 
-  - 
+  - Uncollidable Destroyables
+  - Collidable Destroyables
   - 
   - 
   - 

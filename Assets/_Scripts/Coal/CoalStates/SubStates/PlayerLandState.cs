@@ -18,6 +18,11 @@ public class PlayerLandState : PlayerGroundedState
     {
         base.Enter();
 
+        if(player.isInStatueLevel)
+        {
+            SoundFXManager.instance.PlaySoundFXClip(playerData.landOnGrassSoundFX, player.transform, 0.5f, 0.8f, 1.2f);
+        }
+
         if(Movement?.CurrentVelocity.x != 0f)
         {
             Movement?.SetVelocityX(0f);
@@ -60,6 +65,8 @@ public class PlayerLandState : PlayerGroundedState
         }
         else if (xInput == Movement?.FacingDirection && !isTouchingWall)
         {
+            playerData.walkOnGrassSoundFXTimer = playerData.walkOnGrassSoundFXCooldown + 0.1f;
+
             if(landScarfUp)
             {
                 stateMachine.ChangeState(player.MoveState);

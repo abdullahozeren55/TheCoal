@@ -19,6 +19,12 @@ public class PlayerJumpState : PlayerAbilityState
     public override void Enter()
     {
         base.Enter();
+
+        if(player.isInStatueLevel && (isGrounded || isOnSlope))
+        {
+            SoundFXManager.instance.PlaySoundFXClip(playerData.jumpOnGrassSoundFX, player.transform, 0.5f, 0.8f, 1.2f);
+        }
+
         player.InputHandler.UseJumpInput();
         Movement?.SetVelocityY(playerData.jumpVelocity);
         isAbilityDone = true;

@@ -59,4 +59,13 @@ public class PlayerData : ScriptableObject
     
     public float knockBackTime = 0.2f;
     public float uncollidableTimeAfterDashing = 0.3f;
+
+    [Header("Sound Effects")]
+
+    public AudioClip[] walkOnGrassSoundFX;
+    public AudioClip[] jumpOnGrassSoundFX;
+    public AudioClip[] landOnGrassSoundFX;
+    public AudioClip dashSoundFX;
+    public float walkOnGrassSoundFXCooldown = 0.3f;
+    [HideInInspector] public float walkOnGrassSoundFXTimer = 0f;
 }

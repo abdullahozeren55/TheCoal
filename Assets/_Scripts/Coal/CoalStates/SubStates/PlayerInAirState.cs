@@ -33,8 +33,6 @@ public class PlayerInAirState : PlayerState
     private bool coyoteTime;
     private bool wallHoldCoyoteTime;
     public bool shouldInstantiateAirJumpPrefab;
-
-    private float startWallJumpCoyoteTime;
     private float startWallHoldCoyoteTime;
 
     private float elapsedTime;
@@ -73,7 +71,11 @@ public class PlayerInAirState : PlayerState
     {
         base.Enter();
 
-        StartCoyoteTime();
+        if((stateMachine.PreviousState == player.IdleState || stateMachine.PreviousState == player.MoveState || stateMachine.PreviousState == player.StartMovingState || stateMachine.PreviousState == player.StopMovingState || stateMachine.PreviousState == player.LandState || stateMachine.PreviousState == player.FlipState))
+        {
+            StartCoyoteTime();
+        }
+
 
         if(stateMachine.PreviousState == player.DashState)
         {
@@ -149,6 +151,13 @@ public class PlayerInAirState : PlayerState
             
             if(xInput != 0 && !isTouchingWall)
             {
+                playerData.walkOnGrassSoundFXTimer = playerData.walkOnGrassSoundFXCooldown + 0.1f;
+
+                if(player.isInStatueLevel)
+                {
+                    SoundFXManager.instance.PlaySoundFXClip(playerData.landOnGrassSoundFX, player.transform, 0.5f, 0.8f, 1.2f);
+                }
+
                 stateMachine.ChangeState(player.MoveState);
             }
             else
@@ -168,7 +177,14 @@ public class PlayerInAirState : PlayerState
                 ParticleManager?.StartParticles(player.airJumpParticle, player.feetParticlePoint.position, Quaternion.identity);
             }
             
-            coyoteTime = false;
+            if(coyoteTime)
+            {
+                if(player.isInStatueLevel)
+                {
+                    SoundFXManager.instance.PlaySoundFXClip(playerData.jumpOnGrassSoundFX, player.transform, 0.5f, 0.8f, 1.2f);
+                }
+                coyoteTime = false;
+            }
             shouldInstantiateAirJumpPrefab = true;
 			stateMachine.ChangeState(player.JumpState);
         }
@@ -254,7 +270,7 @@ public class PlayerInAirState : PlayerState
         {
 			coyoteTime = false;
             shouldInstantiateAirJumpPrefab = true;
-            if((stateMachine.PreviousState == player.IdleState || stateMachine.PreviousState == player.MoveState || stateMachine.PreviousState == player.StartMovingState || stateMachine.PreviousState == player.StopMovingState || stateMachine.PreviousState == player.LandState) && stateMachine.CurrentState != player.LedgeClimbState)
+            if((stateMachine.PreviousState == player.IdleState || stateMachine.PreviousState == player.MoveState || stateMachine.PreviousState == player.StartMovingState || stateMachine.PreviousState == player.StopMovingState || stateMachine.PreviousState == player.LandState || stateMachine.PreviousState == player.FlipState))
             {
 			    player.JumpState.DecreaseAmountOfJumpsLeft();
             }

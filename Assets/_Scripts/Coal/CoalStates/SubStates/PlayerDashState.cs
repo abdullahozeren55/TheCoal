@@ -26,6 +26,8 @@ public class PlayerDashState : PlayerAbilityState
         player.gameObject.layer = LayerMask.NameToLayer("DashingPlayer");
         player.gameObject.tag = "DashingPlayer";
 
+        SoundFXManager.instance.PlaySoundFXClip(playerData.dashSoundFX, player.transform, 1.2f, 1.3f, 2f);
+
         CanDash = false;
         player.InputHandler.UseDashInput();
 
@@ -109,6 +111,23 @@ public class PlayerDashState : PlayerAbilityState
                 Movement?.SetVelocityY(0f);
             }
             CheckIfShouldPlaceAfterImage();
+
+            if(isGrounded || isOnSlope)
+            {
+                if(player.isInStatueLevel)
+                {
+                    if(playerData.walkOnGrassSoundFXTimer >= playerData.walkOnGrassSoundFXCooldown/3f)
+                    {
+                        SoundFXManager.instance.PlaySoundFXClip(playerData.walkOnGrassSoundFX, player.transform, 0.6f, 0.8f, 1.2f);
+                        playerData.walkOnGrassSoundFXTimer = 0f;
+                    }
+                    else
+                    {
+                        playerData.walkOnGrassSoundFXTimer += Time.deltaTime;
+                    }
+                }
+            }
+            
         }
     }
 

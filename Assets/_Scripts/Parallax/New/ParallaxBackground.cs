@@ -34,6 +34,11 @@ public class ParallaxBackground : MonoBehaviour
         }
     }
 
+    public void RemoveLayer(ParallaxLayer layer)
+    {
+        parallaxLayers.Remove(layer);
+    }
+
     void Move(float delta)
     {
         foreach (ParallaxLayer layer in parallaxLayers)

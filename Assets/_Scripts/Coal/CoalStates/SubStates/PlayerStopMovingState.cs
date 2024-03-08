@@ -22,11 +22,6 @@ public class PlayerStopMovingState : PlayerGroundedState
 
         startingAccelSpeed = Mathf.Abs(Movement.CurrentVelocity.x/2f);
 
-        if(Movement?.CurrentVelocity.x != startingAccelSpeed * Movement.FacingDirection)
-        {
-            Movement?.SetVelocityX(startingAccelSpeed * Movement.FacingDirection);
-        }
-
         lerpedAmount = 0f;
         elapsedTime = 0f;
     }

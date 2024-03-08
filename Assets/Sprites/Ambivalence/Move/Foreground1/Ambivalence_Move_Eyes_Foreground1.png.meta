@@ -1,0 +1,651 @@
+fileFormatVersion: 2
+guid: 811e7f862f60dd4439018e15a02baf20
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6703431845816091123
+    second: Ambivalence_Move_Eyes_Foreground1_0
+  - first:
+      213: 2696839419563260407
+    second: Ambivalence_Move_Eyes_Foreground1_1
+  - first:
+      213: 2476387523178896404
+    second: Ambivalence_Move_Eyes_Foreground1_2
+  - first:
+      213: -7240855313392721889
+    second: Ambivalence_Move_Eyes_Foreground1_3
+  - first:
+      213: -5279231120902738927
+    second: Ambivalence_Move_Eyes_Foreground1_4
+  - first:
+      213: 5582612831880680203
+    second: Ambivalence_Move_Eyes_Foreground1_5
+  - first:
+      213: -5828457332520496166
+    second: Ambivalence_Move_Eyes_Foreground1_6
+  - first:
+      213: -3267391522276508780
+    second: Ambivalence_Move_Eyes_Foreground1_7
+  - first:
+      213: -2451114420162155639
+    second: Ambivalence_Move_Eyes_Foreground1_8
+  - first:
+      213: -6957799933551158384
+    second: Ambivalence_Move_Eyes_Foreground1_9
+  - first:
+      213: 927053084859460390
+    second: Ambivalence_Move_Eyes_Foreground1_10
+  - first:
+      213: -2818851057636995765
+    second: Ambivalence_Move_Eyes_Foreground1_11
+  - first:
+      213: -1938016667021503987
+    second: Ambivalence_Move_Eyes_Foreground1_12
+  - first:
+      213: -5200112164032880672
+    second: Ambivalence_Move_Eyes_Foreground1_13
+  - first:
+      213: -1044680307027167954
+    second: Ambivalence_Move_Eyes_Foreground1_14
+  - first:
+      213: -7849633048031553577
+    second: Ambivalence_Move_Eyes_Foreground1_15
+  - first:
+      213: 7374592201015302837
+    second: Ambivalence_Move_Eyes_Foreground1_16
+  - first:
+      213: -7269023377481759251
+    second: Ambivalence_Move_Eyes_Foreground1_17
+  - first:
+      213: -8975906298015855136
+    second: Ambivalence_Move_Eyes_Foreground1_18
+  - first:
+      213: -4689685228613149978
+    second: Ambivalence_Move_Eyes_Foreground1_19
+  - first:
+      213: 5444948439214754358
+    second: Ambivalence_Move_Eyes_Foreground1_20
+  - first:
+      213: -8020390060652047399
+    second: Ambivalence_Move_Eyes_Foreground1_21
+  - first:
+      213: -8312231138884489000
+    second: Ambivalence_Move_Eyes_Foreground1_22
+  - first:
+      213: 3422971438946631030
+    second: Ambivalence_Move_Eyes_Foreground1_23
+  - first:
+      213: -4989346419175867327
+    second: Ambivalence_Move_Eyes_Foreground1_24
+  - first:
+      213: -5783387487370974181
+    second: Ambivalence_Move_Eyes_Foreground1_25
+  - first:
+      213: 1039707554460663743
+    second: Ambivalence_Move_Eyes_Foreground1_26
+  - first:
+      213: 5879740554173061573
+    second: Ambivalence_Move_Eyes_Foreground1_27
+  - first:
+      213: -9026145022900304284
+    second: Ambivalence_Move_Eyes_Foreground1_28
+  - first:
+      213: 7997652051957040831
+    second: Ambivalence_Move_Eyes_Foreground1_29
+  - first:
+      213: 1807247031835114841
+    second: Ambivalence_Move_Eyes_Foreground1_30
+  - first:
+      213: -2536691332090065577
+    second: Ambivalence_Move_Eyes_Foreground1_31
+  - first:
+      213: 399524965508237565
+    second: Ambivalence_Move_Eyes_Foreground1_32
+  - first:
+      213: 9029212391359028205
+    second: Ambivalence_Move_Eyes_Foreground1_33
+  - first:
+      213: -3339488424580361078
+    second: Ambivalence_Move_Eyes_Foreground1_34
+  - first:
+      213: 297815185110449279
+    second: Ambivalence_Move_Eyes_Foreground1_35
+  - first:
+      213: -6204869964486399131
+    second: Ambivalence_Move_Eyes_Foreground1_36
+  - first:
+      213: -6115146275380276573
+    second: Ambivalence_Move_Eyes_Foreground1_37
+  - first:
+      213: -3962698197063925154
+    second: Ambivalence_Move_Eyes_Foreground1_38
+  - first:
+      213: -7383809892084272750
+    second: Ambivalence_Move_Eyes_Foreground1_39
+  - first:
+      213: -2598187827726556175
+    second: Ambivalence_Move_Eyes_Foreground1_40
+  - first:
+      213: -4294726368692323496
+    second: Ambivalence_Move_Eyes_Foreground1_41
+  - first:
+      213: -3711522118786163317
+    second: Ambivalence_Move_Eyes_Foreground1_42
+  - first:
+      213: 6540976040055931345
+    second: Ambivalence_Move_Eyes_Foreground1_43
+  - first:
+      213: 542033449427961559
+    second: Ambivalence_Move_Eyes_Foreground1_44
+  - first:
+      213: -2623548602165341507
+    second: Ambivalence_Move_Eyes_Foreground1_45
+  - first:
+      213: -8481773320215546037
+    second: Ambivalence_Move_Eyes_Foreground1_46
+  - first:
+      213: 515884801474562596
+    second: Ambivalence_Move_Eyes_Foreground1_47
+  - first:
+      213: 1324109475550799768
+    second: Ambivalence_Move_Eyes_Foreground1_48
+  - first:
+      213: 7208583209732455874
+    second: Ambivalence_Move_Eyes_Foreground1_49
+  - first:
+      213: -6077674261816795538
+    second: Ambivalence_Move_Eyes_Foreground1_50
+  - first:
+      213: 6367784584420957356
+    second: Ambivalence_Move_Eyes_Foreground1_51
+  - first:
+      213: 6134625112240786704
+    second: Ambivalence_Move_Eyes_Foreground1_52
+  - first:
+      213: 1958456029625399698
+    second: Ambivalence_Move_Eyes_Foreground1_53
+  - first:
+      213: 8894332880939816898
+    second: Ambivalence_Move_Eyes_Foreground1_54
+  - first:
+      213: -4432306318171853753
+    second: Ambivalence_Move_Eyes_Foreground1_55
+  - first:
+      213: -9018843090908052811
+    second: Ambivalence_Move_Eyes_Foreground1_56
+  - first:
+      213: 1746650566205993412
+    second: Ambivalence_Move_Eyes_Foreground1_57
+  - first:
+      213: 6754627647653691709
+    second: Ambivalence_Move_Eyes_Foreground1_58
+  - first:
+      213: 840487112029671250
+    second: Ambivalence_Move_Eyes_Foreground1_59
+  - first:
+      213: 1772750043781318737
+    second: Ambivalence_Move_Eyes_Foreground1_60
+  - first:
+      213: -4962290237502045623
+    second: Ambivalence_Move_Eyes_Foreground1_61
+  - first:
+      213: 4628978123683170265
+    second: Ambivalence_Move_Eyes_Foreground1_62
+  - first:
+      213: -1264735959976973404
+    second: Ambivalence_Move_Eyes_Foreground1_63
+  - first:
+      213: -1150779339705447030
+    second: Ambivalence_Move_Eyes_Foreground1_64
+  - first:
+      213: 2526204200739045854
+    second: Ambivalence_Move_Eyes_Foreground1_65
+  - first:
+      213: -7587696254652838917
+    second: Ambivalence_Move_Eyes_Foreground1_66
+  - first:
+      213: -8504937278958053350
+    second: Ambivalence_Move_Eyes_Foreground1_67
+  - first:
+      213: 2143847893439439179
+    second: Ambivalence_Move_Eyes_Foreground1_68
+  - first:
+      213: 2209462449398759976
+    second: Ambivalence_Move_Eyes_Foreground1_69
+  - first:
+      213: -6702458097551571507
+    second: Ambivalence_Move_Eyes_Foreground1_70
+  - first:
+      213: 6896699014480498170
+    second: Ambivalence_Move_Eyes_Foreground1_71
+  - first:
+      213: -1664829599490727248
+    second: Ambivalence_Move_Eyes_Foreground1_72
+  - first:
+      213: 5998111159424951291
+    second: Ambivalence_Move_Eyes_Foreground1_73
+  - first:
+      213: -6565642872161248670
+    second: Ambivalence_Move_Eyes_Foreground1_74
+  - first:
+      213: 3360381229442701150
+    second: Ambivalence_Move_Eyes_Foreground1_75
+  - first:
+      213: 3325885929359485593
+    second: Ambivalence_Move_Eyes_Foreground1_76
+  - first:
+      213: -3267469949538720412
+    second: Ambivalence_Move_Eyes_Foreground1_77
+  - first:
+      213: -6388981599671408768
+    second: Ambivalence_Move_Eyes_Foreground1_78
+  - first:
+      213: -3751354192326301653
+    second: Ambivalence_Move_Eyes_Foreground1_79
+  - first:
+      213: 4724926732255740914
+    second: Ambivalence_Move_Eyes_Foreground1_80
+  - first:
+      213: -4595859993573221225
+    second: Ambivalence_Move_Eyes_Foreground1_81
+  - first:
+      213: 634909253055502437
+    second: Ambivalence_Move_Eyes_Foreground1_82
+  - first:
+      213: 4898441003621307562
+    second: Ambivalence_Move_Eyes_Foreground1_83
+  - first:
+      213: -5319856808592114477
+    second: Ambivalence_Move_Eyes_Foreground1_84
+  - first:
+      213: -4378716893010521198
+    second: Ambivalence_Move_Eyes_Foreground1_85
+  - first:
+      213: 6014406111698670499
+    second: Ambivalence_Move_Eyes_Foreground1_86
+  - first:
+      213: -6034398628630910271
+    second: Ambivalence_Move_Eyes_Foreground1_87
+  - first:
+      213: 9031621548128879106
+    second: Ambivalence_Move_Eyes_Foreground1_88
+  - first:
+      213: -7425811789331945948
+    second: Ambivalence_Move_Eyes_Foreground1_89
+  - first:
+      213: 7477773629292677284
+    second: Ambivalence_Move_Eyes_Foreground1_90
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ambivalence_Move_Eyes_Foreground1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0e3716a040a8f2a0800000000000000
+      internalID: -6703431845816091123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Move_Eyes_Foreground1_1
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f9b653e9291d6520800000000000000
+      internalID: 2696839419563260407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Move_Eyes_Foreground1_2
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41c9945f455ed5220800000000000000
+      internalID: 2476387523178896404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Move_Eyes_Foreground1_3
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f102a37c470538b90800000000000000
+      internalID: -7240855313392721889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Move_Eyes_Foreground1_4
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ca76f14476cb6b0800000000000000
+      internalID: -5279231120902738927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Move_Eyes_Foreground1_5
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0319caeacc697d40800000000000000
+      internalID: 5582612831880680203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Move_Eyes_Foreground1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad35892cfe82d1fa0800000000000000
+      internalID: -5828457332520496166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Move_Eyes_Foreground1_7
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 0
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49bf59cc8b4e7a2d0800000000000000
+      internalID: -3267391522276508780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Move_Eyes_Foreground1_8
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 0
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98ba562eb64ebfdd0800000000000000
+      internalID: -2451114420162155639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Move_Eyes_Foreground1_9
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 0
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09b527e03dde07f90800000000000000
+      internalID: -6957799933551158384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Move_Eyes_Foreground1_10
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 0
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62b6af27edd8ddc00800000000000000
+      internalID: 927053084859460390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_Move_Eyes_Foreground1_11
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 0
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4d00d2e5ed61e8d0800000000000000
+      internalID: -2818851057636995765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7e0e99b77b7aaf4499275f398db06281
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Ambivalence_Move_Eyes_Foreground1_0: -6703431845816091123
+      Ambivalence_Move_Eyes_Foreground1_1: 2696839419563260407
+      Ambivalence_Move_Eyes_Foreground1_10: 927053084859460390
+      Ambivalence_Move_Eyes_Foreground1_11: -2818851057636995765
+      Ambivalence_Move_Eyes_Foreground1_2: 2476387523178896404
+      Ambivalence_Move_Eyes_Foreground1_3: -7240855313392721889
+      Ambivalence_Move_Eyes_Foreground1_4: -5279231120902738927
+      Ambivalence_Move_Eyes_Foreground1_5: 5582612831880680203
+      Ambivalence_Move_Eyes_Foreground1_6: -5828457332520496166
+      Ambivalence_Move_Eyes_Foreground1_7: -3267391522276508780
+      Ambivalence_Move_Eyes_Foreground1_8: -2451114420162155639
+      Ambivalence_Move_Eyes_Foreground1_9: -6957799933551158384
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

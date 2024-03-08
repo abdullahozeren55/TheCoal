@@ -1,0 +1,464 @@
+fileFormatVersion: 2
+guid: 025546a23d4ab3a4eb8533f577caae86
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9103534414342338093
+    second: Ambivalence_JumpUp_Eyes_Foreground2_0
+  - first:
+      213: -4055859973310733609
+    second: Ambivalence_JumpUp_Eyes_Foreground2_1
+  - first:
+      213: -5126879109394200922
+    second: Ambivalence_JumpUp_Eyes_Foreground2_2
+  - first:
+      213: 7914952969295191527
+    second: Ambivalence_JumpUp_Eyes_Foreground2_3
+  - first:
+      213: -6975129604505581262
+    second: Ambivalence_JumpUp_Eyes_Foreground2_4
+  - first:
+      213: -7626166997539368274
+    second: Ambivalence_JumpUp_Eyes_Foreground2_5
+  - first:
+      213: 7455963017383267159
+    second: Ambivalence_JumpUp_Eyes_Foreground2_6
+  - first:
+      213: 8665380168049986443
+    second: Ambivalence_JumpUp_Eyes_Foreground2_7
+  - first:
+      213: -7858339969889271770
+    second: Ambivalence_JumpUp_Eyes_Foreground2_8
+  - first:
+      213: -2170448594491916638
+    second: Ambivalence_JumpUp_Eyes_Foreground2_9
+  - first:
+      213: -645843309562884456
+    second: Ambivalence_JumpUp_Eyes_Foreground2_10
+  - first:
+      213: -1967997310664147827
+    second: Ambivalence_JumpUp_Eyes_Foreground2_11
+  - first:
+      213: 4065737622585795586
+    second: Ambivalence_JumpUp_Eyes_Foreground2_12
+  - first:
+      213: -7005343782968004983
+    second: Ambivalence_JumpUp_Eyes_Foreground2_13
+  - first:
+      213: 6339723344704063152
+    second: Ambivalence_JumpUp_Eyes_Foreground2_14
+  - first:
+      213: 7047137534060932852
+    second: Ambivalence_JumpUp_Eyes_Foreground2_15
+  - first:
+      213: -6510229953328161313
+    second: Ambivalence_JumpUp_Eyes_Foreground2_16
+  - first:
+      213: -7838135188331957408
+    second: Ambivalence_JumpUp_Eyes_Foreground2_17
+  - first:
+      213: -3416073882027521195
+    second: Ambivalence_JumpUp_Eyes_Foreground2_18
+  - first:
+      213: 8519244946411644032
+    second: Ambivalence_JumpUp_Eyes_Foreground2_19
+  - first:
+      213: -5692577333686905738
+    second: Ambivalence_JumpUp_Eyes_Foreground2_20
+  - first:
+      213: -4932920559546151720
+    second: Ambivalence_JumpUp_Eyes_Foreground2_21
+  - first:
+      213: 4456339436535809340
+    second: Ambivalence_JumpUp_Eyes_Foreground2_22
+  - first:
+      213: 4004633989325274920
+    second: Ambivalence_JumpUp_Eyes_Foreground2_23
+  - first:
+      213: -1798042184782432150
+    second: Ambivalence_JumpUp_Eyes_Foreground2_24
+  - first:
+      213: -8470348479071596418
+    second: Ambivalence_JumpUp_Eyes_Foreground2_25
+  - first:
+      213: -7571041426685256187
+    second: Ambivalence_JumpUp_Eyes_Foreground2_26
+  - first:
+      213: 8466597596877740577
+    second: Ambivalence_JumpUp_Eyes_Foreground2_27
+  - first:
+      213: 7147699375590318491
+    second: Ambivalence_JumpUp_Eyes_Foreground2_28
+  - first:
+      213: -4276421981621344603
+    second: Ambivalence_JumpUp_Eyes_Foreground2_29
+  - first:
+      213: -7716594376481352750
+    second: Ambivalence_JumpUp_Eyes_Foreground2_30
+  - first:
+      213: -1249052472990991928
+    second: Ambivalence_JumpUp_Eyes_Foreground2_31
+  - first:
+      213: 4783651698214080275
+    second: Ambivalence_JumpUp_Eyes_Foreground2_32
+  - first:
+      213: -8548755123804859694
+    second: Ambivalence_JumpUp_Eyes_Foreground2_33
+  - first:
+      213: -7369765757270769872
+    second: Ambivalence_JumpUp_Eyes_Foreground2_34
+  - first:
+      213: -3677522826893813118
+    second: Ambivalence_JumpUp_Eyes_Foreground2_35
+  - first:
+      213: 3887223424044104900
+    second: Ambivalence_JumpUp_Eyes_Foreground2_36
+  - first:
+      213: 6204601090584350059
+    second: Ambivalence_JumpUp_Eyes_Foreground2_37
+  - first:
+      213: 8191760918685944412
+    second: Ambivalence_JumpUp_Eyes_Foreground2_38
+  - first:
+      213: -7319849525695743732
+    second: Ambivalence_JumpUp_Eyes_Foreground2_39
+  - first:
+      213: 8778733474573201651
+    second: Ambivalence_JumpUp_Eyes_Foreground2_40
+  - first:
+      213: 4588453497842227807
+    second: Ambivalence_JumpUp_Eyes_Foreground2_41
+  - first:
+      213: -824350117810067858
+    second: Ambivalence_JumpUp_Eyes_Foreground2_42
+  - first:
+      213: -3062222226089612038
+    second: Ambivalence_JumpUp_Eyes_Foreground2_43
+  - first:
+      213: -1302204298649530346
+    second: Ambivalence_JumpUp_Eyes_Foreground2_44
+  - first:
+      213: 4297131938850654101
+    second: Ambivalence_JumpUp_Eyes_Foreground2_45
+  - first:
+      213: -392916674034721037
+    second: Ambivalence_JumpUp_Eyes_Foreground2_46
+  - first:
+      213: -4464990478762311610
+    second: Ambivalence_JumpUp_Eyes_Foreground2_47
+  - first:
+      213: 5540811033565680576
+    second: Ambivalence_JumpUp_Eyes_Foreground2_48
+  - first:
+      213: 3439481787672323935
+    second: Ambivalence_JumpUp_Eyes_Foreground2_49
+  - first:
+      213: -2166059399606017432
+    second: Ambivalence_JumpUp_Eyes_Foreground2_50
+  - first:
+      213: 8041320443068003260
+    second: Ambivalence_JumpUp_Eyes_Foreground2_51
+  - first:
+      213: -4907019642521234984
+    second: Ambivalence_JumpUp_Eyes_Foreground2_52
+  - first:
+      213: -4919291786803571107
+    second: Ambivalence_JumpUp_Eyes_Foreground2_53
+  - first:
+      213: -3695958491449582261
+    second: Ambivalence_JumpUp_Eyes_Foreground2_54
+  - first:
+      213: -3915009550789205144
+    second: Ambivalence_JumpUp_Eyes_Foreground2_55
+  - first:
+      213: -3668831369114688058
+    second: Ambivalence_JumpUp_Eyes_Foreground2_56
+  - first:
+      213: 7893496748100645295
+    second: Ambivalence_JumpUp_Eyes_Foreground2_57
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ambivalence_JumpUp_Eyes_Foreground2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d263b673150465e70800000000000000
+      internalID: 9103534414342338093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_JumpUp_Eyes_Foreground2_1
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d2a618d7d0b6b7c0800000000000000
+      internalID: -4055859973310733609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_JumpUp_Eyes_Foreground2_2
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a600360d9aa9d8b0800000000000000
+      internalID: -5126879109394200922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_JumpUp_Eyes_Foreground2_3
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 203
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ed53c45acf87dd60800000000000000
+      internalID: 7914952969295191527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_JumpUp_Eyes_Foreground2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 239422d949c533f90800000000000000
+      internalID: -6975129604505581262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_JumpUp_Eyes_Foreground2_5
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 0
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea2dbd955896a2690800000000000000
+      internalID: -7626166997539368274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_JumpUp_Eyes_Foreground2_6
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 0
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75b44956cd6e87760800000000000000
+      internalID: 7455963017383267159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ambivalence_JumpUp_Eyes_Foreground2_7
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 0
+        width: 214
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b85580a5d914870800000000000000
+      internalID: 8665380168049986443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f94942cd66315cc49b5b6377d55edebb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Ambivalence_JumpUp_Eyes_Foreground2_0: 9103534414342338093
+      Ambivalence_JumpUp_Eyes_Foreground2_1: -4055859973310733609
+      Ambivalence_JumpUp_Eyes_Foreground2_2: -5126879109394200922
+      Ambivalence_JumpUp_Eyes_Foreground2_3: 7914952969295191527
+      Ambivalence_JumpUp_Eyes_Foreground2_4: -6975129604505581262
+      Ambivalence_JumpUp_Eyes_Foreground2_5: -7626166997539368274
+      Ambivalence_JumpUp_Eyes_Foreground2_6: 7455963017383267159
+      Ambivalence_JumpUp_Eyes_Foreground2_7: 8665380168049986443
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

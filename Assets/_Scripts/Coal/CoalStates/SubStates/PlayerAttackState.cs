@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAttackState : PlayerAbilityState
 {
 
-    private Weapon weapon;
+    private AggressiveWeapon weapon;
 
     public float lastAttackTime;
 
@@ -75,6 +75,8 @@ public class PlayerAttackState : PlayerAbilityState
             lastAttackTime = Time.time;
         }
 
+        weapon.ClearLists();
+
 
         weapon.ExitWeapon();
     }
@@ -133,7 +135,7 @@ public class PlayerAttackState : PlayerAbilityState
         isAbilityDone = true;
     }
 
-    public void SetWeapon(Weapon weapon)
+    public void SetWeapon(AggressiveWeapon weapon)
     {
         this.weapon = weapon;
         weapon.InitializeWeapon(this, Movement);

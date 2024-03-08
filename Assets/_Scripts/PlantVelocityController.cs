@@ -11,8 +11,18 @@ public class PlantVelocityController : MonoBehaviour
 
     private int externalInfluence = Shader.PropertyToID("_ExternalInfluence");
 
+    [Header("Material Properties")]
+    public float windIntensityValue = 0.5f;
+    public float windScaleValue = 0.5f;
+    public float windSpeedValue = 1f;
+    [HideInInspector] public int windIntensity = Shader.PropertyToID("_WindIntensity");
+    [HideInInspector] public int windScale = Shader.PropertyToID("_WindScale");
+    [HideInInspector] public int windSpeed = Shader.PropertyToID("_WindSpeed");
+
     public void InfluencePlant(Material mat, float XVelocity)
     {
+
         mat.SetFloat(externalInfluence, XVelocity);
+        
     }
 }

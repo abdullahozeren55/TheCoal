@@ -12,6 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8e8a90070c71144a59c4f5ea55c315, type: 3}
   m_Name: Coal_Sword
   m_EditorClassIdentifier: 
+  weaponNormalSoundFX:
+  - {fileID: 8300000, guid: 00756c1754f5ce54fb7b5057dddc4692, type: 3}
+  - {fileID: 8300000, guid: 53419ecc494985c48b44807a7d9efb84, type: 3}
+  - {fileID: 8300000, guid: 5e4446c89c29d9e4b809aee86ea1a577, type: 3}
+  weaponInAirSoundFX: {fileID: 8300000, guid: fc6253a418a835e43b51638d875d78ad, type: 3}
+  weaponHeavySoundFX: {fileID: 8300000, guid: 87acb56f026dc8945a21531a65fcfcbb, type: 3}
+  weaponMoveSoundFX:
+  - {fileID: 8300000, guid: 7a94202237b489c4a840742c59d88133, type: 3}
+  - {fileID: 8300000, guid: ed40b8cc2da60a8449f201b13211ed79, type: 3}
+  - {fileID: 8300000, guid: dee68e17adb161a4799b212a6150d52e, type: 3}
+  weaponMoveHeavySoundFX: {fileID: 8300000, guid: 8a43cf1632c66cb46a14f69f7e39fdc2, type: 3}
+  weaponHitSoundFX:
+  - {fileID: 8300000, guid: afa25648f2a57d44abcb548a111f5c60, type: 3}
+  - {fileID: 8300000, guid: c319c2d484af2ce4b829228cc42a8a2b, type: 3}
+  - {fileID: 8300000, guid: 41a21716cfc5bec42ad9749ee79162e2, type: 3}
+  - {fileID: 8300000, guid: d707ea77e2f5ae846bb48887133fb52c, type: 3}
+  - {fileID: 8300000, guid: cd730d21d6864f747937c02c91580c9e, type: 3}
+  - {fileID: 8300000, guid: 98a94be6537db2847923e07904eb9a4c, type: 3}
   normalAttackCount: 3
   heavyAttackCount: 1
   moveAttackCount: 3
@@ -47,35 +65,35 @@ MonoBehaviour:
     knockbackStrength: 8
     knockbackAngle: {x: 2, y: 0.2}
   - attackName: MoveAttack1
-    movementSpeed: 6
+    movementSpeed: 5
     movementAngle: {x: 1, y: 0.25}
     damageAmount: 5
     poiseDamageAmount: 5
     knockbackStrength: 10
     knockbackAngle: {x: 2, y: 1}
   - attackName: MoveAttack2
-    movementSpeed: 6
+    movementSpeed: 5
     movementAngle: {x: 1, y: 0.1}
     damageAmount: 7
     poiseDamageAmount: 10
     knockbackStrength: 8
     knockbackAngle: {x: 1, y: 0.1}
   - attackName: MoveAttack3
-    movementSpeed: 10
+    movementSpeed: 7
     movementAngle: {x: 0, y: -10}
     damageAmount: 6
     poiseDamageAmount: 8
     knockbackStrength: 9
     knockbackAngle: {x: 1, y: 0.2}
   - attackName: MoveHeavyAttack
-    movementSpeed: 6
+    movementSpeed: 5
     movementAngle: {x: 1, y: 0.1}
     damageAmount: 10
     poiseDamageAmount: 12
     knockbackStrength: 8
     knockbackAngle: {x: 2, y: 0.2}
   - attackName: Air Attack
-    movementSpeed: 10
+    movementSpeed: 7
     movementAngle: {x: 0, y: -10}
     damageAmount: 15
     poiseDamageAmount: 50

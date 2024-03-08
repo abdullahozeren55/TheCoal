@@ -18,4 +18,9 @@ public class SO_WeaponData : ScriptableObject
 
 
     public WeaponScreenShakeDetails[] shakeDetails { get; protected set; }
+    public AudioClip[] weaponNormalSoundFX;
+    public AudioClip weaponInAirSoundFX;
+    public AudioClip weaponHeavySoundFX;
+    public AudioClip[] weaponMoveSoundFX;
+    public AudioClip weaponMoveHeavySoundFX;
 }
