@@ -66,6 +66,7 @@ public class PlayerData : ScriptableObject
     public AudioClip[] jumpOnGrassSoundFX;
     public AudioClip[] landOnGrassSoundFX;
     public AudioClip dashSoundFX;
+    public AudioClip wallSlideOnGrassSoundFX;
     public float walkOnGrassSoundFXCooldown = 0.3f;
     [HideInInspector] public float walkOnGrassSoundFXTimer = 0f;
 }

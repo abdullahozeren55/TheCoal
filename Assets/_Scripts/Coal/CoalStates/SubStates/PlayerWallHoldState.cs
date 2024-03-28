@@ -33,6 +33,11 @@ public class PlayerWallHoldState : PlayerState
     {
         base.Enter();
 
+        if(player.isInStatueLevel)
+        {
+            SoundFXManager.instance.PlaySoundFXClip(playerData.landOnGrassSoundFX, player.transform, 0.5f, 0.8f, 1.2f);
+        }
+
         player.InAirState.shouldInstantiateAirJumpPrefab = false;
     }
 

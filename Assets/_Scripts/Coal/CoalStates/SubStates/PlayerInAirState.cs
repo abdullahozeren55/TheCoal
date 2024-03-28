@@ -168,6 +168,15 @@ public class PlayerInAirState : PlayerState
         else if (jumpInput && isTouchingWall && (canWallHold || wallHoldCoyoteTime) && (xInput == Movement?.FacingDirection || player.WallJumpState.inWallJumpCombo))
         {
             StopWallHoldCoyoteTime();
+
+            if(player.WallJumpState.inWallJumpCombo)
+            {
+                if(player.isInStatueLevel)
+                {
+                    SoundFXManager.instance.PlaySoundFXClip(playerData.landOnGrassSoundFX, player.transform, 0.5f, 0.8f, 1.2f);
+                }
+            }
+
 			stateMachine.ChangeState(player.WallJumpState);
         }
         else if (jumpInput && player.JumpState.CanJump())

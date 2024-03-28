@@ -17,7 +17,7 @@ MonoBehaviour:
   flipMovementVelocity: 5.5
   flipTime: 0.13
   jumpVelocity: 15
-  amountOfJumps: 2
+  amountOfJumps: 100
   wallJumpVelocity: 18
   wallJumpTime: 0.4
   wallJumpComboTime: 0.3
@@ -26,8 +26,8 @@ MonoBehaviour:
   stopOffset: {x: 0.35, y: 0.5}
   coyoteTime: 0.2
   variableJumpHeightMultiplier: 0.4
-  wallSlideVelocity: 0.7
-  wallSlideTime: 0.2
+  wallSlideVelocity: 0.3
+  wallSlideTime: 0.1
   wallHoldVelocity: 0.1
   superDashCooldown: 0
   maxHoldTime: 1
@@ -62,5 +62,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3e8de6ce18dd9004fa51ab54601b3218, type: 3}
   - {fileID: 8300000, guid: ae4a6cb723b071543861a832c2a9950c, type: 3}
   dashSoundFX: {fileID: 8300000, guid: 3b95f019d0d71354e94c7f9f9b96f5ed, type: 3}
+  wallSlideOnGrassSoundFX: {fileID: 8300000, guid: 39a7f945499fed94882939dd51a5b1b9, type: 3}
   walkOnGrassSoundFXCooldown: 0.35
-  walkOnGrassSoundFXTimer: 0.0845469
+  walkOnGrassSoundFXTimer: 0.1622005

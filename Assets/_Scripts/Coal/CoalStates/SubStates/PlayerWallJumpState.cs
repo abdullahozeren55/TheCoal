@@ -20,6 +20,11 @@ public class PlayerWallJumpState : PlayerAbilityState
     {
         base.Enter();
 
+        if(player.isInStatueLevel)
+        {
+            SoundFXManager.instance.PlaySoundFXClip(playerData.jumpOnGrassSoundFX, player.transform, 0.5f, 0.8f, 1.2f);
+        }
+
         
         player.InAirState.SetCanWallHold(false);
         player.Movement?.Flip();
